@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>account_sidebar</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+
+    <style>
+        *{
+            /* border:1px solid red; */
+            color: #333;
+        }
+        .img_wrap{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .member_pic{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .log_out{
+            font-size: 12px;
+            border-radius: 4px;
+            border:1px solid #333;
+            background-color: #FFFEFC;
+        }
+        li{
+            margin: 20px 0;
+            list-style: none;
+        }
+       
+        
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-3 d-flex flex-column justify-content-center" style="border-right: 1px solid #848484;top:120px">
+                <!-- 照片與登出區 -->
+                <div class="d-flex align-items-center">
+                    <div class="img_wrap">
+                        <img class="member_pic" src="./SVG/momber01.JPG" alt="">
+                    </div>
+                    <div class="ml-3">
+                        <p class="m-0">yoga_team</p>
+                        <p class="m-0">點數: 500點</p>
+                        <button class="log_out mt-2">登出</button>
+                    </div>
+                </div>
+                <!-- 選單區 -->
+                <div class="mt-5">
+                    <ul>
+                        <li class="d-flex align-items-center">
+                            <i class="far fa-user fa-lg"></i>
+                            <p class="mb-0 ml-4">我的帳號</p>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <img src="./SVG/order.svg" alt="">
+                            <p class="mb-0 ml-4">訂單紀錄</p>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="far fa-heart fa-lg"></i>
+                            <p class="mb-0 ml-4">我的最愛</p>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <!-- <i class="fas fa-ticket-alt fa-lg"></i> -->
+                            <img src="./SVG/voucher.svg" alt="">
+                            <p class="mb-0 ml-4">我的折價券</p>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <img src="./SVG/point.svg" alt="">
+                            <p class="mb-0 ml-4">我的點數</p>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <img src="./SVG/customize_design.svg" alt="">
+                            <p class="mb-0 ml-4">客製化設計</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product_list_sidebar</title>
+    <style>
+    *{
+        /* border: 1px solid red; */
+    }
+    .product_list_sidebar {
+        top:100px;
+        margin-left: 30px;
+        width: 100px;
+        position: relative;
+        }
+    .bulb {
+        background: #F2A200;
+        border-radius: 100px;
+        display: block;
+        height: 16px;
+        width: 16px;
+        position: absolute;
+        left:2px;
+        transform: translate(-50%,-50%);
+        }
+    .bulb_body{
+        position: relative; 
+        }
+    .glass {
+        background: #848484;
+        border-radius: 100px;
+        display: block;
+        height: 480px;
+        width: 4px;
+    }
+    .amount {
+        background: #F2A200;
+        border-radius: 100px;
+        display: block;
+        width: 4px;
+        position: absolute;
+        top: 0;
+        
+    }
+
+    .title {
+        font-size: 20px;
+        position: absolute;
+        left: 20px;
+    }
+    .subtitle {
+        font-size: 16px;
+        position: absolute;
+        left: 20px;
+    }
+    </style>
+
+</head>
+<body>
+    <div class="product_list_sidebar">
+        <div class="bulb_body">
+            <div class="bulb"></div>
+            <span class="glass">
+                <div class="title" style="top: 5%">瑜珈墊</div>
+                <div class="subtitle" style="top: 15%">一般</div>
+                <div class="subtitle" style="top: 21%">客製化</div>
+                
+                <div class="title"  style="top: 35%">輔具</div>
+                <div class="subtitle" style="top: 45%">瑜珈磚</div>
+                <div class="subtitle" style="top: 52%">支撐墊</div>
+                <div class="subtitle" style="top: 59%">滾筒</div>
+                <div class="subtitle" style="top: 66%">沙包</div>
+                <div class="subtitle" style="top: 73%">伸展帶</div>
+                <div class="subtitle" style="top: 80%">彈力帶</div>
+                <div class="subtitle" style="top: 87%">舖巾</div>
+            </span>
+            <span class="amount" style="height:80%"></span>
+
+        </div>
+    </div>
+</body>
+</html>
