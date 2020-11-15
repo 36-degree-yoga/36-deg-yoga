@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>member_my_account</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/js/bootstrap.bundle.js">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+   
+    <style>
+        
+        body,html{
+            background: #FFFEFC;
+            /* border:1px solid red; */
+            color: #333;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .space_30{
+            width:100%;
+            height: 30px;
+        }
+        .space_60{
+            width:100%;
+            height: 60px;
+        }
+        .space_120{
+            width:100%;
+            height: 120px;
+        }
+        /* side bar ↓↓*/
+        .img_wrap{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .member_pic{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .log_out{
+            font-size: 12px;
+            border-radius: 4px;
+            border:1px solid #333;
+            background-color: #FFFEFC;
+        }
+        li{
+            margin: 20px 0;
+            list-style: none;
+        }
+        .bar_title_area a{
+            color: #333;
+        }
+       
+         /* side bar ↑↑*/
+
+         .member_account_img_wrap{
+             height: 180px;
+             width: 180px;
+             border-radius: 50%;
+             overflow: hidden;
+         }
+
+         input{
+             border:none;
+             
+         }
+         input:focus{
+            outline: -webkit-focus-ring-color auto 1px;
+            outline-color: -webkit-focus-ring-color;
+            outline-style: auto;
+            outline-width: 0px;
+         }
+         .member_account_img_wrap p{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+         }
+         .mask{
+            height: 180px;
+            width: 180px;
+            border-radius: 50%;
+            background-color: #FFFEFC;
+            opacity: .7;
+            position: absolute;
+            border: 4px solid #F2A21F;
+         }
+         
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="space_120"></div>
+            <!-- 左側: 選單 -->
+            <div class="col-3 d-flex flex-column justify-content-center" style="border-right: 1px solid #848484;">
+                <!-- 照片與登出區 -->
+                <div class="d-flex align-items-center">
+                    <div class="img_wrap">
+                        <img class="member_pic" src="./SVG/momber01.JPG" alt="">
+                    </div>
+                    <div class="ml-3">
+                        <p class="mb-1">yoga_team</p>
+                        <p>點數: 500點</p>
+                        <button class="log_out mt-2">登出</button>
+                    </div>
+                </div>
+                <!-- 選單區 -->
+                <div class="bar_title_area mt-5">
+                    <ul>
+                        <li class="d-flex align-items-center">
+                            <i class="far fa-user fa-lg"></i>
+                            <a href="#" class="mb-0 ml-4">我的帳號</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <img src="./SVG/order.svg" alt="">
+                            <a href="#" class="mb-0 ml-4">訂單紀錄</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="far fa-heart fa-lg"></i>
+                            <a href="#" class="mb-0 ml-4">我的最愛</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <!-- <i class="fas fa-ticket-alt fa-lg"></i> -->
+                            <img src="./SVG/voucher.svg" alt="">
+                            <a href="#" class="mb-0 ml-4">我的折價券</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <img src="./SVG/point.svg" alt="">
+                            <a href="#" class="mb-0 ml-4">我的點數</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <img src="./SVG/customize_design.svg" alt="">
+                            <a href="#" class="mb-0 ml-4">客製化設計</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 右側 -->
+            
+            <div class="col-9 d-flex flex-wrap" >
+                <!-- 變更照片區 -->
+                <div class="col-5 d-flex flex-column justify-content-center align-items-center" >
+                    <div class="member_account_img_wrap position-relative">
+                        <!-- hover出現 -->
+                        <div class="mask" style="display:none">
+                            <p >
+                                <a href="" style="color: #004A13;">變更</a>
+                            </p>
+                        </div>
+                        
+                        <!-- 照片 -->
+                        <img class="member_pic" src="./SVG/momber01.JPG" alt="">
+                        
+                    </div>
+                    <div class="space_30"></div>
+                    <p>
+                        檔案大小 : 最大1MB
+                        <br>
+                        檔案限制：JPEG , PNG
+                    </p>
+                </div>
+                <!-- 填資料區 -->
+                <div class="col-7 d-flex flex-column justify-content-center align-items-center">
+                    <div>
+                        <div class="my-4 d-flex align-items-center">
+                            <p>姓名</p>
+                            <div class="ml-3" style="width:300px ;border-bottom: 1px solid #333333;">
+                                <input type="text">
+                                <a href="#" style="color: #135F39;">刪除帳號</a>
+                            </div>
+                            
+                        </div>
+                        <div class="my-4 d-flex align-items-center" >
+                            <p>帳號</p>
+                            <div class="ml-3" style="width:300px ;border-bottom: 1px solid #333333;">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="my-4 d-flex align-items-center" >
+                            <p>密碼</p>
+                            <div >
+                                <a class="ml-3" href="#" style="border-bottom: 1px solid #135F39;color:#135F39;">設定新密碼</a>
+                            </div>
+                        </div>
+                        <div class="my-4 d-flex align-items-center" >
+                            <p>手機</p>
+                            <div class="ml-3" style="width:300px ;border-bottom: 1px solid #333333;">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="my-4 d-flex align-items-center" >
+                            <p>信箱</p>
+                            <div class="ml-3" style="width:300px ;border-bottom: 1px solid #333333;">
+                                <input type="email">
+                            </div>
+                        </div>
+                        <div class="my-4 d-flex align-items-center" >
+                            <p>生日</p>
+                            <div class="ml-3" style="width:300px ;border-bottom: 1px solid #333333;">
+                                <input type="date"  style="width:300px;">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- 按鈕 -->
+                <div class="space_120"></div>
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <button class="mr-5">取消變更</button>
+                    <button>儲存</button>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+
+
+    <script src="lib/jquery-3.5.1.js"></script>
+    <script>
+       $('.member_account_img_wrap').mouseenter(function(){
+            $('.mask').css('display','block')
+            
+       });
+       $('.member_account_img_wrap').mouseleave(function(){
+            $('.mask').css('display','none');
+       });
+
+    </script>
+</body>
+</html>

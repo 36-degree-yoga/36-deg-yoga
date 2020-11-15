@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product_list_mat</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap/js/bootstrap.bundle.js">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <!-- 字體 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <style>
+
+    
+        body{
+            /* border:1px solid red; */
+            font-family: 'Josefin Sans', sans-serif;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        .banner{
+            height: 443px;
+            width: 100%;
+            background-color: aquamarine;
+
+        }
+        h1{
+            font-size: 64px;
+            font-weight: 700;
+        }
+        h6{
+            font-size: 24px;
+        }
+        p{
+            font-size: 16px;
+        }
+        .space_30{
+            width:100%;
+            height: 30px;
+        }
+        .space_60{
+            width:100%;
+            height: 60px;
+        }
+        .space_120{
+            width:100%;
+            height: 120px;
+        }
+        .prop_space{
+        width: 468px;
+        height: 295px;
+        background-color: blueviolet;
+    }
+        /* sidebar */
+        .test{
+    width: 100%;
+    height: 500px;
+    background-color: red;
+}
+
+
+        .product_siderbar_wrap {
+            margin-top: 60px;
+            padding-top: 60px;
+            margin-left: 90px;
+        }
+
+
+        /* 溫度計 */
+        .thermometer_container {
+            height: 500px;
+            width: 20px;
+        }
+
+        .thermometer_wrap {
+            width: 100%;
+            height: 100%;
+        }
+
+        .thermometer {
+            width: 100%;
+            top: 0;
+        }
+
+        .thermometer_line {
+            height: 100%;
+            width: 10px;
+            border: 1px solid #C1C1C1;
+            border-radius: 10px;
+            padding: 1.6px;
+
+        }
+
+        .thermometer_move {
+            width: 100%;
+            height: 60px;
+            background-color: #F2A200;
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+
+        /* 標題 */
+       
+
+
+        .product_sidebar_content {
+            margin-top: 45px;
+            margin-left: 40px;
+
+        }
+
+        .product_siderbar_title {
+            margin-bottom: 60px;
+        }
+
+        .title {
+            font-size: 20px;
+            margin-bottom: 40px;
+            
+        }
+        .title a{
+            color: #004a13
+        }
+
+        .subtitle {
+            margin-bottom: 15px;
+        }
+        .subtitle a{
+            color: #333333;
+        }
+    /* sidebar */
+
+    .product{
+        width: 225.7px;
+    }
+    .product_img_wrap{
+        width: 225.7px;
+        height: 295px;
+        background-color: blue;
+    }
+    .prop_list_pic{
+        width: 468px;
+        height: 733px;
+        background-color: blueviolet;
+    }
+    
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+    </nav>
+    
+    <div class="container-fluid">
+        <!-- banner照片 -->
+        <div class="row">
+            <div class="banner">
+                <img src="" alt="">
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- 左側:側邊選單 -->
+            <div class="col-3">
+                <div class="product_siderbar_wrap d-flex">
+                    <!-- 溫度計 -->
+                    <div class="thermometer_container">
+                        <div class="thermometer_wrap d-flex  justify-content-center position-relative">
+                            <img class="thermometer d-block position-absolute" src="img/thermometer/sidebar_thermometer_head.svg" alt="">
+
+                            <!-- <div class="thermometer_line_wrap"> -->
+                            <div class="thermometer_line">
+                                <div class="thermometer_move"></div>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+
+                    </div>
+
+                    <!-- 側bar標題 -->
+                        <div class="product_sidebar_content">
+                            <div class="product_siderbar_title">
+                                <div class="title"><a id="plst_top" href="#">瑜珈墊</a></div>
+                                <div class="subtitle"><a href="#">一般</a></div>
+                                <div class="subtitle"><a href="#">客製化</a></div>
+                            </div>
+                            <div class="product_siderbar_title">
+                                <div class="title"><a href="#">輔具</a></div>
+                                <div class="subtitle"><a href="#">瑜珈磚</a></div>
+                                <div class="subtitle"><a href="#">支撐墊</a></div>
+                                <div class="subtitle"><a href="#">滾筒</a></div>
+                                <div class="subtitle"><a href="#">沙包</a></div>
+                                <div class="subtitle"><a href="#">伸展帶</a></div>
+                                <div class="subtitle"><a href="#">彈力帶</a></div>
+                                <div class="subtitle"><a href="#">舖巾</a></div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <!-- 右側 -->
+            <div class="col-8 ">
+                <!-- 餅乾屑與篩選器 -->
+                <div class="d-flex justify-content-between align-items-center" style="height: 120px;">
+                    <!-- 餅乾屑 -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Library</li>
+                        </ol>
+                    </nav>
+
+                    <!-- 篩選器 -->
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown button
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 產品列表 -->
+
+                <!-- 瑜珈磚 -->
+                <div class="d-flex justify-content-between flex-wrap">
+                    <!-- 瑜珈磚大圖 -->
+                    <div class="col-6 d-flex p-0 justify-content-start"> 
+                        <div class="prop_list_pic">
+                            <img src="" alt="">
+                        </div> 
+                    </div>
+                    <!-- 瑜珈磚列表 -->
+                    <div class="col-6 p-0 d-flex flex-wrap justify-content-around">
+                        <div class="product">
+                            <div class="product_img_wrap">
+                                <img src="" alt=""> 
+                            </div>
+                            <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                            <p style="text-align: center;">NT.1,000</p>    
+                        </div>
+                        <div class="product">
+                            <div class="product_img_wrap">
+                                <img src="" alt=""> 
+                            </div>
+                            <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                            <p style="text-align: center;">NT.1,000</p>    
+                        </div>
+                        <div class="space_30"></div>
+                        <div class="product">
+                            <div class="product_img_wrap">
+                                <img src="" alt=""> 
+                            </div>
+                            <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                            <p style="text-align: center;">NT.1,000</p>    
+                        </div>
+                        <div class="product">
+                            <div class="product_img_wrap">
+                                <img src="" alt=""> 
+                            </div>
+                            <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                            <p style="text-align: center;">NT.1,000</p>    
+                        </div>    
+                    </div> 
+                </div>
+                <!-- 支撐墊 -->
+                <div class="space_120"></div>
+                <div class="d-flex justify-content-between flex-wrap">
+                    <div class="product">
+                        <div class="product_img_wrap">
+                            <img src="" alt=""> 
+                        </div>
+                        <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                        <p class="p-0" style="text-align: center;">NT.1,000</p>    
+                    </div>
+                    <div class="product">
+                        <div class="product_img_wrap">
+                            <img src="" alt=""> 
+                        </div>
+                        <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                        <p style="text-align: center;">NT.1,000</p>    
+                    </div>
+                    <div class="product">
+                        <div class="product_img_wrap">
+                            <img src="" alt=""> 
+                        </div>
+                        <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                        <p class="p-0" style="text-align: center;">NT.1,000</p>    
+                    </div>
+                    <div class="product">
+                        <div class="product_img_wrap">
+                            <img src="" alt=""> 
+                        </div>
+                        <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                        <p style="text-align: center;">NT.1,000</p>    
+                    </div>
+                </div>
+                <!-- 滾筒 -->
+                <div class="space_120"></div>
+                <div class="d-flex justify-content-between flex-wrap">
+                    <div class="product">
+                        <div class="product_img_wrap">
+                            <img src="" alt=""> 
+                        </div>
+                        <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                        <p class="p-0" style="text-align: center;">NT.1,000</p>    
+                    </div>
+                    <div class="product">
+                        <div class="product_img_wrap">
+                            <img src="" alt=""> 
+                        </div>
+                        <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                        <p style="text-align: center;">NT.1,000</p>    
+                    </div>
+                    <div class="product">
+                        <div class="product_img_wrap">
+                            <img src="" alt=""> 
+                        </div>
+                        <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                        <p class="p-0" style="text-align: center;">NT.1,000</p>    
+                    </div>
+                    <div class="product">
+                        <div class="product_img_wrap">
+                            <img src="" alt=""> 
+                        </div>
+                        <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                        <p style="text-align: center;">NT.1,000</p>    
+                    </div>
+                </div>
+                <!-- 沙包 -->
+                <div class="space_120"></div>
+                <div class="d-flex flex-wrap justify-content-between">
+                    <!-- 沙包列表 -->
+                    <div class="col-6 p-0 d-flex flex-wrap justify-content-around">
+                        <div class="product">
+                            <div class="product_img_wrap">
+                                <img src="" alt=""> 
+                            </div>
+                            <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                            <p style="text-align: center;">NT.1,000</p>    
+                        </div>
+                        <div class="product">
+                            <div class="product_img_wrap">
+                                <img src="" alt=""> 
+                            </div>
+                            <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                            <p style="text-align: center;">NT.1,000</p>    
+                        </div>
+                        <div class="space_30"></div>
+                        <div class="product">
+                            <div class="product_img_wrap">
+                                <img src="" alt=""> 
+                            </div>
+                            <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                            <p style="text-align: center;">NT.1,000</p>    
+                        </div>
+                        <div class="product">
+                            <div class="product_img_wrap">
+                                <img src="" alt=""> 
+                            </div>
+                            <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                            <p style="text-align: center;">NT.1,000</p>    
+                        </div>    
+                    </div> 
+                    <!-- 沙包大圖 -->
+                    <div class="col-6 d-flex p-0 justify-content-end"> 
+                        <div class="prop_list_pic">
+                            <img src="" alt="">
+                        </div> 
+                    </div>
+                </div>
+                <!-- 伸展帶 -->
+                <div class="space_120"></div>
+                <div class="d-flex justify-content-between flex-wrap">
+                    <div class="product">
+                        <div class="product_img_wrap">
+                            <img src="" alt=""> 
+                        </div>
+                        <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                        <p class="p-0" style="text-align: center;">NT.1,000</p>    
+                    </div>
+                    <div class="product">
+                        <div class="product_img_wrap">
+                            <img src="" alt=""> 
+                        </div>
+                        <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                        <p style="text-align: center;">NT.1,000</p>    
+                    </div>
+                    <div class="product">
+                        <div class="product_img_wrap">
+                            <img src="" alt=""> 
+                        </div>
+                        <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                        <p class="p-0" style="text-align: center;">NT.1,000</p>    
+                    </div>
+                    <div class="product">
+                        <div class="product_img_wrap">
+                            <img src="" alt=""> 
+                        </div>
+                        <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                        <p style="text-align: center;">NT.1,000</p>    
+                    </div>
+                </div>
+                <!-- 彈力帶 -->
+                <div class="space_120"></div>
+                <div class="d-flex justify-content-between flex-wrap">
+                    <div class="product">
+                        <div class="product_img_wrap">
+                            <img src="" alt=""> 
+                        </div>
+                        <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                        <p class="p-0" style="text-align: center;">NT.1,000</p>    
+                    </div>
+                    <div class="product">
+                        <div class="product_img_wrap">
+                            <img src="" alt=""> 
+                        </div>
+                        <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                        <p style="text-align: center;">NT.1,000</p>    
+                    </div>
+                    <div class="prop_space"></div>
+                </div>
+                <!-- 鋪巾 -->
+                <div class="space_120"></div>
+                <div class="d-flex justify-content-between flex-wrap">
+                    <div class="product">
+                        <div class="product_img_wrap">
+                            <img src="" alt=""> 
+                        </div>
+                        <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                        <p class="p-0" style="text-align: center;">NT.1,000</p>    
+                    </div>
+                    <div class="product">
+                        <div class="product_img_wrap">
+                            <img src="" alt=""> 
+                        </div>
+                        <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+                        <p style="text-align: center;">NT.1,000</p>    
+                    </div>
+                    <div class="prop_space"></div>
+                </div>
+            </div>
+        </div>
+  
+    </div>
+           
+
+    <footer>
+        <div class="space_120"></div>
+        <div style="background-color: #004A13;height: 435px; width: 100%; "></div>
+    </footer>
+    
+    <script src="lib/jquery-3.5.1.js"></script>
+    <script>
+
+    // 點側bar標題後變化------------
+    $('.product_siderbar_title a').on('click', function () {
+        $('.product_siderbar_title a').css('color', '#333333');
+        $(this).css('color', '#db5c00');
+        let plstTop=$('#plst_top').position().top;
+        let aTop=$(this).position().top;
+        let topMinus=aTop-plstTop; 
+        let len=60+topMinus;
+        $('.thermometer_move').css('height',len+"px");
+        // console.log(len)
+    });
+    // -----------------------------
+
+
+</script>
+</body>
+</html>
