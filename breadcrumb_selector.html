@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./fontawesome/css/all.css">
+    <title>麵包屑＋篩選器</title>
+    <style>
+        * {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .row {
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+
+        h3 {
+            color: #004A13;
+            font-size: 2.5rem;
+        }
+
+        h6 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        a {
+            color: #333333;
+        }
+
+        /* hover 是否要用 jquery */
+        .breadcrumb-item>a:hover {
+            color: #db5c00;
+            font-weight: normal;
+            text-decoration: none;
+        }
+
+        .breadcrumb {
+            background-color: transparent;
+            padding: 0.5rem 1rem;
+
+        }
+
+        .breadcrumb-item>a,
+        .dropdown-item {
+            color: #004A13;
+            font-weight: lighter;
+        }
+
+        .breadcrumb-item+.breadcrumb-item::before {
+            color: #004A13;
+            content: " > ";
+        }
+
+        .breadcrumb-item.active {
+            color: #004A13;
+            font-weight: 500;
+        }
+
+
+        .btn,
+        .dropdown-menu {
+            border-color: #004A13;
+            color: #004A13;
+        }
+
+        .btn:focus {
+            box-shadow: none;
+        }
+
+        /* .btn.change {
+            color: #db5c00;
+        } */
+
+        .dropdown-toggle::after {
+            margin-left: 2.2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 麵包屑＋篩選器 (Q：container/row 是否需要另外再命名還是用備註？) -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3 px-0"></div>
+
+            <!-- 麵包屑 -->
+            <div class="col-6 px-0">
+
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">瑜珈墊</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <!-- 篩選器 -->
+            <div class="col-3 px-0">
+
+                <div class="dropdown ">
+                    <button class="btn dropdown-toggle rounded-0 px-4 " type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        分類：選項
+                    </button>
+                    <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">價格由低到高</a>
+                        <a class="dropdown-item" href="#">價格由高到低</a>
+                        <a class="dropdown-item" href="#">熱銷排行</a>
+                        <a class="dropdown-item" href="#">上架時間由新到舊</a>
+                        <a class="dropdown-item" href="#">上架時間由舊到新</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./lib/jquery-3.5.1.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+
+    <script>
+
+        // 篩選器按鈕：hover 變顏色、dropdown-item：hover 變顏色
+
+        // $('#dropdownMenuButton').on('click', function () {
+        //     $('.btn').addClass('change');
+        // });
+
+
+    </script>
+
+</body>
+
+</html>
