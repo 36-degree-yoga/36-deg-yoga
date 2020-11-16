@@ -1,0 +1,46 @@
+footer {
+  padding: 4rem 0 0 0;
+  background-color: #004a13;
+}
+h6 {
+  color: #f2a200;
+}
+p a,
+p {
+  color: #fffefc;
+  line-height: 1.38rem;
+}
+hr {
+  margin: 15.1px 0 0 0.5px;
+  border: solid 2px #fffefc;
+  border-radius: 50%;
+}
+.copyright {
+  color: #f2a200;
+}
+#foot-info2 {
+  padding-left: 4rem;
+}
+#foot-info3 {
+  padding-left: 6rem;
+}
+.mobile-footer .col a {
+  color: #004a13;
+}
+@media (max-width: 576px) {
+  footer {
+    background-color: #fffefc;
+    border-top: solid 1px #004a13;
+    padding: 1rem 0 1rem 0;
+  }
+  .mobile-footer {
+  }
+  .pc-footer {
+    display: none;
+  }
+}
+@media (min-width: 577px) {
+  .mobile-footer {
+    display: none;
+  }
+}
