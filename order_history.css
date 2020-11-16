@@ -1,0 +1,105 @@
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 300;
+  font: #333333;
+}
+p {
+  line-height: 22px;
+}
+
+/* 訂單選單 */
+.list_option {
+  width: 100%;
+  margin-bottom: 60px;
+  cursor: pointer;
+}
+.list_option li {
+  border: 1px solid #333333;
+  text-align: center;
+  padding: 10px;
+}
+
+/* 訂單列表標題 */
+
+.order_list_wrap {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.order_top_word {
+  margin-bottom: 20px;
+}
+
+.order_title,
+.order_title_content {
+  width: 100%;
+  border: 1px solid #333;
+}
+
+.order_title li {
+  background-color: #fdebca;
+}
+
+.order_title li,
+.order_title_content li {
+  padding: 10px;
+  text-align: center;
+}
+
+.order_history_detail_btn {
+  height: 60px;
+  border-bottom: 1px solid #848484;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.order_history_detail_btn p {
+  font-weight: 500;
+  color: #f2a200;
+  margin-left: 5px;
+}
+.order_history_detail_btn img {
+  width: 20px;
+}
+
+/* <!-- 詳細區塊 --> */
+
+.order_details_page {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #848484;
+}
+
+.order_product_wrap {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.order_img_wrap {
+  width: 90px;
+  height: 90px;
+  background-color: lightblue;
+  margin-right: 20px;
+}
+
+.p_title {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.p_detail {
+  font-size: 0.8em;
+  line-height: 22px;
+}
+
+/*按鈕 */
+#buy_again {
+  margin-left: 20px;
+}
+.btn_s {
+  background-color: #004a13;
+  font-weight: 300;
+  color: #fffefc;
+  width: 108px;
+  height: 38px;
+  border: none;
+  border-radius: 4px;
+}
