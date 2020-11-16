@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>order_history</title>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="bootstrap/js/bootstrap.bundle.js" />
+    <link rel="stylesheet" href="CSS/reset.css" />
+    <link rel="stylesheet" href="order_history.css" />
+  </head>
+
+  <body class="d-flex">
+    <div class="order_list_history col-7">
+      <!-- 訂單選單 -->
+      <div class="order_list_option_wrap">
+        <ul class="d-flex list_option">
+          <li class="col" id="done">已完成訂單</li>
+          <li class="col" id="wait_pay">待付款</li>
+          <li class="col" id="wait_out">待出貨</li>
+          <li class="col" id="wait_take">待收貨</li>
+          <li class="col" id="cancel">已取消訂單</li>
+          <li class="col" id="order_return">退款/退貨</li>
+        </ul>
+      </div>
+
+      <!-- 訂單紀錄列表 -->
+      <div class="order_list_wrap">
+        <div class="order_item_wrap">
+          <div class="order_top_word">
+            <p>已於 <span id="top_date">2020-11-08</span> 完成訂單</p>
+          </div>
+
+          <ul class="d-flex order_title">
+            <li class="col">訂單編號</li>
+            <li class="col">下單日期</li>
+            <li class="col">付款狀態</li>
+            <li class="col">物流進度</li>
+            <li class="col">總金額</li>
+          </ul>
+          <ul class="d-flex order_title_content">
+            <li class="col" id="order_id">BE8882724</li>
+            <li class="col" id="order_at">2020/10/31</li>
+            <li class="col" id="order_pay">已付款</li>
+            <li class="col" id="order_transport">已送達</li>
+            <li class="col" id="order_moneny">NT$ 2000</li>
+          </ul>
+
+          <div
+            class="order_history_detail_btn d-flex align-items-center justify-content-center"
+          >
+            <img src="img/minus-o-icon.svg" alt="" />
+            <p>收起訂單明細</p>
+          </div>
+
+          <!-- 詳細區塊 -->
+
+          <div class="order_details_page">
+            <!-- 金額詳情 -->
+            <div class="order_money_detail d-flex justify-content-end">
+              <p>
+                商品總額: $<span id="order_total_pay">2000</span>&ensp; /&ensp;
+              </p>
+              <p>運費: $<span id="order_total_pay">0</span>&ensp; /&ensp;</p>
+              <p>折扣: -$<span id="order_total_pay">0</span> 元</p>
+            </div>
+
+            <!-- 商品 -->
+            <div class="order_product_wrap d-flex align-items-center">
+              <div class="detail_left">
+                <!-- 訂單商品圖 -->
+
+                <div class="order_img_wrap">
+                  <img class="p_img" src="" alt="" />
+                </div>
+                <!-- 商品尺寸 -->
+                <div class="product_detail d-flex flex-column align-self-start">
+                  <p class="p_title">超棒餘家電</p>
+                  <p class="p_detail">顏色:<span id="color"></span></p>
+                  <p class="p_detail">尺寸:<span id="size"></span></p>
+                  <p class="p_detail">重量:<span id="weight"></span>g</p>
+                </div>
+              </div>
+
+              <!-- 件數價錢 -->
+              <div class="count_price d-flex col-6">
+                <p>共<span class="count">1</span>件</p>
+                <p>NT$ <span class="price">2000</span></p>
+              </div>
+              </div>
+            </div>
+
+            <!-- 訂單狀態資訊跟按鈕 -->
+            <div
+              class="order_detail_bottom d-flex align-items-end justify-content-between"
+            >
+              <!-- 狀態 -->
+              <ul>
+                <li class="transport_pay_way d-flex justify-content-start">
+                  <p>
+                    寄送方式: <span id="transport_way">宅配</span>&ensp; /&ensp;
+                  </p>
+                  <p>付費方式: <span id="pay_way">ATM轉帳</span>&ensp;</p>
+                </li>
+                <li class="data_statu d-flex justify-content-start">
+                  <p>
+                    <span id="data">2020-11-02</span>&ensp;
+                    <span id="time">09:00</span>&ensp;
+                    <span id="order_event">出貨</span>
+                  </p>
+                </li>
+              </ul>
+
+              <!-- 按鈕 -->
+              <div class="btn-wrap d-flex">
+                <button class="btn_s" id="buy_again">再買一次</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
