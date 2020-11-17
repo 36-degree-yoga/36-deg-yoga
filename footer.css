@@ -21,6 +21,7 @@ p {
   height: 0.1px;
   border: solid 1px #fffefc;
   border-radius: 1px;
+  background-color: #fffefc;
 }
 .copyright {
   color: #f2a200;
