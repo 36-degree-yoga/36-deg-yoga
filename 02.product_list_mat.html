@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product_list_mat</title>
     
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="bootstrap/js/bootstrap.bundle.js">
     <link rel="stylesheet" href="CSS/reset.css">
-    <!-- 字體 -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    
     <style>
 
     
@@ -35,6 +34,74 @@
             
             font-size: 16px;
         }
+        /* 餅乾屑與篩選器↓↓ */
+        .breadcrumb-item>a:hover {
+            color: #db5c00;
+            font-weight: normal;
+            text-decoration: none;
+        }
+
+        .breadcrumb {
+            background-color: transparent;
+            padding: 0.5rem 1rem;
+
+        }
+
+        .breadcrumb-item>a,
+        .dropdown-item {
+            color: #004A13;
+            font-weight: lighter;
+        }
+
+        .breadcrumb-item+.breadcrumb-item::before {
+            color: #004A13;
+            content: " > ";
+        }
+
+        .breadcrumb-item.active {
+            color: #004A13;
+            font-weight: 500;
+        }
+
+
+        .btn,
+        .dropdown-menu {
+            border-color: #004A13;
+            color: #004A13;
+            background-color: #FFFEFC;
+        }
+
+        .dropdown-menu {
+            margin-top: 0;
+            top: -10px;
+        }
+
+
+        a.dropdown-item:active {
+            background-color: transparent;
+            color: #db5c00;
+            font-weight: normal;
+        }
+
+        a.dropdown-item:hover {
+            color: #db5c00;
+        }
+
+
+        .btn:focus {
+            box-shadow: none;
+        }
+
+        .btn:hover {
+            color: #004A13;
+            font-weight: 500;
+        }
+
+        .dropdown-toggle::after {
+            margin-left: 2.2rem;
+        }
+        /* 餅乾屑與篩選器↑↑ */
+
         /* ↓sidebar↓ */
         .test{
             width: 100%;
@@ -221,13 +288,13 @@
                             </div>
                             <div class="product_siderbar_title">
                                 <div class="title"><a href="#">輔具</a></div>
-                                <div class="subtitle"><a href="#">瑜珈磚</a></div>
-                                <div class="subtitle"><a href="#">支撐墊</a></div>
-                                <div class="subtitle"><a href="#">滾筒</a></div>
-                                <div class="subtitle"><a href="#">沙包</a></div>
-                                <div class="subtitle"><a href="#">伸展帶</a></div>
-                                <div class="subtitle"><a href="#">彈力帶</a></div>
-                                <div class="subtitle"><a href="#">舖巾</a></div>
+                                <div class="subtitle"><a href="#block">瑜珈磚</a></div>
+                                <div class="subtitle"><a href="#pad">支撐墊</a></div>
+                                <div class="subtitle"><a href="#roller">滾筒</a></div>
+                                <div class="subtitle"><a href="#sand">沙包</a></div>
+                                <div class="subtitle"><a href="#strap">伸展帶</a></div>
+                                <div class="subtitle"><a href="#band">彈力帶</a></div>
+                                <div class="subtitle"><a href="#towel">舖巾</a></div>
                             </div>
                         </div>
                 </div>
@@ -237,22 +304,27 @@
                 <!-- 餅乾屑與篩選器 -->
                 <div class="d-flex justify-content-between align-items-center" style="height: 120px;">
                     <!-- 餅乾屑 -->
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Library</li>
-                        </ol>
-                    </nav>
+                    <div class="col-6 px-0">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb mb-0">
+                                <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">瑜珈墊</li>
+                            </ol>
+                        </nav>
+                    </div>
 
                     <!-- 篩選器 -->
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown button
+                    <div class="dropdown ">
+                        <button class="btn dropdown-toggle rounded-0 px-4 " type="button" id="dropdownListButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            分類：選項
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-menu border-top-0 rounded-0" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">價格由低到高</a>
+                            <a class="dropdown-item" href="#">價格由高到低</a>
+                            <a class="dropdown-item" href="#">熱銷排行</a>
+                            <a class="dropdown-item" href="#">上架時間由新到舊</a>
+                            <a class="dropdown-item" href="#">上架時間由舊到新</a>
                         </div>
                     </div>
 
@@ -342,7 +414,8 @@
     </footer>
     
 
-    <script src="lib/jquery-3.5.1.js"></script>
+<script src="lib/jquery-3.5.1.js"></script>
+<script src="./bootstrap/js/bootstrap.bundle.js"></script>
 <script>
 
     // 點側bar標題後變化↓↓
@@ -383,15 +456,15 @@
         if(scrollTop < barFixed){
             $('.product_siderbar_wrap').removeClass('bottomFixed');
             $('.product_siderbar_wrap').removeClass('fixed');
-            console.log("1")
+            
         }else if(scrollTop < barUnFixd){
             $('.product_siderbar_wrap').removeClass('bottomFixed');
             $('.product_siderbar_wrap').addClass('fixed');
-            console.log("2")
+            
         }else{
             $('.product_siderbar_wrap').removeClass('fixed');
             $('.product_siderbar_wrap').addClass('bottomFixed');
-            console.log("3")
+            
         } 
     });
     // 側bar到一個位置fix住↑↑   
