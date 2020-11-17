@@ -10,6 +10,8 @@
     <style>
         * {
             font-family: 'Noto Sans TC', sans-serif;
+            /* outline: 1px solid red; */
+
         }
 
         .row {
@@ -68,15 +70,34 @@
         .dropdown-menu {
             border-color: #004A13;
             color: #004A13;
+            background-color: transparent;
         }
+
+        .dropdown-menu {
+            margin-top: 0;
+            top: -10px;
+        }
+
+
+        a.dropdown-item:active {
+            background-color: transparent;
+            color: #db5c00;
+            font-weight: normal;
+        }
+
+        a.dropdown-item:hover {
+            color: #db5c00;
+        }
+
 
         .btn:focus {
             box-shadow: none;
         }
 
-        /* .btn.change {
-            color: #db5c00;
-        } */
+        .btn:hover {
+            color: #004A13;
+            font-weight: 500;
+        }
 
         .dropdown-toggle::after {
             margin-left: 2.2rem;
@@ -92,33 +113,46 @@
         <div class="row">
             <div class="col-3 px-0"></div>
 
-            <!-- 麵包屑 -->
-            <div class="col-6 px-0">
 
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb mb-0">
-                        <li class="breadcrumb-item"><a href="#">首頁</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">瑜珈墊</li>
-                    </ol>
-                </nav>
+            <div class="col-8 px-0">
+
+                <div class="wrap d-flex justify-content-between">
+
+
+                    <!-- 麵包屑 -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">瑜珈墊</li>
+                        </ol>
+                    </nav>
+
+
+                    <!-- 篩選器 -->
+                    <div class="dropdown ">
+                        <button class="btn dropdown-toggle rounded-0 px-4 " type="button" id="dropdownListButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            分類：選項
+                        </button>
+                        <div class="dropdown-menu border-top-0 rounded-0" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">價格由低到高</a>
+                            <a class="dropdown-item" href="#">價格由高到低</a>
+                            <a class="dropdown-item" href="#">熱銷排行</a>
+                            <a class="dropdown-item" href="#">上架時間由新到舊</a>
+                            <a class="dropdown-item" href="#">上架時間由舊到新</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
             </div>
 
-            <!-- 篩選器 -->
-            <div class="col-3 px-0">
 
-                <div class="dropdown ">
-                    <button class="btn dropdown-toggle rounded-0 px-4 " type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        分類：選項
-                    </button>
-                    <div class="dropdown-menu rounded-0" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">價格由低到高</a>
-                        <a class="dropdown-item" href="#">價格由高到低</a>
-                        <a class="dropdown-item" href="#">熱銷排行</a>
-                        <a class="dropdown-item" href="#">上架時間由新到舊</a>
-                        <a class="dropdown-item" href="#">上架時間由舊到新</a>
-                    </div>
-                </div>
+            <div class="col-1 px-0">
+
+
 
             </div>
         </div>
@@ -132,10 +166,13 @@
 
         // 篩選器按鈕：hover 變顏色、dropdown-item：hover 變顏色
 
-        // $('#dropdownMenuButton').on('click', function () {
-        //     $('.btn').addClass('change');
+        // $('dropdown-item').on('hover', function () {
+        //     $(this).css('color', '#db5c00');
         // });
 
+        // $('#dropdownListButton').on('hover', function () {
+        //     $(this).css('color', '#db5c00');
+        // });
 
     </script>
 
