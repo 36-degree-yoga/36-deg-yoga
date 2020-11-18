@@ -1,0 +1,49 @@
+body,
+html {
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
+  background-color: #fffefc;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 56px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+h4 {
+  font-size: 32px;
+}
+h5 {
+  font-size: 28px;
+}
+
+h6 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* 間距↓↓ */
+.space_30 {
+  width: 100%;
+  height: 30px;
+}
+.space_60 {
+  width: 100%;
+  height: 60px;
+}
+.space_120 {
+  width: 100%;
+  height: 120px;
+}
+/* 間距↑↑ */
