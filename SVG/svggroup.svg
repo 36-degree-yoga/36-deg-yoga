@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+
+<symbol id="move" data-name="move"  width="50" height="50" viewBox="0 0 50 50">
+  <g id="Group_1212" data-name="Group 1212" transform="translate(-7794 -1239)">
+    <g id="Group_1211" data-name="Group 1211">
+      <g id="Group_1210" data-name="Group 1210">
+        <g id="Group_1204" data-name="Group 1204" transform="translate(116 -188)">
+          <g id="Group_1203" data-name="Group 1203">
+            <g id="Group_1202" data-name="Group 1202" transform="translate(-0.048 -1)">
+              <path id="Polygon_2" data-name="Polygon 2" d="M8,0l8,8H0Z" transform="translate(7695.048 1428)" fill="#004a13"/>
+            </g>
+            <rect id="Rectangle_1148" data-name="Rectangle 1148" width="6" height="38" transform="translate(7700 1433)" fill="#004a13"/>
+            <rect id="Rectangle_1149" data-name="Rectangle 1149" width="6" height="38" transform="translate(7722 1449) rotate(90)" fill="#004a13"/>
+            <g id="Group_1207" data-name="Group 1207" transform="translate(15406.048 2905) rotate(180)">
+              <path id="Polygon_2-2" data-name="Polygon 2" d="M8,0l8,8H0Z" transform="translate(7695.048 1428)" fill="#004a13"/>
+            </g>
+            <g id="Group_1208" data-name="Group 1208" transform="translate(9156 -6251.048) rotate(90)">
+              <path id="Polygon_2-3" data-name="Polygon 2" d="M8,0l8,8H0Z" transform="translate(7695.048 1428)" fill="#004a13"/>
+            </g>
+            <g id="Group_1209" data-name="Group 1209" transform="translate(6250 9155.048) rotate(-90)">
+              <path id="Polygon_2-4" data-name="Polygon 2" d="M8,0l8,8H0Z" transform="translate(7695.048 1428)" fill="#004a13"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</symbol>
+
+
+<!-- 放大ICON -->
+<symbol id="zoom_in" data-name="zoom_in" width="50" height="50" viewBox="0 0 50 50">
+  <g id="icon_-_search" data-name="icon - search">
+    <path id="Path_99" data-name="Path 99" d="M50,45.6,39.623,35.22a21.531,21.531,0,0,0,4.4-13.208A21.877,21.877,0,0,0,22.013,0,21.877,21.877,0,0,0,0,22.013,21.877,21.877,0,0,0,22.013,44.025a21.531,21.531,0,0,0,13.208-4.4L45.6,50ZM6.289,22.013A15.571,15.571,0,0,1,22.013,6.289,15.571,15.571,0,0,1,37.736,22.013,15.571,15.571,0,0,1,22.013,37.736,15.571,15.571,0,0,1,6.289,22.013Z" fill="#004a13"/>
+  </g>
+  <g id="button_-_add_-_big" data-name="button - add - big" transform="translate(10 10)">
+    <g id="Group_1139" data-name="Group 1139" transform="translate(-7555 369)">
+      <rect id="Rectangle_1104" data-name="Rectangle 1104" width="24" height="4" transform="translate(7569 -369) rotate(90)" fill="#004a13"/>
+      <rect id="Rectangle_1106" data-name="Rectangle 1106" width="24" height="4" transform="translate(7555 -359)" fill="#004a13"/>
+    </g>
+  </g>
+</symbol>
+
+
+
+<!-- 縮小icon -->
+<symbol id="zoom_out" data-name="oom_out"  width="50" height="50" viewBox="0 0 50 50">
+  <g id="Group_1201" data-name="Group 1201" transform="translate(-7665 -1458)">
+    <g id="icon_-_search" data-name="icon - search" transform="translate(7665 1458)">
+      <path id="Path_99" data-name="Path 99" d="M50,45.6,39.623,35.22a21.531,21.531,0,0,0,4.4-13.208A21.877,21.877,0,0,0,22.013,0,21.877,21.877,0,0,0,0,22.013,21.877,21.877,0,0,0,22.013,44.025a21.531,21.531,0,0,0,13.208-4.4L45.6,50ZM6.289,22.013A15.571,15.571,0,0,1,22.013,6.289,15.571,15.571,0,0,1,37.736,22.013,15.571,15.571,0,0,1,22.013,37.736,15.571,15.571,0,0,1,6.289,22.013Z" fill="#004a13"/>
+    </g>
+  </g>
+  <rect id="Rectangle_1146" data-name="Rectangle 1146" width="24" height="4" transform="translate(10 20)" fill="#004a13"/>
+</symbol>
+
+
+<!-- 無圓框+號 -->
+<symbol  width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="plus">
+      <rect width="16" height="16" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Repeat_Grid_43" data-name="Repeat Grid 43" clip-path="url(#clip-path)">
+    <g transform="translate(-1263 -247)">
+      <g id="button_-_add_-_big" data-name="button - add - big" transform="translate(1263 247)">
+        <g id="Group_1139" data-name="Group 1139" transform="translate(-7555 369)">
+          <rect id="Rectangle_1104" data-name="Rectangle 1104" width="16" height="4" transform="translate(7565 -369) rotate(90)" fill="#191919"/>
+          <rect id="Rectangle_1106" data-name="Rectangle 1106" width="16" height="4" transform="translate(7555 -363)" fill="#191919"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</symbol>
+
+
+<!-- 無圓框減號 -->
+ <symbol id="minus" data-name="minus"  width="16" height="16" viewBox="0 0 16 16">
+                <g id="Group_1139" data-name="Group 1139" transform="translate(-7555 363)">
+                  <rect id="Rectangle_1106" data-name="Rectangle 1106" width="16" height="4" transform="translate(7555 -363)" fill="#191919"/>
+                </g>
+              </symbol>
+
+
+
+
+
+</svg>
+
+
+
