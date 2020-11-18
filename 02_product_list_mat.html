@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="bootstrap/js/bootstrap.bundle.js">
     <link rel="stylesheet" href="CSS/reset.css">
     
+    <link rel="stylesheet" href="share.css">
     
     <style>
 
@@ -26,6 +27,10 @@
         h1{
             font-size: 64px;
             font-weight: 700;
+        }
+        h3{
+            font-size: 40px;
+            font-weight: 500;
         }
         h6{
             font-size: 24px;
@@ -195,6 +200,7 @@
             width: 225.7px;
             height: 295px;
             background-color: blue;
+            cursor: pointer;
         }
         .mat_list_pic{
             width: 468px;
@@ -212,6 +218,62 @@
             background-color: #ccc;
         }
 
+        /* 彈跳視窗↓↓ */
+        #exampleModal{
+           
+        }
+        .modal-dialog{
+            border-radius: 4px;
+            
+        }
+        .close{
+            opacity: 1;
+        }
+        .modal-header{
+            border-bottom:0;
+        }
+        button:focus{
+            outline: 1px #FFFEFC;
+        }
+        .modal-footer{
+            border-top:0; 
+        }
+        .modal-content {
+        border:2px solid #004A13;
+        border-radius: 4px;
+        width: 100%;
+        background: #FFFEFC;
+        opacity: 1;
+        }
+        /* 彈跳視窗↑↑ */
+
+        /* quick_view↓↓ */
+        :focus {
+        opacity: 1;
+        }
+        .quick_view_img_wrap{
+            width: 349.7px;
+            height: 458px;
+            background-color: #db5c00;
+        }
+        @media (min-width: 576px){
+            .modal-dialog {
+                max-width: 1000px;
+                margin: 1.75rem auto;
+            }
+        }
+
+        .color_circle{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #F2A200;
+            margin: 0 15px;
+        }
+        /* quick_view↑↑ */
+
+        
+    
     </style>
 </head>
 <body>
@@ -330,9 +392,9 @@
 
                 </div>
                 <!-- 一般產品列表 -->
-                <div class="d-flex justify-content-between flex-wrap" id="std">
+                <div class="d-flex justify-content-between flex-wrap" id="std" name="std">
                     <div class="product">
-                        <div class="product_img_wrap">
+                        <div class="product_img_wrap" data-toggle="modal" data-target="#exampleModal">
                             <img src="" alt=""> 
                         </div>
                         <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
@@ -406,7 +468,66 @@
         </div>
   
     </div>
-    
+
+   
+  
+    <!-- 彈跳視窗↓↓ -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                    <img src="./SVG/delete.svg" alt="">
+                </span>
+            </button>
+            </div>
+            <div class="modal-body d-flex justify-content-center">
+            
+                <div class="quick_view_img_wrap">
+                    <img src="" alt="">
+                </div>
+                <div class="ml-5">
+                    <h3>瑜珈墊</h3>
+                    <div class="space_30"></div>
+                    <div>
+                        防滑
+                    </div>
+                    <div class="space_30"></div>
+                    <p style="line-height: 30px;">
+                        1. 全新結構，提供手腕與腳踝最佳緩衝及保護。
+                        <br>
+                        2. 天然橡膠材質，乾濕止滑效果優異。
+                        <br>
+                        3. 表面特殊波紋壓痕處理，提升質感並增加磨擦阻力係數。
+                        
+                    </p>
+                    <div class="space_30"></div>
+                    <div class="d-flex align-items-center">
+                        <div style="width: 10px;height: 20px;background-color: #db5c00;"></div>
+                        <h6 class="ml-2">NT. 1,000</h6>
+                    </div>
+                    <div class="space_60"></div>
+                    <div class="d-flex">
+                        <div class="color_circle"></div>
+                        <div class="color_circle"></div>
+                        <div class="color_circle"></div>
+                    </div>
+                    <div class="space_60"></div>
+                    <div>
+                        <button class="btn_f" style="margin-right: 20px;">了解更多</button>
+                        <button class="btn_l">加入購物車</button>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="modal-footer">
+               <div class="space_30"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- 彈跳視窗↑↑ -->    
 
     <footer>
         <div style="width:100%;height: 120px;"></div>
@@ -469,6 +590,11 @@
     });
     // 側bar到一個位置fix住↑↑   
 
+    
+    
+    
 </script>
+
+
 </body>
 </html>
