@@ -1,0 +1,319 @@
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  margin: 80px 0 5px 0;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  background: rgb(219, 219, 219);
+}
+
+.custom {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  height: 100vh;
+}
+
+@media (max-width: 500px) {
+  .custom {
+    display: none;
+  }
+}
+
+p {
+  font-size: 1rem;
+  line-height: 22px;
+}
+
+h5 {
+  font-size: 1.75rem;
+}
+
+.custom_page {
+  height: 100%;
+  border: 1px solid #848484;
+  /* margin: 10px; */
+  background-color: #fffefc;
+  padding-left: 60px;
+  padding-bottom: 60px;
+}
+
+.mat_show_wrap {
+  background-color: rgb(214, 145, 145);
+  border-radius: 4px;
+  width: 180px;
+  height: 550px;
+  box-shadow: 0px 5px 6px #848484;
+}
+
+/* 呈現區 */
+.zoom_icon svg {
+  margin-top: 30px;
+  width: 50px;
+  height: 50px;
+}
+
+/* 選項區 */
+
+.custom_optiom_wrap {
+  width: 100%;
+  padding: 60px 0 0;
+  height: 100%;
+}
+
+.custom_title_wrap,
+.custom_btn,
+.option_container {
+  width: 560px;
+}
+.custom_title_wrap {
+  margin-bottom: 30px;
+}
+
+.custom_total_price {
+  color: #db5c00;
+  font-size: 1.75rem;
+}
+
+.add_cart_icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.count {
+  font-size: 24px;
+  color: #004a13;
+}
+
+.custom_btn {
+  margin-bottom: 30px;
+}
+
+.done_btn button {
+  margin-left: 20px;
+}
+
+/* 選項區框框裡 */
+.all_option_wrap {
+  height: 80%;
+  width: 580px;
+  overflow-y: auto;
+}
+
+/* 邊框粗細 */
+.option_button,
+.option_item_title_wrap {
+  border: 1px solid #848484;
+  border-collapse: collapse;
+  background-color: rgba(255, 249, 237, 0.5);
+}
+
+.option_item_title_wrap,
+.option_button {
+  border-left: 2px solid #848484;
+  border-right: 2px solid #848484;
+}
+
+.bt2 {
+  border-top: 2px solid #848484;
+}
+.bb2 {
+  border-bottom: 2px solid #848484;
+}
+
+.btno {
+  border-top: none;
+  border-bottom: 2px solid #848484;
+}
+
+.option_item_title_wrap {
+  align-items: center;
+  height: 50px;
+  padding: 0 30px;
+}
+
+.item_title {
+  font-weight: 700;
+  margin-right: 30px;
+
+}
+
+/* +- */
+.fold {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  background-image: url(SVG/svggroup.svg#minus);
+}
+.fold .less {
+  width: 16px;
+  height: 4px;
+}
+
+.fold .more {
+  width: 16px;
+  height: 16px;
+}
+
+.option_button {
+  padding: 30px;
+}
+
+.how {
+  text-align: right;
+}
+
+.how a {
+  font-size: 14px;
+  color: #f2a200;
+}
+
+/*長寬 */
+
+.long_btn button,
+.width_btn button {
+  width: 65px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+/* 厚度 */
+.thickness button {
+  width: 65px;
+  margin-right: 30px;
+}
+
+/* 材質 */
+
+.texture button {
+  width: 90px;
+  margin-right: 30px;
+}
+
+.texture p {
+  margin-left: -10px;
+}
+
+/* 顏色 */
+.color {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #848484;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+/* 圖案 */
+.img_item_wrap {
+  margin-bottom: 30px;
+}
+
+.img_item {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #848484;
+  margin-right: 20px;
+  border-radius: 4px;
+}
+.img_defining button {
+  margin-right: 20px;
+}
+
+/* 文字 */
+.print {
+  margin-bottom: 30px;
+}
+.print button {
+  margin-right: 20px;
+}
+
+.print span {
+  margin-right: 30px;
+}
+
+.add_text {
+  margin-bottom: 20px;
+}
+.add_text input {
+  margin-right: 20px;
+}
+
+.btn_f {
+  background-color: #004a13;
+  font-weight: 400;
+  color: #fffefc;
+  width: 108px;
+  height: 38px;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn_l {
+  background-color: transparent;
+  font-weight: 400;
+  color: #004a13;
+  width: 108px;
+  height: 38px;
+  border: 2px solid #004a13;
+  border-radius: 4px;
+}
+
+/* JQ  CLASS */
+
+.option_hide {
+ display: none;
+}
+
+/* mobile */
+
+.m_custom {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .m_custom {
+    display: block;
+  }
+  .m_custom_header {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .m_custom_header button {
+    width: 80px;
+    height: 40px;
+  }
+  .m_custom_header div {
+    padding-left: 65px;
+  }
+
+  .custom_total_price {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .custom_title_wrap,
+  .custom_btn,
+  .option_container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .mat_show_wrap {
+    height: 380px;
+    width: 150px;
+  }
+
+  .mat_space .zoom_icon svg use {
+    width: 30px;
+  }
+  .red {
+    filter: drop-shadow(red);
+  }
+}

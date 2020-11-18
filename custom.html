@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>custom</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="bootstrap/js/bootstrap.bundle.js" />
+    <link rel="stylesheet" href="CSS/reset.css" />
+    <link rel="stylesheet" href="custom.css" />
+  </head>
+
+  <body>
+    <div class="custom container-fluid">
+        
+      <div class="custom_page d-flex no-wrap">
+        
+        <!-- 縮放ICON -->
+        <div class="zoom_icon  d-flex flex-column align-self-end col-1">
+            <svg> <use xlink:href="SVG/svggroup.svg#move"/> </svg>
+            <svg> <use xlink:href="SVG/svggroup.svg#zoom_in"/> </svg>
+            <svg> <use xlink:href="SVG/svggroup.svg#zoom_out"/> </svg>
+
+        </div>
+
+
+        <!-- 瑜珈墊製作區 -->
+        <div class="mat_space d-flex align-items-center justify-content-center col-4">
+
+          <div class="mat_show_wrap"></div>
+
+        </div>
+
+        
+
+        <!-- 選項區域 -->
+        <div class="custom_optiom_wrap col-5">
+          <!-- 大標 -->
+          <div class="custom_title_wrap d-flex justify-content-between">
+            <div><h5>製作你的瑜珈墊</h5></div>
+            <p class="custom_total_price">
+              共計NT.&nbsp;<span>1239</span>&ensp;元
+            </p>
+          </div>
+
+
+
+          <!-- 工能按鈕 -->
+          <div class="custom_btn d-flex justify-content-between">
+
+            <!-- 記數器 -->
+            <div class="cart_count_wrap d-flex justify-content-between col align-items-lg-center">
+                  <!-- - -->
+              <div class="minus add_cart_icon">
+                <img src="SVG/custom/minus_g_icon.svg"  alt="">
+              </div>
+                <!-- 數量 -->
+              <div class="count">1</div>
+                  <!-- + -->
+              <div class="plus add_cart_icon">
+              <img src="SVG/custom/plus_g_icon.svg"  alt="">
+              </div>
+            </div>
+          
+            <div class="done_btn">
+              <button class="btn_l">儲存設計</button>
+              <button class="btn_l" >直接購買</button>
+              <button class="btn_f">加入購物車</button>
+            </div>
+          </div>
+          
+
+
+          <!-- 選項框 -->
+          <div class="all_option_wrap">
+              <div class="option_container">
+                  <!-- 長寬上框 -->
+                  <div class="bt2 option_item_title_wrap bt2 d-flex justify-content-between">
+                    <div class="item_wrap">
+                        <div class="item_title">長度選項</div>
+                        <div class="choose"></div> </div>
+                    
+                          <div class="fold">
+                             <svg class="less"><use xlink:href="SVG/svggroup.svg#minus"/></svg>
+                            </div>
+                    
+                    
+                   
+                  </div>
+                  <!-- 下框選項 -->
+                  <div class="option_button d-flex ">
+                    <div class="long_btn d-flex flex-column col">
+                        <p>長/cm</p>
+                        <button class="btn_l" class="">173</button>
+                        <button class="btn_f">183</button>
+                        <button class="btn_l">193</button>
+                    </div>
+                    <div class="width_btn  col">
+                        <p>寬/cm</p>
+                        <button class="btn_l">61</button><br>
+                        <button class="btn_l">68</button><br>
+                        <button class="btn_l">80</button><br>
+                        <button class="btn_f">180</button><span>+ $200</span>
+                    </div>
+                    <div class="how  align-self-end "><a href="">
+                        如何挑選尺寸
+                    </a></div>
+    
+                  </div>
+              </div>
+                
+               <!-- ...... -->
+    
+                  <!-- 厚度選項框 -->
+              <div class="option_container">
+                <!-- 上框 -->
+              <div class="option_item_title_wrap d-flex justify-content-between">
+                  <div class="item_wrap ">
+                      <div class="item_title">厚度選項</div>
+                      <div class="choose"></div>
+                   </div>
+                  
+                  
+                  <div class="fold">
+                    <svg class="less"> <use xlink:href="SVG/svggroup.svg#minus"/> </svg>
+                </div>
+                </div>
+                <!-- 下框選項 -->
+                <div class="option_button d-flex">
+                    <div class="btn-content thickness d-flex col"><button class="btn_l">3.5</button>
+                    <button class="btn_l">5.0</button>
+                    <button class="btn_l">8.0</button>
+                    <p class="align-self-end">mm</p></div>
+                    <div class="how align-self-end"><a href="">
+                        如何挑選厚度
+                    </a></div>
+                </div>
+            </div>
+              
+             <!-- ...... -->
+    
+                <!-- 材質框 -->
+                <div class="option_container">
+                    <!-- 上框 -->
+                    <div class="option_item_title_wrap d-flex justify-content-between">
+                        <div class="item_wrap">
+                            <div class="item_title">材質選項</div>
+                            <div class="choose"></div>
+                         </div>
+                        
+                        
+                        <div class="fold">
+                            <svg class="less"> <use xlink:href="SVG/svggroup.svg#minus"/> </svg>
+                      </div>
+                      </div>
+                    <!-- 下框選項 -->
+                    <div class="option_button d-flex">
+                        <div class="btn-content 
+                        texture d-flex col"><button class="btn_l">TPE</button>
+                            <button class="btn_l">NR</button>
+                            <p class="align-self-center">+ $200</p>
+                            </div>
+      
+                        <div class="how  align-self-end "><a href="">
+                            材質差異
+                        </a></div>
+                    </div>
+                </div>
+                  
+                 <!-- ...... -->
+    
+                    <!-- 顏色框 -->
+              <div class="option_container">
+                <!-- 上框 -->
+                <div class="option_item_title_wrap d-flex justify-content-between">
+                    <div class="item_wrap">
+                        <div class="item_title">顏色選項</div>
+                        <div class="choose"></div>
+                     </div>
+                    
+                    
+                    <div class="fold">
+                        <svg class="less"> <use xlink:href="SVG/svggroup.svg#minus"/> </svg>
+                  </div>
+                  </div>
+                <!-- 下框選項 -->
+                <div class="option_button d-flex justify-content-between">
+                    <div class="color_wrap d-flex align-items-center">
+                        <div class="color"></div>
+                        <div class="color"></div>
+                        <div class="color"></div>
+                        <div class="color"></div>
+                        <div class="color"></div> 
+    
+                    </div>
+                    <div class="color_defining d-flex align-items-center -">
+                        <div class="color "></div>
+                        <button class="btn_f">自定義顏色</button>
+                    </div>
+                </div>
+            </div>
+              
+             <!-- ...... -->
+    
+                <!-- 圖案框 -->
+                <div class="option_container">
+                    <!-- 上框 -->
+                    <div class="option_item_title_wrap d-flex justify-content-between">
+                        <div class="item_wrap">
+                            <div class="item_title">圖案選項</div>
+                            <div class="choose"></div>
+                         </div>
+                        
+                        
+                         <div class="fold">
+                          <svg class="less"> <use xlink:href="SVG/svggroup.svg#minus"/> </svg>
+                    </div>
+                      </div>
+                    <!-- 下框選項 -->
+                    <div class="option_button d-flex flex-column">
+                        <div class="img_item_wrap d-flex">
+                            <div class="img_item"></div>
+                            <div class="img_item"></div>
+                            <div class="img_item"></div>
+                            <div class="img_item"></div>
+                            <div class="img_item"></div>
+                        </div>
+                        
+                        <div class="img_defining d-flex align-items-center">
+                            <div></div>
+                            <button class="btn_f">上傳圖片</button>
+                            <p >限  PNG、JPG、BMP、GIF 圖檔 </p>
+                        </div>
+                    </div>
+                </div>
+                  
+                 <!-- ...... -->
+    
+                    <!-- 文字框 -->
+              <div class="option_container">
+                <!-- 上框 -->
+                <div class="bb2 option_item_title_wrap d-flex justify-content-between">
+                    <div class="item_wrap ">
+                        <div class="item_title">文字選項</div>
+                        <div class="choose"></div>
+                     </div>
+                    
+                    
+                    <div class="fold">
+                        <svg class="less"> <use xlink:href="SVG/svggroup.svg#minus"/> </svg>
+                  </div>
+                  </div>
+                <!-- 下框選項 -->
+                <div class="btno option_button d-flex flex-column">
+                    <div class="print btn-content d-flex align-items-center">
+                        <button class="btn_l">印刷</button>
+                    <button class="btn_f">鋼印</button><span>+ $80</span>
+                    </div>
+                <div class="add_text d-flex justify-content-between">
+                    <input type="text" class="col"><button class="btn_f">新增文字</button>
+                </div>
+                <div class="how d-flex  justify-content-end align-self-end"><a href="">
+                    鋼印和印刷差別
+                </a></div>
+    
+                </div>
+          </all_option_wrap>
+
+                
+           
+        </div>
+          
+         <!-- ...... -->
+          <!-- 關閉區 -->
+         <div class="page_close col-1"></div>
+        
+        </div>
+
+
+
+
+        </div>
+
+        <div class="page_close col-1"></div>
+      </div>
+    </div>
+
+<!-------- 手機------ -->
+
+
+    <div class="m_custom container-fluid">
+
+
+
+      <div class="m_custom_header d-flex  justify-content-between align-items-center">
+          <img class="" src="SVG/delete.svg" width="30px" alt="">
+          <div class="">製作你的瑜珈墊</div>
+          <button class=" btn_f">下一步</button>     
+      </div>
+
+      <!-- 第二航標題功能 -->
+      <div class="custom_title_wrap d-flex justify-content-between align-items-center col">
+        
+        <p class="custom_total_price">
+          共計NT.&nbsp;<span>1239</span>&ensp;元
+        </p>
+
+          <!-- - -->
+          <div class="minus add_cart_icon">
+            <img src="SVG/custom/minus_g_icon.svg"  alt="">
+          </div>
+          <!-- 數量 -->
+          <div class="count">1</div>
+          <!-- + -->
+          <div class="plus add_cart_icon">
+            <img src="SVG/custom/plus_g_icon.svg"  alt="">
+          </div>
+        </div>
+      </div>
+      <!-- 魚價電顯示 -->
+<!-- 
+      <div class="mat_space d-flex  justify-content-center">
+
+          <div class="mat_show_wrap "></div>
+          <div class="zoom_icon  d-flex flex-column align-self-end col-1">
+            <svg class="red"> <use xlink:href="svg/svggroup.svg#move"/> </svg>
+            <svg> <use xlink:href="svg/svggroup.svg#zoom_in"/> </svg>
+            <svg> <use xlink:href="svg/svggroup.svg#zoom_out"/> </svg>
+
+        </div>
+
+      </div> -->
+
+
+  
+  
+
+      <!-- 手機板外框底↓-->
+    </div>
+  
+
+    <script src="lib/jquery-3.5.1.js"></script>
+    <script>
+      let hide=$('.fold').parent().next();
+
+
+      
+            hide.toggleClass('d-flex');
+            hide.addClass('option_hide');
+      
+
+let foldFrist = $('.fold').first();
+let fold= $(foldFrist).parent().next();
+    fold.toggleClass('d-flex');
+    fold.addClass('option_hide');
+
+
+
+        $('.fold').on('click',function(){
+            let hide=$(this).parent().next();
+            // let icon=$(this).children().eq(1);
+            hide.toggleClass('d-flex')
+            hide.addClass('option_hide');
+        });
+    </script>
+
+
+  </body>
+</html>
