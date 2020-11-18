@@ -49,9 +49,9 @@ p {
 /* 間距↑↑ */
 
 /* 綠底按鈕↓↓ */
-.btn_s {
+.btn_f {
   background-color: #004a13;
-  font-weight: 300;
+  font-weight: 400;
   color: #fffefc;
   width: 108px;
   height: 38px;
@@ -63,7 +63,7 @@ p {
 /* 線按鈕↓↓ */
 .btn_l {
   background-color: transparent;
-  font-weight: 300;
+  font-weight: 400;
   color: #004a13;
   width: 108px;
   height: 38px;
