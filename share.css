@@ -47,3 +47,27 @@ p {
   height: 120px;
 }
 /* 間距↑↑ */
+
+/* 綠底按鈕↓↓ */
+.btn_s {
+  background-color: #004a13;
+  font-weight: 300;
+  color: #fffefc;
+  width: 108px;
+  height: 38px;
+  border: none;
+  border-radius: 4px;
+}
+/* 綠底按鈕↑↑ */
+
+/* 線按鈕↓↓ */
+.btn_l {
+  background-color: transparent;
+  font-weight: 300;
+  color: #004a13;
+  width: 108px;
+  height: 38px;
+  border: 2px solid #004a13;
+  border-radius: 4px;
+}
+/* 線按鈕↑↑ */
