@@ -1,0 +1,30 @@
+* {
+  outline: 1px soild #ab2800;
+}
+.nav-place-zone {
+  width: 100%;
+  height: 7.5rem;
+  border-bottom: 1px solid #004a13;
+  background: rgba(255, 254, 252, 0.8);
+}
+
+.login-btn,
+.regist-btn {
+  width: 33%;
+  border: 2px solid #004a13;
+  border-radius: 4px 4px 0px 0px;
+  line-height: 60px;
+  border-bottom: none;
+  margin-top: 5rem;
+}
+.login-floor,
+.regist-floor {
+  border: 2px solid #004a13;
+  border-radius: 0px 4px 4px 4px;
+  width: 100%;
+}
+
+/* 套用class */
+.display-none {
+  display: none;
+}
