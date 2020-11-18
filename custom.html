@@ -288,7 +288,7 @@
 <!-------- 手機------ -->
 
 
-    <div class="m_custom container-fluid">
+    <div class="m_custom">
 
 
 
@@ -317,19 +317,17 @@
           </div>
         </div>
       </div>
-      <!-- 魚價電顯示 -->
-<!-- 
-      <div class="mat_space d-flex  justify-content-center">
+      <!-- 瑜珈墊顯示 -->
 
-          <div class="mat_show_wrap "></div>
-          <div class="zoom_icon  d-flex flex-column align-self-end col-1">
-            <svg class="red"> <use xlink:href="svg/svggroup.svg#move"/> </svg>
-            <svg> <use xlink:href="svg/svggroup.svg#zoom_in"/> </svg>
-            <svg> <use xlink:href="svg/svggroup.svg#zoom_out"/> </svg>
+      <div class="m_mat_space d-flex  justify-content-center">
+
+          <div class="m_mat_show_wrap "></div>
+          <div class="m_zoom_icon  d-flex flex-column align-self-end col-1">
+  
 
         </div>
 
-      </div> -->
+      </div>
 
 
   
@@ -342,9 +340,6 @@
     <script src="lib/jquery-3.5.1.js"></script>
     <script>
       let hide=$('.fold').parent().next();
-
-
-      
             hide.toggleClass('d-flex');
             hide.addClass('option_hide');
       
@@ -357,10 +352,13 @@ let fold= $(foldFrist).parent().next();
 
 
         $('.fold').on('click',function(){
-            let hide=$(this).parent().next();
-            // let icon=$(this).children().eq(1);
-            hide.toggleClass('d-flex')
+          let hide=$('.fold').parent().next();
+            hide.removeClass('d-flex');
             hide.addClass('option_hide');
+            let show=$(this).parent().next();
+            // let icon=$(this).children().eq(1);
+            show.toggleClass('d-flex')
+            show.addClass('option_hide');
         });
     </script>
 

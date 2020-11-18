@@ -305,12 +305,13 @@ h5 {
     padding: 15px;
   }
 
-  .mat_show_wrap {
+  .m_mat_show_wrap {
     height: 380px;
     width: 150px;
+    background-color: rgb(201, 148, 148);
   }
 
-  .mat_space .zoom_icon svg use {
+  .m_mat_space .zoom_icon svg use {
     width: 30px;
   }
   .red {
