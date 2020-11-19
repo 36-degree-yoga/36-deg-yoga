@@ -370,30 +370,6 @@
 
         /* 產品資訊下拉按鈕 ↑ */
 
-        /* 撰寫商品評論 & 產品問題詢問 下拉按鈕 ↓*/
-
-        .write-reviews-btn,
-        .ask-questions-btn {
-            border-radius: 4px;
-            color: #FFFEFC;
-            background-color: #004a13;
-            margin-left: 20px;
-
-        }
-
-        .write-reviews-btn:hover,
-        .ask-questions-btn:hover {
-            color: #004a13;
-            background-color: transparent;
-            font-weight: 600;
-            text-decoration: none;
-        }
-
-
-
-
-        /* 撰寫商品評論下拉按鈕 ↑ */
-
         /* 猜你喜歡 推薦商品 ↓↓  */
 
         .product-zone {
@@ -416,6 +392,103 @@
         }
 
         /* 猜你喜歡 推薦商品 ↑↑*/
+
+        /* 撰寫商品評論 & 產品問題詢問 下拉按鈕 ↓*/
+
+        .write-reviews-btn,
+        .ask-questions-btn {
+            border-radius: 4px;
+            color: #FFFEFC;
+            background-color: #004a13;
+            margin-left: 20px;
+
+        }
+
+        .write-reviews-btn:hover,
+        .ask-questions-btn:hover {
+            color: #004a13;
+            background-color: transparent;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* 撰寫商品評論下拉按鈕 ↑ */
+
+        /* 區塊4 評論頁籤 */
+        .nav-pills .nav-link {
+            border-radius: 0;
+        }
+
+        .nav-pills .nav-link.active {
+            border-bottom: 2px solid #db5c00;
+            color: #db5c00;
+            background-color: #FFFEFC
+        }
+
+        /* 區塊4 search-bar */
+        .form-control:focus {
+            border-color: #333333;
+            box-shadow: none;
+        }
+
+        .search-icon {
+            border-radius: 0%;
+            border: 1.5px solid #333333;
+        }
+
+        /* .search-icon::before {
+            content: "";
+            background-image: url("./SVG/search-icon.svg");
+            display: block;
+            width: 30px;
+            height: 30px;
+        } */
+
+        /* 評論篩選器 ↓ */
+        /* .reviews-dropdown {
+            margin-left: 40px;
+        } */
+
+        .reviews-btn,
+        .reviews-dropdown-menu {
+            border-color: #333333 !important;
+            color: #333333 !important;
+            background-color: #FFFEFC !important;
+        }
+
+        .reviews-dropdown-menu {
+            margin-top: 0;
+            top: 0px !important;
+        }
+
+        .reviews-item {
+            color: #333333 !important;
+        }
+
+        a.reviews-item:active {
+            background-color: transparent !important;
+            color: #db5c00 !important;
+            font-weight: normal !important;
+        }
+
+        a.reviews-item:hover {
+            color: #db5c00 !important;
+        }
+
+        .reviews-dropdown-toggle::after {
+            margin-right: 0 !important;
+        }
+
+        .star-wrap {
+            height: 16px;
+        }
+
+        .star-icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* 尺寸篩選器 ↑ */
     </style>
 </head>
 
@@ -840,7 +913,7 @@
 
                     </div>
 
-                    <!-- 區塊4：客戶評論 -->
+                    <!-- 區塊4-1：客戶評論 -->
 
                     <div class="space_60"></div>
                     <h3 class="mb-0">CUSTOMER REVIEWS</h3>
@@ -927,33 +1000,35 @@
                                     <!-- 非必填 -->
                                     <!-- 1 -->
                                     <fieldset class="form-group line-height">
+
                                         <div class="row">
-                                            <legend class="col-form-label">你的練習頻率為何？(非必填)
+                                            <legend class="col-form-label">你的瑜珈經驗之程度？ (非必填)
                                             </legend>
+
                                             <div class="col-sm-10">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios1-1"
+                                                    <input class="form-check-input" type="radio" name="gridRadios1"
                                                         id="gridRadios1-1" value="option1-1">
                                                     <label class="form-check-label" for="gridRadios1-1">
                                                         一週不到 1 次
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios1-2"
+                                                    <input class="form-check-input" type="radio" name="gridRadios1"
                                                         id="gridRadios1-2" value="option1-2">
                                                     <label class="form-check-label" for="gridRadios1-2">
                                                         一週 1 次
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios1-3"
+                                                    <input class="form-check-input" type="radio" name="gridRadios1"
                                                         id="gridRadios1-3" value="option1-3">
                                                     <label class="form-check-label" for="gridRadios1-3">
                                                         一週 2-4 次
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios1-4"
+                                                    <input class="form-check-input" type="radio" name="gridRadios1"
                                                         id="gridRadios1-4" value="option1-4">
                                                     <label class="form-check-label" for="gridRadios1-4">
                                                         一週超過 5 次
@@ -964,6 +1039,8 @@
                                             </div>
                                         </div>
                                     </fieldset>
+
+
                                     <!-- 2 -->
                                     <fieldset class="form-group line-height">
 
@@ -973,28 +1050,28 @@
 
                                             <div class="col-sm-10">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios2-1"
+                                                    <input class="form-check-input" type="radio" name="gridRadios2"
                                                         id="gridRadios2-1" value="option2-1">
                                                     <label class="form-check-label" for="gridRadios2-1">
                                                         初學者
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios2-2"
+                                                    <input class="form-check-input" type="radio" name="gridRadios2"
                                                         id="gridRadios2-2" value="option2-2">
                                                     <label class="form-check-label" for="gridRadios2-2">
                                                         中段班
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios2-3"
+                                                    <input class="form-check-input" type="radio" name="gridRadios2"
                                                         id="gridRadios2-3" value="option2-3">
                                                     <label class="form-check-label" for="gridRadios2-3">
                                                         進階班
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios2-4"
+                                                    <input class="form-check-input" type="radio" name="gridRadios2"
                                                         id="gridRadios2-4" value="option2-4">
                                                     <label class="form-check-label" for="gridRadios2-4">
                                                         瑜珈老師
@@ -1015,28 +1092,28 @@
 
                                             <div class="col-sm-10">
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios3-1"
+                                                    <input class="form-check-input" type="radio" name="gridRadios3"
                                                         id="gridRadios3-1" value="option3-1">
                                                     <label class="form-check-label" for="gridRadios3-1">
                                                         環保
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios3-2"
+                                                    <input class="form-check-input" type="radio" name="gridRadios3"
                                                         id="gridRadios3-2" value="option3-2">
                                                     <label class="form-check-label" for="gridRadios3-2">
                                                         無毒
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios3-3"
+                                                    <input class="form-check-input" type="radio" name="gridRadios3"
                                                         id="gridRadios3-3" value="option3-3">
                                                     <label class="form-check-label" for="gridRadios3-3">
                                                         專利防滑
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="gridRadios3-4"
+                                                    <input class="form-check-input" type="radio" name="gridRadios3"
                                                         id="gridRadios3-4" value="option3-4">
                                                     <label class="form-check-label" for="gridRadios3-4">
                                                         客製化選擇
@@ -1080,10 +1157,7 @@
                                     </div>
                                 </form>
 
-
-
                             </div>
-
 
                         </div>
                     </div>
@@ -1151,22 +1225,113 @@
                         </div>
                     </div>
 
+                    <!-- 區塊4-2：客戶評論 -->
+
+                    <ul class="nav nav-pills mb-3 " id="pills-tab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active line-height" id="pills-reviews-tab" data-toggle="pill"
+                                href="#pills-reviews" role="tab" aria-controls="pills-reviews"
+                                aria-selected="true">REVIEWS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link line-height" id="pills-questions-tab" data-toggle="pill"
+                                href="#pills-questions" role="tab" aria-controls="pills-questions"
+                                aria-selected="false">QUESTIONS</a>
+                        </li>
+
+                    </ul>
+
+                    <div class="tab-content" id="pills-tabContent">
+
+                        <!-- REVIEWS -->
+                        <div class="tab-pane fade show active" id="pills-reviews" role="tabpanel"
+                            aria-labelledby="pills-reviews-tab">
+
+                            <div class="d-flex justify-content-between align-items-baseline line-height">
+                                <h6 class="text-center line-height">
+                                    篩選評論
+                                </h6>
+
+                                <button type="submit" class="submit-btn btn ">
+                                    清除設定
+                                </button>
+                            </div>
+                            <!-- search-bar -->
+
+                            <form class="d-flex w-50 justify-content-center align-items-baseline line-height">
+
+                                <input class="form-control search-icon mr-0" type="search"
+                                    placeholder=" Search Reviews " aria-label="Search" maxlength="120">
+
+                                <button class="btn border-0 my-sm-0" type="submit">
+                                    <img src="./SVG/search-icon.svg" alt="">
+                                </button>
+                            </form>
+
+                            <!-- 評論篩選器 -->
+
+
+                            <!-- Rating< -->
+                            <div class="reviews-dropdown dropdown line-height">
+
+                                <button class="reviews-btn btn reviews-dropdown-toggle dropdown-toggle rounded-0 px-5 "
+                                    type="button" id="dropdownListButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    分數
+                                </button>
+
+                                <div class="reviews-dropdown-menu dropdown-menu rounded-0 "
+                                    aria-labelledby="dropdownMenuButton">
+                                    <a class="reviews-item dropdown-item" href="#">
+                                        <img src="./SVG/stars_5.svg" alt="">
+                                    </a>
+                                    <a class="reviews-item dropdown-item" href="#">
+                                        <img src="./SVG/stars_4.svg" alt="">
+                                    </a>
+                                    <a class="reviews-item dropdown-item" href="#">
+                                        <img src="./SVG/stars_3.svg" alt="">
+                                    </a>
+                                    <a class="reviews-item dropdown-item" href="#">
+                                        <img src="./SVG/stars_2.svg" alt="">
+                                    </a>
+                                    <a class="reviews-item dropdown-item " href="#">
+                                        <img class="w-100 star-icon" src="./SVG/stars_1.svg" alt="">
+                                    </a>
+
+                                </div>
+                            </div>
 
 
 
 
 
 
+                        </div>
+
+
+                        <!-- QUESTIONS -->
+
+                        <div class="tab-pane fade" id="pills-questions" role="tabpanel"
+                            aria-labelledby="pills-questions-tab">
+                            ...
+                        </div>
+
+
+
+
+
+                    </div>
 
 
                 </div>
 
 
+
+
+
+
+
             </div>
-
-
-
-
 
 
 
@@ -1174,12 +1339,8 @@
 
 
 
-    </div>
-
-
-
-    <script src="./lib/jquery-3.5.1.js"></script>
-    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+        <script src="./lib/jquery-3.5.1.js"></script>
+        <script src="./bootstrap/js/bootstrap.bundle.js"></script>
 </body>
 
 </html>
