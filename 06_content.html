@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提案頁</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./share.css">
+    <style>
+        .hero{
+            height: 48.75rem;
+            padding:0!important;
+
+        }
+        .hero-img{
+            background: url("./img/06_content/content_07.png") right bottom no-repeat;
+            background-size: cover; 
+            margin-bottom: 5.625rem;     
+            git 
+        }
+
+
+        .hero-text{
+            margin-top: 15.875rem;
+        }
+
+       
+
+        .hero-text-h1-mobile{
+            display: none;
+        }
+
+        .scrolldown_btn{
+            margin-left: 500px;
+        }
+        .scroll_p{
+            font-family: 'Josefin Sans', sans-serif;
+            color: #333333;
+            font-size: 1rem;
+            transform: rotate(90deg);
+            height: 40px;
+            margin-left: -12px;
+            width: 6rem;
+            vertical-align: middle;
+            position: relative;
+
+        }
+
+        .scrolldown_line{
+            height: 90px;
+            width: 2px;
+            background-color: #333333;
+            margin-top: 40px;
+        }
+
+        .hero-text-h1-desktop{
+            width: 500px;
+            z-index: 1;
+            position:absolute;
+            left: 15px;
+
+        }
+
+        .hero-text p{
+            margin-top: 5.625rem;
+
+        }
+
+        .hero-text-span-mobile{
+        
+        display: none;
+    }
+
+    .hero-text-span-desktop{
+        margin-top: 5.625rem;
+        display: inline-block;
+    }
+/* content區塊共同地方 */
+
+        .content-sec{
+            height: 42.375rem;
+            padding:0!important;
+        }
+
+        .text-wrap{
+            width: 21.375rem;
+
+        }
+
+
+/* 第一個conetnet區塊 */
+        .sec1-img{
+            background: url("./img/06_content/content_03.png") center bottom no-repeat;
+            background-size: cover;    
+
+
+        }
+        .sec1-text{
+            background: url("./img/06_content/content_04.svg");
+            height: 100%;
+            background-size: 50%;            
+            background-attachment: fixed;
+
+
+        }
+
+        .text-wrap{
+            /* margin-top: 12.5rem; */
+        }
+
+        .text-wrap h2{
+            margin-bottom: 1.6875rem;
+
+        }
+
+        .text-wrap span{
+            margin-top: 3.375rem;
+        }
+
+/* tag */
+
+       
+        .tag-line{
+            width: 8px;
+            height: 25px;
+            background-color: #F2A200;
+            border-radius: 1px;
+            top:0;
+            left: 0;
+            margin-right: 0.875rem;
+        }
+
+        .tag h6{
+            font-size:24px!important;
+            color:#F2A200;
+        }
+/* 第2個區塊的內容 */
+        .sec2-img{
+            background: url("./img/06_content/content_02.png") center bottom no-repeat;
+            background-size: cover;    
+
+
+        }
+        .sec2-text{
+            background: url("./img/06_content/content_04.svg");
+            height: 100%;
+            background-size: 50%;            
+            background-attachment: fixed;
+
+
+        }
+/* 熱門商品 */
+        .content-product{
+            height: 46.8125rem;
+            background: #F2A200;
+        }
+
+/* 最後一個區塊  */
+        .last-sec{
+            height: 56.25rem;
+            padding: 0!important;
+        }
+
+        .last-sec-img{
+            background: url("./img/06_content/content_05.png") right bottom no-repeat;
+            background-size: cover; 
+            margin-bottom: 5.625rem;   
+
+        }
+
+        .last-sec{
+            padding: 0!important;
+
+        }
+
+        .last-sec-text-wrap{
+            margin-top:7.625rem;
+        }
+
+        .last-sec-thermo::before{
+            content: '';
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            position: absolute;
+            top: -4.6px;
+            left: -4px;
+            background: #DB5C00;
+
+        }
+
+        .last-sec-thermo{
+
+            /* width: 100%; */
+            height: 6px;
+            background: #DB5C00;
+        }
+
+        .last-sec-text{
+            margin-top: 11.25rem;
+            margin-bottom: 4rem;
+        }
+
+
+
+.srolldown_btn_mobile{
+    display: none!important;
+}
+/* ------------------------------------------手機版 */
+/* ------------------------------------------手機版 */
+/* ------------------------------------------手機版 */
+/* ------------------------------------------手機版 */
+
+@media screen and (max-width:992px){
+    .hero{
+        height: auto;
+        align-items: flex-start;
+    }
+
+    .srolldown_btn_mobile{
+    display: inline-block!important;
+    order:3;
+    height: 26.625rem;
+    /* transform: rotate(90deg); */
+    
+    /* height: 26.6875rem; */
+    
+    }
+
+    .scroll_p_mobile{
+        font-family: 'Josefin Sans', sans-serif;
+            color: #333333;
+            font-size: 1rem;
+            transform: rotate(90deg);
+            height: 40px;
+            margin-left: -12px;
+            width: 6rem;
+            /* vertical-align: middle;*/
+            position: absolute; 
+            bottom: 4.5rem;
+
+    }
+
+    .scroll_p_mobile::after{
+        content: '';
+        
+        position: absolute;
+         height: 90px;
+        width: 2px;
+       background-color: #333333;
+        transform: rotate(-90deg);
+        transform-origin: top;
+        left: 100%;
+        top: 30%;
+    
+    }
+
+
+    .srolldown_btn_desktop{
+        display: none!important;
+    }
+
+    .hero-text{
+        order: 2;
+        padding-left: 2.25rem;
+        margin-top: 3.125rem;
+        padding-left: 2.25rem;
+        height: 26.625rem;
+
+    }
+
+    .hero-text-span-mobile{
+        margin-top: 3.125rem;
+        display: inline-block;
+    }
+
+    .hero-text-span-desktop{
+        
+        display: none;
+    }
+
+    .hero-img{
+        order: 1;
+        height: 20.625rem;
+        background-position: right top;
+        margin-bottom: 0;
+    }
+
+    .hero-text-h1{
+            position: relative;
+            width: 100%;
+        }
+    .hero-text-h1-mobile h1{
+        left: 0;
+    }
+
+    .hero-text-h1-mobile{
+        display: inline-block;
+    }
+
+    .hero-text-h1-desktop{
+        display: none;
+    }
+
+/* 手機版內容區---------------- */
+    .content-sec{
+            height: auto!important;
+            padding:0!important;
+        }
+
+        .text-wrap{
+            height:21.875rem;
+            margin: 0 1.3125rem;
+
+        }
+
+        .text-wrap h2{
+            margin-top: 2.375rem;
+        }
+
+        .sec1-text,
+        .sec2-text{
+            background-size: 100%;
+        }
+        .text-wrap p{
+            margin-top: 1rem;
+        }
+        
+        .sec2-img,
+        .sec1-img{
+        height: 20.625rem;}
+
+
+        .sec2-text{
+            order:2;
+        }
+
+        .sec2-img{
+            order:1;
+        }
+/* --------熱門商品區-------- */
+        .content-product{
+            height: 40.75rem;
+        }
+
+
+/* -----手機版最後一個區塊----- */
+
+        .last-sec{
+            height: 50.5rem;
+        }
+
+
+        .last-sec-img{
+
+        height: 20.625rem;
+        order:1;
+        margin-bottom: 0;
+        margin-left:2.25rem;
+
+        }
+
+        .last-sec-content{
+        order:2;
+        }
+
+        .last-sec-text-wrap{
+            margin-top: 2.5rem;
+            padding-left: 2.25rem;
+        }
+        .last-sec-text{
+            margin-top: 3.75rem;
+        }
+
+        
+
+
+}
+
+
+    </style>
+
+
+
+</head>
+<body>
+    <div class="container-fluid hero d-flex flex-wrap">
+        
+        <div class="srolldown_btn srolldown_btn_desktop col-1 d-flex flex-column justify-content-end align-items-center">
+            <div class="scroll_p">Scroll&ensp;Down</div>
+            <div class="scrolldown_line"></div> 
+        </div>  
+        
+        <div class="col-lg-3 col-9 d-flex flex-column hero-text position-relative align-items-center">
+            <div class="hero-text-h1 hero-text-h1-desktop mt-0"><h1>瑜珈墊挑選指南</h1></div>
+            <div class="hero-text-h1 hero-text-h1-mobile mt-0"><h1>瑜珈墊<br>挑選指南</h1></div>
+            <span class="hero-text-span-desktop">一張適合的瑜珈墊，可以幫助你更快速地進入體式，同時確保安全與舒適度。
+            閱讀我們的挑選指南，找到專屬你的瑜珈墊！
+            </span>
+            <span class="hero-text-span-mobile">一張適合的瑜珈墊，可以幫助你更快速地進入體式，同時確保安全與舒適度。
+                閱讀我們的挑選指南，找到專屬你的瑜珈墊！
+                </span>
+        </div>
+        <div class="col-lg-8 col-12 hero-img"></div>
+
+        <!-- 手機版scrolldown -->
+        
+        
+        <div class="srolldown_btn_mobile col-3 d-flex align-items-end">
+                <div class="scroll_p_mobile">Scroll&ensp;Down</div>
+            </div> 
+            
+        
+        
+    
+    </div>
+<!-- content區塊1 -->
+    
+        <div class="container-fluid d-flex content-sec flex-wrap">
+            
+            <div class="col-lg-6 col-12 sec1-img">
+                
+
+            </div>
+            <div class="col-lg-6 col-12 sec1-text d-flex justify-content-center align-items-center">
+                <div class="text-wrap">
+                    <h2>動態瑜珈</h2>
+
+                    <div class="tag-wrapper d-flex">
+                            <div class="d-flex align-items-center tag mr-3">
+                                <div class="tag-line"></div>
+                                <h6 class="mt-2">防滑</h6>
+                            </div>
+                            <div class="d-flex align-items-center tag mr-3">
+                                <div class="tag-line"></div>
+                                <h6 class="mt-2">防滑</h6>
+                            
+                            </div>
+                </div>
+                    
+                    <p>如果常做的瑜珈種類是動作多變、體式變化較頻繁或含有彈跳的瑜珈類型，你需要一張防滑性好，與穩定性更高的的薄墊，
+                        讓你的身體穩定在正確的位置上，動作穩定一些，減少運動傷害。</p>
+                </div>
+
+            </div>
+        
+        </div>
+<!-- 熱門商品 -->
+        <div class="container-fluid d-flex content-product">
+            
+        </div>
+
+
+<!-- content區塊2 -->
+        <div class="container-fluid d-flex content-sec flex-wrap">
+                    
+            <div class="col-lg-6 col-12 sec2-text d-flex justify-content-center align-items-center">
+                <div class="text-wrap">
+                    <h2>靜態瑜珈</h2>
+
+                    <div class="tag-wrapper d-flex">
+                            <div class="d-flex align-items-center tag mr-3">
+                                <div class="tag-line"></div>
+                                <h6 class="mt-2">防滑</h6>
+                            </div>
+                            <div class="d-flex align-items-center tag mr-3">
+                                <div class="tag-line"></div>
+                                <h6 class="mt-2">防滑</h6>
+                            
+                            </div>
+                </div>
+                    
+                    <p>靜態瑜珈強調呼吸和冥想，主要坐在墊子上的動作，適合帶點厚度、緩衝性較高的瑜珈墊，以避免身體接觸地面而感到冰冷或過硬不適，厚而柔軟的瑜伽墊會讓你更舒適。</p>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 col-12 sec2-img">
+                
+
+            </div>
+
+        </div>
+    
+<!-- 熱門商品 -->
+<div class="container-fluid d-flex content-product">
+            
+</div>
+<!---------------------------------  最後區塊  -->
+
+<div class="container-fluid last-sec d-flex flex-wrap">
+     
+    <div class="col-lg-1 col-0"></div>
+    <div class="col-lg-4 col-12 d-flex flex-column last-sec last-sec-content flex-wrap">
+        <div class="last-sec-text-wrap">
+            <div class="last-sec-thermo position-relative ml-2">
+            </div>
+            <div class="last-sec-text"><h1 class="mb-4">Find</h1><h1 class="mb-4">Your</h1><h1>Soulmat</h1></div>
+            
+            <div class=""><h3>36度，與人類共感的溫度</h3></div>
+        </div>
+    </div>
+
+    <div class="col-lg-7 col-12 last-sec-img"></div>
+    
+
+</div>
+
+
+
+</div>
+
+<!-- Script -->
+    <script src="./lib/jquery-3.5.1.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    
+</body>
+</html>
