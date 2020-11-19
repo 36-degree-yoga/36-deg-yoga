@@ -1,3 +1,4 @@
+/* 字體未連結成功 */
 body {
   font-family: "Noto Sans TC", sans-serif;
 }
@@ -26,29 +27,25 @@ p {
 .copyright {
   color: #f2a200;
 }
-#foot-info2 {
+.foot-info2 {
   padding-left: 4rem;
 }
-#foot-info3 {
-  padding-left: 6rem;
+.foot-info3 {
+  padding-left: 90px;
 }
-.mobile-footer .col a {
-  color: #004a13;
-}
+
 @media (max-width: 576px) {
-  footer {
-    background-color: #fffefc;
-    border-top: solid 1px #004a13;
-    padding: 1rem 0 1rem 0;
+  .foot-info2 {
+    margin-top: 30px;
+    padding-left: 15px;
   }
-  .mobile-footer {
+  .foot-info3 {
+    margin-top: 30px;
+    padding-left: 15px;
   }
-  .pc-footer {
+  .mobile-display-none {
     display: none;
   }
 }
 @media (min-width: 577px) {
-  .mobile-footer {
-    display: none;
-  }
 }

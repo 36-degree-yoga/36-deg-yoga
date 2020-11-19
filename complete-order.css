@@ -1,0 +1,16 @@
+body {
+    background-color: #fffefc;
+  }
+  .nav-place-zone {
+    width: 100%;
+    height: 7.5rem;
+    border-bottom: 1px solid #004a13;
+    background: rgba(255, 254, 252, 0.8);
+  }
+  .thermometer-progress-bar {
+    width: 100%;
+    height: 180px;
+    background-color: lightcoral;
+    opacity: 0.5;
+  }
+  /* 上面以後套通用元件 替代品 */

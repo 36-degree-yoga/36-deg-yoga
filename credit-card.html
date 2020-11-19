@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>確認付款（刷卡）</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="./fontawesome/css/all.css" />
+    <link rel="stylesheet" href="./credit-card.css" />
+  </head>
+  <body>
+    <nav class="nav-place-zone"></nav>
+    <div class="thermometer-progress-bar"></div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-5">
+          <h5>信用卡資訊</h5>
+          <div
+            class="credit-card-img position-relative text-monospace text-white"
+          >
+            <p id="demotext" class="position-absolute">
+              <span class="card-num1-text"></span>
+              <span class="card-num2-text"></span>
+              <span class="card-num3-text"></span>
+              <span class="card-num4-text"></span>
+            </p>
+            <p id="demotextdate" class="position-absolute">
+              <span class="card-num1-text"></span>
+              <span class="card-num2-text"></span>
+            </p>
+          </div>
+          <div>
+            <div class="form-group row">
+              <label for="card-num1" class="col-sm-3 col-form-label pl-3"
+                >信用卡卡號</label
+              >
+              <div class="col-sm-9 py-1 pl-0 pr-2">
+                <input
+                  type="text"
+                  class="form-control3 text-center"
+                  id="card-num1"
+                  maxlength="4"
+                /><span class=""> -</span>
+                <input
+                  type="text"
+                  class="form-control3 text-center"
+                  id="card-num2"
+                  maxlength="4"
+                /><span class=""> -</span>
+                <input
+                  type="text"
+                  class="form-control3 text-center"
+                  id="card-num3"
+                  maxlength="4"
+                /><span class=""> -</span>
+                <input
+                  type="text"
+                  class="form-control3 text-center"
+                  id="card-num4"
+                  maxlength="4"
+                />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="card-date1" class="col-sm-3 col-form-label pl-3"
+                >到期年限</label
+              >
+              <div class="col-sm-9 py-1 pl-0 pr-2 d-flex">
+                <div class="col-6 p-0">
+                  <select class="form-control4 month-option px-2 text-center">
+                    <option class="preset-choose-month">--請選擇--</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option></select
+                  ><span class="px-2">月</span>
+                </div>
+                <div class="col-6 p-0">
+                  <select class="form-control4 year-option px-2 text-center">
+                    <option class="preset-choose-year">--請選擇--</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option></select
+                  ><span class="px-2">年</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 鍵盤輸入練習 -->
+            <input
+              type="text"
+              id="ttt"
+              name=""
+              value=""
+              maxlength=""
+              placeholder=""
+            />
+            <div class="ppp"></div>
+            <!-- 鍵盤輸入練習  -->
+          </div>
+        </div>
+        <div class="col-lg-1 col-md-1">撐開用</div>
+        <div class="col-lg-4 col-md-4 pl-1">明細的位置</div>
+      </div>
+    </div>
+
+    <script src="lib/jquery-3.5.1.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- <script src="./text-animation.js"></script> -->
+    <!-- 鍵盤輸入練習 -->
+    <script>
+      $("document").ready(function () {
+        $("#card-num1").keyup(function () {
+          $(".card-num1-text:first").html(this.value);
+        });
+        $("#card-num2").keyup(function () {
+          $(".card-num2-text:first").html(this.value);
+        });
+        $("#card-num3").keyup(function () {
+          $(".card-num3-text:first").html(this.value);
+        });
+        $("#card-num4").keyup(function () {
+          $(".card-num4-text:first").html(this.value);
+        });
+      });
+      $("document").ready(function () {
+        $("#ttt").keyup(function () {
+          $(".ppp:first").html(this.value);
+        });
+      });
+      $(".month-option").on("click", function () {
+        $(".preset-choose-month").addClass("display-none");
+      });
+      $(".year-option").on("click", function () {
+        $(".preset-choose-year").addClass("display-none");
+      });
+      //補0
+      function decimal2Hex(d) {
+        let mon = d.toString(12);
+        if (mon.length < 2) {
+          mon = 0 + hex;
+        }
+        return hex;
+      }
+    </script>
+    <!-- 鍵盤輸入練習 -->
+  </body>
+</html>

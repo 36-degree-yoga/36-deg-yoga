@@ -1,0 +1,48 @@
+.nav-place-zone {
+  width: 100%;
+  height: 7.5rem;
+  border-bottom: 1px solid #004a13;
+  background: rgba(255, 254, 252, 0.8);
+}
+.thermometer-progress-bar {
+  width: 100%;
+  height: 180px;
+  background-color: lightcoral;
+  opacity: 0.5;
+}
+/* 上面以後套通用元件 替代品 */
+.credit-card-img {
+  width: 100%;
+  height: 228px;
+  background: url(./img/credit-card.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 60px 0 50px 0;
+}
+#demotext {
+  font-size: 24px;
+  top: 55%;
+  left: 20%;
+}
+#demotextdate {
+  top: 77%;
+  left: 30%;
+}
+
+.form-control3 {
+  border: 1px solid #333;
+  border-radius: 4px;
+  height: 32px;
+  width: 20%;
+}
+.form-control4 {
+  border: 1px solid #333;
+  border-radius: 4px;
+  height: 32px;
+  width: 72%;
+}
+
+/* 套用class */
+.display-none {
+    display: none;
+  }

@@ -10,7 +10,7 @@
     <style>
         * {
             font-family: 'Noto Sans TC', sans-serif;
-            /* outline: 1px solid red; */
+
 
         }
 
@@ -45,7 +45,7 @@
 
         .breadcrumb {
             background-color: transparent;
-            padding: 0.5rem 1rem;
+            padding: 0.5rem 0;
 
         }
 
@@ -66,11 +66,11 @@
         }
 
 
-        .btn,
-        .dropdown-menu {
+        .product-list-dropdown .btn,
+        .product-list-dropdown .dropdown-menu {
             border-color: #004A13;
             color: #004A13;
-            background-color: transparent;
+            background-color: #FFFEFC;
         }
 
         .dropdown-menu {
@@ -129,17 +129,18 @@
 
 
                     <!-- 篩選器 -->
-                    <div class="dropdown ">
-                        <button class="btn dropdown-toggle rounded-0 px-4 " type="button" id="dropdownListButton"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="product-list-dropdown dropdown ">
+                        <button class="product-list-btn btn dropdown-toggle rounded-0 px-4 " type="button"
+                            id="dropdownListButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             分類：選項
                         </button>
-                        <div class="dropdown-menu border-top-0 rounded-0" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">價格由低到高</a>
-                            <a class="dropdown-item" href="#">價格由高到低</a>
-                            <a class="dropdown-item" href="#">熱銷排行</a>
-                            <a class="dropdown-item" href="#">上架時間由新到舊</a>
-                            <a class="dropdown-item" href="#">上架時間由舊到新</a>
+                        <div class="product-list-dropdown-menu dropdown-menu border-top-0 rounded-0"
+                            aria-labelledby="dropdownMenuButton">
+                            <a class="product-list-item dropdown-item" href="#">價格由低到高</a>
+                            <a class="product-list-item dropdown-item" href="#">價格由高到低</a>
+                            <a class="product-list-item dropdown-item" href="#">熱銷排行</a>
+                            <a class="product-list-item dropdown-item" href="#">上架時間由新到舊</a>
+                            <a class="product-list-item dropdown-item" href="#">上架時間由舊到新</a>
                         </div>
                     </div>
 
