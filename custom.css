@@ -42,6 +42,18 @@ h5 {
   padding-bottom: 60px;
 }
 
+.delete_wrap {
+  width: 80px;
+  height: 80px;
+  right: 0;
+  top: 0;
+}
+
+.zoom_icon img {
+  width: 40px;
+  margin-top: 30px;
+}
+
 .mat_show_wrap {
   background-color: rgb(214, 145, 145);
   border-radius: 4px;
@@ -51,11 +63,6 @@ h5 {
 }
 
 /* 呈現區 */
-.zoom_icon svg {
-  margin-top: 30px;
-  width: 50px;
-  height: 50px;
-}
 
 /* 選項區 */
 
@@ -105,53 +112,54 @@ h5 {
 }
 
 /* 邊框粗細 */
-.option_button,
 .option_item_title_wrap {
-  border: 1px solid #848484;
-  border-collapse: collapse;
+  border-top: 1px solid #848484;
   background-color: rgba(255, 249, 237, 0.5);
 }
 
 .option_item_title_wrap,
 .option_button {
-  border-left: 2px solid #848484;
-  border-right: 2px solid #848484;
+  border-left: 1px solid #848484;
+  border-right: 1px solid #848484;
+}
+.option_button {
+  border-top: 1px solid #848484;
 }
 
 .bt2 {
-  border-top: 2px solid #848484;
+  border-top: 1px solid #848484;
 }
 .bb2 {
-  border-bottom: 2px solid #848484;
+  border-bottom: 1px solid #848484;
 }
 
 .btno {
   border-top: none;
-  border-bottom: 2px solid #848484;
+  border-bottom: 1px solid #848484;
 }
 
 .option_item_title_wrap {
   align-items: center;
   height: 50px;
-  padding: 0 30px;
+  padding-left: 30px;
 }
 
 .item_title {
   font-weight: 700;
   margin-right: 30px;
-
 }
 
 /* +- */
 .fold {
+  text-align: center;
   cursor: pointer;
-  width: 16px;
-  height: 16px;
-  background-image: url(SVG/svggroup.svg#minus);
+  height: 100%;
+  width: 80px;
 }
-.fold .less {
+.fold img {
   width: 16px;
-  height: 4px;
+  height: 50px;
+  margin: 0 auto;
 }
 
 .fold .more {
@@ -265,18 +273,27 @@ h5 {
 /* JQ  CLASS */
 
 .option_hide {
- display: none;
+  display: none;
 }
 
-/* mobile */
+/* 手機mobile */
 
 .m_custom {
   display: none;
 }
 
 @media (max-width: 500px) {
+ ::-webkit-scrollbar {
+   display: none;
+ }
+
+
   .m_custom {
+    width: 375px;
+    height: 812px;
+    overflow-x: hidden;
     display: block;
+    background-color: #fffefc;
   }
   .m_custom_header {
     padding-left: 15px;
@@ -290,6 +307,7 @@ h5 {
     height: 40px;
   }
   .m_custom_header div {
+    font-size: 20px;
     padding-left: 65px;
   }
 
@@ -309,12 +327,85 @@ h5 {
     height: 380px;
     width: 150px;
     background-color: rgb(201, 148, 148);
+    border-radius: 4px;
+
+    box-shadow: 0px 5px 6px #848484;
+  }
+
+  .m_mat_space {
+    padding-bottom: 30px;
   }
 
   .m_mat_space .zoom_icon svg use {
     width: 30px;
   }
-  .red {
-    filter: drop-shadow(red);
+
+  .option_scroll{
+    width: 375px;
+    overflow-x: auto;
   }
+
+  /* 選項 */
+  .m_option_item {
+    width: 450px;
+    overflow-x: scroll ;
+    height: 50px;
+    background-color: rgba(255, 249, 237, 0.7);
+  }
+
+
+
+  .m_item_title {
+    padding: 20px;
+  }
+
+  .m_option_button_wrap {
+    width: 2250px;
+    background:none;
+    height: 200px;
+  }
+
+  .m_item_button {
+    width: 375px;
+    padding-left: 30px;
+    overflow: hidden;
+  }
+  .m_item_button p {
+    margin-top: 10px;
+  }
+
+ 
+  .m_size_btn button {
+    width: 65px;
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+
+
+  .m_img_item_wrap {
+  width: 460px;
+  margin-bottom: 20px;
+}
+
+.img-scroll-wrap{
+  overflow-x: auto;
+}
+
+.m_img_defining p{
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.add_text input {
+  margin-right: 10px;
+}
+
+.question_mark{
+  color: #db5c00;
+  font-size: 24px;
+  font-weight: bolder;
+  right:30px;
+  top: 15px;
+}
+
 }
