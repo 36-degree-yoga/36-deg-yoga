@@ -4,30 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>member_my_account</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="bootstrap/js/bootstrap.bundle.js">
     <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="fontawesome/css/all.css">
-   
+    <link rel="stylesheet" href="share.css">
     <style>
         
-        body,html{
-            background: #FFFEFC;
-            /* border:1px solid red; */
-            color: #333;
-            font-family: 'Noto Sans TC', sans-serif;
-        }
-        .space_30{
-            width:100%;
-            height: 30px;
-        }
-        .space_60{
-            width:100%;
-            height: 60px;
-        }
-        .space_120{
-            width:100%;
-            height: 120px;
+        a:hover{
+            text-decoration: none;
         }
         /* side bar ↓↓*/
         .img_wrap{
@@ -90,10 +74,38 @@
             position: absolute;
             border: 4px solid #F2A21F;
          }
-         
+         /* 彈跳視窗↓↓ */
+        #exampleModal{
+           
+        }
+        .modal-dialog{
+            border-radius: 4px;
+            max-width: 668px;
+        }
+        .close{
+            opacity: 1;
+        }
+        .modal-header{
+            border-bottom:0;
+        }
+        button:focus{
+            outline: 1px #FFFEFC;
+        }
+        .modal-footer{
+            border-top:0; 
+        }
+        .modal-content {
+        border:2px solid #004A13;
+        border-radius: 4px;
+        width: 100%;
+        background: #FFFEFC;
+        opacity: 1;
+        }
+        /* 彈跳視窗↑↑ */
     </style>
 </head>
 <body>
+
     <div class="container">
         <div class="row">
             <div class="space_120"></div>
@@ -185,8 +197,8 @@
                         </div>
                         <div class="my-4 d-flex align-items-center" >
                             <p>密碼</p>
-                            <div >
-                                <a class="ml-3" href="#" style="border-bottom: 1px solid #135F39;color:#135F39;">設定新密碼</a>
+                            <div>
+                                <a class="ml-3" href="#" style="border-bottom: 1px solid #135F39;color:#135F39;" data-toggle="modal" data-target="#exampleModal" >設定新密碼</a>
                             </div>
                         </div>
                         <div class="my-4 d-flex align-items-center" >
@@ -214,27 +226,80 @@
                 <!-- 按鈕 -->
                 <div class="space_120"></div>
                 <div class="col-12 d-flex justify-content-center align-items-center">
-                    <button class="mr-5">取消變更</button>
-                    <button>儲存</button>
+                    <button class="mr-5 btn_l">取消變更</button>
+                    <button class="btn_f">儲存</button>
                 </div>
                 
             </div>
             
         </div>
     </div>
-
-
-
-    <script src="lib/jquery-3.5.1.js"></script>
-    <script>
-       $('.member_account_img_wrap').mouseenter(function(){
-            $('.mask').css('display','block')
+    <!-- 彈跳視窗↓↓ -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">
+                    <img src="./SVG/delete.svg" alt="">
+                </span>
+            </button>
+            </div>
+            <div class="modal-body d-flex justify-content-center flex-column">
             
-       });
-       $('.member_account_img_wrap').mouseleave(function(){
-            $('.mask').css('display','none');
-       });
+                <div class="d-flex align-items-center justify-content-center">
+                    <p>現在密碼</p>
+                    <div class="ml-3" style="width:300px ;border-bottom: 1px solid #333333;">
+                        <input type="text">
+                        <a href="#" style="color: #135F39;">忘記密碼</a>
+                    </div>
+                
+                </div>
+                <div class="space_30"></div>
+                <div class="d-flex align-items-center justify-content-center" >
+                    <p>新的密碼</p>
+                    <div class="ml-3" style="width:300px ;border-bottom: 1px solid #333333;">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="space_30"></div>
+                <div class="d-flex align-items-center justify-content-center" >
+                    <p>確認密碼</p>
+                    <div class="ml-3" style="width:300px ;border-bottom: 1px solid #333333;">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="space_60"></div>
+                <div class="w-100 d-flex justify-content-center">
+                    <button class="btn_f">變更密碼</button>
+                </div>
+               
+            </div>
+            <div class="modal-footer">
+               <div class="space_30"></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- 彈跳視窗↑↑ --> 
+    
+    
+    <footer>
+        <div style="width:100%;height: 120px;"></div>
+        <div style="background-color: #004A13;height: 435px; width: 100%; "></div>
+    </footer>
 
-    </script>
+<script src="lib/jquery-3.5.1.js"></script>
+<script src="./bootstrap/js/bootstrap.bundle.js"></script>
+<script>
+    $('.member_account_img_wrap').mouseenter(function(){
+        $('.mask').css('display','block')
+        
+    });
+    $('.member_account_img_wrap').mouseleave(function(){
+        $('.mask').css('display','none');
+    });
+
+</script>
 </body>
 </html>

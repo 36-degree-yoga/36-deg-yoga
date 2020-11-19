@@ -176,7 +176,7 @@
             width: 225.7px;
         }
         .product_img_wrap{
-            width: 225.7px;
+            width: 100%;
             height: 295px;
             background-color: blue;
             cursor: pointer;
@@ -241,6 +241,10 @@
                 margin: 1.75rem auto;
             }
         }
+        .item-tag>p {
+            border-left: 8px solid #F2A200;
+            padding: 0 15px;
+        }
 
         .color_circle{
             width: 40px;
@@ -251,7 +255,75 @@
         }
         /* quick_view↑↑ */
 
-        
+        /* 手機版 */
+        @media (max-width: 1440px){
+            .col-8{
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            
+            .product_side_bar{
+                display: none;
+            }
+            .product_list{
+                justify-content: center !important;
+            }
+            
+            
+            
+        }
+        @media (max-width: 768px){
+            
+            #ctm{
+                height: 30px;
+            }
+            .product_img_wrap{
+                height: 242px;
+            }
+            .customize_area_img_wrap{
+            width: 100%;
+            height: 252px;
+            background-color: #ccc;
+            }
+            .content_wrap{
+                padding: 60px 0 !important;
+            }
+            .word_pic_wrap{
+                flex-direction: column;
+            }
+            .word_pic_wrap h1{
+                margin-bottom: 30px !important;
+            }
+            .btn_wrap{
+                justify-content: center !important;
+            }
+
+        }
+        @media (max-width: 540px){
+            .breadcrumb{
+                display: none;
+            }
+            #dropdownListButton {
+                border: 0;
+            }
+            .dropdown-menu{
+                border:0;
+            }
+
+            .right_area{
+                padding: 0;
+            }
+            
+            .product{
+                flex: 0 0 50%;
+                max-width: 50%;
+                margin: 0 0 30px 0;
+                padding: 0 3px;
+            }
+            .mat_list_pic{
+                display: none;
+            }
+        }
     
     </style>
 </head>
@@ -302,7 +374,7 @@
 
         <div class="row">
             <!-- 左側:側邊選單 -->
-            <div class="col-3 ">
+            <div class="product_side_bar col-3 ">
                 <!-- 商品列sidebar↓-->
                 <div class="product_siderbar_wrap d-flex">
 
@@ -324,8 +396,8 @@
                         <div class="product_sidebar_content">
                             <div class="product_siderbar_title">
                                 <div class="title"><a id="plst_top" href="#">瑜珈墊</a></div>
-                                <div class="subtitle"><a href="#std" >一般</a></div>
-                                <div class="subtitle"><a href="#ctm" >客製化</a></div>
+                                <div class="subtitle"><a href="#std" name="std" >一般</a></div>
+                                <div class="subtitle"><a href="#ctm" name="ctm">客製化</a></div>
                             </div>
                             <div class="product_siderbar_title">
                                 <div class="title"><a href="#">輔具</a></div>
@@ -341,7 +413,7 @@
                 </div>
             </div>
             <!-- 右側 -->
-            <div class="col-8 ">
+            <div class="right_area col-8">
                 <!-- 餅乾屑與篩選器 -->
                 <div class="d-flex justify-content-between align-items-center" style="height: 120px;">
                     <!-- 餅乾屑 -->
@@ -371,43 +443,43 @@
 
                 </div>
                 <!-- 一般產品列表 -->
-                <div class="d-flex justify-content-between col-12 flex-wrap" id="std" name="std">
-                    <div class="product mb-5">
+                <div class="product_list d-flex justify-content-between flex-wrap" id="std" name="std">
+                    <div class="product mb-5 col-3">
                         <div class="product_img_wrap" data-toggle="modal" data-target="#exampleModal">
                             <img src="" alt=""> 
                         </div>
                         <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
                         <p class="p-0" style="text-align: center;">NT.1,000</p>    
                     </div>
-                    <div class="product mb-5">
+                    <div class="product mb-5 col-3">
                         <div class="product_img_wrap">
                             <img src="" alt=""> 
                         </div>
                         <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
                         <p style="text-align: center;">NT.1,000</p>    
                     </div>
-                    <div class="product mb-5">
+                    <div class="product mb-5 col-3">
                         <div class="product_img_wrap">
                             <img src="" alt=""> 
                         </div>
                         <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
                         <p style="text-align: center;">NT.1,000</p>    
                     </div>
-                    <div class="product mb-5">
+                    <div class="product mb-5 col-3">
                         <div class="product_img_wrap">
                             <img src="" alt=""> 
                         </div>
                         <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
                         <p style="text-align: center;">NT.1,000</p>    
                     </div>
-                    <div class="product mb-5">
+                    <div class="product mb-5 col-3">
                         <div class="product_img_wrap">
                             <img src="" alt=""> 
                         </div>
                         <h6 class="mt-4 mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
                         <p style="text-align: center;">NT.1,000</p>    
                     </div>
-                    <div class="product mb-5">
+                    <div class="product mb-5 col-3">
                         <div class="product_img_wrap">
                             <img src="" alt=""> 
                         </div>
@@ -421,9 +493,9 @@
                 <!-- 客製化產品區 -->
                 <div class="space_120" id="ctm"></div>
                 <div class="customize_area d-flex align-items-center justify-content-center" >
-                    <div class="d-flex flex-column w-100 p-5">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <h1 class=" mb-0">
+                    <div class="content_wrap d-flex flex-column w-100 p-5">
+                        <div class="word_pic_wrap d-flex align-items-center justify-content-between">
+                            <h1 class=" mb-0" style="color: #FFFEFC;">
                                 Make
                                 <br> 
                                 Your
@@ -434,7 +506,7 @@
                                 <img src="" alt="">
                             </div>
                         </div>
-                        <div class="d-flex justify-content-end mt-4">
+                        <div class="btn_wrap d-flex justify-content-end mt-4">
                             <button class="btn_l mr-4">了解更多</button>
                             <button class="btn_f">開始製作</button>
                         </div>
@@ -468,8 +540,9 @@
                 <div class="ml-5">
                     <h3>瑜珈墊</h3>
                     <div class="space_30"></div>
-                    <div>
-                        防滑
+                    <div class="item-tag d-flex">
+                        <p class="text-justify" style="color: #F2A200;">止滑</p>
+                        <p class="text-justify" style="color: #F2A200;">防水</p>
                     </div>
                     <div class="space_30"></div>
                     <p style="line-height: 30px;">
