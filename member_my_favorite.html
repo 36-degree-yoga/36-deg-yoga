@@ -29,11 +29,7 @@
             background-color: blue;
             cursor: pointer;
         }
-        .mobile_bar_wrap{
-            display:none;
-            
-        }
-        
+       
         
         .like_fill{
             fill: none;
@@ -81,8 +77,11 @@
         }
         /* 會員中心side_bar↑↑ */
 
-
-        
+        /* 會員中心 手機板 side_bar↓↓ */
+        .m_account_bar_wrap{
+            display: none;
+        }
+        /* 會員中心 手機板 side_bar↑↑ */
 
         /* RWD↓↓*/
         @media (max-width: 1440px){
@@ -105,15 +104,38 @@
             .account_side_bar{
                 display: none !important;
             }
-            .mobile_bar_wrap{
-                display: block;
-                overflow: hidden;
-                
+            
+            /* 手機板橫條bar↓ */
+            body {
+                width: 100vw;
+                overflow-x: hidden;
+                }
+
+            ::-webkit-scrollbar {
+                display: none;
             }
-            .mobile_bar{
+            .m_account_bar_wrap {
+                display: block;
+                overflow-x: scroll;
+                height: 55px;
+            }
+
+            .m_account_bar_item {
                 width: 100%;
+                height: 100%;
                 justify-content: center;
             }
+
+            .m_account_option {
+                padding: 20px;
+            }
+                /* 寫JQ可以加的class */
+            .check_border {
+            border-bottom: 2px solid #f2a200;
+            }
+            /* 手機板橫條bar↑ */
+            
+
             .product_img_wrap{
                 height: 242px;
             }
@@ -132,18 +154,13 @@
 
         }
         @media (max-width: 540px){
-            body{
-                overflow: hidden;
+            /* 手機板橫條bar↓ */
+            .m_account_bar_item {
+                width: 660px;
+                height: 100%;
             }
-            .mobile_bar_wrap{
-                
-                overflow-x: auto;
-            }
-            .mobile_bar{
-                width: 700px;
-                justify-content: flex-start;
-                overflow-x: ;
-            }
+            /* 手機板橫條bar↑ */
+
             .product_list{
                 padding: 0;
             }
@@ -199,18 +216,18 @@
         </div>
     </nav>
 
-    <!-- 會員中心選單橫條bar -->
-    <div class="mobile_bar_wrap">
-        <div class="mobile_bar d-flex py-2">
-            <a class="mx-2">我的帳號</a>
-            <a class="mx-2">訂單紀錄</a>
-            <a class="mx-2">我的最愛</a>
-            <a class="mx-2">我的折價券</a>
-            <a class="mx-2">我的點數</a>
-            <a class="mx-2">客製化設計</a>
+    <!-- 會員中心選單橫條bar↓↓ -->
+    <div class="m_account_bar_wrap">
+        <div class="m_account_bar_item d-flex align-items-center">
+          <div class="m_account_option"><p class="check_border">我的帳號</p></div>
+          <div class="m_account_option"><p>訂單紀錄</p></div>
+          <div class="m_account_option"><p>我的最愛</p></div>
+          <div class="m_account_option"><p>我的折價券</p></div>
+          <div class="m_account_option"><p>我的點數</p></div>
+          <div class="m_account_option"><p>客製化設計</p></div>
         </div>
     </div>
-    
+    <!-- 會員中心選單橫條bar↑↑ -->
 
     <div class="container">
         <div class="row">
@@ -291,7 +308,7 @@
                     <div class="product_img_wrap position-relative" data-toggle="modal" data-target="#exampleModal">
                         <img src="" alt="">
 
-                        <svg id="btn_like" class="position-absolute" style="right:15px;bottom:15px" width="30" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 28">
+                        <svg id="" class="btn_like position-absolute" style="right:15px;bottom:15px" width="30" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 28">
                             <g id="圖層_2" data-name="圖層 2">
                                 <g id="圖層_1-2" data-name="圖層 1">
                                     <g id="Path_324" data-name="Path 324">
@@ -313,7 +330,19 @@
                 <div class="product mb-5 col-4">
                     <div class="product_img_wrap position-relative" data-toggle="modal" data-target="#exampleModal">
                         <img src="" alt="">
-                        <img src="./SVG/like.svg" alt="" class="btn_like position-absolute" style="right:10px;bottom:10px">
+
+                        <svg id="" class="btn_like position-absolute" style="right:15px;bottom:15px" width="30" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 28">
+                            <g id="圖層_2" data-name="圖層 2">
+                                <g id="圖層_1-2" data-name="圖層 1">
+                                    <g id="Path_324" data-name="Path 324">
+                                        <path class="like_fill"  d="M15,28C6.93,22.16,2.7,16.84,1,12.39-3.68.47,9.6-3.58,15,3.46c5.4-7,18.68-3,14,8.93C27.3,16.84,23.06,22.16,15,28Z"/>
+                                        <path class="like_stroke" d="M15,25.51a51.66,51.66,0,0,0,7.88-7.15,23.48,23.48,0,0,0,4.29-6.69c1.15-3,1.11-5.46-.11-7.25a5.94,5.94,0,0,0-5-2.42,6.85,6.85,0,0,0-5.49,2.68L15,6.74,13.41,4.68A6.85,6.85,0,0,0,7.92,2a5.94,5.94,0,0,0-5,2.42c-1.22,1.79-1.26,4.29-.11,7.25a23.48,23.48,0,0,0,4.29,6.69A51.66,51.66,0,0,0,15,25.51M15,28C6.93,22.16,2.7,16.84,1,12.39-2.13,4.45,2.74,0,7.92,0A8.86,8.86,0,0,1,15,3.46,8.86,8.86,0,0,1,22.08,0c5.18,0,10.05,4.45,7,12.39C27.3,16.84,23.07,22.16,15,28Z"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+
+                        
                     </div>
                     <div class="space_30"></div>
                     <h6 class="mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
@@ -324,7 +353,19 @@
                 <div class="product mb-5 col-4">
                     <div class="product_img_wrap position-relative" data-toggle="modal" data-target="#exampleModal">
                         <img src="" alt="">
-                        <img src="./SVG/like.svg" alt="" class="btn_like position-absolute" style="right:10px;bottom:10px">
+
+                        <svg id="" class="btn_like position-absolute" style="right:15px;bottom:15px" width="30" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 28">
+                            <g id="圖層_2" data-name="圖層 2">
+                                <g id="圖層_1-2" data-name="圖層 1">
+                                    <g id="Path_324" data-name="Path 324">
+                                        <path class="like_fill"  d="M15,28C6.93,22.16,2.7,16.84,1,12.39-3.68.47,9.6-3.58,15,3.46c5.4-7,18.68-3,14,8.93C27.3,16.84,23.06,22.16,15,28Z"/>
+                                        <path class="like_stroke" d="M15,25.51a51.66,51.66,0,0,0,7.88-7.15,23.48,23.48,0,0,0,4.29-6.69c1.15-3,1.11-5.46-.11-7.25a5.94,5.94,0,0,0-5-2.42,6.85,6.85,0,0,0-5.49,2.68L15,6.74,13.41,4.68A6.85,6.85,0,0,0,7.92,2a5.94,5.94,0,0,0-5,2.42c-1.22,1.79-1.26,4.29-.11,7.25a23.48,23.48,0,0,0,4.29,6.69A51.66,51.66,0,0,0,15,25.51M15,28C6.93,22.16,2.7,16.84,1,12.39-2.13,4.45,2.74,0,7.92,0A8.86,8.86,0,0,1,15,3.46,8.86,8.86,0,0,1,22.08,0c5.18,0,10.05,4.45,7,12.39C27.3,16.84,23.07,22.16,15,28Z"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+
+                        
                     </div>
                     <div class="space_30"></div>
                     <h6 class="mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
@@ -335,7 +376,19 @@
                 <div class="product mb-5 col-4">
                     <div class="product_img_wrap position-relative" data-toggle="modal" data-target="#exampleModal">
                         <img src="" alt="">
-                        <img src="./SVG/like.svg" alt="" class="btn_like position-absolute" style="right:10px;bottom:10px">
+
+                        <svg id="" class="btn_like position-absolute" style="right:15px;bottom:15px" width="30" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 28">
+                            <g id="圖層_2" data-name="圖層 2">
+                                <g id="圖層_1-2" data-name="圖層 1">
+                                    <g id="Path_324" data-name="Path 324">
+                                        <path class="like_fill"  d="M15,28C6.93,22.16,2.7,16.84,1,12.39-3.68.47,9.6-3.58,15,3.46c5.4-7,18.68-3,14,8.93C27.3,16.84,23.06,22.16,15,28Z"/>
+                                        <path class="like_stroke" d="M15,25.51a51.66,51.66,0,0,0,7.88-7.15,23.48,23.48,0,0,0,4.29-6.69c1.15-3,1.11-5.46-.11-7.25a5.94,5.94,0,0,0-5-2.42,6.85,6.85,0,0,0-5.49,2.68L15,6.74,13.41,4.68A6.85,6.85,0,0,0,7.92,2a5.94,5.94,0,0,0-5,2.42c-1.22,1.79-1.26,4.29-.11,7.25a23.48,23.48,0,0,0,4.29,6.69A51.66,51.66,0,0,0,15,25.51M15,28C6.93,22.16,2.7,16.84,1,12.39-2.13,4.45,2.74,0,7.92,0A8.86,8.86,0,0,1,15,3.46,8.86,8.86,0,0,1,22.08,0c5.18,0,10.05,4.45,7,12.39C27.3,16.84,23.07,22.16,15,28Z"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+
+                        
                     </div>
                     <div class="space_30"></div>
                     <h6 class="mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
@@ -346,7 +399,19 @@
                 <div class="product mb-5 col-4">
                     <div class="product_img_wrap position-relative" data-toggle="modal" data-target="#exampleModal">
                         <img src="" alt="">
-                        <img src="./SVG/like.svg" alt="" class="btn_like position-absolute" style="right:10px;bottom:10px">
+
+                        <svg id="" class="btn_like position-absolute" style="right:15px;bottom:15px" width="30" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 28">
+                            <g id="圖層_2" data-name="圖層 2">
+                                <g id="圖層_1-2" data-name="圖層 1">
+                                    <g id="Path_324" data-name="Path 324">
+                                        <path class="like_fill"  d="M15,28C6.93,22.16,2.7,16.84,1,12.39-3.68.47,9.6-3.58,15,3.46c5.4-7,18.68-3,14,8.93C27.3,16.84,23.06,22.16,15,28Z"/>
+                                        <path class="like_stroke" d="M15,25.51a51.66,51.66,0,0,0,7.88-7.15,23.48,23.48,0,0,0,4.29-6.69c1.15-3,1.11-5.46-.11-7.25a5.94,5.94,0,0,0-5-2.42,6.85,6.85,0,0,0-5.49,2.68L15,6.74,13.41,4.68A6.85,6.85,0,0,0,7.92,2a5.94,5.94,0,0,0-5,2.42c-1.22,1.79-1.26,4.29-.11,7.25a23.48,23.48,0,0,0,4.29,6.69A51.66,51.66,0,0,0,15,25.51M15,28C6.93,22.16,2.7,16.84,1,12.39-2.13,4.45,2.74,0,7.92,0A8.86,8.86,0,0,1,15,3.46,8.86,8.86,0,0,1,22.08,0c5.18,0,10.05,4.45,7,12.39C27.3,16.84,23.07,22.16,15,28Z"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+
+                        
                     </div>
                     <div class="space_30"></div>
                     <h6 class="mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
@@ -357,7 +422,19 @@
                 <div class="product mb-5 col-4">
                     <div class="product_img_wrap position-relative" data-toggle="modal" data-target="#exampleModal">
                         <img src="" alt="">
-                        <img src="./SVG/like.svg" alt="" class="btn_like position-absolute" style="right:10px;bottom:10px">
+
+                        <svg id="" class="btn_like position-absolute" style="right:15px;bottom:15px" width="30" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 28">
+                            <g id="圖層_2" data-name="圖層 2">
+                                <g id="圖層_1-2" data-name="圖層 1">
+                                    <g id="Path_324" data-name="Path 324">
+                                        <path class="like_fill"  d="M15,28C6.93,22.16,2.7,16.84,1,12.39-3.68.47,9.6-3.58,15,3.46c5.4-7,18.68-3,14,8.93C27.3,16.84,23.06,22.16,15,28Z"/>
+                                        <path class="like_stroke" d="M15,25.51a51.66,51.66,0,0,0,7.88-7.15,23.48,23.48,0,0,0,4.29-6.69c1.15-3,1.11-5.46-.11-7.25a5.94,5.94,0,0,0-5-2.42,6.85,6.85,0,0,0-5.49,2.68L15,6.74,13.41,4.68A6.85,6.85,0,0,0,7.92,2a5.94,5.94,0,0,0-5,2.42c-1.22,1.79-1.26,4.29-.11,7.25a23.48,23.48,0,0,0,4.29,6.69A51.66,51.66,0,0,0,15,25.51M15,28C6.93,22.16,2.7,16.84,1,12.39-2.13,4.45,2.74,0,7.92,0A8.86,8.86,0,0,1,15,3.46,8.86,8.86,0,0,1,22.08,0c5.18,0,10.05,4.45,7,12.39C27.3,16.84,23.07,22.16,15,28Z"/>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+
+                        
                     </div>
                     <div class="space_30"></div>
                     <h6 class="mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
@@ -418,11 +495,12 @@
     // 側bar到一個位置fix住↑↑  
 
 
+
     // like的hover↓↓ 待解決!!!!!!!!!!!!!!!!!!!!!!!!!!
-    $('#btn_like').on('mouseenter',function(){
+    $('.btn_like').on('mouseenter',function(){
         $(this).find('.like_fill').css('fill','#db5c00');
     });
-    $('#btn_like').on('mouseleave',function(){
+    $('.btn_like').on('mouseleave',function(){
         $(this).find('.like_fill').css('fill','none');
         // 偵測有沒有點過
         if($(this).attr('clicked') != 'yes') {
@@ -432,14 +510,19 @@
         
     });
 
-    $('#btn_like').on('click',function(){
-        $('.like_fill').toggleClass('color');
+    $('.btn_like').on('click',function(){
+        $(this).toggleClass('color');
         
     });
     
     // like的hover↑↑
 
+    // 手機板side bar動畫↓↓
+    $('.m_account_option').on('click',function(){
+        $(this).children().addClass('check_border').parent().siblings().children().removeClass('check_border');
 
+    });
+    // 手機板side bar動畫↑↑
 
 
 
