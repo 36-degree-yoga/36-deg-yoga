@@ -132,8 +132,9 @@
             font-weight: 500;
         }
 
+        /* 待調整 */
         .dropdown-toggle::after {
-            margin-left: 2.2rem;
+            margin-left: 0rem;
         }
 
         /* 篩選器 ↑ */
@@ -479,14 +480,8 @@
             margin-right: 0 !important;
         }
 
-        .star-wrap {
-            height: 16px;
-        }
 
-        .star-icon {
-            width: 16px;
-            height: 16px;
-        }
+
 
         /* 尺寸篩選器 ↑ */
     </style>
@@ -597,7 +592,7 @@
 
                                 <div class="star-icon d-flex">
 
-                                    <img src="./SVG/stars_5.svg" alt="">
+                                    <img src="./SVG/star_5_new.svg" alt="">
 
                                     <a class="pl-2" href="">
                                         (1051）評論
@@ -647,7 +642,7 @@
                                     aria-expanded="false">
                                     選擇尺寸
                                 </button>
-                                <div class="size-list-dropdown-menu dropdown-menu border-top-0 rounded-0 w-100"
+                                <div class="size-list-dropdown-menu dropdown-menu  rounded-0 w-100"
                                     aria-labelledby="dropdownMenuButton">
                                     <a class="size-list-item dropdown-item text-center" href="#">180 公分</a>
                                     <a class="size-list-item dropdown-item text-center" href="#">215 公分</a>
@@ -1227,16 +1222,14 @@
 
                     <!-- 區塊4-2：客戶評論 -->
 
-                    <ul class="nav nav-pills mb-3 " id="pills-tab" role="tablist">
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active line-height" id="pills-reviews-tab" data-toggle="pill"
-                                href="#pills-reviews" role="tab" aria-controls="pills-reviews"
-                                aria-selected="true">REVIEWS</a>
+                            <a class="nav-link active " id="pills-reviews-tab" data-toggle="pill" href="#pills-reviews"
+                                role="tab" aria-controls="pills-reviews" aria-selected="true">REVIEWS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link line-height" id="pills-questions-tab" data-toggle="pill"
-                                href="#pills-questions" role="tab" aria-controls="pills-questions"
-                                aria-selected="false">QUESTIONS</a>
+                            <a class="nav-link " id="pills-questions-tab" data-toggle="pill" href="#pills-questions"
+                                role="tab" aria-controls="pills-questions" aria-selected="false">QUESTIONS</a>
                         </li>
 
                     </ul>
@@ -1247,59 +1240,204 @@
                         <div class="tab-pane fade show active" id="pills-reviews" role="tabpanel"
                             aria-labelledby="pills-reviews-tab">
 
-                            <div class="d-flex justify-content-between align-items-baseline line-height">
-                                <h6 class="text-center line-height">
-                                    篩選評論
-                                </h6>
+                            <!-- 篩選評論 -->
 
-                                <button type="submit" class="submit-btn btn ">
-                                    清除設定
-                                </button>
-                            </div>
-                            <!-- search-bar -->
+                            <div class="filter-area border-bottom">
+                                <div class="space_30 border-top"></div>
 
-                            <form class="d-flex w-50 justify-content-center align-items-baseline line-height">
+                                <div class="d-flex justify-content-between align-items-baseline line-height">
 
-                                <input class="form-control search-icon mr-0" type="search"
-                                    placeholder=" Search Reviews " aria-label="Search" maxlength="120">
+                                    <h6 class="text-center line-height">
+                                        篩選評論
+                                    </h6>
 
-                                <button class="btn border-0 my-sm-0" type="submit">
-                                    <img src="./SVG/search-icon.svg" alt="">
-                                </button>
-                            </form>
+                                    <button type="submit" class="submit-btn btn ">
+                                        清除設定
+                                    </button>
+                                </div>
 
-                            <!-- 評論篩選器 -->
+                                <!-- search-bar -->
+                                <form class="d-flex w-50 justify-content-center align-items-baseline line-height">
+
+                                    <input class="form-control search-icon mr-0" type="search"
+                                        placeholder=" Search Reviews " aria-label="Search" maxlength="120">
+
+                                    <button class="btn border-0 my-sm-0" type="submit">
+                                        <img src="./SVG/search-icon.svg" alt="">
+                                    </button>
+                                </form>
+
+                                <!-- 評論篩選器 -->
+
+                                <div class="d-flex flex-wrap">
+
+                                    <!-- Rating -->
+                                    <div class="col-4 pl-0">
+                                        <div class="reviews-dropdown dropdown line-height ">
+
+                                            <button
+                                                class="reviews-btn btn reviews-dropdown-toggle dropdown-toggle rounded-0 w-100"
+                                                type="button" id="dropdownListButton" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                分數
+                                            </button>
+
+                                            <div class="reviews-dropdown-menu dropdown-menu rounded-0 w-100"
+                                                aria-labelledby="dropdownMenuButton">
+
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    All 全部
+                                                </a>
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    <img src="./SVG/stars_5.svg" alt="">
+                                                </a>
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    <img src="./SVG/stars_4.svg" alt="">
+                                                </a>
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    <img src="./SVG/stars_3.svg" alt="">
+                                                </a>
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    <img src="./SVG/stars_2.svg" alt="">
+                                                </a>
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    <img src="./SVG/stars_1.svg" alt="">
+                                                </a>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Images & Videos-->
+                                    <div class="col-4 pl-0">
+                                        <div class="reviews-dropdown dropdown line-height">
+
+                                            <button
+                                                class="reviews-btn btn reviews-dropdown-toggle dropdown-toggle rounded-0 w-100"
+                                                type="button" id="dropdownListButton" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                Images & Videos
+                                            </button>
+
+                                            <div class="reviews-dropdown-menu dropdown-menu rounded-0 w-100"
+                                                aria-labelledby="dropdownMenuButton">
+
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    All 全部
+                                                </a>
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    With Images & Videos
+                                                </a>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Practice Frequency-->
+                                    <div class="col-4 pl-0">
+                                        <div class="reviews-dropdown dropdown line-height">
+
+                                            <button
+                                                class="reviews-btn btn reviews-dropdown-toggle dropdown-toggle rounded-0 w-100"
+                                                type="button" id="dropdownListButton" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                練習頻率
+                                            </button>
+
+                                            <div class="reviews-dropdown-menu dropdown-menu rounded-0 w-100"
+                                                aria-labelledby="dropdownMenuButton">
+
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    一週不到 1 次
+                                                </a>
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    一週 1 次
+                                                </a>
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    一週 2-4 次
+                                                </a>
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    一週超過 5 次
+                                                </a>
 
 
-                            <!-- Rating< -->
-                            <div class="reviews-dropdown dropdown line-height">
+                                            </div>
+                                        </div>
 
-                                <button class="reviews-btn btn reviews-dropdown-toggle dropdown-toggle rounded-0 px-5 "
-                                    type="button" id="dropdownListButton" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    分數
-                                </button>
+                                    </div>
 
-                                <div class="reviews-dropdown-menu dropdown-menu rounded-0 "
-                                    aria-labelledby="dropdownMenuButton">
-                                    <a class="reviews-item dropdown-item" href="#">
-                                        <img src="./SVG/stars_5.svg" alt="">
-                                    </a>
-                                    <a class="reviews-item dropdown-item" href="#">
-                                        <img src="./SVG/stars_4.svg" alt="">
-                                    </a>
-                                    <a class="reviews-item dropdown-item" href="#">
-                                        <img src="./SVG/stars_3.svg" alt="">
-                                    </a>
-                                    <a class="reviews-item dropdown-item" href="#">
-                                        <img src="./SVG/stars_2.svg" alt="">
-                                    </a>
-                                    <a class="reviews-item dropdown-item " href="#">
-                                        <img class="w-100 star-icon" src="./SVG/stars_1.svg" alt="">
-                                    </a>
+                                    <!-- Yogi Experience-->
+                                    <div class="col-4 pl-0">
+                                        <div class="reviews-dropdown dropdown line-height">
+
+                                            <button
+                                                class="reviews-btn btn reviews-dropdown-toggle dropdown-toggle rounded-0 w-100"
+                                                type="button" id="dropdownListButton" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                瑜珈經驗的程度
+                                            </button>
+
+                                            <div class="reviews-dropdown-menu dropdown-menu rounded-0 w-100"
+                                                aria-labelledby="dropdownMenuButton">
+
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    初學者
+                                                </a>
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    中段班
+                                                </a>
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    進階班
+                                                </a>
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    瑜珈老師
+                                                </a>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- My Favourite Feature -->
+                                    <div class="col-4 pl-0">
+                                        <div class="reviews-dropdown dropdown line-height">
+
+                                            <button
+                                                class="reviews-btn btn reviews-dropdown-toggle dropdown-toggle rounded-0 w-100"
+                                                type="button" id="dropdownListButton" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                喜愛的產品功能
+                                            </button>
+
+                                            <div class="reviews-dropdown-menu dropdown-menu rounded-0 w-100"
+                                                aria-labelledby="dropdownMenuButton">
+
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    環保
+                                                </a>
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    無毒
+                                                </a>
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    專利防滑
+                                                </a>
+                                                <a class="reviews-item dropdown-item text-center" href="#">
+                                                    客製化選擇
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
 
                                 </div>
+
                             </div>
+
+
+
+
 
 
 
