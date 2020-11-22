@@ -14,16 +14,10 @@
             padding: 0;
         }
 
-        /* .bg{
-            left:-25%;
-            top: -25%;
-            height: 150%;
-            width: 150%;
-            background: url(./SVG/test-background.png) center;
-            background-size: cover;
-            padding: 0;
-            animation: rotate 1s linear;
-        } */
+        h2{
+            color: #004A13;
+        }
+
 
 /* ----叉叉和logo---- */
     .delete{
@@ -71,24 +65,21 @@
         }
 
         .content{
-            margin-top:10%;
-            width: 84%;
+            padding-top:5%;
+           padding-bottom:42px;
+            width: 100%;
+            height: 87%;
             
             
         }
 
         .content-title{
-            height: 20%;
+           
 
         }
 
-        .choice-next button{
-            width: 8.125rem;
-
-        }
         .btn-wrapper{
             width: 100%;
-            padding: 0 21%;
             height: 47%;
         }
 
@@ -115,75 +106,256 @@
         height: 38px;
         border: none;
         border-radius: 4px;
-        }
 
-
-        .choice{
-            width: 14rem;
-            
-            
-        }
-
-        .choice-next{
-            height: 22%;
-            padding-bottom: 7.5rem;
-        }
-/* -------進度條 */
-        .pro-bar{
-            width: 16%;
-            margin: 7.5rem 0;
-        }
-
-        /* 溫度計 */
-        .thermometer_container {
-            
-            height: 711px;
-            width: 24px;
-            /* 685(137)+18投的高度+8-->留尾巴 */
-        }
-
-        .thermometer_wrap {
-            width: 100%;
-            height: 100%;
-        }
-
-        .thermometer {
-            width: 100%;
-            top: 0;
-            left:0.05px;
-        }
-
-        .thermometer_line {
-            height: 100%;
-            width: 12px;
-            border: 1px solid #C1C1C1;
-            border-radius: 10px;
-            padding: 2px;
-
-        }
-
-        .thermometer_move {
-            width: 100%;
-            height: 703px;
-            background-color: #F2A200;
-            border-radius: 5px;
-            transition: 0.5s;
-        }
         
-        .pro-number{
-            margin-top: 18px;
-            height: 703px;
-            /* 頭飾18px */
         }
 
-        .number{
-            height: 20%;
+        .content-wrapper button{
+            width: 210px;
         }
 
-        .number span{
-            transform: rotate(90deg);
-            transform-origin: top;
+        re-take button{
+            width: 155px;
         }
+
+/*------- tag ----------*/
+        .text-wrap{
+            /* margin-top: 12.5rem; */
+        }
+
+        .text-wrap h2{
+            margin-bottom: 1.6875rem;
+
+        }
+
+        .text-wrap span{
+            margin-top: 3.375rem;
+        }
+
+
+       
+        .tag-line{
+            width: 8px;
+            height: 25px;
+            background-color: #F2A200;
+            border-radius: 1px;
+            top:0;
+            left: 0;
+            margin-right: 0.5rem;
+        }
+
+        .tag h6{
+            font-size:24px!important;
+            color:#F2A200;
+        }
+
+
+/* -------商品結果 */
+        /* 熱門商品 */
+        .row {
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
+
+        h3 {
+            color: #004A13;
+            font-size: 2.5rem;
+        }
+
+        h6 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        a {
+            color: #333333;
+        }
+
+        a:hover {
+            color: #db5c00;
+            text-decoration: none;
+        }
+
+        /* 猜你喜歡 推薦商品 ↓↓  */
+        
+        .product-info {
+            color: #848484;
+            background: rgba(255,254,252,.5);
+            
+            
+          
+            height: 130px;
+            width: 100%;
+            bottom:0;
+            
+            
+        }
+
+   
+        .img-wrap {
+            width: 200px;
+            height: 262px;
+
+        }
+
+        .tag-wrapper h3,
+        .tag-wrapper h6{
+            color: #333333;
+        }
+
+        .tag:nth-child(1) .tag-line{
+           background: #DB5C00;
+            width: 12px;
+            height: 30px;
+
+        }
+
+        .top1 .img-wrap{
+            width: 320px;
+            height: 420px;
+        }
+
+        .top1 .tag:nth-child(1) .tag-line{
+            width: 12px;
+            height: 46px;
+            background: #DB5C00;
+        }
+
+        .tag-line-s{
+            width: 12px;
+            height: 17px;
+            margin-right: 0.5rem;
+            margin-top: 12px;
+        }
+        .match{
+            color:#F2A200;
+            margin-top: 24px;
+
+        }
+
+        .product-pic {
+            object-fit: contain;
+            object-position: center;
+        }
+
+
+        .content-product:nth-child(2){
+            margin-right: 60px;
+        }
+
+        .content-product:nth-child(3){
+            margin-right: 60px;
+        }
+
+
+        /* 猜你喜歡 推薦商品 ↑↑ */
+
+ 
+
+
+/* ------重新測驗----------------- */
+        .re-take{
+                    height: 120px;
+                    width: 100%;
+                    bottom: 0;
+                    background: url(./SVG/texture-cream.jpg);
+                    border-top:1px solid #707070;
+                }
+
+        .re-take button{
+            width: 155px;
+            margin-left: 120px;
+        }
+/*--------------- 手機版手機版手機版 --------------------------*/
+
+        @media (max-width: 992px) {
+
+            .hero{
+                height: 2144px;
+            }
+
+            .content-wrapper{
+                width: 100%;
+                height: 100%;
+                left:0;
+                background: url(./SVG/11_bg.png), #FFFEFC;
+                background-size: 100%;
+                background-attachment: fixed;
+            }
+
+            .delete{
+                width: 100%;
+                height: 147px;
+                justify-content: center!important;
+                align-items: center;
+            }
+            .logo svg{
+                width: 121px;
+                height: 29px;
+            }
+
+            .close{
+                position: absolute;
+                top:20px;
+                left:20px;
+                margin: 0;
+                
+
+            }
+
+            .close svg{
+                width: 30px;
+                height: 30px;
+            }
+
+            .content{
+                margin-top: 100px;
+                padding-top: 0;
+            }
+
+            .content h2{
+                font-size:56px;
+            }
+
+
+ /*-------- 猜你喜歡 推薦商品 ↑↑ ----------------*/
+ .content-product:nth-child(3),           
+ .content-product:nth-child(2){
+                margin-right: 0;
+            }
+
+
+            .container-fluid {
+                overflow: hidden;
+            }
+
+            .guessyoullike {
+                width: 1125px;
+                position: relative;
+            }
+
+            .product-zone {
+                margin-right: 75px;
+                margin-left: 75px;
+            }
+
+
+            .re-take button{
+                margin-left: 1rem;
+            }
+
+            .img-wrap{
+                width: 320px;
+                height: 420px;
+
+            }
+
+
+        }
+
 
 /* ----石頭動畫--------------------------- */
     
@@ -304,9 +476,6 @@
 </head>
 <body>
     <div class="container-fluid hero position-relative">
-        <!-- <div class="bg position-absolute">
-        </div> -->
-
 <!-- 飛躍的彩色石頭 -->
 
             <svg class="position-absolute green-rock" xmlns="http://www.w3.org/2000/svg" width="1218.765" height="1124.635" viewBox="0 0 1218.765 1124.635">
@@ -322,53 +491,146 @@
               </svg>
                 
 <!-- 內文 -->
-        <div class="content-wrapper position-absolute d-flex">
-            <div class="pro-bar d-flex justify-content-end">
-                <div class="pro-number">
-                    <div class="number d-flex justify-content-center align-items-center"><span>01</span></div>
-                    <div class="number d-flex justify-content-center align-items-center"><span>02</span></div>
-                    <div class="number d-flex justify-content-center align-items-center"><span>03</span></div>
-                    <div class="number d-flex justify-content-center align-items-center"><span>04</span></div>
-                    <div class="number d-flex justify-content-center align-items-center"><span>05</span></div>
-                </div>
-                <div class="thermometer_container">
-                    <div class="thermometer_wrap d-flex  justify-content-center position-relative">
-                        <img class="thermometer d-block position-absolute" src="img/thermometer/sidebar_thermometer_head.svg" alt="">
+        <div class="content-wrapper position-absolute d-flex">           
+            <div class="content d-flex justify-content-center flex-wrap align-items-end">
+                <div class="content-title text-center w-100"><h2>Your Soulmat</h2></div>
+                <div class="content-product d-flex justify-content-between mb-4">
+                            
+                    <div class="product-zone px-0 top1">
+                        <div class="tag-wrapper d-flex justify-content-between">
+                            <div class="d-flex align-items-center tag mr-3">
+                                <div class="tag-line"></div>
+                                <h3 class="mt-2">Top1</h3>
+                            </div>
+                            <div class="d-flex align-items-center tag mr-3 mt-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="28.39" viewBox="0 0 34 28.39">
+                                    <g id="Layer_3" data-name="Layer 3" transform="translate(-1.22 -3.61)">
+                                      <path id="Path_489" data-name="Path 489" d="M4,13.33a1.39,1.39,0,1,0-.411.986A1.39,1.39,0,0,0,4,13.33Z" transform="translate(0 0)" fill="#db5c00"/>
+                                      <path id="Path_490" data-name="Path 490" d="M31.81,15.84a20.35,20.35,0,0,0-4.58,1.43,22.7,22.7,0,0,0-3.48,2.1A17.69,17.69,0,0,1,22,16.57a47.65,47.65,0,0,1-2.8-7.69,1.046,1.046,0,0,0-2,0,46.709,46.709,0,0,1-2.8,7.69,17,17,0,0,1-1.76,2.8,22.7,22.7,0,0,0-3.48-2.1,20.66,20.66,0,0,0-4.58-1.43,1.006,1.006,0,0,0-1.09,1.44A50.13,50.13,0,0,1,7.82,31.17a1,1,0,0,0,1,.83h18.8a1,1,0,0,0,1-.83,50.15,50.15,0,0,1,4.26-13.89,1,1,0,0,0-1.07-1.44ZM26.79,30H9.64a55.659,55.659,0,0,0-3.4-11.71,15.75,15.75,0,0,1,2.09.78,20,20,0,0,1,3.85,2.45,1,1,0,0,0,1.39-.09,19.28,19.28,0,0,0,2.67-4,43.46,43.46,0,0,0,2-4.89,41.739,41.739,0,0,0,2,4.89,19.92,19.92,0,0,0,2.66,4,1,1,0,0,0,1.4.09,19.21,19.21,0,0,1,3.85-2.45,14.769,14.769,0,0,1,2.09-.78A55.07,55.07,0,0,0,26.79,30Z" transform="translate(0 0)" fill="#db5c00"/>
+                                      <path id="Path_491" data-name="Path 491" d="M35.22,13.33a1.39,1.39,0,1,1-1.39-1.39A1.39,1.39,0,0,1,35.22,13.33Z" transform="translate(0 0)" fill="#db5c00"/>
+                                      <path id="Path_492" data-name="Path 492" d="M18.22,6.39A1.39,1.39,0,1,0,16.84,5a1.39,1.39,0,0,0,1.38,1.39Z" transform="translate(0 0)" fill="#db5c00"/>
+                                      <path id="Path_493" data-name="Path 493" d="M18.23,26.34a1.11,1.11,0,1,0,1.1,1.1A1.11,1.11,0,0,0,18.23,26.34Z" transform="translate(0 0)" fill="#db5c00"/>
+                                      <path id="Path_494" data-name="Path 494" d="M12.58,26.34a1.11,1.11,0,1,0,1.1,1.1A1.11,1.11,0,0,0,12.58,26.34Z" transform="translate(0 0)" fill="#db5c00"/>
+                                      <path id="Path_495" data-name="Path 495" d="M23.89,26.34a1.11,1.11,0,1,0,1.1,1.1A1.11,1.11,0,0,0,23.89,26.34Z" transform="translate(0 0)" fill="#db5c00"/>
+                                    </g>
+                                  </svg>
+                                  
+                            </div>
+                            <div class="d-flex align-items-center tag">
+                                 <div class="tag-line tag-line-s"></div>
+                                 <p class="match">90% Match</p>
+                                        
+                            </div>
+                                    </div>
             
-                        <!-- <div class="thermometer_line_wrap"> -->
-                        <div class="thermometer_line">
-                            <div class="thermometer_move"></div>
-                        </div>
-                        <!-- </div> -->
-                    </div>
+                        <div class="product-wrap">
             
+                                        <div class="img-wrap border position-relative">
+                                            <!-- product 的 border 之後取消 -->
+                                            <img class="product-pic w-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
+                                            <div class="product-info text-center position-absolute d-flex align-items-center">
+                                                <a class="w-100" href="">
+                                                    <h6 class="">好瘦瑜珈磚</h6>
+                                                    <p class="">NT$. 1000</p>
+                                                </a>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                        
+                                    
+                                </div>
+        
                 </div>
+                <div class="content-product d-flex justify-content-between mb-4">
+                            
+                    <div class="product-zone px-0 ">
+                        <div class="tag-wrapper d-flex justify-content-between">
+                            <div class="d-flex align-items-center tag mr-3">
+                                <div class="tag-line"></div>
+                                <h6 class="mt-2">Top2</h6>
+                            </div>
+                            
+                            <div class="d-flex align-items-center tag">
+                                 <div class="tag-line tag-line-s"></div>
+                                 <p class="match">80% Match</p>
+                                        
+                            </div>
+                                    </div>
+            
+                        <div class="product-wrap">
+            
+                                        <div class="img-wrap border position-relative">
+                                            <!-- product 的 border 之後取消 -->
+                                            <img class="product-pic w-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
+                                            <div class="product-info text-center position-absolute d-flex align-items-center">
+                                                <a class="w-100" href="">
+                                                    <h6 class="">好瘦瑜珈磚</h6>
+                                                    <p class="">NT$. 1000</p>
+                                                </a>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                        
+                                    
+                                </div>
+            
+                                
+            
+                        
+                </div>
+                <div class="content-product d-flex justify-content-between mb-4">
+                            
+                    <div class="product-zone px-0 ">
+                        <div class="tag-wrapper d-flex justify-content-between">
+                            <div class="d-flex align-items-center tag mr-3">
+                                <div class="tag-line"></div>
+                                <h6 class="mt-2">Top3</h6>
+                            </div>
+                            
+                            <div class="d-flex align-items-center tag">
+                                 <div class="tag-line tag-line-s"></div>
+                                 <p class="match">70% Match</p>
+                                        
+                            </div>
+                                    </div>
+            
+                        <div class="product-wrap">
+            
+                                        <div class="img-wrap border position-relative">
+                                            <!-- product 的 border 之後取消 -->
+                                            <img class="product-pic w-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
+                                            <div class="product-info text-center position-absolute d-flex align-items-center">
+                                                <a class="w-100" href="">
+                                                    <h6 class="">好瘦瑜珈磚</h6>
+                                                    <p class="">NT$. 1000</p>
+                                                </a>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                        
+                                    
+                                </div>
+            
+                                
+            
+                        
+                </div>
+                <div class="col-12 d-flex justify-content-center"><button type="button" class="btn_f mx-5" name="" value="">看更多商品</button></div>
                 
-                
+
             </div>
 
-            <div class="content d-flex justify-content-center flex-wrap align-items-">
-                <div class="content-title text-center w-100"><h2>你常做的瑜珈種類？</h2></div>
-                <div class="btn-wrapper d-flex flex-wrap align-content-start">
-                    <div class="btn-wrap col-6 d-flex justify-content-center"><button type="button" class="btn_l choice" name="" value="">哈達瑜伽</button></div>
-                    <div class="btn-wrap col-6 d-flex justify-content-center"><button type="button" class="btn_l choice" name="" value="">哈達瑜伽</button></div>
-                    <div class="btn-wrap col-6 d-flex justify-content-center"><button type="button" class="btn_l choice" name="" value="">哈達瑜伽</button></div>
-                    <div class="btn-wrap col-6 d-flex justify-content-center"><button type="button" class="btn_l choice" name="" value="">哈達瑜伽</button></div>
-                    <div class="btn-wrap col-6 d-flex justify-content-center"><button type="button" class="btn_l choice" name="" value="">哈達瑜伽</button></div>
-                    <div class="btn-wrap col-6 d-flex justify-content-center"><button type="button" class="btn_l choice" name="" value="">哈達瑜伽</button></div>
-                    <div class="btn-wrap col-6 d-flex justify-content-center"><button type="button" class="btn_l choice" name="" value="">哈達瑜伽</button></div>
-                    <div class="btn-wrap col-6 d-flex justify-content-center"><button type="button" class="btn_l choice" name="" value="">哈達瑜伽</button></div>
-                    
-                </div>
+        </div>
 
-
-    
-                <div class="choice-next d-flex justify-content-center">
-                    <button type="button" class="btn_l choice mx-5" name="" value="">上一步</button>
-                    <button type="button" class="btn_f choice mx-5" name="" value="">下一步</button>
-
-                </div>
-            </div>
+        <div class="re-take d-flex justify-content-center position-absolute align-items-center">
+            <h6>想看其他結果？</h6>
+            <button type="button" class="btn_f" name="" value="">重新測驗</button>
 
         </div>
 

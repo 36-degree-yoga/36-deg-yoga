@@ -72,8 +72,8 @@
         
 
         .animation img{
-            width: 1080px;
-            height: 1080px;
+            width: 1200px;
+            height: 1200px;
             animation: rotate 10s linear infinite;
         }
 
@@ -105,7 +105,43 @@
             bottom:32px; 
             left: 36px;
         }
+/* -----------手機版--------------- */
+@media screen and (max-width:992px){
+        .close{
+                position: absolute;
+                top:20px;
+                left:20px;
+                margin: 0;
+                
 
+            }
+            .close svg{
+                width: 30px;
+                height: 30px;
+            }
+
+            .last-sec-thermo{
+              margin-left: 5rem!important;
+            }
+            h2{
+              font-size: 40px;
+            }
+            .text{
+              margin-bottom: 52px;
+            }
+            .logo{
+              top:120px;
+              left: 50%;
+              transform: translate(-50%,0);
+            }
+            .animation img{
+              height: 600px;
+              width: 600px;
+            }
+            .img-scope{
+              height: 100%;
+            }
+          }
     </style>
 </head>
 <body>
