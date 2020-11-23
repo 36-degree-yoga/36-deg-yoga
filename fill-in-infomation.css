@@ -101,6 +101,9 @@
   color: #f2a200;
   /* text-decoration: */
 }
+.change-his-padding-in-mobile {
+  padding: 0 60px 0 22px;
+}
 /* 商品明細 */
 .howmuch-you-need-pay tbody tr:last-child {
   visibility: hidden;
@@ -164,6 +167,19 @@
   .this-one-mobile-none {
     display: none;
   }
+  .change-his-padding-in-mobile {
+    padding: 0;
+  }
+  /* form control */
+  .form-control6 {
+    width: 100%;
+  }
+  .form-control9 {
+    width: 100%;
+  }
+  .form-control8 {
+    visibility: hidden;
+  }
   /* 商品明細 */
 
   .title-in-table a {
@@ -172,10 +188,11 @@
   .howmuch-you-need-pay tbody tr:last-child {
     visibility: visible;
   }
+
   /* button */
   .btn-leave {
     width: 130px;
     line-height: 40px;
-    margin: 60px 20px;
+    margin: 0px 10px;
   }
 }

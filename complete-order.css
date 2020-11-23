@@ -98,9 +98,7 @@ body {
   text-align: center;
   margin-bottom: 24px;
 }
-.finish-order-info p {
-  /* font-size: 24px; */
-}
+
 .finish-order-info-mobile {
   display: none;
 }
