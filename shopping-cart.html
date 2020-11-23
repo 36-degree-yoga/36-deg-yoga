@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>購物車</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="./fontawesome/css/all.css" />
+    <link rel="stylesheet" href="./shopping-cart.css" />
+  </head>
+  <body>
+    <nav class="nav-place-zone"></nav>
+
+    <div class="thermometer_container">
+      <div class="order_step_title row justify-content-around">
+        <p id="order_s_1">商品確認</p>
+        <p id="order_s_2">填寫資料</p>
+        <p id="order_s_3">確認付款</p>
+        <p id="order_s_4">訂單完成</p>
+      </div>
+      <div class="thermometer_wrap d-flex align-items-center">
+        <img
+          class="thermometer d-block"
+          src="img/thermometer/order_thermometer.svg"
+          alt=""
+        />
+
+        <!-- <div class="thermometer_line_wrap"> -->
+        <div class="thermometer_line">
+          <div class="thermometer_move"></div>
+        </div>
+        <!-- </div> -->
+      </div>
+      <div class="order_step_number row justify-content-around">
+        <p id="order_n_1">01</p>
+        <p id="order_n_2">02</p>
+        <p id="order_n_3">03</p>
+        <p id="order_n_4">04</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-10 this-one-mobile-none">
+          <div class="shop-cart-title d-flex justify-content-end">
+            <p class="need-padding3">內容</p>
+            <p class="need-padding2">數量</p>
+            <p class="need-padding1">價格</p>
+            <p class="need-padding1">收藏</p>
+            <p class="need-padding1 pr-4">刪除</p>
+          </div>
+          <div class="dividerline-in-table-no2 this-one-mobile-none"></div>
+          <div class="d-flex px-2 ">
+            <div class="col-5  d-flex justify-content-between ">
+              <div class="product-img w-50">商品圖</div>
+              <div class="product-info">
+                <p>好瘦好瘦瑜伽墊</p>
+                <p class="product-info-detail">
+                  顏色:嘿<br />尺寸：150*130<br />重量:500g
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-3d-flex justify-content-end align-items-center pr-3 number-change"
+            >
+              <i class="fas fa-minus-circle"></i>
+              <span class="mx-4">1</span>
+              <i class="fas fa-plus-circle"></i>
+            </div>
+            <div class="col-2 d-flex justify-content-center align-items-center">
+              <p class="m-0">NT.1200</p>
+            </div>
+            <div class="col-1 d-flex justify-content-center align-items-center">
+              <i class="far fa-heart"></i>
+            </div>
+            <div
+              class="col-1 d-flex justify-content-end align-items-center pr-4"
+            >
+              <i class="far fa-trash-alt"></i>
+            </div>
+          </div>
+         
+         
+        </div>
+        <div class="this-one-pc-none col-12">
+            <div class="d-flex col-12">
+                <div class=" col-9 d-flex justify-content-start">
+                    <div class="product-img">商品圖</div>
+                    <div class="product-info">
+                 <p>好瘦好瘦瑜伽墊</p>
+                 <p class="product-info-detail">
+                 顏色:嘿<br />尺寸：150*130<br />重量:500g
+                </p>
+                    </div>
+                 </div>
+                 
+            <div class="col-3 d-flex justify-content-end align-items-end">
+            <p class="m-0">NT.1200</p>
+            </div>
+        </div>
+            <div class="col-12 d-flex align-items-center my-2"><div class="col-sm-6 col-6 d-flex justify-content-start number-change align-items-center">
+            <i class="fas fa-minus-circle"></i>
+            <span class="mx-4">1</span>
+            <i class="fas fa-plus-circle"></i>
+            </div>
+            <div class="col-6 d-flex justify-content-end">
+            <i class="far fa-heart mx-2"></i>
+       
+            <i class="far fa-trash-alt mx-2"></i>
+            </div>
+        </div>
+
+        <div class="dividerline-in-table-no2"></div>
+    
+    </div>
+         <div class="d-flex justify-content-end col-12 col-sm-12 col-md-10 col-lg-10">
+            <div class="text-right pc-need-hide-span">
+               <p>共 3 件</br ><span>/</span>
+             總重：1500g<span>/</span><br>
+              TOTAL： NT.3600</p>
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-leave p-0">繼續購物</button>
+            <button class="btn btn-leave p-0 hope-next-step">下ㄧ步</button>
+          </div>
+      </div>
+    </div>
+
+    <!--  hot products -->
+    <div class="container hot-products-zone">這裡是熱門商品的位置呦</div>
+    <!-- foooterrrrrrrr -->
+    <div class="container-fluid footer-zone"></div>
+    <script src="lib/jquery-3.5.1.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- 溫度計的 -->
+    <script src="lib/jquery-3.5.1.js"></script>
+    <script>
+      $(".home_page_number a").on("click", function () {
+        $(this).css("color", "#db5c00");
+        $(this).siblings().css("color", "#848484");
+      });
+
+      $("#hpn_1").on("click", function () {
+        $(".thermometer_move").css("width", "33%");
+      });
+
+      $("#hpn_2").on("click", function () {
+        $(".thermometer_move").css("width", "66%");
+      });
+
+      $("#hpn_3").on("click", function () {
+        $(".thermometer_move").css("width", "100%");
+      });
+    </script>
+  </body>
+</html>

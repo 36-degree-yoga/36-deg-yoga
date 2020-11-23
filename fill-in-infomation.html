@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>填資料囉</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="./fontawesome/css/all.css" />
+    <link rel="stylesheet" href="./fill-in-infomation.css" />
+  </head>
+  <body>
+    <nav class="nav-place-zone"></nav>
+
+    <div class="thermometer_container">
+      <div class="order_step_title row justify-content-around">
+        <p id="order_s_1">商品確認</p>
+        <p id="order_s_2">填寫資料</p>
+        <p id="order_s_3">確認付款</p>
+        <p id="order_s_4">訂單完成</p>
+      </div>
+      <div class="thermometer_wrap d-flex align-items-center">
+        <img
+          class="thermometer d-block"
+          src="img/thermometer/order_thermometer.svg"
+          alt=""
+        />
+
+        <!-- <div class="thermometer_line_wrap"> -->
+        <div class="thermometer_line">
+          <div class="thermometer_move"></div>
+        </div>
+        <!-- </div> -->
+      </div>
+      <div class="order_step_number row justify-content-around">
+        <p id="order_n_1">01</p>
+        <p id="order_n_2">02</p>
+        <p id="order_n_3">03</p>
+        <p id="order_n_4">04</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div
+        class="row justify-content-center flex-sm-column flex-sm-column flex-md-row flex-lg-row"
+      >
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12 pl-4 pr-5">
+          <!-- part1 -->
+          <div>
+            <div class="d-flex justify-content-between">
+              <h6>運送資訊</h6>
+              <div class="d-flex justify-content-between this-one-mobile-none">
+                <div class="mx-3 this-one-mobile-none">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="inside"
+                    checked
+                  />
+                  <label class="form-check-label" for="inside">台灣本島</label>
+                </div>
+                <div class="mx-3 this-one-mobile-none">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="outside"
+                  />
+                  <label class="form-check-label" for="outside"
+                    >離島/海外地區</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="dividerline-in-table mb-3"></div>
+            <div class="px-2">
+              <div class="form-group row mb-2">
+                <label class="col-12 col-sm-12 col-md-3 col-lg-3 col-form-label"
+                  >運送方式</label
+                >
+                <div
+                  class="col-12 col-sm-12 col-md-9 col-lg-9 py-1 mobile-need-change-padding pr-2 d-flex"
+                >
+                  <select class="form-control6 option-1 px-2 text-center">
+                    <option class="preset-choose-1">--請選擇--</option>
+                    <option>宅配到府</option>
+                    <option>超商取貨</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row mb-2">
+                <label class="col-12 col-sm-12 col-md-3 col-lg-3 col-form-label"
+                  >付款方式</label
+                >
+                <div
+                  class="col-12 col-sm-12 col-md-9 col-lg-9 py-1 mobile-need-change-padding pr-2 d-flex"
+                >
+                  <select class="form-control6 option-1 px-2 text-center">
+                    <option class="preset-choose-1">--請選擇--</option>
+                    <option>貨到付款</option>
+                    <option>信用卡支付</option>
+                    <option>ATM匯款</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row mb-2">
+                <label class="col-12 col-sm-12 col-md-3 col-lg-3 col-form-label"
+                  >送達時間</label
+                >
+                <div
+                  class="col-12 col-sm-12 col-md-9 col-lg-9 py-1 mobile-need-change-padding pr-2 d-flex"
+                >
+                  <select class="form-control6 option-1 px-2 text-center">
+                    <option class="preset-choose-1">--請選擇--</option>
+                    <option>上午</option>
+                    <option>下午</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- part2 -->
+          <div class="mt-4">
+            <div class="d-flex justify-content-between">
+              <h6>收件資訊</h6>
+
+              <div class="mx-3">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="member-info"
+                />
+                <label class="form-check-label" for="member-info"
+                  >填入會員資料</label
+                >
+              </div>
+            </div>
+
+            <div class="dividerline-in-table mb-3"></div>
+            <div class="px-2">
+              <div class="form-group row mb-2">
+                <label
+                  class="col-12 col-sm-12 col-md-3 col-lg-3 col-form-label"
+                  for="email"
+                  >Email信箱</label
+                >
+                <div
+                  class="col-12 col-sm-12 col-md-9 col-lg-9 py-1 mobile-need-change-padding pr-2 d-flex"
+                >
+                  <input
+                    type="text"
+                    class="form-control6 text-center"
+                    id="email"
+                  />
+                </div>
+              </div>
+              <div class="form-group row mb-2">
+                <label
+                  class="col-12 col-sm-12 col-md-3 col-lg-3 col-form-label"
+                  for="name"
+                  >收件人姓名</label
+                >
+                <div
+                  class="col-12 col-sm-12 col-md-9 col-lg-9 py-1 mobile-need-change-padding pr-2 d-flex"
+                >
+                  <input
+                    type="text"
+                    class="form-control6 text-center"
+                    id="name"
+                  />
+                </div>
+              </div>
+              <div class="form-group row mb-2">
+                <label
+                  class="col-12 col-sm-12 col-md-3 col-lg-3 col-form-label"
+                  for="phonr-number"
+                  >手機號碼</label
+                >
+                <div
+                  class="col-12 col-sm-12 col-md-9 col-lg-9 py-1 mobile-need-change-padding pr-2 d-flex"
+                >
+                  <input
+                    type="text"
+                    class="form-control6 text-center"
+                    id="phone-number"
+                  />
+                </div>
+              </div>
+              <div class="form-group row mb-2">
+                <label class="col-12 col-sm-12 col-md-3 col-lg-3 col-form-label"
+                  >收件地址</label
+                >
+                <div
+                  class="col-12 col-sm-12 col-md-9 col-lg-9 py-1 mobile-need-change-padding pr-2"
+                >
+                  <div class="d-flex">
+                    <select class="form-control7 option-1 px-2 text-center">
+                      <option class="preset-choose-1">--請選擇--</option>
+                      <option>city1</option>
+                      <option>city2</option>
+                    </select>
+                    <input
+                      type="text"
+                      class="form-control8 text-center"
+                      id="city-number"
+                    />
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control6 text-center my-3"
+                    id="city-detail"
+                  />
+                </div>
+              </div>
+              <div class="form-group row mb-2">
+                <label class="col-12 col-sm-12 col-md-3 col-lg-3 col-form-label"
+                  >備註</label
+                >
+                <div
+                  class="col-12 col-sm-12 col-md-9 col-lg-9 py-1 mobile-need-change-padding pr-2"
+                >
+                  <input
+                    type="text"
+                    class="form-control9 text-center"
+                    id="orther"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- part3 -->
+          <div class="mt-4">
+            <div class="d-flex justify-content-between">
+              <h6>發票明細</h6>
+              <div class="d-flex justify-content-between">
+                <div class="mx-3 this-one-mobile-none">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id=""
+                    checked
+                  />
+                  <label class="form-check-label" for="">電子發票</label>
+                </div>
+                <div class="mx-3 this-one-mobile-none">
+                  <input type="checkbox" class="form-check-input" id="" />
+                  <label class="form-check-label" for="">發票證明聯</label>
+                </div>
+              </div>
+            </div>
+            <div class="dividerline-in-table mb-3"></div>
+            <div class="px-2">
+              <div class="form-group row mb-2">
+                <div class="d-flex justify-content-start px-4">
+                  <div class="mx-3">
+                    <input
+                      type="checkbox"
+                      class="form-check-input"
+                      id=""
+                      checked
+                    />
+                    <label class="form-check-label" for="">隨包裹</label>
+                  </div>
+                  <div class="mx-3">
+                    <input type="checkbox" class="form-check-input" id="" />
+                    <label class="form-check-label" for="">電子條碼載具</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- part4 -->
+          <div class="mt-4">
+            <div class="d-flex justify-content-between">
+              <h6>優惠選擇</h6>
+            </div>
+
+            <div class="dividerline-in-table mb-3"></div>
+            <div class="px-2">
+              <div class="form-group row mb-2">
+                <label
+                  class="col-12 col-sm-12 col-md-3 col-lg-3 col-form-label"
+                  for=""
+                  >優惠代碼</label
+                >
+                <div
+                  class="col-12 col-sm-12 col-md-9 col-lg-9 py-1 mobile-need-change-padding pr-2 d-flex"
+                >
+                  <input type="text" class="form-control4 text-center" id="" />
+                  <a href="#" class="text-center control-his-position ml-3"
+                    >確認</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 明細完成 -->
+        <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+          <div class="title-in-table d-flex justify-content-between">
+            <h6>購物明細</h6>
+            <a href="#" class="close-features"
+              ><i class="fas fa-minus-circle"></i>收起訂單明細</a
+            >
+          </div>
+          <div class="dividerline-in-table mb-3"></div>
+
+          <div class="d-flex justify-content-center">
+            <table class="howmuch-you-need-pay">
+              <tbody>
+                <tr>
+                  <th scope="row">商品數量</th>
+                  <td>n</td>
+                </tr>
+                <tr>
+                  <th scope="row">商品重量</th>
+                  <td>total-weight</td>
+                </tr>
+                <tr>
+                  <th scope="row">商品金額</th>
+                  <td>money-sum</td>
+                </tr>
+                <tr>
+                  <th scope="row">運費</th>
+                  <td>car-money</td>
+                </tr>
+                <tr>
+                  <th scope="row">優惠折抵</th>
+                  <td>bouns</td>
+                </tr>
+                <tr>
+                  <th scope="row">應付金額</th>
+                  <td>total</td>
+                </tr>
+                <tr>
+                  <td colspan="2" class="py-2">
+                    <a href="#" class="close-features"
+                      ><i class="fas fa-plus-circle"></i> 收起訂單明細</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-10">
+          <div class="col-6 d-flex align-items-center flex-column">
+            <!-- ennnnnnddddd -->
+            <div class="my-5 text-center">
+              <input type="checkbox" class="form-check-input" id="" />
+              <label class="form-check-label change-color-yel" for=""
+                >我同意<span>隱私權協定</span></label
+              >
+            </div>
+            <div class="text-center">
+              <button class="btn btn-leave p-0">回到購物車</button>
+              <button class="btn btn-leave p-0 hope-next-step">下一步</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="lib/jquery-3.5.1.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- <script src="./text-animation.js"></script> -->
+    <!--  -->
+    <script>
+      $(".option-1").on("click", function () {
+        $(".preset-choose-1").addClass("display-none");
+      });
+    </script>
+  </body>
+</html>

@@ -1,15 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>完成訂單</title>
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="./fontawesome/css/all.css" />
-    <link rel="stylesheet" href=".complete-order.css" />
-</head>
-<body>
+    <link rel="stylesheet" href="./complete-order.css" />
+  </head>
+  <body>
     <nav class="nav-place-zone"></nav>
-    <div class="thermometer-progress-bar"></div>
-</body>
+
+    <div class="thermometer_container">
+      <div class="order_step_title row justify-content-around">
+        <p id="order_s_1">商品確認</p>
+        <p id="order_s_2">填寫資料</p>
+        <p id="order_s_3">確認付款</p>
+        <p id="order_s_4">訂單完成</p>
+      </div>
+      <div class="thermometer_wrap d-flex align-items-center">
+        <img
+          class="thermometer d-block"
+          src="img/thermometer/order_thermometer.svg"
+          alt=""
+        />
+
+        <!-- <div class="thermometer_line_wrap"> -->
+        <div class="thermometer_line">
+          <div class="thermometer_move"></div>
+        </div>
+        <!-- </div> -->
+      </div>
+      <div class="order_step_number row justify-content-around">
+        <p id="order_n_1">01</p>
+        <p id="order_n_2">02</p>
+        <p id="order_n_3">03</p>
+        <p id="order_n_4">04</p>
+      </div>
+    </div>
+
+    <div class="container-fluid need-bck-img">
+      <div class="row justify-content-center">
+        <div
+          class="col-lg-6 col-md-6 col-sm-11 col-11 order-background d-flex justify-content-center"
+        >
+          <div class="finish-order-info">
+              <!-- animation -->
+            <div class="da-gogo mx-auto mb-3 text-center">
+              <i class="far fa-check-circle"></i>
+            </div>
+            <h5>已完成訂單</h5>
+            <div>
+              <p>訂單編號：<span>s124454</span></p>
+              <!-- <p>選擇貨到付款</p> -->
+              <p>
+                可至會員中心查詢訂單資訊
+                <span class="finish-order-info-pc">謝謝惠顧</span>
+              </p>
+              <p class="finish-order-info-mobile">謝謝惠顧</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 text-center">
+          <button class="btn btn-leave p-0">回到首頁</button>
+          <button class="btn btn-leave p-0 hope-next-step">繼續購物</button>
+        </div>
+      </div>
+    </div>
+    <!-- foooterrrrrrrr -->
+    <div class="container-fluid footer-zone"></div>
+    <!-- 溫度計的 -->
+    <script src="lib/jquery-3.5.1.js"></script>
+    <script>
+      $(".home_page_number a").on("click", function () {
+        $(this).css("color", "#db5c00");
+        $(this).siblings().css("color", "#848484");
+      });
+
+      $("#hpn_1").on("click", function () {
+        $(".thermometer_move").css("width", "33%");
+      });
+
+      $("#hpn_2").on("click", function () {
+        $(".thermometer_move").css("width", "66%");
+      });
+
+      $("#hpn_3").on("click", function () {
+        $(".thermometer_move").css("width", "100%");
+      });
+    </script>
+  </body>
 </html>

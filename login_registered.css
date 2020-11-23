@@ -7,6 +7,7 @@ body {
   border-bottom: 1px solid #004a13;
   background: rgba(255, 254, 252, 0.8);
 }
+
 .tag-page {
   margin-top: 5rem;
 }
@@ -44,7 +45,9 @@ body {
   top: -2.5px;
   height: 462px;
   padding: 60px 0;
+  background-color: #fffefc;
   /* transition: 0.8s; */
+  z-index: 1;
 }
 
 .form-control1,
@@ -97,7 +100,7 @@ body {
   border-right: none;
 }
 .click-btn {
-  z-index: 1;
+  z-index: 3;
 }
 
 /* rwd */

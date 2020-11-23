@@ -4,7 +4,9 @@ body {
 }
 footer {
   padding: 4rem 0 0 0;
-  background-color: #004a13;
+  /* background-color: #004a13; */
+  background: url(./img/index/index_back02.jpg);
+  background-size: cover;
 }
 h6 {
   color: #f2a200;
@@ -14,6 +16,9 @@ p a,
 p {
   color: #fffefc;
   line-height: 26px;
+}
+.social-icon {
+  margin-left: 30px;
 }
 
 .dividerline {
@@ -42,6 +47,16 @@ p {
   .foot-info3 {
     margin-top: 30px;
     padding-left: 15px;
+  }
+  .social-icon {
+    margin-left: 18px;
+  }
+  .social-icon img {
+    width: 28px;
+    height: 28px;
+  }
+  .footer-logo img {
+    width: 100px;
   }
   .mobile-display-none {
     display: none;
