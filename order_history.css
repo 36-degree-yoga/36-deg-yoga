@@ -7,6 +7,10 @@ p {
   line-height: 22px;
 }
 
+.order_list_history {
+  display: flex;
+}
+
 /* 訂單選單 */
 .list_option {
   width: 100%;
@@ -74,6 +78,11 @@ p {
   margin-bottom: 60px;
 }
 
+.order_details_page {
+}
+
+
+
 .order_img_wrap {
   width: 100px;
   height: 100px;
@@ -104,144 +113,136 @@ p {
   border-radius: 4px;
 }
 
-.m_order_history{
+.m_order_history {
   display: none;
 }
 
-
 /* 手機 */
 
-
-@media (max-width:500px){
-   ::-webkit-scrollbar {
-   display: none;
- }
-
-p {
-  line-height: 25px;
-}
-
-
-  .order_list_history{
+@media (max-width: 500px) {
+  ::-webkit-scrollbar {
     display: none;
-  } 
-  .m_order_history{
-  display: block;
-  width: 100vw;
-  overflow-x: hidden;
-}
+  }
 
+  p {
+    line-height: 25px;
+  }
 
+  .order_list_history {
+    display: none;
+  }
+  .hide {
+    display: none;
+  }
+  .m_order_history {
+    display: block;
+    width: 100vw;
+    overflow-x: hidden;
+  }
 
-/* 標題 */
+  /* 標題 */
 
-.m_back_and_title{
-  background-color: #004a13;
-  height: 50px;
-  padding-left: 25px;
-  padding-right: 25px;
-}
+  .m_back_and_title {
+    background-color: #004a13;
+    height: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 
+  .m_title {
+    font-size: 1rem;
+    color: #fffefc;
+    height: 50px;
+  }
+  .m_title img {
+    height: 50px;
+    width: 35px;
+    margin-right: 10px;
+  }
 
+  .back_arrow {
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    color: #fffefc;
+    font-size: 30px;
+    font-weight: bold;
+  }
 
-.m_title{
-  font-size: 1rem;
-  color: #fffefc;
-  height: 50px;
-}
-.m_title img{
-  height: 50px;
-  width: 35px;
-  margin-right: 10px;
-}
+  /* 手機選項蘭 */
+  .m_order_option_wrap {
+    overflow-x: scroll;
+    height: 60px;
+  }
 
-.back_arrow{
-  line-height: 50px;
-  width: 50px;
-  height: 50px;
-  color: #fffefc;
-  font-size:30px;
-  font-weight: bold;
-}
+  .m_order_type {
+    width: 525px;
+    height: 100%;
+  }
 
-/* 手機選項蘭 */
-.m_order_option_wrap{
-  overflow-x: scroll;
-  height: 60px;
-}
+  .m_order_option {
+    padding: 20px;
+  }
 
-.m_order_type{
-  width: 525px;
-  height: 100%;
-}
+  .check_border {
+    border-bottom: 2px solid #f2a200;
+  }
 
-.m_order_option{
-padding: 20px;
+  /* 清單藍 */
 
-}
+  .m_order_list,
+  .m_order_item {
+    width: 100%;
+  }
 
-.check_border{
-border-bottom: 2px solid #f2a200;
-}
+  .m_order_title {
+    background-color: #fdebca;
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid #848484;
+    border-bottom: 1px solid #848484;
+  }
 
+  .m_order_status {
+    margin-bottom: 15px;
+  }
 
-/* 清單藍 */
+  .m_order_detail {
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid #848484;
+  }
 
-.m_order_list,
-.m_order_item{
-  width: 100%;
-}
+  .m_p {
+    font-size: 14px;
+  }
 
-.m_order_title{
-  background-color:#fdebca;
-  width: 100%;
-  padding: 20px;
-  border-top: 1px solid #848484;
-  border-bottom: 1px solid #848484;
-}
+  .p_title {
+    margin-bottom: 0;
+  }
+  .m_order_product_wrap {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .order_img_wrap {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
 
-.m_order_status{
-  margin-bottom: 15px;
-}
+  .product-left {
+    width: 100%;
+  }
 
-.m_order_detail{
-  width: 100%;
-  padding: 20px;
-  border-bottom: 1px solid #848484;
-}
+  .count_price {
+    width: 35%;
+  }
 
-.m_p{
-  font-size: 14px;
-}
+  .btn-wrap {
+    margin-top: 30px;
+  }
 
-.p_title{
-  margin-bottom: 0;
-}
-.m_order_product_wrap {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.order_img_wrap{
-  width:100px;
-  height: 100px;
-  margin-right: 10px;
-}
-
-.product-left{
-  width: 100%;
-}
-
-.count_price{
-  width: 35%;
-}
-
-.btn-wrap{
-  margin-top: 30px;
-}
-
-.order_history_detail_btn{
-  margin-bottom: 0;
-}
-
-
+  .order_history_detail_btn {
+    margin-bottom: 0;
+  }
 }

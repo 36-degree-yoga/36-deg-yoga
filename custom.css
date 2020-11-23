@@ -12,6 +12,13 @@
   background: rgb(219, 219, 219);
 }
 
+button:hover{
+  opacity: .6;
+}
+
+p{
+  line-height: 22px;
+}
 .custom {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -38,8 +45,15 @@ h5 {
   border: 1px solid #848484;
   /* margin: 10px; */
   background-color: #fffefc;
-  padding-left: 60px;
+  /* padding-left: 60px; */
   padding-bottom: 60px;
+}
+
+@media (min-width:500px) and (max-width:1400px){
+  .custom_page {
+    width: 1400px;
+  }
+  
 }
 
 .delete_wrap {
@@ -47,6 +61,12 @@ h5 {
   height: 80px;
   right: 0;
   top: 0;
+}
+
+.zoom_icon{
+  bottom:60px;
+  left:60px;
+
 }
 
 .zoom_icon img {
@@ -145,8 +165,13 @@ h5 {
 }
 
 .item_title {
-  font-weight: 700;
+  font-weight: 500;
   margin-right: 30px;
+}
+
+.choose.img_item{
+  width: 30px;
+  height: 30px;
 }
 
 /* +- */
@@ -165,6 +190,10 @@ h5 {
 .fold .more {
   width: 16px;
   height: 16px;
+}
+
+.fold img:hover{
+  opacity: .5;
 }
 
 .option_button {
@@ -289,9 +318,9 @@ h5 {
 
 
   .m_custom {
-    width: 375px;
-    height: 812px;
-    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
     display: block;
     background-color: #fffefc;
   }
@@ -308,7 +337,7 @@ h5 {
   }
   .m_custom_header div {
     font-size: 20px;
-    padding-left: 65px;
+    padding-left:;
   }
 
   .custom_total_price {
@@ -321,6 +350,15 @@ h5 {
   .option_container {
     width: 100%;
     padding: 15px;
+  }
+
+  .m_zoom_icon {
+    right: 30px;
+  }
+
+  .m_zoom_icon img{
+    height: 32px;
+    margin-bottom: 25px;
   }
 
   .m_mat_show_wrap {
@@ -341,9 +379,11 @@ h5 {
   }
 
   .option_scroll{
-    width: 375px;
+    width: 100vw;
     overflow-x: auto;
   }
+
+
 
   /* 選項 */
   .m_option_item {
@@ -360,13 +400,13 @@ h5 {
   }
 
   .m_option_button_wrap {
-    width: 2250px;
+    width: 600vw;
     background:none;
     height: 200px;
   }
 
   .m_item_button {
-    width: 375px;
+    width: 100vw;
     padding-left: 30px;
     overflow: hidden;
   }
@@ -408,4 +448,75 @@ h5 {
   top: 15px;
 }
 
+}
+
+
+
+/* 彈跳視窗 */
+
+.modal-size{
+  width: 600px;
+  height: 400px;
+}
+.out_body{
+  padding-top: 40px;
+  text-align: center;
+}
+.out_body p{
+  font-size: 24px;
+  line-height: 50px;
+}
+.out_body p a{
+ color: #db5c00;
+}
+
+.out_header{
+  padding: 30px;
+}
+
+
+
+.m_out_body{
+  padding-top: 40px;
+  text-align: center;
+}
+.m_out_body p{
+  font-size: 24px;
+  line-height: 50px;
+}
+.m_out_body p a{
+ color: #db5c00;
+}
+
+.m_out_header{
+  padding: 30px;
+}
+.m_out_header img{
+  width: 40px;  
+  left: -275px;
+}
+
+
+
+.m_modal-size{
+ height: 700px;
+  
+}
+
+.m_out_body button{
+  margin-bottom: 60px;
+  height: 60px;
+  width:150px;
+}
+
+.m_out_hide{
+  display: none;
+}
+
+
+.m_cart_content p{
+  margin-top: -100px;
+}
+.m_save_wrap{
+  margin-top: -100px;
 }

@@ -5,21 +5,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>custom</title>
-  <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
-  <link rel="stylesheet" href="bootstrap/js/bootstrap.bundle.js" />
-  <link rel="stylesheet" href="CSS/reset.css" />
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="bootstrap/js/bootstrap.bundle.js">
+  <link rel="stylesheet" href="CSS/reset.css">
+  <link rel="stylesheet" href="share.css">
   <link rel="stylesheet" href="custom.css" />
 </head>
 
 <body>
+
+
   <div class="custom container-fluid">
 
-    <div class="custom_page d-flex no-wrap position-relative">
+
+
+    <div class="custom_page d-flex justify-content-center no-wrap position-relative">
 
       <div class="delete_wrap position-absolute d-flex align-items-end"><img class="" src="svg/delete.svg" alt=""></div>
 
       <!-- 縮放ICON -->
-      <div class="zoom_icon  d-flex flex-column align-self-end col-1">
+      <div class="zoom_icon d-flex flex-column align-self-end position-absolute">
         <img src="svg/custom/move.svg" alt="">
         <img src="svg/custom/zoom_in.svg" alt="">
         <img src="svg/custom/zoom_out.svg" alt="">
@@ -27,7 +32,7 @@
 
 
       <!-- 瑜珈墊製作區 -->
-      <div class="mat_space d-flex align-items-center justify-content-center col-4">
+      <div class="mat_space d-flex align-items-center justify-content-center col-5">
 
         <div class="mat_show_wrap"></div>
 
@@ -67,11 +72,16 @@
           </div>
 
           <div class="done_btn">
-            <button class="btn_l">儲存設計</button>
+            <button type="button" class="btn_l" data-toggle="modal" data-target="#save_design">
+              儲存設計
+            </button>
             <button class="btn_l">直接購買</button>
-            <button class="btn_f">加入購物車</button>
+            <button type="button" class="btn_f" data-toggle="modal" data-target="#add_cart_btn">加入購物車</button>
           </div>
         </div>
+
+
+
 
 
 
@@ -96,8 +106,8 @@
             <div class="option_button d-flex ">
               <div class="long_btn d-flex flex-column col">
                 <p>長/cm</p>
-                <button class="btn_l" class="">173</button>
-                <button class="btn_f">183</button>
+                <button class="btn_l" >173</button>
+                <button class="btn_l">183</button>
                 <button class="btn_l">193</button>
               </div>
               <div class="width_btn  col">
@@ -105,10 +115,10 @@
                 <button class="btn_l">61</button><br>
                 <button class="btn_l">68</button><br>
                 <button class="btn_l">80</button><br>
-                <button class="btn_f">180</button><span>+ $200</span>
+                <button class="btn_l">180</button><span>+ $200</span>
               </div>
-              <div class="how  align-self-end "><a href="">
-                  如何挑選尺寸
+              <div class="how  align-self-end "><a href="#cc" onclick="channel()">如何挑選尺寸</a>
+                  
                 </a></div>
 
             </div>
@@ -127,7 +137,7 @@
 
 
               <div class="fold">
-                <img src="svg/custom/minus_nowrap.svg" alt="">
+                <img src="svg/custom/plus_nowrap.svg" alt="">
               </div>
             </div>
             <!-- 下框選項 -->
@@ -156,7 +166,7 @@
 
 
               <div class="fold">
-                <img src="svg/custom/minus_nowrap.svg" alt="">
+                <img src="svg/custom/plus_nowrap.svg" alt="">
               </div>
             </div>
             <!-- 下框選項 -->
@@ -179,14 +189,14 @@
           <div class="option_container">
             <!-- 上框 -->
             <div class="option_item_title_wrap d-flex justify-content-between">
-              <div class="item_wrap">
+              <div class="item_wrap d-flex align-items-center">
                 <div class="item_title">顏色選項</div>
-                <div class="choose"></div>
+                <div class="choose color"></div>
               </div>
 
 
               <div class="fold">
-                <img src="svg/custom/minus_nowrap.svg" alt="">
+                <img src="svg/custom/plus_nowrap.svg" alt="">
               </div>
             </div>
             <!-- 下框選項 -->
@@ -212,14 +222,14 @@
           <div class="option_container">
             <!-- 上框 -->
             <div class="option_item_title_wrap d-flex justify-content-between">
-              <div class="item_wrap">
+              <div class="item_wrap d-flex align-items-center">
                 <div class="item_title">圖案選項</div>
-                <div class="choose"></div>
+                <div class="choose img_item"></div>
               </div>
 
 
               <div class="fold">
-                <img src="svg/custom/minus_nowrap.svg" alt="">
+                <img src="svg/custom/plus_nowrap.svg" alt="">
               </div>
             </div>
             <!-- 下框選項 -->
@@ -253,14 +263,14 @@
 
 
               <div class="fold">
-                <img src="svg/custom/minus_nowrap.svg" alt="">
+                <img src="svg/custom/plus_nowrap.svg" alt="">
               </div>
             </div>
             <!-- 下框選項 -->
             <div class="btno option_button d-flex flex-column">
               <div class="print btn-content d-flex align-items-center">
                 <button class="btn_l">印刷</button>
-                <button class="btn_f">鋼印</button><span>+ $80</span>
+                <button class="btn_l">鋼印</button><span>+ $80</span>
               </div>
               <div class="add_text d-flex justify-content-between">
                 <input type="text" class="col"><button class="btn_f">新增文字</button>
@@ -280,7 +290,6 @@
 
           <!-- ...... -->
 
-
         </div>
 
 
@@ -290,6 +299,52 @@
 
 
     </div>
+
+    <!-- c8c8 c8  -->
+    
+
+    <!-- Modal  儲存設計 -->
+    <div class="modal fade" id="save_design" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content modal-size">
+          <div class="modal-header .out_header">
+            
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <img class="" src="svg/delete.svg" alt="">
+            </button>
+          </div>
+          <div class="modal-body out_body">
+            <p>已儲存您的設計</p>
+            <p>可至會員中心 > <a href="">我的最愛 </a> 查看設計</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+     <!-- Modal  加入購物車 -->
+     <div class="modal fade" id="add_cart_btn" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+       <div class="modal-content modal-size">
+         <div class="modal-header out_header">
+           
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <img class="" src="svg/delete.svg" alt="">
+           </button>
+         </div>
+         <div class="modal-body out_body">
+           <p class="mt-4">已加入 <a href="">購物車 </a></p>
+         </div>
+         
+       </div>
+     </div>
+   </div>
+
+
+
   </div>
 
   <!-------- 手機------ -->
@@ -300,9 +355,10 @@
 
 
     <div class="m_custom_header d-flex  justify-content-between align-items-center">
-      <a href=""><img class="" src="SVG/delete.svg" width="30px" alt=""></a>
-      <div class="">製作你的瑜珈墊</div>
-      <button class=" btn_f">下一步</button>
+      <button class=" btn_f"type="button"data-toggle="modal" data-target="#m_leave">離開</button>
+      <!-- <a href=""><img class="" src="SVG/delete.svg" width="30px" alt=""></a> -->
+      <div class="">客製瑜珈墊</div>
+      <button class=" btn_f"type="button"data-toggle="modal" data-target="#m_next">下一步</button>
     </div>
 
     <!-- 第二航標題功能 -->
@@ -331,16 +387,14 @@
 
     <div class="m_mat_space d-flex  justify-content-center position-relative">
 
-      <div class="m_zoom_icon position-absolute d-flex flex-column align-self-end col-1">
+      <div class="m_zoom_icon position-absolute d-flex flex-column align-self-end ">
         <img src="svg/custom/move.svg" alt="">
         <img src="svg/custom/zoom_in.svg" alt="">
         <img src="svg/custom/zoom_out.svg" alt="">
       </div>
 
       <div class="m_mat_show_wrap "></div>
-      <div class="m_zoom_icon  d-flex flex-column align-self-end ">
-
-      </div>
+      
 
     </div>
 
@@ -367,7 +421,7 @@ question_mark position-absolute">
         <p class="mt-3">長 | cm &emsp; <span>+ $50</span></p>
         <div class="m_size_btn d-flex mb-2">
           <button class="btn_l" class="">173</button>
-          <button class="btn_f">183</button>
+          <button class="btn_l">183</button>
           <button class="btn_l">193</button>
         </div>
 
@@ -377,7 +431,7 @@ question_mark position-absolute">
           <button class="btn_l">61</button><br>
           <button class="btn_l">68</button><br>
           <button class="btn_l">80</button><br>
-          <button class="btn_f">180</button>
+          <button class="btn_l">180</button>
         </div>
       </div>
 
@@ -453,7 +507,7 @@ question_mark position-absolute">
 
         <div class="print btn-content d-flex align-items-center mt-4">
           <button class="btn_l w-25">印刷</button>
-          <button class="btn_f w-25">鋼印</button><span>+ $80</span>
+          <button class="btn_l w-25">鋼印</button><span>+ $80</span>
         </div>
         <div class="add_text d-flex justify-content-start">
           <input type="text" class=" "><button class="btn_f">新增文字</button>
@@ -473,6 +527,69 @@ question_mark position-absolute">
     </div>
 
 
+     <!-- Modal  下一步 -->
+    <div class="modal fade" id="m_next" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content m_modal-size">
+         <div class="modal-header m_out_header">
+           
+           <button type="button" class="close position-relative" data-dismiss="modal" aria-label="Close">
+             <img class="position-absolute" src="svg/delete.svg" alt="">
+           </button>
+         </div>
+         <div class="modal-body m_out_body d-flex align-items-center justify-content-center">
+
+          <div class="m_out_btn  align-items-center justify-content-center m_out_hide">
+            <button type="button" class="btn_f" >加入購物車</button><br>
+            <button type="button" class="btn_f" >直接購買</button><br>
+            <button type="button" class="btn_f" >儲存設計</button>
+          </div>
+
+          <div class="m_cart_content m_out_hide">
+            <p class="">已加入 <br><a href="">購物車 </a></p>
+          </div>
+
+          <div class="m_save_content">
+            
+            <div class="m_save_wrap">
+              <p>已儲存您的設計</p>
+              <p>可至會員中心 > <a href="">我的最愛 </a><br> 查看設計</p>
+            </div>
+          </div>
+
+
+         </div>
+         
+       </div>
+     </div>
+    </div>
+     <!--  ↑ Modal  下一步 -->
+
+        <!-- Modal  離開 -->
+    <div class="modal fade" id="m_leave" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content m_modal-size">
+       <div class="modal-header m_out_header">
+         
+         <button type="button" class="close position-relative" data-dismiss="modal" aria-label="Close">
+           <img class="position-absolute" src="svg/delete.svg" alt="">
+         </button>
+       </div>
+       <div class="modal-body m_out_body d-flex align-items-center justify-content-center">
+        <div class="m_out_btn d-flex flex-column align-items-center justify-content-center">
+          <p class="mb-5">確定要離開<br>客製瑜珈墊頁面嗎?</p>
+          <button type="button" class="btn_f mt-5" >確定離開</button>
+          <button type="button" class="btn_f"data-dismiss="modal" aria-label="Close" >繼續編輯</button>
+        </div>
+       </div>
+       
+     </div>
+   </div>
+  </div>
+   <!--  ↑ Modal  離開 -->
+
 
 
 
@@ -483,9 +600,10 @@ question_mark position-absolute">
     <!-- 手機板外框底↓-->
   </div>
 
-
   <script src="lib/jquery-3.5.1.js"></script>
+  <script src="./bootstrap/js/bootstrap.bundle.js"></script>
   <script>
+  // ↓↓ 選項展開↓↓//
     let hide = $('.fold').parent().next();
     hide.toggleClass('d-flex');
     hide.addClass('option_hide');
@@ -496,17 +614,37 @@ question_mark position-absolute">
     fold.toggleClass('d-flex');
     fold.addClass('option_hide');
 
+    foldFrist.children().attr('src','');
+
 
 
     $('.fold').on('click', function () {
+      $('.fold').children().attr('src','svg/custom/plus_nowrap.svg')
       let hide = $('.fold').parent().next();
       hide.removeClass('d-flex');
       hide.addClass('option_hide');
       let show = $(this).parent().next();
       // let icon=$(this).children().eq(1);
       show.toggleClass('d-flex')
-      show.addClass('option_hide');
+      show.toggleClass('option_hide');
+      let foldIcon= $(this).children();
+      foldIcon.attr('src','')
+      
     });
+
+  // ↑↑ 選項展開↑↑//
+
+
+
+
+
+
+//↓↓如何挑選尺寸跳窗↓↓
+function channel(){
+window.open("howto.html","如何挑選尺寸","height=800,width=800,location=no,menubar=no,status=no","channelmode,scrollbars")
+}
+//↑↑如何挑選尺寸跳窗↑↑
+
   </script>
 
 
