@@ -161,13 +161,17 @@
 
 
   .nav-search-area{
-    height: 7.5rem;
+    height: 75px;
     transition:1s;
     display: none;
     position: fixed;
     top: 0;
+    padding: 0!important;
+    
 
   }
+
+
 
   .nav-search-area.show{
 
@@ -176,6 +180,10 @@
     animation: nav-search-show 1s;
     transition:1s;
     
+  }
+
+  .nav-search-send{
+    padding:0!important;
   }
 
   @keyframes nav-search-show {
@@ -239,6 +247,19 @@
   opacity: 0;
   right:100%;
   position:relative;
+}
+
+.nav-mobile-side::after{
+  content:"";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:0;
+  left:0;
+  background-color:white;
+  opacity: .5;
+  z-index: -1;
+
 }
 
 
@@ -528,9 +549,9 @@
           
         </div>          
         <form class="container-fluid nav-search-area justify-content-between align-items-center">
-          <input class="form-control col-10" type="" placeholder="Search" aria-label="">
+          <input class="form-control col-10 ml-2" type="" placeholder="Search" aria-label="">
           <!-- 把type=search刪掉防止醜的叉叉出現 -->
-          <div class="col-2 d-flex justify-content-end nav-search-send" type="submit"> 
+          <div class="col-2 d-flex justify-content-center nav-search-send" type="submit"> 
             <svg class="nav-icon" id="icon_-_search" data-name="icon - search" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
             <rect id="Rectangle_176" data-name="Rectangle 176" width="14.1" height="14.1" fill="none"/>
             <g id="icon_-_search-2" data-name="icon - search">
@@ -682,15 +703,6 @@
 
 
 
-<!----- Bottom Nav for mobile ------------------>
-      
-
-
-    <div class="box"></div>
-    <div class="box"><h1>這邊是為了測試滾動效果，下拉式選單做了兩種可以討論下</h1></div>
-    <div class="box"></div>
-    <div class="box"></div>
-    <div class="box"></div>
 
 <!-------------------------- Script ----------------------------------->
 
