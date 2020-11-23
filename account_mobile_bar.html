@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="bootstrap/js/bootstrap.bundle.js" />
+    <link rel="stylesheet" href="CSS/reset.css" />
+
+    <style>
+      @media (max-width: 500px) {
+        body {
+          width: 100vw;
+          overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+          display: none;
+        }
+        .m_account_bar_wrap {
+          overflow-x: scroll;
+          height: 55px;
+        }
+
+        .m_account_bar_item {
+          width: 660px;
+          height: 100%;
+        }
+
+        .m_account_option {
+          padding: 20px;
+        }
+        /* 寫JQ可以加的class↓ */
+        .check_border {
+          border-bottom: 2px solid #f2a200;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="m_account_bar_wrap">
+      <div class="m_account_bar_item d-flex align-items-center">
+        <div class="m_account_option"><p class="check_border">我的帳號</p></div>
+        <div class="m_account_option"><p>訂單紀錄</p></div>
+        <div class="m_account_option"><p>我的最愛</p></div>
+        <div class="m_account_option"><p>我的折價券</p></div>
+        <div class="m_account_option"><p>我的點數</p></div>
+        <div class="m_account_option"><p>客製化設計</p></div>
+      </div>
+    </div>
+  </body>
+</html>

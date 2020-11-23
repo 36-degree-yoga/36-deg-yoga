@@ -58,7 +58,43 @@
             object-fit: contain;
             object-position: center;
         }
+
+        .icon-wrap {
+            display: none !important;
+        }
+
         /* 猜你喜歡 推薦商品 ↑↑ */
+
+        @media (max-width: 500px) {
+
+            .container-fluid {
+                overflow: hidden;
+            }
+
+            .guessyoullike {
+                width: 1125px;
+                position: relative;
+            }
+
+            .product-zone {
+                margin-right: 75px;
+                margin-left: 75px;
+            }
+
+            .justify-content-center {
+                justify-content: space-between !important;
+            }
+
+            .icon-wrap {
+                display: flex !important;
+                position: absolute;
+                width: 345px;
+                justify-content: space-between;
+                left: 15px;
+                top: 240px;
+
+            }
+        }
     </style>
 </head>
 
@@ -69,7 +105,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-2 px-0"></div>
-            <div class="col-8 px-0">
+            <div class="col-md-8 coi-sm-12 px-0">
 
                 <h3 class="text-center">商品推薦</h3>
 
@@ -127,6 +163,11 @@
                                 <p>NT$. 1000</p>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="icon-wrap d-flex">
+                        <div class="icon-left"><img src="./SVG/icon_left.svg" alt=""></div>
+                        <div class="icon-right"><img src="./SVG/icon_right.svg" alt=""></div>
                     </div>
 
                 </div>
