@@ -59,6 +59,10 @@ p {
   border: none;
   border-radius: 4px;
 }
+
+.btn_f:hover {
+  opacity: 0.6;
+}
 /* 綠底按鈕↑↑ */
 
 /* 線按鈕↓↓ */
@@ -70,6 +74,9 @@ p {
   height: 38px;
   border: 2px solid #004a13;
   border-radius: 4px;
+}
+.btn_l:hover {
+  opacity: 0.6;
 }
 /* 線按鈕↑↑ */
 
