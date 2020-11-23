@@ -239,6 +239,10 @@
             background-color: #FFFEFC !important;
         }
 
+        .sort-by.show {
+            transform: translate3d(-69px, 27px, 0px) !important;
+        }
+
         .size-list-item {
             color: #333333 !important;
         }
@@ -292,7 +296,13 @@
         .banner-wrap {
             margin-top: 60px;
             height: 414px;
-            background-color: rgb(157, 255, 0);
+            overflow: hidden;
+
+        }
+
+        .big-banner {
+            object-fit: cover;
+            object-position: center;
         }
 
         .sm-banner-area {
@@ -303,7 +313,7 @@
             width: 86px;
             height: 82px;
             margin: 20px 120px;
-            background-color: red;
+
         }
 
 
@@ -607,6 +617,7 @@
             /* banner 區 */
             .banner-wrap {
                 margin-top: 0;
+                height: 100%;
 
             }
 
@@ -886,21 +897,21 @@
             <div class="col-9">
 
                 <!-- 商品 banner 展示 -->
-                <div class=" border position-relative">
+                <div class="  position-relative">
                     <div class="banner-wrap w-100">
-                        <img class="big-banner w-100 border" src="" alt="">
+                        <img class="big-banner w-100 " src="./guess-imgs/mat_1.jpg" alt="">
                     </div>
 
 
                     <div class="sm-banner-area flex-column position-absolute ">
-                        <div class="sm-banner-wrap border">
-                            <img class="sm-banner-1 w-100" src="" alt="">
+                        <div class="sm-banner-wrap ">
+                            <img class="sm-banner-1 w-100" src="./guess-imgs/mat_1.jpg" alt="">
                         </div>
-                        <div class="sm-banner-wrap border">
-                            <img class="sm-banner-2 w-100" src="" alt="">
+                        <div class="sm-banner-wrap ">
+                            <img class="sm-banner-2 w-100" src="./guess-imgs/mat_2.jpg" alt="">
                         </div>
-                        <div class="sm-banner-wrap border">
-                            <img class="sm-banner-3 w-100" src="" alt="">
+                        <div class="sm-banner-wrap ">
+                            <img class="sm-banner-3 w-100" src="./guess-imgs/mat_3.jpg" alt="">
                         </div>
                     </div>
 
@@ -1216,7 +1227,7 @@
 
                                 <div class="img-wrap w-100 border ">
                                     <!-- product 的 border 之後取消 -->
-                                    <img class="product-pic w-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
+                                    <img class="product-pic w-100 h-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
                                 </div>
 
                                 <div class="product-info text-center">
@@ -1234,7 +1245,7 @@
 
                                 <div class="img-wrap w-100 border ">
                                     <!-- product 的 border 之後取消 -->
-                                    <img class="product-pic w-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
+                                    <img class="product-pic w-100 h-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
                                 </div>
 
                                 <div class="product-info text-center">
@@ -1252,7 +1263,7 @@
 
                                 <div class="img-wrap w-100 border ">
                                     <!-- product 的 border 之後取消 -->
-                                    <img class="product-pic w-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
+                                    <img class="product-pic w-100 h-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
                                 </div>
 
                                 <div class="product-info text-center">
@@ -2121,7 +2132,7 @@
                                         分類：選擇
                                     </button>
 
-                                    <div class="size-list-dropdown-menu dropdown-menu  rounded-0 "
+                                    <div class="sort-by size-list-dropdown-menu dropdown-menu  rounded-0 "
                                         aria-labelledby="dropdownMenuButton">
                                         <a class="size-list-item dropdown-item text-center" href="#">最新</a>
                                         <a class="size-list-item dropdown-item text-center" href="#">最高分</a>
