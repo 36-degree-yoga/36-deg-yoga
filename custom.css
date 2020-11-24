@@ -24,6 +24,9 @@ p{
   padding-bottom: 15px;
   height: 100vh;
 }
+h5{
+  color: #333;
+}
 
 @media (max-width: 500px) {
   .custom {
@@ -106,14 +109,35 @@ h5 {
   font-size: 1.75rem;
 }
 
+#mat-total-price{
+  color: #db5c00;
+  background: none;
+  border: none;
+  width: 80px;
+  text-align: center;
+}
+#mat-total-price:focus{
+  outline: none;
+}
+
 .add_cart_icon img {
   width: 30px;
   height: 30px;
+}
+.add_cart_icon:hover{
+  cursor: pointer;
 }
 
 .count {
   font-size: 24px;
   color: #004a13;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: center;
+}
+.count:focus{
+  outline: none;
 }
 
 .custom_btn {
@@ -129,6 +153,20 @@ h5 {
   height: 80%;
   width: 580px;
   overflow-y: auto;
+}
+/* 即時數據 */
+.choose input{
+  background: none;
+  border: none;
+  width: 50px;
+  text-align: center;
+}
+
+.add_pay input{
+  background: none;
+  border: none;
+  width: 30px;
+  text-align: left;
 }
 
 /* 邊框粗細 */
@@ -337,7 +375,6 @@ h5 {
   }
   .m_custom_header div {
     font-size: 20px;
-    padding-left:;
   }
 
   .custom_total_price {

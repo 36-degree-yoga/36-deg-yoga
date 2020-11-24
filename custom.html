@@ -34,7 +34,7 @@
       <!-- 瑜珈墊製作區 -->
       <div class="mat_space d-flex align-items-center justify-content-center col-5">
 
-        <div class="mat_show_wrap"></div>
+        <div class="mat_show_wrap" id="my_mat"></div>
 
       </div>
 
@@ -43,13 +43,14 @@
       <!-- 選項區域 -->
       <div class="custom_optiom_wrap col-5">
         <!-- 大標 -->
-        <div class="custom_title_wrap d-flex justify-content-between">
+        <div class="custom_title_wrap d-flex justify-content-between align-items-center">
           <div>
             <h5>製作你的瑜珈墊</h5>
           </div>
-          <p class="custom_total_price">
-            共計NT.&nbsp;<span>1239</span>&ensp;元
-          </p>
+          <div class="custom_total_price d-flex align-items-center">
+            共計NT.
+            <input id="mat-total-price" name="mat-total-price" type="text" value="700" readonly>&ensp;元
+          </div>
         </div>
 
 
@@ -64,7 +65,8 @@
               <img src="SVG/custom/minus_g_icon.svg" alt="">
             </div>
             <!-- 數量 -->
-            <div class="count">1</div>
+            <!-- <div class="count">1</div> -->
+            <input id="mat-count" name="mat-count" class="count" type="text" value="1" readonly="readonly">
             <!-- + -->
             <div class="plus add_cart_icon">
               <img src="SVG/custom/plus_g_icon.svg" alt="">
@@ -90,10 +92,26 @@
           <div class="option_container">
             <!-- 長寬上框 -->
             <div class="bt2 option_item_title_wrap bt2 d-flex justify-content-between">
-              <div class="item_wrap">
+              <div class="item_wrap d-flex align-items-center">
                 <div class="item_title">尺寸選項</div>
-                <div class="choose"></div>
+                <!-- 數據 -->
+                <div class="choose d-flex align-items-center">
+                  <input id="mat-h" name="mat-h" type="text" value="173" readonly>
+                  x
+                  <input id="mat-w" name="mat-w" type="text" value="61" readonly>
+                  cm
+                </div>
+                <!-- 數據↑ -->
               </div>
+
+              <!-- 加錢顯示 -->
+              <div class="add_pay_wrap a-w ml-auto">
+                <div class="add_pay d-flex ml-auto align-items-center">
+                  + $
+                  <input class="push" id="mat-w-pay" name="mat-w-pay" type="text" value="" readonly>
+                </div>
+              </div>
+              <!-- 加錢顯示 ↑ -->
 
               <div class="fold">
                 <img src="svg/custom/minus_nowrap.svg" alt="">
@@ -103,24 +121,26 @@
 
             </div>
             <!-- 下框選項 -->
-            <div class="option_button d-flex ">
-              <div class="long_btn d-flex flex-column col">
-                <p>長/cm</p>
-                <button class="btn_l" >173</button>
-                <button class="btn_l">183</button>
-                <button class="btn_l">193</button>
-              </div>
-              <div class="width_btn  col">
-                <p>寬/cm</p>
-                <button class="btn_l">61</button><br>
-                <button class="btn_l">68</button><br>
-                <button class="btn_l">80</button><br>
-                <button class="btn_l">180</button><span>+ $200</span>
-              </div>
-              <div class="how  align-self-end "><a href="#cc" onclick="channel()">如何挑選尺寸</a>
-                  
-                </a></div>
+            <div class="animation">
+              <div class="option_button d-flex ">
+                <div class="long_btn d-flex flex-column col">
+                  <p>長/cm</p>
+                  <button class="btn_l">173</button>
+                  <button class="btn_l">183</button>
+                  <button class="btn_l">193</button>
+                </div>
+                <div class="width_btn  col">
+                  <p>寬/cm</p>
+                  <button class="btn_l add-200" value="0">61</button><br>
+                  <button class="btn_l add-200" value="0">68</button><br>
+                  <button class="btn_l add-200" value="0">80</button><br>
+                  <button class="btn_l add-200" value="200">180</button><span>+ $200</span>
+                </div>
+                <div class="how  align-self-end "><a href="#cc" onclick="channel()">如何挑選尺寸</a>
 
+                  </a></div>
+
+              </div>
             </div>
           </div>
 
@@ -130,9 +150,14 @@
           <div class="option_container">
             <!-- 上框 -->
             <div class="option_item_title_wrap d-flex justify-content-between">
-              <div class="item_wrap ">
+              <div class="item_wrap d-flex align-items-center">
                 <div class="item_title">厚度選項</div>
-                <div class="choose"></div>
+                <!-- 數據 -->
+                <div class="choose d-flex align-items-center">
+                  <input id="mat-thickness" name="mat-thickness" type="text" value="3.5" readonly>
+                  mm
+                </div>
+                <!-- 數據↑ -->
               </div>
 
 
@@ -159,11 +184,23 @@
           <div class="option_container">
             <!-- 上框 -->
             <div class="option_item_title_wrap d-flex justify-content-between">
-              <div class="item_wrap">
+              <div class="item_wrap d-flex align-items-center">
                 <div class="item_title">材質選項</div>
-                <div class="choose"></div>
+                <!-- 數據 -->
+                <div class="choose d-flex align-items-center">
+                  <input id="mat-texture" name="mat-texture" type="text" value="TPE" readonly>
+                </div>
+                <!-- 數據↑ -->
               </div>
 
+              <!-- 加錢顯示 -->
+              <div class="add_pay_wrap a-t ml-auto">
+                <div class="add_pay d-flex ml-auto align-items-center">
+                  + $
+                  <input class="push" id="mat-texture-pay" name="mat-texture-pay" type="text" value="" readonly>
+                </div>
+              </div>
+              <!-- 加錢顯示 ↑ -->
 
               <div class="fold">
                 <img src="svg/custom/plus_nowrap.svg" alt="">
@@ -172,9 +209,9 @@
             <!-- 下框選項 -->
             <div class="option_button d-flex">
               <div class="btn-content 
-                        texture d-flex col"><button class="btn_l">TPE</button>
-                <button class="btn_l">NR</button>
-                <p class="align-self-center">+ $200</p>
+                        texture d-flex col"><button class="btn_l add-150" value="0">TPE</button>
+                <button class="btn_l add-150" value="150">NR</button>
+                <p class="align-self-center">+ $150</p>
               </div>
 
               <div class="how  align-self-end "><a href="">
@@ -191,7 +228,7 @@
             <div class="option_item_title_wrap d-flex justify-content-between">
               <div class="item_wrap d-flex align-items-center">
                 <div class="item_title">顏色選項</div>
-                <div class="choose color"></div>
+                <div class="choose color ml-2"></div>
               </div>
 
 
@@ -200,18 +237,20 @@
               </div>
             </div>
             <!-- 下框選項 -->
-            <div class="option_button d-flex justify-content-between">
-              <div class="color_wrap d-flex align-items-center">
-                <div class="color"></div>
-                <div class="color"></div>
-                <div class="color"></div>
-                <div class="color"></div>
-                <div class="color"></div>
+            <div class="animation">
+              <div class="option_button d-flex justify-content-between">
+                <div class="color_wrap d-flex align-items-center">
+                  <div class="color"></div>
+                  <div class="color"></div>
+                  <div class="color"></div>
+                  <div class="color"></div>
+                  <div class="color"></div>
 
-              </div>
-              <div class="color_defining d-flex align-items-center -">
-                <div class="color "></div>
-                <button class="btn_f">自定義顏色</button>
+                </div>
+                <div class="color_defining d-flex align-items-center -">
+                  <div class="color" id='pick_color'></div>
+                  <button class="btn_f" id="picker">自定義顏色</button>
+                </div>
               </div>
             </div>
           </div>
@@ -224,7 +263,7 @@
             <div class="option_item_title_wrap d-flex justify-content-between">
               <div class="item_wrap d-flex align-items-center">
                 <div class="item_title">圖案選項</div>
-                <div class="choose img_item"></div>
+                <div class="choose img_item ml-2"></div>
               </div>
 
 
@@ -245,7 +284,7 @@
               <div class="img_defining d-flex align-items-center">
                 <div></div>
                 <button class="btn_f">上傳圖片</button>
-                <p>限 PNG、JPG、BMP、GIF 圖檔 </p>
+                <p>限 PNG、JPG 圖檔 </p>
               </div>
             </div>
           </div>
@@ -256,11 +295,22 @@
           <div class="option_container">
             <!-- 上框 -->
             <div class="bb2 option_item_title_wrap d-flex justify-content-between">
-              <div class="item_wrap ">
+              <div class="item_wrap d-flex align-items-center">
                 <div class="item_title">文字選項</div>
-                <div class="choose"></div>
+                <!-- 數據 -->
+                <div class="choose d-flex align-items-center">
+                  <input id="mat-print" name="mat-print" type="text" value="" readonly>
+                </div>
+                <!-- 數據↑ -->
               </div>
-
+              <!-- 加錢顯示 -->
+              <div class="add_pay_wrap a-p ml-auto">
+                <div class="add_pay d-flex ml-auto align-items-center">
+                  + $
+                  <input class="push" id="mat-print-pay" name="mat-print-pay" type="text" value="" readonly>
+                </div>
+              </div>
+              <!-- 加錢顯示 ↑ -->
 
               <div class="fold">
                 <img src="svg/custom/plus_nowrap.svg" alt="">
@@ -269,8 +319,8 @@
             <!-- 下框選項 -->
             <div class="btno option_button d-flex flex-column">
               <div class="print btn-content d-flex align-items-center">
-                <button class="btn_l">印刷</button>
-                <button class="btn_l">鋼印</button><span>+ $80</span>
+                <button class="btn_l add-80" value="0">印刷</button>
+                <button class="btn_l add-80" value="80">鋼印</button><span>+ $80</span>
               </div>
               <div class="add_text d-flex justify-content-between">
                 <input type="text" class="col"><button class="btn_f">新增文字</button>
@@ -301,15 +351,15 @@
     </div>
 
     <!-- c8c8 c8  -->
-    
+
 
     <!-- Modal  儲存設計 -->
-    <div class="modal fade" id="save_design" tabindex="-1" role="dialog"
-      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="save_design" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content modal-size">
           <div class="modal-header .out_header">
-            
+
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <img class="" src="svg/delete.svg" alt="">
             </button>
@@ -318,30 +368,30 @@
             <p>已儲存您的設計</p>
             <p>可至會員中心 > <a href="">我的最愛 </a> 查看設計</p>
           </div>
-          
+
         </div>
       </div>
     </div>
 
 
-     <!-- Modal  加入購物車 -->
-     <div class="modal fade" id="add_cart_btn" tabindex="-1" role="dialog"
-     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-       <div class="modal-content modal-size">
-         <div class="modal-header out_header">
-           
-           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-             <img class="" src="svg/delete.svg" alt="">
-           </button>
-         </div>
-         <div class="modal-body out_body">
-           <p class="mt-4">已加入 <a href="">購物車 </a></p>
-         </div>
-         
-       </div>
-     </div>
-   </div>
+    <!-- Modal  加入購物車 -->
+    <div class="modal fade" id="add_cart_btn" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content modal-size">
+          <div class="modal-header out_header">
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <img class="" src="svg/delete.svg" alt="">
+            </button>
+          </div>
+          <div class="modal-body out_body">
+            <p class="mt-4">已加入 <a href="">購物車 </a></p>
+          </div>
+
+        </div>
+      </div>
+    </div>
 
 
 
@@ -355,10 +405,10 @@
 
 
     <div class="m_custom_header d-flex  justify-content-between align-items-center">
-      <button class=" btn_f"type="button"data-toggle="modal" data-target="#m_leave">離開</button>
+      <button class=" btn_f" type="button" data-toggle="modal" data-target="#m_leave">離開</button>
       <!-- <a href=""><img class="" src="SVG/delete.svg" width="30px" alt=""></a> -->
       <div class="">客製瑜珈墊</div>
-      <button class=" btn_f"type="button"data-toggle="modal" data-target="#m_next">下一步</button>
+      <button class=" btn_f" type="button" data-toggle="modal" data-target="#m_next">下一步</button>
     </div>
 
     <!-- 第二航標題功能 -->
@@ -394,7 +444,7 @@
       </div>
 
       <div class="m_mat_show_wrap "></div>
-      
+
 
     </div>
 
@@ -494,7 +544,7 @@ question_mark position-absolute">
 
         <div class="m_img_defining d-flex align-items-center mt-3">
           <button class="btn_f">上傳圖片</button>
-          <p>限 PNG、JPG、BMP、GIF 圖檔 </p>
+          <p>限 PNG、JPG圖檔 </p>
         </div>
 
       </div>
@@ -527,68 +577,68 @@ question_mark position-absolute">
     </div>
 
 
-     <!-- Modal  下一步 -->
-    <div class="modal fade" id="m_next" tabindex="-1" role="dialog"
-      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <!-- Modal  下一步 -->
+    <div class="modal fade" id="m_next" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content m_modal-size">
-         <div class="modal-header m_out_header">
-           
-           <button type="button" class="close position-relative" data-dismiss="modal" aria-label="Close">
-             <img class="position-absolute" src="svg/delete.svg" alt="">
-           </button>
-         </div>
-         <div class="modal-body m_out_body d-flex align-items-center justify-content-center">
+          <div class="modal-header m_out_header">
 
-          <div class="m_out_btn  align-items-center justify-content-center m_out_hide">
-            <button type="button" class="btn_f" >加入購物車</button><br>
-            <button type="button" class="btn_f" >直接購買</button><br>
-            <button type="button" class="btn_f" >儲存設計</button>
+            <button type="button" class="close position-relative" data-dismiss="modal" aria-label="Close">
+              <img class="position-absolute" src="svg/delete.svg" alt="">
+            </button>
+          </div>
+          <div class="modal-body m_out_body d-flex align-items-center justify-content-center">
+
+            <div class="m_out_btn  align-items-center justify-content-center ">
+              <button type="button" class="btn_f">加入購物車</button><br>
+              <button type="button" class="btn_f">直接購買</button><br>
+              <button type="button" class="btn_f">儲存設計</button>
+            </div>
+
+            <div class="m_cart_content m_out_hide">
+              <p class="">已加入 <br><a href="">購物車 </a></p>
+            </div>
+
+            <div class="m_save_content m_out_hide">
+
+              <div class="m_save_wrap">
+                <p>已儲存您的設計</p>
+                <p>可至會員中心 > <a href="">我的最愛 </a><br> 查看設計</p>
+              </div>
+            </div>
+
+
           </div>
 
-          <div class="m_cart_content m_out_hide">
-            <p class="">已加入 <br><a href="">購物車 </a></p>
-          </div>
+        </div>
+      </div>
+    </div>
+    <!--  ↑ Modal  下一步 -->
 
-          <div class="m_save_content">
-            
-            <div class="m_save_wrap">
-              <p>已儲存您的設計</p>
-              <p>可至會員中心 > <a href="">我的最愛 </a><br> 查看設計</p>
+    <!-- Modal  離開 -->
+    <div class="modal fade" id="m_leave" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content m_modal-size">
+          <div class="modal-header m_out_header">
+
+            <button type="button" class="close position-relative" data-dismiss="modal" aria-label="Close">
+              <img class="position-absolute" src="svg/delete.svg" alt="">
+            </button>
+          </div>
+          <div class="modal-body m_out_body d-flex align-items-center justify-content-center">
+            <div class="m_out_btn d-flex flex-column align-items-center justify-content-center">
+              <p class="mb-5">確定要離開<br>客製瑜珈墊頁面嗎?</p>
+              <button type="button" class="btn_f mt-5">確定離開</button>
+              <button type="button" class="btn_f" data-dismiss="modal" aria-label="Close">繼續編輯</button>
             </div>
           </div>
 
-
-         </div>
-         
-       </div>
-     </div>
-    </div>
-     <!--  ↑ Modal  下一步 -->
-
-        <!-- Modal  離開 -->
-    <div class="modal fade" id="m_leave" tabindex="-1" role="dialog"
-    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content m_modal-size">
-       <div class="modal-header m_out_header">
-         
-         <button type="button" class="close position-relative" data-dismiss="modal" aria-label="Close">
-           <img class="position-absolute" src="svg/delete.svg" alt="">
-         </button>
-       </div>
-       <div class="modal-body m_out_body d-flex align-items-center justify-content-center">
-        <div class="m_out_btn d-flex flex-column align-items-center justify-content-center">
-          <p class="mb-5">確定要離開<br>客製瑜珈墊頁面嗎?</p>
-          <button type="button" class="btn_f mt-5" >確定離開</button>
-          <button type="button" class="btn_f"data-dismiss="modal" aria-label="Close" >繼續編輯</button>
         </div>
-       </div>
-       
-     </div>
-   </div>
-  </div>
-   <!--  ↑ Modal  離開 -->
+      </div>
+    </div>
+    <!--  ↑ Modal  離開 -->
 
 
 
@@ -602,47 +652,286 @@ question_mark position-absolute">
 
   <script src="lib/jquery-3.5.1.js"></script>
   <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="lib/fabric.min.js"></script>
   <script>
-  // ↓↓ 選項展開↓↓//
-    let hide = $('.fold').parent().next();
-    hide.toggleClass('d-flex');
-    hide.addClass('option_hide');
+    // canvas
 
 
+  </script>
+  <script>
+
+    // ↓↓ 商品數量↓↓// 
+    var t = $('.count');/*  數量顯示框*/
+    $('.plus').click(function () {
+      if (t.val() < 10) {/* 數量最大不能超過 */
+        t.val(parseInt(t.val()) + 1);
+      } else {
+        t.val(10);
+      }
+    })
+    $('.minus').click(function () {
+      if (t.val() <= 1) {	/*數量最少爲1  */
+        t.val(1);
+      } else {
+        t.val(parseInt(t.val()) - 1);
+      }
+    })
+    // ↑↑ 商品數量↑↑ //
+
+    // ↓↓ 總價計算↓↓// 
+    $('.a-w').hide()  //寬
+    $('.a-t').hide()  //材質
+    $('.a-p').hide()  //鋼印
+
+    // 幹我成功了!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    $('.add-200').on('click', function () {
+      let add = parseInt($(this).val())
+      let now = parseInt($('#mat-total-price').val())
+      let count = parseInt($('#mat-count').val())
+      if (add == '200') {
+        $('.a-w').show()
+        $('#mat-w-pay').val(add)
+      }else{
+        $('.a-w').hide()
+        $('#mat-w-pay').val(add)
+      } 
+      let texturePay = parseInt($('#mat-texture-pay').val())
+      let wPay = parseInt($('#mat-w-pay').val())
+      let printPay = parseInt($('#mat-print-pay').val())
+      if(isNaN(texturePay)){
+        texturePay=0
+      }
+      if(isNaN(wPay)){
+        wPay=0
+      }
+      if(isNaN(printPay)){
+        printPay=0
+      }
+      console.log(wPay)
+     
+      now=700+parseInt(texturePay+wPay+printPay)
+      final=now*count
+      $('#mat-total-price').val(final)
+    })
+
+
+// 幹我成功了!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    $('.add-150').on('click', function () {
+      let add = parseInt($(this).val())
+      let now = parseInt($('#mat-total-price').val())
+      let count = parseInt($('#mat-count').val())
+      if (add == '150') {
+        $('.a-t').show()
+        $('#mat-texture-pay').val(add)
+      }else{
+        $('.a-t').hide()
+        $('#mat-texture-pay').val(add)
+      } 
+      let texturePay = parseInt($('#mat-texture-pay').val())
+      let wPay = parseInt($('#mat-w-pay').val())
+      let printPay = parseInt($('#mat-print-pay').val())
+      if(isNaN(texturePay)){
+        texturePay=0
+      }
+      if(isNaN(wPay)){
+        wPay=0
+      }
+      if(isNaN(printPay)){
+        printPay=0
+      }
+      console.log(wPay)
+     
+      now=700+parseInt(texturePay+wPay+printPay)
+      final=now*count
+      $('#mat-total-price').val(final)
+      
+    })
+
+    // 幹我成功了!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    $('.add-80').on('click', function () {
+      let add = parseInt($(this).val())
+      let now = parseInt($('#mat-total-price').val())
+      let count = parseInt($('#mat-count').val())
+      if (add == '80') {
+        $('.a-p').show()
+        $('#mat-print-pay').val(add)
+      }else{
+        $('.a-p').hide()
+        $('#mat-print-pay').val(add)
+      } 
+      let texturePay = parseInt($('#mat-texture-pay').val())
+      let wPay = parseInt($('#mat-w-pay').val())
+      let printPay = parseInt($('#mat-print-pay').val())
+      if(isNaN(texturePay)){
+        texturePay=0
+      }
+      if(isNaN(wPay)){
+        wPay=0
+      }
+      if(isNaN(printPay)){
+        printPay=0
+      }
+      console.log(wPay)
+     
+      now=700+parseInt(texturePay+wPay+printPay)
+      final=now*count
+      $('#mat-total-price').val(final)
+    })
+
+            // 加減數量
+    $('.plus').click(function () {
+      let now = parseInt($('#mat-total-price').val())
+      let count = parseInt($('#mat-count').val())
+      let texturePay = parseInt($('#mat-texture-pay').val())
+      let wPay = parseInt($('#mat-w-pay').val())
+      let printPay = parseInt($('#mat-print-pay').val())
+      if(isNaN(texturePay)){
+        texturePay=0
+      }
+      if(isNaN(wPay)){
+        wPay=0
+      }
+      if(isNaN(printPay)){
+        printPay=0
+      }
+      now=700+parseInt(texturePay+wPay+printPay)
+      final=now*count
+      $('#mat-total-price').val(final)
+    })
+
+
+
+    $('.minus').click(function () {
+      let now = parseInt($('#mat-total-price').val())
+      let count = parseInt($('#mat-count').val())
+      let texturePay = parseInt($('#mat-texture-pay').val())
+      let wPay = parseInt($('#mat-w-pay').val())
+      let printPay = parseInt($('#mat-print-pay').val())
+      if(isNaN(texturePay)){
+        texturePay=0
+      }
+      if(isNaN(wPay)){
+        wPay=0
+      }
+      if(isNaN(printPay)){
+        printPay=0
+      }
+      now=700+parseInt(texturePay+wPay+printPay)
+      final=now*count
+      $('#mat-total-price').val(final)
+    })
+
+    // ↑↑ 總價計算↑↑ // 
+
+    // ↓↓ 尺寸選項↓↓// 
+    $('.long_btn button').first().removeClass('btn_l').addClass('btn_f')
+    $('.width_btn button').first().removeClass('btn_l').addClass('btn_f')
+    $('.long_btn button').on('click', function () {
+      $('.long_btn button').removeClass('btn_f').addClass('btn_l')
+      $(this).addClass('btn_f').removeClass('btn_l')
+      $('#mat-h').val($(this).html())
+    })
+    $('.width_btn button').on('click', function () {
+      $('.width_btn button').removeClass('btn_f').addClass('btn_l')
+      $(this).addClass('btn_f').removeClass('btn_l')
+      $('#mat-w').val($(this).html())
+    })
+
+    // ↑↑ 尺寸選項↑↑ // 
+
+    // ↓↓ 厚度選項↓↓// 
+    $('.thickness button').first().removeClass('btn_l').addClass('btn_f')
+
+    $('.thickness button').on('click', function () {
+      $('.thickness button').removeClass('btn_f').addClass('btn_l')
+      $(this).addClass('btn_f').removeClass('btn_l')
+      $('#mat-thickness').val($(this).html())
+    })
+    // ↑↑ 厚度選項↑↑ // 
+
+    // ↓↓ 材質選項↓↓// 
+    $('.texture button').first().removeClass('btn_l').addClass('btn_f')
+
+    $('.texture button').on('click', function () {
+      $('.texture button').removeClass('btn_f').addClass('btn_l')
+      $(this).addClass('btn_f').removeClass('btn_l')
+      $('#mat-texture').val($(this).html())
+    })
+    // ↑↑ 材質選項↑↑ // 
+
+    // ↓↓ 文字印刷選項↓↓// 
+
+    $('.print button').on('click', function () {
+      $('.print button').removeClass('btn_f').addClass('btn_l')
+      $(this).addClass('btn_f').removeClass('btn_l')
+      $('#mat-print').val($(this).html())
+    })
+    // ↑↑ 材質選項↑↑ // 
+
+
+    // ↓↓ 選項展開↓↓//
     let foldFrist = $('.fold').first();
-    let fold = $(foldFrist).parent().next();
-    fold.toggleClass('d-flex');
-    fold.addClass('option_hide');
-
-    foldFrist.children().attr('src','');
-
+    $('.fold').parent().next().removeClass('d-flex').hide()
+    // foldFrist.parent().next().toggleClass('d-flex')
+    foldFrist.children().attr('src', 'svg/custom/minus_nowrap.svg');
+    foldFrist.parent().next().show();
 
 
     $('.fold').on('click', function () {
-      $('.fold').children().attr('src','svg/custom/plus_nowrap.svg')
-      let hide = $('.fold').parent().next();
-      hide.removeClass('d-flex');
-      hide.addClass('option_hide');
       let show = $(this).parent().next();
-      // let icon=$(this).children().eq(1);
-      show.toggleClass('d-flex')
-      show.toggleClass('option_hide');
-      let foldIcon= $(this).children();
-      foldIcon.attr('src','')
-      
+      // show.addClass('d-flex');
+      if ($(this).children().attr('src') == 'svg/custom/minus_nowrap.svg') {
+        $(this).children().attr('src', 'svg/custom/plus_nowrap.svg')
+        $(this).parent().next().slideToggle(300);
+        $(this).parent().next().hide;
+      } else {
+        $(this).children().attr('src', 'svg/custom/minus_nowrap.svg')
+        $(this).parent().next().slideToggle(300);
+
+      }
+
+      // let hide = $(this).parent().next();
+      // hide.removeClass('d-flex');
+      // hide.slideToggle()
+      // show.toggleClass('d-flex')
+      // show.toggleClass('option_hide');
+      // let foldIcon= $(this).children();
+
     });
 
-  // ↑↑ 選項展開↑↑//
+    // ↑↑ 選項展開↑↑//
+
+
+    // 訂單明細收合↓↓
+    $('.order_history_detail_btn').children()
+      .attr('src', 'svg/custom/plus_o_icon.svg')
+    $('.order_details_page').hide()
+
+    $('.openIt').on('click', function () {
+      if ($(this).children().attr('src') == 'svg/custom/plus_o_icon.svg') {
+        $(this).children().attr('src', 'svg/custom/minus_o_icon.svg')
+        $(this).children('p').html('收起訂單明細')
+      } else {
+        $(this).children().attr('src', 'svg/custom/plus_o_icon.svg')
+        $(this).children('p').html('展開訂單明細')
+      }
+
+      // console.log($(this).children('p').html())
+
+      $(this).next().slideToggle("500")
+
+    })
+    // 訂單明細收合↑↑
 
 
 
 
 
 
-//↓↓如何挑選尺寸跳窗↓↓
-function channel(){
-window.open("howto.html","如何挑選尺寸","height=800,width=800,location=no,menubar=no,status=no","channelmode,scrollbars")
-}
+    //↓↓如何挑選尺寸跳窗↓↓
+    function channel() {
+      window.open("howto.html", "如何挑選尺寸", "height=800,width=800,location=no,menubar=no,status=no", "channelmode,scrollbars")
+    }
 //↑↑如何挑選尺寸跳窗↑↑
 
   </script>
