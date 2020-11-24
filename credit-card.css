@@ -179,6 +179,13 @@
 .close-features {
   color: #f2a200;
 }
+/* hover */
+a {
+  transition: 0.5s;
+}
+a:hover {
+  opacity: 0.6;
+}
 
 /* button */
 .btn-leave {
@@ -187,7 +194,7 @@
   color: #004a13;
   border: 1px solid #004a13;
   margin: 60px 20px 120px 20px;
-  transition: 1s;
+  transition: 0.5s;
 }
 .btn-leave:hover {
   opacity: 0.6;

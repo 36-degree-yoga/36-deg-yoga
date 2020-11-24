@@ -99,6 +99,8 @@
 .change-color-yel span {
   color: #f2a200;
   text-decoration: underline;
+  cursor: pointer;
+  transition: 0.5s;
 }
 h6 {
   color: #004a13;
@@ -149,6 +151,18 @@ h6 {
 .close-features {
   color: #f2a200;
 }
+/* hover */
+a {
+  transition: 0.5s;
+}
+a:hover {
+  opacity: 0.6;
+  color: #f2a200;
+}
+.change-color-yel span:hover {
+  opacity: 0.6;
+}
+
 /* button */
 .btn-leave {
   width: 130px;
@@ -156,12 +170,19 @@ h6 {
   color: #004a13;
   border: 1px solid #004a13;
   margin: 60px 20px 120px 20px;
+  transition: 0.5s;
+}
+.btn-leave:hover {
+  opacity: 0.6;
+  color: #004a13;
 }
 .hope-next-step {
   background-color: #004a13;
   color: #fffefc;
 }
-
+.hope-next-step:hover {
+  color: #fffefc;
+}
 @media (max-width: 576px) {
   .order_step_title {
     text-align: center;
@@ -195,6 +216,7 @@ h6 {
     position: relative;
     width: 100%;
   }
+
   /* form control */
   .form-control6 {
     width: 100%;

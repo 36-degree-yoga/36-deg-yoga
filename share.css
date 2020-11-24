@@ -49,6 +49,12 @@ p {
 }
 /* 間距↑↑ */
 
+a {
+  transition: 0.5s;
+}
+a:hover {
+  opacity: 0.6;
+}
 /* 綠底按鈕↓↓ */
 .btn_f {
   background-color: #004a13;
@@ -58,6 +64,7 @@ p {
   height: 38px;
   border: none;
   border-radius: 4px;
+  transition: 0.5s;
 }
 
 .btn_f:hover {
@@ -74,6 +81,7 @@ p {
   height: 38px;
   border: 2px solid #004a13;
   border-radius: 4px;
+  transition: 0.5s;
 }
 .btn_l:hover {
   opacity: 0.6;

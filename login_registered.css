@@ -23,7 +23,9 @@ body {
   line-height: 55px;
   color: #004a13;
   cursor: pointer;
+  transition: 0.5s;
 }
+
 .login-btn {
   border-right: none;
 }
@@ -32,6 +34,8 @@ body {
   border-radius: 0px 4px 0px 0px;
   border-left: none;
 }
+
+/* hover */
 .just-a-vertcal-dividerline {
   height: 56.5px;
   width: 2px;
@@ -87,6 +91,9 @@ body {
   background-image: url(./img/background-img/finish-order.png);
   height: 900px;
   background-position: bottom;
+}
+.btn_f:hover {
+  color: #fffefc;
 }
 
 /* 套用class */
