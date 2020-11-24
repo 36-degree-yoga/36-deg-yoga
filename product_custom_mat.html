@@ -240,7 +240,7 @@
         }
 
         .sort-by.show {
-            transform: translate3d(-69px, 27px, 0px) !important;
+            transform: translate3d(-70px, 27px, 0px) !important;
         }
 
         .size-list-item {
@@ -374,7 +374,8 @@
 
         .details-info,
         .shopping-procedure {
-            background-color: #FDEBCA;
+            background-color: rgba(255, 249, 237, 0.5);
+            ;
         }
 
         /*  折疊 */
@@ -550,8 +551,17 @@
             margin-left: 30px;
         }
 
+        .content-area {
+            margin-left: 26px;
+        }
+
         .filter-info {
             font-weight: 500;
+        }
+
+        .fa-thumbs-up,
+        .fa-thumbs-down {
+            cursor: pointer;
         }
 
         /* 分頁 */
@@ -735,30 +745,35 @@
             /* 猜你喜歡 */
 
             .guessyoullike {
-                width: 930px;
+                width: 900px;
                 position: relative;
                 justify-content: flex-start !important;
             }
 
-            .img-wrap {
+            /* .img-wrap {
                 height: 100%;
-            }
+            } */
 
             .product-zone {
                 margin-right: 40px;
                 margin-left: 40px;
-                width: 230px !important;
+                width: 220px !important;
             }
 
             /*  猜你喜歡:手機版 icon */
             .icon-wrap {
                 display: flex !important;
                 position: absolute;
-                width: 312px;
+                width: 300px;
                 justify-content: space-between;
                 left: 0px;
-                top: 140px;
+                top: 150px;
+            }
 
+            .icon-left img,
+            .icon-right img {
+                width: 35px;
+                height: 35px;
             }
 
             /* 評論：兩個 按鈕 */
@@ -819,6 +834,16 @@
                 margin: -1rem -1rem -1rem -1rem;
             }
 
+            .close {
+                opacity: 1;
+            }
+
+            .delete-btn-img {
+                width: 40px;
+                height: 40px;
+                overflow: hidden;
+            }
+
             .reviewsFilter-label {
                 border-color: #004a13 !important;
                 color: #004a13;
@@ -830,6 +855,17 @@
 
             .thumbs-up {
                 padding-left: 0 !important;
+            }
+
+            /* 問與答 手機版間距 */
+            .media-yoga {
+                margin-left: -56px;
+            }
+
+            /* 分頁 手機版 */
+            .page-item {
+                margin-left: 4px;
+                margin-right: 4px;
             }
         }
     </style>
@@ -1154,14 +1190,13 @@
                                         【保養方式】
                                     </p>
                                     <p class="text-muted ">
-                                        1.新品請使用濕布（建議調製酒精：水=1：3的比例）擦拭後置放於通風處陰乾3-7天，即可減少新品氣味 <br>
-                                        <br>
+                                        1.）&nbsp;新品請使用濕布（建議調製酒精：水=1：3的比例）擦拭後置放於通風處陰乾3-7天，即可減少新品氣味。 <br>
 
-                                        2.PU材質較柔軟易受損。使用時請避免穿戴高硬度、尖銳物品或是久壓存放，否則容易有刮傷或破損情形發生，降低使用壽命<br>
-                                        <br>
 
-                                        3.使用的過程中以及儲存收納時盡量避免陽光照射，也請勿放置於高溫、任何強光可能直射的地方。以防止加速瑜伽墊老化、脆化或變異的可能性。<br>
-                                        <br>
+                                        2.）&nbsp;PU材質較柔軟易受損。使用時請避免穿戴高硬度、尖銳物品或是久壓存放，否則容易有刮傷或破損情形發生，降低使用壽命。<br>
+
+
+                                        3.）&nbsp;使用的過程中以及儲存收納時盡量避免陽光照射，也請勿放置於高溫、任何強光可能直射的地方。以防止加速瑜伽墊老化、脆化或變異的可能性。<br>
 
                                     <div class="space_30"></div>
                                     </p>
@@ -1197,7 +1232,7 @@
 
                                 <div class="card-body py-0 shopping-procedure">
                                     <div class="space_30"></div>
-                                    <p>
+                                    <p class="text-muted ">
                                         1.) 為了提供便捷購物服務，第一次購物完成結帳後，36度 yoga 將自動將您註冊為會員，無須額外註冊。 <br>
                                         <br>
                                         2.) 首次購物流程:
@@ -1835,7 +1870,7 @@
                                                 <button type="button" class="close" data-dismiss="modal"
                                                     aria-label="Close">
                                                     <span class="delete-btn" aria-hidden="true"><img
-                                                            src="./SVG/delete.svg" alt=""></span>
+                                                            class="delete-btn-img" src="./SVG/delete.svg" alt=""></span>
                                                 </button>
 
                                                 <h5 class="reviews-filter-title modal-title mx-auto"
@@ -2117,7 +2152,7 @@
                             <!-- 評論內容 -->
                             <div class="space_30"></div>
 
-                            <div class="sort-by d-flex justify-content-between line-height">
+                            <div class="sort-by-wrap d-flex justify-content-between line-height">
                                 <a class="pl-2" href="">
                                     (1051）評論
                                 </a>
@@ -2129,7 +2164,7 @@
                                         class="size-list-btn btn size-list-dropdown-toggle dropdown-toggle border-0  p-0"
                                         id="dropdownListButton" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
-                                        分類：選擇
+                                        進階篩選
                                     </button>
 
                                     <div class="sort-by size-list-dropdown-menu dropdown-menu  rounded-0 "
@@ -2151,7 +2186,7 @@
                                     <!-- 人像-->
                                     <div class="d-flex ">
                                         <div class="avatar border ">
-                                            <img class="w-100" src="" alt="">
+                                            <img class="avatar-img w-100" src="" alt="">
                                         </div>
 
                                         <div class="avatar-name pl-3">
@@ -2166,15 +2201,18 @@
                                 <!-- 留言 -->
                                 <div class="comment-content line-height">
                                     <img class="line-height pl-3" src="./SVG/stars_5.svg" alt="">
-                                    <p class="filter-info line-height">
-                                        練習頻率：每週5次以上 <br>
-                                        瑜伽經驗：高級 <br>
-                                        我最喜歡的功能：防滑 <br>
-                                    </p>
 
-                                    <p>
-                                        跪著時，我可以做瑜伽姿勢而左膝不再疼痛。善待自己，充實自己的生活並享受練習。
-                                    </p>
+                                    <div class="content-area">
+                                        <p class="filter-info line-height">
+                                            練習頻率：每週5次以上 <br>
+                                            瑜伽經驗：高級 <br>
+                                            我最喜歡的功能：防滑 <br>
+                                        </p>
+
+                                        <p>
+                                            跪著時，我可以做瑜伽姿勢而左膝不再疼痛。善待自己，充實自己的生活並享受練習。
+                                        </p>
+                                    </div>
                                 </div>
                                 <!-- 分享 -->
                                 <div class="d-flex justify-content-between line-height pb-4 border-bottom">
@@ -2203,10 +2241,10 @@
                             <div class="comment-message">
                                 <!-- 人名 -->
                                 <div class="d-flex justify-content-between ">
-
+                                    <!-- 人像-->
                                     <div class="d-flex ">
                                         <div class="avatar border ">
-                                            <img class="w-100" src="" alt="">
+                                            <img class="avatar-img w-100" src="" alt="">
                                         </div>
 
                                         <div class="avatar-name pl-3">
@@ -2221,15 +2259,18 @@
                                 <!-- 留言 -->
                                 <div class="comment-content line-height">
                                     <img class="line-height pl-3" src="./SVG/stars_5.svg" alt="">
-                                    <p class="filter-info line-height">
-                                        練習頻率：每週5次以上 <br>
-                                        瑜伽經驗：高級 <br>
-                                        我最喜歡的功能：防滑 <br>
-                                    </p>
 
-                                    <p>
-                                        跪著時，我可以做瑜伽姿勢而左膝不再疼痛。善待自己，充實自己的生活並享受練習。
-                                    </p>
+                                    <div class="content-area">
+                                        <p class="filter-info line-height">
+                                            練習頻率：每週5次以上 <br>
+                                            瑜伽經驗：高級 <br>
+                                            我最喜歡的功能：防滑 <br>
+                                        </p>
+
+                                        <p>
+                                            跪著時，我可以做瑜伽姿勢而左膝不再疼痛。善待自己，充實自己的生活並享受練習。
+                                        </p>
+                                    </div>
                                 </div>
                                 <!-- 分享 -->
                                 <div class="d-flex justify-content-between line-height pb-4 border-bottom">
@@ -2258,10 +2299,10 @@
                             <div class="comment-message">
                                 <!-- 人名 -->
                                 <div class="d-flex justify-content-between ">
-
+                                    <!-- 人像-->
                                     <div class="d-flex ">
                                         <div class="avatar border ">
-                                            <img class="w-100" src="" alt="">
+                                            <img class="avatar-img w-100" src="" alt="">
                                         </div>
 
                                         <div class="avatar-name pl-3">
@@ -2276,15 +2317,18 @@
                                 <!-- 留言 -->
                                 <div class="comment-content line-height">
                                     <img class="line-height pl-3" src="./SVG/stars_5.svg" alt="">
-                                    <p class="filter-info line-height">
-                                        練習頻率：每週5次以上 <br>
-                                        瑜伽經驗：高級 <br>
-                                        我最喜歡的功能：防滑 <br>
-                                    </p>
 
-                                    <p>
-                                        跪著時，我可以做瑜伽姿勢而左膝不再疼痛。善待自己，充實自己的生活並享受練習。
-                                    </p>
+                                    <div class="content-area">
+                                        <p class="filter-info line-height">
+                                            練習頻率：每週5次以上 <br>
+                                            瑜伽經驗：高級 <br>
+                                            我最喜歡的功能：防滑 <br>
+                                        </p>
+
+                                        <p>
+                                            跪著時，我可以做瑜伽姿勢而左膝不再疼痛。善待自己，充實自己的生活並享受練習。
+                                        </p>
+                                    </div>
                                 </div>
                                 <!-- 分享 -->
                                 <div class="d-flex justify-content-between line-height pb-4 border-bottom">
@@ -2313,10 +2357,10 @@
                             <div class="comment-message">
                                 <!-- 人名 -->
                                 <div class="d-flex justify-content-between ">
-
+                                    <!-- 人像-->
                                     <div class="d-flex ">
                                         <div class="avatar border ">
-                                            <img class="w-100" src="" alt="">
+                                            <img class="avatar-img w-100" src="" alt="">
                                         </div>
 
                                         <div class="avatar-name pl-3">
@@ -2331,15 +2375,18 @@
                                 <!-- 留言 -->
                                 <div class="comment-content line-height">
                                     <img class="line-height pl-3" src="./SVG/stars_5.svg" alt="">
-                                    <p class="filter-info line-height">
-                                        練習頻率：每週5次以上 <br>
-                                        瑜伽經驗：高級 <br>
-                                        我最喜歡的功能：防滑 <br>
-                                    </p>
 
-                                    <p>
-                                        跪著時，我可以做瑜伽姿勢而左膝不再疼痛。善待自己，充實自己的生活並享受練習。
-                                    </p>
+                                    <div class="content-area">
+                                        <p class="filter-info line-height">
+                                            練習頻率：每週5次以上 <br>
+                                            瑜伽經驗：高級 <br>
+                                            我最喜歡的功能：防滑 <br>
+                                        </p>
+
+                                        <p>
+                                            跪著時，我可以做瑜伽姿勢而左膝不再疼痛。善待自己，充實自己的生活並享受練習。
+                                        </p>
+                                    </div>
                                 </div>
                                 <!-- 分享 -->
                                 <div class="d-flex justify-content-between line-height pb-4 border-bottom">
@@ -2399,11 +2446,11 @@
                             <div class="space_30"></div>
 
                             <!-- 問答 -->
-                            <div class="media border-bottom line-height">
+                            <div class="media-qa media border-bottom line-height">
 
                                 <!-- 人像-->
                                 <div class="avatar border">
-                                    <img class="w-100" src="" class="mr-3" alt="">
+                                    <img class="avatar-img w-100" src="" class="mr-3" alt="">
                                 </div>
 
                                 <div class="media-body pl-3">
@@ -2424,11 +2471,11 @@
                                         </p>
                                     </div>
                                     <!-- A:回覆 -->
-                                    <div class="media mt-3">
+                                    <div class="media-yoga media mt-3">
                                         <!-- 人像-->
-                                        <a class=" mr-3" href="#">
+                                        <a href="#">
                                             <div class="avatar border">
-                                                <img class="w-100" src="" class="mr-3" alt="">
+                                                <img class="avatar-img w-100" src="" class="mr-3" alt="">
                                             </div>
                                         </a>
                                         <div class="media-body pl-3">
@@ -2471,11 +2518,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="media border-bottom line-height">
+                            <div class="media-qa media border-bottom line-height">
 
                                 <!-- 人像-->
                                 <div class="avatar border">
-                                    <img class="w-100" src="" class="mr-3" alt="">
+                                    <img class="avatar-img w-100" src="" class="mr-3" alt="">
                                 </div>
 
                                 <div class="media-body pl-3">
@@ -2496,11 +2543,11 @@
                                         </p>
                                     </div>
                                     <!-- A:回覆 -->
-                                    <div class="media mt-3">
+                                    <div class="media-yoga media mt-3">
                                         <!-- 人像-->
-                                        <a class=" mr-3" href="#">
+                                        <a href="#">
                                             <div class="avatar border">
-                                                <img class="w-100" src="" class="mr-3" alt="">
+                                                <img class="avatar-img w-100" src="" class="mr-3" alt="">
                                             </div>
                                         </a>
                                         <div class="media-body pl-3">
@@ -2543,11 +2590,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="media border-bottom line-height">
+                            <div class="media-qa media border-bottom line-height">
 
                                 <!-- 人像-->
                                 <div class="avatar border">
-                                    <img class="w-100" src="" class="mr-3" alt="">
+                                    <img class="avatar-img w-100" src="" class="mr-3" alt="">
                                 </div>
 
                                 <div class="media-body pl-3">
@@ -2568,11 +2615,11 @@
                                         </p>
                                     </div>
                                     <!-- A:回覆 -->
-                                    <div class="media mt-3">
+                                    <div class="media-yoga media mt-3">
                                         <!-- 人像-->
-                                        <a class=" mr-3" href="#">
+                                        <a href="#">
                                             <div class="avatar border">
-                                                <img class="w-100" src="" class="mr-3" alt="">
+                                                <img class="avatar-img w-100" src="" class="mr-3" alt="">
                                             </div>
                                         </a>
                                         <div class="media-body pl-3">
@@ -2615,11 +2662,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="media border-bottom line-height">
+                            <div class="media-qa media border-bottom line-height">
 
                                 <!-- 人像-->
                                 <div class="avatar border">
-                                    <img class="w-100" src="" class="mr-3" alt="">
+                                    <img class="avatar-img w-100" src="" class="mr-3" alt="">
                                 </div>
 
                                 <div class="media-body pl-3">
@@ -2640,11 +2687,11 @@
                                         </p>
                                     </div>
                                     <!-- A:回覆 -->
-                                    <div class="media mt-3">
+                                    <div class="media-yoga media mt-3">
                                         <!-- 人像-->
-                                        <a class=" mr-3" href="#">
+                                        <a href="#">
                                             <div class="avatar border">
-                                                <img class="w-100" src="" class="mr-3" alt="">
+                                                <img class="avatar-img w-100" src="" class="mr-3" alt="">
                                             </div>
                                         </a>
                                         <div class="media-body pl-3">
@@ -2687,6 +2734,7 @@
                                     </div>
                                 </div>
                             </div>
+
 
                             <!-- 分頁 -->
                             <nav aria-label="Page navigation example ">

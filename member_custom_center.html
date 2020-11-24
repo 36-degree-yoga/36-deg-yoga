@@ -103,11 +103,18 @@
             opacity: 0.7;
         }
 
-        /* 繼續編輯按鈕 */
+        /* 繼續編輯 按鈕 */
         .edit-btn {
             left: 22%;
             top: 120px;
             /* visibility: hidden; */
+            display: none;
+        }
+
+        /* 刪除按鈕 手機版 */
+        .trash-icon-m {
+            margin-left: 10px;
+            margin-right: 10px;
             display: none;
         }
 
@@ -211,6 +218,19 @@
 
             .space_120 {
                 height: 60px;
+            }
+
+            /* 刪除按鈕 桌機版 */
+
+            .trash-icon {
+                display: none;
+            }
+
+            /* 刪除按鈕 手機版 */
+            .trash-icon-m {
+                margin-left: 10px;
+                margin-right: 10px;
+                display: initial;
             }
         }
 
@@ -433,12 +453,50 @@
 
                     <div class="product_img_wrap position-relative" data-toggle="modal" data-target="#exampleModal">
                         <img class="product_img" src="" alt="">
+
+                        <button class="edit-btn btn_f position-absolute " id="edit-btn">繼續編輯</button>
+
+                    </div>
+
+                    <div class="space_30"></div>
+
+                    <div class="wrap position-relative">
+
+                        <!-- 刪除按鈕 桌機版-->
+                        <div class="trash-icon position-absolute">
+                            <img src="./SVG/icon_trash.svg" alt="">
+                        </div>
+
+                        <h6 class="mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
+
+                        <p class="p-0" style="text-align: center;">NT.1,000</p>
+                    </div>
+
+
+
+                    <div class="space_30"></div>
+
+                    <div class="wrap d-flex justify-content-between">
+                        <!-- 刪除按鈕 手機版-->
+                        <div class="trash-icon-m py-1">
+                            <img src="./SVG/icon_trash.svg" alt="">
+                        </div>
+                        <button class="btn_f w-100">加入購物車</button>
+                    </div>
+
+                </div>
+                <div class="product mb-5 col-4">
+
+                    <div class="product_img_wrap position-relative" data-toggle="modal" data-target="#exampleModal">
+                        <img class="product_img" src="" alt="">
                         <button class="edit-btn btn_f position-absolute " id="edit-btn">繼續編輯</button>
                     </div>
 
                     <div class="space_30"></div>
 
                     <div class="wrap position-relative">
+
+                        <!-- 刪除按鈕 桌機版-->
                         <div class="trash-icon position-absolute">
                             <img src="./SVG/icon_trash.svg" alt="">
                         </div>
@@ -452,19 +510,27 @@
 
                     <div class="space_30"></div>
 
-                    <button class="btn_f w-100">加入購物車</button>
+                    <div class="wrap d-flex justify-content-between">
+                        <!-- 刪除按鈕 手機版-->
+                        <div class="trash-icon-m py-1">
+                            <img src="./SVG/icon_trash.svg" alt="">
+                        </div>
+                        <button class="btn_f w-100">加入購物車</button>
+                    </div>
 
                 </div>
                 <div class="product mb-5 col-4">
 
                     <div class="product_img_wrap position-relative" data-toggle="modal" data-target="#exampleModal">
                         <img class="product_img" src="" alt="">
-                        <button class="edit-btn btn_f position-absolute ">繼續編輯</button>
+                        <button class="edit-btn btn_f position-absolute " id="edit-btn">繼續編輯</button>
                     </div>
 
                     <div class="space_30"></div>
 
                     <div class="wrap position-relative">
+
+                        <!-- 刪除按鈕 桌機版-->
                         <div class="trash-icon position-absolute">
                             <img src="./SVG/icon_trash.svg" alt="">
                         </div>
@@ -478,19 +544,27 @@
 
                     <div class="space_30"></div>
 
-                    <button class="btn_f w-100">加入購物車</button>
+                    <div class="wrap d-flex justify-content-between">
+                        <!-- 刪除按鈕 手機版-->
+                        <div class="trash-icon-m py-1">
+                            <img src="./SVG/icon_trash.svg" alt="">
+                        </div>
+                        <button class="btn_f w-100">加入購物車</button>
+                    </div>
 
                 </div>
                 <div class="product mb-5 col-4">
 
                     <div class="product_img_wrap position-relative" data-toggle="modal" data-target="#exampleModal">
                         <img class="product_img" src="" alt="">
-                        <button class="edit-btn btn_f position-absolute ">繼續編輯</button>
+                        <button class="edit-btn btn_f position-absolute " id="edit-btn">繼續編輯</button>
                     </div>
 
                     <div class="space_30"></div>
 
                     <div class="wrap position-relative">
+
+                        <!-- 刪除按鈕 桌機版-->
                         <div class="trash-icon position-absolute">
                             <img src="./SVG/icon_trash.svg" alt="">
                         </div>
@@ -504,33 +578,13 @@
 
                     <div class="space_30"></div>
 
-                    <button class="btn_f w-100">加入購物車</button>
-
-                </div>
-                <div class="product mb-5 col-4">
-
-                    <div class="product_img_wrap position-relative" data-toggle="modal" data-target="#exampleModal">
-                        <img class="product_img" src="" alt="">
-                        <button class="edit-btn btn_f position-absolute ">繼續編輯</button>
-                    </div>
-
-                    <div class="space_30"></div>
-
-                    <div class="wrap position-relative">
-                        <div class="trash-icon position-absolute">
+                    <div class="wrap d-flex justify-content-between">
+                        <!-- 刪除按鈕 手機版-->
+                        <div class="trash-icon-m py-1">
                             <img src="./SVG/icon_trash.svg" alt="">
                         </div>
-
-                        <h6 class="mb-0" style="text-align: center;">好瘦瑜珈墊</h6>
-
-                        <p class="p-0" style="text-align: center;">NT.1,000</p>
+                        <button class="btn_f w-100">加入購物車</button>
                     </div>
-
-
-
-                    <div class="space_30"></div>
-
-                    <button class="btn_f w-100">加入購物車</button>
 
                 </div>
 
@@ -624,7 +678,9 @@
         })
         $('.product_img_wrap').on('mouseleave', function () {
             $(this).find('#edit-btn').css('display', 'none');
-        })
+        });
+
+
 
 
 
