@@ -22,6 +22,7 @@ body {
   font-size: 24px;
   line-height: 55px;
   color: #004a13;
+  cursor: pointer;
 }
 .login-btn {
   border-right: none;
@@ -76,11 +77,16 @@ body {
   border: 1px solid #333;
   border-radius: 4px;
   height: 32px;
-  width: 30%;
+  width: 40%;
 }
 #imgcode {
   height: 60px;
   width: 120px;
+}
+body {
+  background-image: url(./img/background-img/finish-order.png);
+  height: 900px;
+  background-position: bottom;
 }
 
 /* 套用class */
@@ -107,18 +113,23 @@ body {
 @media (max-width: 576px) {
   .login-floor,
   .regist-floor {
-    border: 1px solid #004a13;
-    width: 100%;
-    top: -2.5px;
+    top: -3px;
     height: 430px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
   .login-btn,
   .regist-btn {
     width: 33%;
-    border: 2px solid #004a13;
-    border-bottom: none;
     font-size: 16px;
-    line-height: 30px;
-    color: #004a13;
+    line-height: 32px;
+  }
+  .need-bck-img {
+    background-size: contain;
+    background-position: center;
+  }
+  .just-a-vertcal-dividerline {
+    height: 33px;
+    width: 2px;
   }
 }

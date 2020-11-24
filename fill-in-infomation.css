@@ -58,7 +58,6 @@
 }
 .order_step_number #order_n_3 {
   color: #f2a200;
-  font-size: 24px;
 }
 /* 溫度計 */
 .form-control4 {
@@ -99,12 +98,22 @@
 }
 .change-color-yel span {
   color: #f2a200;
-  /* text-decoration: */
+  text-decoration: underline;
+}
+h6 {
+  color: #004a13;
+}
+.i-need-padding {
+  padding: 0 30px;
 }
 .change-his-padding-in-mobile {
   padding: 0 60px 0 22px;
 }
 /* 商品明細 */
+.i-need-w-and-fix {
+  position: fixed;
+  width: 23%;
+}
 .howmuch-you-need-pay tbody tr:last-child {
   visibility: hidden;
 }
@@ -114,6 +123,12 @@
   border: solid 1px #004a13;
   border-radius: 1px;
   background-color: #004a13;
+}
+
+.which-need-bordre-bottom {
+  margin-bottom: 24px;
+  border-bottom: 2px solid #004a13;
+  border-radius: 1px;
 }
 
 .howmuch-you-need-pay {
@@ -158,6 +173,9 @@
   #order_s_4 {
     display: none;
   }
+  .order_step_number p {
+    font-size: 16px;
+  }
   .thermometer_container {
     margin: 0 auto;
     width: 300px;
@@ -169,6 +187,13 @@
   }
   .change-his-padding-in-mobile {
     padding: 0;
+  }
+  .i-need-padding {
+    padding: 0 16px;
+  }
+  .i-need-w-and-fix {
+    position: relative;
+    width: 100%;
   }
   /* form control */
   .form-control6 {

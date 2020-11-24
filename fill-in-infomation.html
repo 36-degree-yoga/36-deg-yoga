@@ -43,12 +43,12 @@
       <div
         class="row justify-content-center flex-sm-column flex-sm-column flex-md-row flex-lg-row"
       >
-        <div
-          class="col-lg-6 col-md-6 col-sm-12 col-12 hange-his-padding-in-mobile"
-        >
+        <div class="col-lg-6 col-md-6 col-sm-12 col-12 i-need-padding">
           <!-- part1 -->
           <div>
-            <div class="d-flex justify-content-between">
+            <div
+              class="d-flex justify-content-between which-need-bordre-bottom"
+            >
               <h6>運送資訊</h6>
               <div class="d-flex justify-content-between this-one-mobile-none">
                 <div class="mx-3 this-one-mobile-none">
@@ -60,7 +60,7 @@
                   />
                   <label class="form-check-label" for="inside">台灣本島</label>
                 </div>
-                <div class="mx-3 this-one-mobile-none">
+                <div class="ml-3 this-one-mobile-none">
                   <input
                     type="checkbox"
                     class="form-check-input"
@@ -72,7 +72,7 @@
                 </div>
               </div>
             </div>
-            <div class="dividerline-in-table mb-3"></div>
+
             <div class="px-2">
               <div class="form-group row mb-2">
                 <label class="col-12 col-sm-12 col-md-3 col-lg-3 col-form-label"
@@ -121,10 +121,12 @@
           </div>
           <!-- part2 -->
           <div class="mt-4">
-            <div class="d-flex justify-content-between">
+            <div
+              class="d-flex justify-content-between which-need-bordre-bottom"
+            >
               <h6>收件資訊</h6>
 
-              <div class="mx-3">
+              <div>
                 <input
                   type="checkbox"
                   class="form-check-input"
@@ -136,7 +138,6 @@
               </div>
             </div>
 
-            <div class="dividerline-in-table mb-3"></div>
             <div class="px-2">
               <div class="form-group row mb-2">
                 <label
@@ -230,10 +231,12 @@
           </div>
           <!-- part3 -->
           <div class="mt-4">
-            <div class="d-flex justify-content-between">
+            <div
+              class="d-flex justify-content-between which-need-bordre-bottom"
+            >
               <h6>發票明細</h6>
               <div class="d-flex justify-content-between">
-                <div class="mx-3 this-one-mobile-none">
+                <div class="this-one-mobile-none mr-1">
                   <input
                     type="checkbox"
                     class="form-check-input"
@@ -242,13 +245,13 @@
                   />
                   <label class="form-check-label" for="">電子發票</label>
                 </div>
-                <div class="mx-3 this-one-mobile-none">
+                <div class="ml-4 this-one-mobile-none">
                   <input type="checkbox" class="form-check-input" id="" />
                   <label class="form-check-label" for="">發票證明聯</label>
                 </div>
               </div>
             </div>
-            <div class="dividerline-in-table mb-3"></div>
+
             <div class="px-2">
               <div class="form-group row mb-2">
                 <div class="d-flex justify-content-start px-4">
@@ -271,11 +274,12 @@
           </div>
           <!-- part4 -->
           <div class="mt-4">
-            <div class="d-flex justify-content-between">
+            <div
+              class="d-flex justify-content-between which-need-bordre-bottom"
+            >
               <h6>優惠選擇</h6>
             </div>
 
-            <div class="dividerline-in-table mb-3"></div>
             <div class="px-2">
               <div class="form-group row mb-2">
                 <label
@@ -288,7 +292,7 @@
                 >
                   <input type="text" class="form-control4 text-center" id="" />
                   <a href="#" class="text-center control-his-position ml-3"
-                    >確認</a
+                    ><u>確認</u></a
                   >
                 </div>
               </div>
@@ -298,55 +302,59 @@
 
         <!-- 明細完成 -->
         <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-          <div class="title-in-table d-flex justify-content-between">
-            <h6>購物明細</h6>
-            <a href="#" class="close-features"
-              ><i class="fas fa-minus-circle"></i>收起訂單明細</a
+          <div class="i-need-w-and-fix">
+            <div
+              class="title-in-table d-flex justify-content-between which-need-bordre-bottom"
             >
-          </div>
-          <div class="dividerline-in-table mb-3"></div>
+              <h6>購物明細</h6>
+              <a href="#" class="close-features"
+                ><i class="fas fa-minus-circle"></i>收起訂單明細</a
+              >
+            </div>
 
-          <div class="d-flex justify-content-center">
-            <table class="howmuch-you-need-pay">
-              <tbody>
-                <tr>
-                  <th scope="row">商品數量</th>
-                  <td>n</td>
-                </tr>
-                <tr>
-                  <th scope="row">商品重量</th>
-                  <td>total-weight</td>
-                </tr>
-                <tr>
-                  <th scope="row">商品金額</th>
-                  <td>money-sum</td>
-                </tr>
-                <tr>
-                  <th scope="row">運費</th>
-                  <td>car-money</td>
-                </tr>
-                <tr>
-                  <th scope="row">優惠折抵</th>
-                  <td>bouns</td>
-                </tr>
-                <tr>
-                  <th scope="row">應付金額</th>
-                  <td>total</td>
-                </tr>
-                <tr>
-                  <td colspan="2" class="py-2">
-                    <a href="#" class="close-features"
-                      ><i class="fas fa-plus-circle"></i> 收起訂單明細</a
-                    >
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="d-flex justify-content-center">
+              <table class="howmuch-you-need-pay">
+                <tbody>
+                  <tr>
+                    <th scope="row">商品數量</th>
+                    <td>n</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">商品重量</th>
+                    <td>total-weight</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">商品金額</th>
+                    <td>money-sum</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">運費</th>
+                    <td>car-money</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">優惠折抵</th>
+                    <td>bouns</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">應付金額</th>
+                    <td>total</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="py-2">
+                      <a href="#" class="close-features"
+                        ><i class="fas fa-plus-circle"></i> 收起訂單明細</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
+
         <div class="col-md-10 col-lg-10 col-sm-12 col-12">
           <div
-            class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex align-items-center flex-column"
+            class="col-12 col-sm-12 col-md-7 col-lg-7 d-flex align-items-center flex-column"
           >
             <!-- ennnnnnddddd -->
             <div class="my-5 text-center">

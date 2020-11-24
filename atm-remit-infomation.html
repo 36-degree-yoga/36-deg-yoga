@@ -43,28 +43,31 @@
         class="row justify-content-center flex-sm-column-reverse flex-column-reverse flex-lg-row flex-md-row"
       >
         <!--  -->
-        <div class="col-lg-5 col-md-5 title-in-credit-card">
-          <h5>匯款資訊</h5>
-          <div class="dividerline-in-table this-one-pc-none"></div>
-          <div class="atm-remit-info mt-4">
+        <div class="col-lg-5 col-md-5 title-in-atm">
+          <h6>匯款資訊</h6>
+
+          <div class="atm-remit-info mt-4 mobile-need-change-padding-all">
             <p>銀行代號<span>：</span><br />013國泰世華銀行</p>
             <p>銀行帳號<span>：</span><br />5647-9320-3847-5747</p>
             <p>轉帳金額<span>：</span><br />NT.3600</p>
           </div>
           <div class="dividerline-in-table-no2 this-one-pc-none"></div>
           <div
-            class="d-flex justify-content-lg-start justify-content-md-start justify-content-sm-center justify-content-center"
+            class="d-flex justify-content-lg-start justify-content-md-start justify-content-sm-center justify-content-center py-0"
           >
-            <small>小提醒：請於三天內匯款完成，避免取消訂單</small>
+            <small style="color: #f2a200" class="mt-0"
+              >小提醒：請於三天內匯款完成，避免取消訂單</small
+            >
           </div>
         </div>
         <div class="col-lg-1 col-md-1"></div>
         <div class="col-lg-4 col-md-4">
-          <div class="title-in-table d-flex justify-content-between">
+          <div class="title-in-table d-flex justify-content-between mb-3">
             <h6>購物明細</h6>
-            <a href="#" class="close-features"><i class="fas fa-minus-circle"></i>收起訂單明細</a>
+            <a href="#" class="close-features"
+              ><i class="fas fa-minus-circle"></i>收起訂單明細</a
+            >
           </div>
-          <div class="dividerline-in-table mb-3"></div>
 
           <div class="d-flex justify-content-center">
             <table class="howmuch-you-need-pay">
@@ -115,27 +118,6 @@
     <script src="bootstrap/js/bootstrap.bundle.js"></script>
     <!-- <script src="./text-animation.js"></script> -->
     <!--  -->
-    <script>
-      //溫度計的
-      $(".home_page_number a").on("click", function () {
-        $(this).css("color", "#db5c00");
-        $(this).siblings().css("color", "#848484");
-      });
-
-      $("#hpn_1").on("click", function () {
-        $(".thermometer_move").css("width", "33%");
-      });
-
-      $("#hpn_2").on("click", function () {
-        $(".thermometer_move").css("width", "66%");
-      });
-
-      $("#hpn_3").on("click", function () {
-        $(".thermometer_move").css("width", "100%");
-      });
-
-
-    </script>
-
+    <script></script>
   </body>
 </html>

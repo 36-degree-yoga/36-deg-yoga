@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="./fontawesome/css/all.css" />
     <link rel="stylesheet" href="./credit-card.css" />
+    <link rel="stylesheet" href="./share.css" />
   </head>
   <body>
     <nav class="nav-place-zone"></nav>
@@ -44,8 +45,8 @@
       >
         <!--  -->
         <div class="col-lg-5 col-md-5 title-in-credit-card">
-          <h5>信用卡資訊</h5>
-          <div class="dividerline-in-table this-one-pc-none"></div>
+          <h6>信用卡資訊</h6>
+        
           <div
             class="credit-card-img position-relative text-monospace text-white"
           >
@@ -60,7 +61,7 @@
               <span class="card-num2-text"></span>
             </p>
           </div>
-          <div>
+          <div class="mobile-need-change-padding-all">
             <div class="form-group row">
               <label for="card-num1" class="col-sm-3 col-form-label pl-3"
                 >信用卡卡號</label
@@ -157,11 +158,10 @@
         </div>
         <div class="col-lg-1 col-md-1"></div>
         <div class="col-lg-4 col-md-4">
-          <div class="title-in-table d-flex justify-content-between">
-            <h6>購物明細</h6>
+          <div class="title-in-table d-flex justify-content-between mb-3">
+            <p>購物明細</p>
             <a href="#"><i class="fas fa-minus-circle"></i>收起訂單明細</a>
           </div>
-          <div class="dividerline-in-table mb-3"></div>
 
           <div class="d-flex justify-content-center">
             <table class="howmuch-you-need-pay">
@@ -251,7 +251,7 @@
           $(".ppp:first").html(this.value);
         });
       });
-      
+
       $(".month-option").on("click", function () {
         $(".preset-choose-month").addClass("display-none");
       });
