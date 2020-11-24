@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./share.css">
     <style>
+        h1,h2{
+            color:#004A13;
+        }
+
         .hero{
             height: 48.75rem;
             padding:0!important;
@@ -103,9 +107,25 @@
 
 
         }
+
+        .sec1-text::before,
+        .sec2-text::before{
+            position: absolute;
+            content:"";
+            width: 100%;
+            height: 100%;
+            top:0;
+            left: 0;
+            background-color: #fff;
+ 
+            opacity: .3;
+
+
+        }
 /* tag */
         .text-wrap{
             /* margin-top: 12.5rem; */
+            z-index: 1;
         }
 
         .text-wrap h2{
@@ -115,6 +135,10 @@
 
         .text-wrap span{
             margin-top: 3.375rem;
+        }
+
+        .tag-wrapper{
+            margin-bottom: 2.5rem;
         }
 
 
@@ -135,7 +159,7 @@
         }
 /* 第2個區塊的內容 */
         .sec2-img{
-            background: url("./img/_content/content_02.png") center bottom no-repeat;
+            background: url("./img/06_content/content_02.png") center bottom no-repeat;
             background-size: cover;    
 
 
@@ -150,15 +174,15 @@
         }
 /* 熱門商品 */
         .content-product{
-            height: 46.8125rem;
+            height: 48.5rem;
             background: #F2A200;
         }
 
-
-        .row {
-            margin-top: 60px;
-            margin-bottom: 60px;
+        .text-center{
+            margin-top: 5rem;
         }
+
+
 
         h3 {
             color: #004A13;
@@ -184,7 +208,8 @@
 
         /* 猜你喜歡 推薦商品 ↓↓  */
         .product-zone {
-            margin-right: 30px;
+            margin-right: 78px;
+            cursor: pointer;
         }
 
         .product-info {
@@ -193,8 +218,13 @@
 
         .img-wrap {
             width: 225.7px;
-            height: 378px;
+            height: 295px;
             margin: 60px 0 30px 0;
+        }
+
+        .product-wrap{
+            height: 378px;
+            transition:.5s;
         }
 
         .product-pic {
@@ -202,59 +232,51 @@
             object-position: center;
         }
 
+        .product-info{
+                margin-top: 0!important;
+            }
+
+        .product-info p{
+            color: #333333;
+        }
+
         .icon-wrap {
             display: none !important;
         }
 
+        .btn_f{
+            width: 21.375rem;
+            margin: 60px 0 60px 0;
+        }
+
         /* 猜你喜歡 推薦商品 ↑↑ */
 
-        @media (max-width: 992px) {
-
-            .container-fluid {
-                overflow: hidden;
-            }
-
-            .guessyoullike {
-                width: 1125px;
-                position: relative;
-            }
-
-            .product-zone {
-                margin-right: 75px;
-                margin-left: 75px;
-            }
-
-            .justify-content-center {
-                justify-content: space-between !important;
-            }
-
-            .icon-wrap {
-                display: flex !important;
-                position: absolute;
-                width: 345px;
-                justify-content: space-between;
-                left: 15px;
-                top: 240px;
-
-            }
-        }
 
 /* 最後一個區塊  */
         .last-sec{
             height: 56.25rem;
             padding: 0!important;
+            
+        }
+
+        .last-sec h1{
+            font-family: 'Josefin Sans', sans-serif;
         }
 
         .last-sec-img{
             background: url("./img/06_content/content_05.png") right bottom no-repeat;
             background-size: cover; 
-            margin-bottom: 5.625rem;   
+            /* margin-bottom: 5.625rem;    */
 
         }
 
         .last-sec{
             padding: 0!important;
 
+        }
+
+        .last-sec h3{
+            color: #333333;
         }
 
         .last-sec-text-wrap{
@@ -281,8 +303,17 @@
         }
 
         .last-sec-text{
-            margin-top: 11.25rem;
+            margin-top: 7.5rem;
             margin-bottom: 4rem;
+        }
+
+        .btn_l{
+            margin-top: 3.75rem;
+            width: 220px;
+        }
+
+        .mobile{
+            display: none;
         }
 
 
@@ -295,10 +326,18 @@
 /* ------------------------------------------手機版 */
 /* ------------------------------------------手機版 */
 
-@media screen and (max-width:992px){
+@media screen and (max-width:1500px){
+    /* 992 */
     .hero{
         height: auto;
         align-items: flex-start;
+    }
+
+    h1{
+        font-size: 3.5rem;
+    }
+    h2{
+        font-size:40px;
     }
 
     .srolldown_btn_mobile{
@@ -389,7 +428,31 @@
 /* 手機版內容區---------------- */
     .content-sec{
             height: auto!important;
-            padding:0!important;
+            padding:0 0 60px 0!important;
+            background: url("./img/06_content/content_04.svg");
+            height: 100%;
+            background-size: 100%;            
+            background-attachment: fixed;
+        }
+        .content-sec::before{
+            position: absolute;
+            content:"";
+            width: 100%;
+            height: 100%;
+            top:0;
+            left: 0;
+            background-color: #fff;
+ 
+            opacity: .3;
+
+
+        }
+
+        .sec1-text::before,
+        .sec2-text::before{
+            background-color: transparent;
+
+
         }
 
         .text-wrap{
@@ -400,14 +463,21 @@
 
         .text-wrap h2{
             margin-top: 2.375rem;
+            margin-bottom:15px;
         }
 
         .sec1-text,
         .sec2-text{
+            background: none;
             background-size: 100%;
         }
+
+        
+
+
         .text-wrap p{
             margin-top: 1rem;
+            margin-bottom: 60px;
         }
         
         .sec2-img,
@@ -424,14 +494,79 @@
         }
 /* --------熱門商品區-------- */
         .content-product{
-            height: 40.75rem;
+            height: 42rem;
+            padding:0 0 50px 0!important;
         }
+
+        .row {
+            margin-left: 0!important;
+            margin-right: 0!important;
+            height: 33rem;
+        }
+
+
+        .text-center{
+            margin-top: 60px;
+        }
+
+        .container-fluid {
+                overflow: hidden;
+            }
+
+        .guessyoullike {
+                /* width: 1052px; */
+                position: absolute;
+                justify-content: none!important;
+                left:0;
+                transition:.5s;
+            
+            }
+
+        .product-zone {
+                margin-right: 75px;
+                margin-left: 75px;
+                
+            }
+            .img-wrap{
+                margin: 40px 0 30px 0;
+            }
+
+            .product-zone{
+                margin-right: 75px!important;
+            }
+
+           
+/* 
+            .justify-content-center {
+                justify-content: space-between !important;
+            } */
+        
+            .icon-wrapper{
+                width: 100%;
+            }
+
+            .icon-wrap {
+                display: flex !important;
+                position: absolute;
+                width: 100%;
+                justify-content: space-between;
+                left: 0px;
+                top: 287.5px;
+                padding:0 12px;
+                z-index: 1;
+
+            }
+
+            .btn_f{
+                width: 18rem;
+            }
+
 
 
 /* -----手機版最後一個區塊----- */
 
         .last-sec{
-            height: 50.5rem;
+            height: 55rem;
         }
 
 
@@ -454,6 +589,24 @@
         }
         .last-sec-text{
             margin-top: 3.75rem;
+            margin-bottom: 30px;
+        }
+
+        .mobile{
+            display: block;
+        }
+
+        .desktop{
+            display: none;
+        }
+
+        .last-sec-btn{
+            padding-right: 2.25rem;
+        }
+
+        .last-sec-btn button{
+            width: 100%;
+            margin-top: 50px;
         }
 
         
@@ -500,13 +653,13 @@
     </div>
 <!-- content區塊1 -->
     
-        <div class="container-fluid d-flex content-sec flex-wrap">
+        <div class="container-fluid d-flex content-sec flex-wrap position-relative">
             
             <div class="col-lg-6 col-12 sec1-img">
                 
 
             </div>
-            <div class="col-lg-6 col-12 sec1-text d-flex justify-content-center align-items-center">
+            <div class="col-lg-6 col-12 sec1-text d-flex justify-content-center align-items-center position-relative">
                 <div class="text-wrap">
                     <h2>動態瑜珈</h2>
 
@@ -517,7 +670,12 @@
                             </div>
                             <div class="d-flex align-items-center tag mr-3">
                                 <div class="tag-line"></div>
-                                <h6 class="mt-2">防滑</h6>
+                                <h6 class="mt-2">穩定</h6>
+                            
+                            </div>
+                            <div class="d-flex align-items-center tag mr-3">
+                                <div class="tag-line"></div>
+                                <h6 class="mt-2">3-5cm</h6>
                             
                             </div>
                 </div>
@@ -530,100 +688,114 @@
         
         </div>
 <!-- 熱門商品 -->
-       
-            <div class="container-fluid content-product">
-                <div class="row">
-                    <div class="col-2 px-0"></div>
-                    <div class="col-md-8 coi-sm-12 px-0">
-        
-                        <h3 class="text-center">商品推薦</h3>
-        
-                        <div class="guessyoullike d-flex justify-content-center">
-        
-                            <div class="product-zone px-0 ">
-        
-                                <div class="product-wrap">
-        
-                                    <div class="img-wrap border ">
-                                        <!-- product 的 border 之後取消 -->
-                                        <img class="product-pic w-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
-                                    </div>
-        
-                                    <div class="product-info text-center">
-                                        <a href="">
-                                            <h6 class="mb-0">好瘦瑜珈磚</h6>
-                                        </a>
-                                        <p>NT$. 1000</p>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <div class="product-zone px-0 ">
-        
-                                <div class="product-wrap">
-        
-                                    <div class="img-wrap border ">
-                                        <!-- product 的 border 之後取消 -->
-                                        <img class="product-pic w-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
-                                    </div>
-        
-                                    <div class="product-info text-center">
-                                        <a href="">
-                                            <h6 class="mb-0">好瘦瑜珈磚</h6>
-                                        </a>
-                                        <p>NT$. 1000</p>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <div class="product-zone px-0 mr-0">
-        
-                                <div class="product-wrap">
-        
-                                    <div class="img-wrap border ">
-                                        <!-- product 的 border 之後取消 -->
-                                        <img class="product-pic w-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
-                                    </div>
-        
-                                    <div class="product-info text-center">
-                                        <a href="">
-                                            <h6 class="mb-0">好瘦瑜珈磚</h6>
-                                        </a>
-                                        <p>NT$. 1000</p>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <div class="icon-wrap d-flex">
-                                <div class="icon-left"><img src="./SVG/icon_left.svg" alt=""></div>
-                                <div class="icon-right"><img src="./SVG/icon_right.svg" alt=""></div>
-                            </div>
-        
-                        </div>
-        
-                    </div>
-                    <div class="col-2 px-0"></div>
-                </div>
+<div class="container-fluid content-product position-relative">
+    <div class="row">
+        <div class="col-lg-2 px-0 icon-wrapper">
+            <div class="icon-wrap d-flex">
+                <a class="icon-left"><img src="./SVG/icon_left.svg" alt=""></a>
+                <a class="icon-right"><img src="./SVG/icon_right.svg" alt=""></a>
             </div>
+        </div>
+        <div class="col-lg-8 coi-sm-12 px-0">
+
+            <h2 class="text-center">商品推薦</h2>
+
+            <div class="guessyoullike d-flex justify-content-center position-relative">
+                <a href="">
+                    <div class="product-zone px-0">
+
+                        <div class="product-wrap">
+
+                            <div class="img-wrap border ">
+                                <!-- product 的 border 之後取消 -->
+                                <img class="product-pic w-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
+                            </div>
+
+                            <div class="product-info text-center">
+                                <a href="">
+                                    <h6 class="mb-0">好瘦瑜珈磚</h6>
+                                </a>
+                                <p>NT$. 1000</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="product-zone px-0">
+
+                        <div class="product-wrap">
+
+                            <div class="img-wrap border ">
+                                <!-- product 的 border 之後取消 -->
+                                <img class="product-pic w-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
+                            </div>
+
+                            <div class="product-info text-center">
+                                <a href="">
+                                    <h6 class="mb-0">好瘦瑜珈磚2</h6>
+                                </a>
+                                <p>NT$. 1000</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="">
+                    <div class="product-zone px-0 mr-0">
+
+                        <div class="product-wrap">
+
+                            <div class="img-wrap border ">
+                                <!-- product 的 border 之後取消 -->
+                                <img class="product-pic w-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
+                            </div>
+
+                            <div class="product-info text-center">
+                                <a href="">
+                                    <h6 class="mb-0">好瘦瑜珈磚3</h6>
+                                </a>
+                                <p>NT$. 1000</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+
+            </div>
+
+            <div class="mobile" style="height: 418px;"></div>
+
+        </div>
+        
+        <div class="col-2 px-0"></div>
+    </div>
+    <div class="w-100 d-flex justify-content-center"><button class="btn_f">看更多商品</button>
+    </div>
+</div>
             
        
 
 
 <!-- content區塊2 -->
-        <div class="container-fluid d-flex content-sec flex-wrap">
+        <div class="container-fluid d-flex content-sec flex-wrap position-relative">
                     
-            <div class="col-lg-6 col-12 sec2-text d-flex justify-content-center align-items-center">
+            <div class="col-lg-6 col-12 sec2-text d-flex justify-content-center align-items-center position-relative">
                 <div class="text-wrap">
                     <h2>靜態瑜珈</h2>
 
                     <div class="tag-wrapper d-flex">
                             <div class="d-flex align-items-center tag mr-3">
                                 <div class="tag-line"></div>
-                                <h6 class="mt-2">防滑</h6>
+                                <h6 class="mt-2">舒適</h6>
                             </div>
                             <div class="d-flex align-items-center tag mr-3">
                                 <div class="tag-line"></div>
-                                <h6 class="mt-2">防滑</h6>
+                                <h6 class="mt-2">觸感</h6>
+                            
+                            </div>
+                            <div class="d-flex align-items-center tag mr-3">
+                                <div class="tag-line"></div>
+                                <h6 class="mt-2">5-8cm</h6>
                             
                             </div>
                 </div>
@@ -641,78 +813,88 @@
         </div>
     
 <!-- 熱門商品 -->
-<div class="container-fluid content-product">
+<div class="container-fluid content-product position-relative">
     <div class="row">
-        <div class="col-2 px-0"></div>
-        <div class="col-md-8 coi-sm-12 px-0">
+        <div class="col-lg-2 px-0 icon-wrapper">
+            <div class="icon-wrap d-flex">
+                <a class="icon-left"><img src="./SVG/icon_left.svg" alt=""></a>
+                <a class="icon-right"><img src="./SVG/icon_right.svg" alt=""></a>
+            </div>
+        </div>
+        <div class="col-lg-8 coi-sm-12 px-0">
 
-            <h3 class="text-center">商品推薦</h3>
+            <h2 class="text-center">商品推薦</h2>
 
-            <div class="guessyoullike d-flex justify-content-center">
+            <div class="guessyoullike d-flex justify-content-center position-relative">
+                <a href="">
+                    <div class="product-zone px-0">
 
-                <div class="product-zone px-0 ">
+                        <div class="product-wrap">
 
-                    <div class="product-wrap">
+                            <div class="img-wrap border ">
+                                <!-- product 的 border 之後取消 -->
+                                <img class="product-pic w-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
+                            </div>
 
-                        <div class="img-wrap border ">
-                            <!-- product 的 border 之後取消 -->
-                            <img class="product-pic w-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
-                        </div>
-
-                        <div class="product-info text-center">
-                            <a href="">
-                                <h6 class="mb-0">好瘦瑜珈磚</h6>
-                            </a>
-                            <p>NT$. 1000</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-zone px-0 ">
-
-                    <div class="product-wrap">
-
-                        <div class="img-wrap border ">
-                            <!-- product 的 border 之後取消 -->
-                            <img class="product-pic w-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
-                        </div>
-
-                        <div class="product-info text-center">
-                            <a href="">
-                                <h6 class="mb-0">好瘦瑜珈磚</h6>
-                            </a>
-                            <p>NT$. 1000</p>
+                            <div class="product-info text-center">
+                                <a href="">
+                                    <h6 class="mb-0">好瘦瑜珈磚</h6>
+                                </a>
+                                <p>NT$. 1000</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
+                <a href="">
+                    <div class="product-zone px-0">
 
-                <div class="product-zone px-0 mr-0">
+                        <div class="product-wrap">
 
-                    <div class="product-wrap">
+                            <div class="img-wrap border ">
+                                <!-- product 的 border 之後取消 -->
+                                <img class="product-pic w-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
+                            </div>
 
-                        <div class="img-wrap border ">
-                            <!-- product 的 border 之後取消 -->
-                            <img class="product-pic w-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
-                        </div>
-
-                        <div class="product-info text-center">
-                            <a href="">
-                                <h6 class="mb-0">好瘦瑜珈磚</h6>
-                            </a>
-                            <p>NT$. 1000</p>
+                            <div class="product-info text-center">
+                                <a href="">
+                                    <h6 class="mb-0">好瘦瑜珈磚2</h6>
+                                </a>
+                                <p>NT$. 1000</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
+                
+                <a href="">
+                    <div class="product-zone px-0 mr-0">
 
-                <div class="icon-wrap d-flex">
-                    <div class="icon-left"><img src="./SVG/icon_left.svg" alt=""></div>
-                    <div class="icon-right"><img src="./SVG/icon_right.svg" alt=""></div>
-                </div>
+                        <div class="product-wrap">
+
+                            <div class="img-wrap border ">
+                                <!-- product 的 border 之後取消 -->
+                                <img class="product-pic w-100" src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
+                            </div>
+
+                            <div class="product-info text-center">
+                                <a href="">
+                                    <h6 class="mb-0">好瘦瑜珈磚3</h6>
+                                </a>
+                                <p>NT$. 1000</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
 
             </div>
 
+            <div class="mobile" style="height: 418px;"></div>
+
         </div>
+        
         <div class="col-2 px-0"></div>
+    </div>
+    <div class="w-100 d-flex justify-content-center"><button class="btn_f">看更多商品</button>
     </div>
 </div>
 <!---------------------------------  最後區塊  -->
@@ -724,9 +906,12 @@
         <div class="last-sec-text-wrap">
             <div class="last-sec-thermo position-relative ml-2">
             </div>
-            <div class="last-sec-text"><h1 class="mb-4">Find</h1><h1 class="mb-4">Your</h1><h1>Soulmat</h1></div>
+            <div class="last-sec-text desktop"><h1 class="">Find</h1><h1 class="">Your</h1><h1>Soulmat</h1></div>
+            <div class="last-sec-text mobile"><h1 class="">Find Your</h1><h1>Soulmat</h1></div>
             
-            <div class=""><h3>36度，與人類共感的溫度</h3></div>
+            <div class="desktop"><h3>36度，與人類共感的溫度</h3></div>
+            <div class="mobile"><h3>36度，<br>與人類共感的溫度</h3></div>
+            <div class="last-sec-btn"><button class="btn_l">進入測驗</button></div>
         </div>
     </div>
 
@@ -743,6 +928,80 @@
     <script src="./lib/jquery-3.5.1.js"></script>
     <script src="./bootstrap/js/bootstrap.bundle.js"></script>
     <script src="./lib/jquery-3.5.1.js"></script>
+
+    <script>
+        let w = $(window).width(); 
+        let img_wrap = $('.img-wrap').width();
+        let margin = (w - img_wrap)/2;
+        let width = img_wrap*3 + margin*6;
+        let move = img_wrap + margin*2;
+
+        $(document).ready(function(){        
+        
+
+            if(w < 992){
+                $('.product-zone').css('margin-left',margin).css('margin-right',margin);
+                $('.guessyoullike').css('width',width);
+                console.log('img_wrap:'+img_wrap,'margin:'+margin,'move:'+move);
+            }
+            
+        })
+
+ 
+
+        $('.icon-left').on('click',function(e){
+            
+            let p = $('.guessyoullike').position().left;
+            console.log('positionleft:'+p);
+            if(p==0){
+                $('.icon-left').css('opacity','.2').css('transition','.5s');
+                $('.icon-right').css('opacity','1').css('transition','.5s');
+
+            }
+
+            else if(p==-move){
+                $('.icon-left').css('opacity','.2').css('transition','.5s');
+                $('.icon-right').css('opacity','1').css('transition','.5s');
+                $('.guessyoullike').css('left','+='+ move);
+
+
+            }
+            else{     
+                $('.icon-left').css('opacity','1').css('transition','.5s');
+                $('.icon-right').css('opacity','1').css('transition','.5s');           
+                $('.guessyoullike').css('left','+='+ move);}
+
+        })
+
+        $('.icon-right').on('click',function(e){
+            
+            let p = $('.guessyoullike').position().left;
+            console.log('positionleft:'+p);
+            if(p==-move*2){
+                $('.icon-right').css('opacity','.2').css('transition','.5s');
+                $('.icon-left').css('opacity','1').css('transition','.5s');
+
+            }
+
+            else if(p==-move){
+                $('.icon-right').css('opacity','.2').css('transition','.5s');
+                $('.icon-left').css('opacity','1').css('transition','.5s');
+                $('.guessyoullike').css('left','-='+ move);
+
+
+            }
+            else{
+                $('.icon-left').css('opacity','1').css('transition','.5s');
+                $('.icon-right').css('opacity','1').css('transition','.5s');  
+                $('.guessyoullike').css('left','-='+ move);}
+
+        })
+
+   
+
+       
+
+    </script>
     
 </body>
 </html>
