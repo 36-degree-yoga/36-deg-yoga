@@ -6,6 +6,7 @@
     <title>提案頁</title>
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./share.css">
+    <link rel="stylesheet" href="./CSS/animate.min.css">
     <style>
         h1,h2{
             color:#004A13;
@@ -20,7 +21,22 @@
             background: url("./img/06_content/content_07.png") right bottom no-repeat;
             background-size: cover; 
             margin-bottom: 5.625rem;     
+            /* opacity: 1; */
+            animation: fadein 2s;
             
+        }
+
+        @keyframes fadein{
+            from{
+                opacity:0;
+                /* background-size: contain;
+            background-position: 2000% 0; */
+            }
+            to{
+                opacity:1;
+                /* background-size: cover;
+            background-position: 0% 0;} */
+            }
         }
  
 
@@ -34,9 +50,28 @@
             display: none;
         }
 
+        
+
+
         .scrolldown_btn{
             margin-left: 500px;
         }
+
+        .scrollbox{
+            transition: .5s;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .scrollbox:hover{
+                transform: translateY(50px);
+
+            }
+
+
+
+
+
         .scroll_p{
             font-family: 'Josefin Sans', sans-serif;
             color: #333333;
@@ -55,6 +90,7 @@
             width: 2px;
             background-color: #333333;
             margin-top: 40px;
+            margin-left: 40px;
         }
 
         .hero-text-h1-desktop{
@@ -176,6 +212,7 @@
         .content-product{
             height: 48.5rem;
             background: #F2A200;
+            overflow: hidden;
         }
 
         .text-center{
@@ -326,7 +363,7 @@
 /* ------------------------------------------手機版 */
 /* ------------------------------------------手機版 */
 
-@media screen and (max-width:1500px){
+@media screen and (max-width:992px){
     /* 992 */
     .hero{
         height: auto;
@@ -624,21 +661,23 @@
     <div class="container-fluid hero d-flex flex-wrap">
         
         <div class="srolldown_btn srolldown_btn_desktop col-1 d-flex flex-column justify-content-end align-items-center">
-            <div class="scroll_p">Scroll&ensp;Down</div>
-            <div class="scrolldown_line"></div> 
+            <div class="scrollbox">
+                <div class="scroll_p">Scroll&ensp;Down</div>
+                <div class="scrolldown_line"></div> 
+            </div>
         </div>  
         
         <div class="col-lg-3 col-9 d-flex flex-column hero-text position-relative align-items-center">
-            <div class="hero-text-h1 hero-text-h1-desktop mt-0"><h1>瑜珈墊挑選指南</h1></div>
-            <div class="hero-text-h1 hero-text-h1-mobile mt-0"><h1>瑜珈墊<br>挑選指南</h1></div>
-            <span class="hero-text-span-desktop">一張適合的瑜珈墊，可以幫助你更快速地進入體式，同時確保安全與舒適度。
+            <div class="hero-text-h1 hero-text-h1-desktop mt-0 animate__animated animate__fadeInLeft"><h1>瑜珈墊挑選指南</h1></div>
+            <div class="hero-text-h1 hero-text-h1-mobile mt-0 animate__animated animate__fadeInLeft"><h1>瑜珈墊<br>挑選指南</h1></div>
+            <span class="hero-text-span-desktop animate__animated animate__fadeInLeft">一張適合的瑜珈墊，可以幫助你更快速地進入體式，同時確保安全與舒適度。
             閱讀我們的挑選指南，找到專屬你的瑜珈墊！
             </span>
             <span class="hero-text-span-mobile">一張適合的瑜珈墊，可以幫助你更快速地進入體式，同時確保安全與舒適度。
                 閱讀我們的挑選指南，找到專屬你的瑜珈墊！
                 </span>
         </div>
-        <div class="col-lg-8 col-12 hero-img"></div>
+        <div class="col-lg-8 col-12 hero-img animate__animated animate__fadeInLeft"></div>
 
         <!-- 手機版scrolldown -->
         
@@ -930,72 +969,181 @@
     <script src="./lib/jquery-3.5.1.js"></script>
 
     <script>
-        let w = $(window).width(); 
-        let img_wrap = $('.img-wrap').width();
-        let margin = (w - img_wrap)/2;
-        let width = img_wrap*3 + margin*6;
-        let move = img_wrap + margin*2;
+// -------偵測top----//
+    $(window).on('scroll',function(){
+        let top = $(this).scrollTop();
+        $().addClass('');
 
-        $(document).ready(function(){        
+    })
         
 
-            if(w < 992){
+// -------------熱門商品區-------------------------
+
+
+        $(document).ready(function(){    
+
+            let w = $(window).width(); 
+            let img_wrap = $('.img-wrap').width();
+            let margin = (w - img_wrap)/2;
+            let width = img_wrap*3 + margin*6;
+            let move = img_wrap + margin*2;
+
+          if(w < 992){
+              //先設定
+
                 $('.product-zone').css('margin-left',margin).css('margin-right',margin);
                 $('.guessyoullike').css('width',width);
+                $('.guessyoullike').addClass('position-absolute');
+                $('.guessyoullike').removeClass('position-relative');;
+                $('.guessyoullike').removeClass('justify-content-center');
                 console.log('img_wrap:'+img_wrap,'margin:'+margin,'move:'+move);
+
+                // click movement
+                $('.icon-left').on('click',function(e){
+            
+                let p = $('.guessyoullike').position().left;
+                console.log('positionleft:'+p);
+                if(p==0){
+                    $('.icon-left').css('opacity','.2').css('transition','.5s');
+                    $('.icon-right').css('opacity','1').css('transition','.5s');
+
+                }
+
+                else if(p==-move){
+                    $('.icon-left').css('opacity','.2').css('transition','.5s');
+                    $('.icon-right').css('opacity','1').css('transition','.5s');
+                    $('.guessyoullike').css('left','+='+ move);
+
+
+                }
+                else{     
+                    $('.icon-left').css('opacity','1').css('transition','.5s');
+                    $('.icon-right').css('opacity','1').css('transition','.5s');           
+                    $('.guessyoullike').css('left','+='+ move);}
+                
+                 })
+                
+
+                 $('.icon-right').on('click',function(e){
+            
+                        let p = $('.guessyoullike').position().left;
+                        console.log('positionleft:'+p);
+                        if(p==-move*2){
+                            $('.icon-right').css('opacity','.2').css('transition','.5s');
+                            $('.icon-left').css('opacity','1').css('transition','.5s');
+
+                        }
+
+                        else if(p==-move){
+                            $('.icon-right').css('opacity','.2').css('transition','.5s');
+                            $('.icon-left').css('opacity','1').css('transition','.5s');
+                            $('.guessyoullike').css('left','-='+ move);
+
+
+                        }
+                        else{
+                            $('.icon-left').css('opacity','1').css('transition','.5s');
+                            $('.icon-right').css('opacity','1').css('transition','.5s');  
+                            $('.guessyoullike').css('left','-='+ move);}
+
+                    })
+
             }
+                       
+        })
+
+        $(window).resize(function(){
+           
+            
+
+            let w = $(window).width(); 
+            let img_wrap = $('.img-wrap').width();
+            let margin = (w - img_wrap)/2;
+            let width = img_wrap*3 + margin*6;
+            let move = img_wrap + margin*2;
+                
+            
+            
+            if(w < 992){
+                // setting
+                $('.product-zone').css('margin-left',margin).css('margin-right',margin);
+                $('.guessyoullike').css('width',width);
+                $('.guessyoullike').addClass('position-absolute');
+                $('.guessyoullike').removeClass('position-relative');;
+                $('.guessyoullike').removeClass('justify-content-center');
+                
+                console.log('img_wrap:'+img_wrap,'margin:'+margin,'move:'+move);
+
+                //click
+
+                $('.icon-left').on('click',function(e){
+            
+                        let p = $('.guessyoullike').position().left;
+                        console.log('positionleft:'+p);
+                        if(p>=0){
+                            $('.icon-left').css('opacity','.2').css('transition','.5s');
+                            $('.icon-right').css('opacity','1').css('transition','.5s');
+
+                        }
+
+                        else if(p>=move){
+                            $('.icon-left').css('opacity','.2').css('transition','.5s');
+                            $('.icon-right').css('opacity','1').css('transition','.5s');
+                            $('.guessyoullike').css('left','+='+ move);
+
+
+                        }
+                        else{     
+                            $('.icon-left').css('opacity','1').css('transition','.5s');
+                            $('.icon-right').css('opacity','1').css('transition','.5s');           
+                            $('.guessyoullike').css('left','+='+ move);}
+
+                    })
+
+                    $('.icon-right').on('click',function(e){
+                        
+                        let p = $('.guessyoullike').position().left;
+                        console.log('positionleft:'+p);
+                        if(p>=-move*2){
+                            $('.icon-right').css('opacity','.2').css('transition','.5s');
+                            $('.icon-left').css('opacity','1').css('transition','.5s');
+
+                        }
+
+                        else if(p>=-move){
+                            $('.icon-right').css('opacity','.2').css('transition','.5s');
+                            $('.icon-left').css('opacity','1').css('transition','.5s');
+                            $('.guessyoullike').css('left','-='+ move);
+
+
+                        }
+                        else{
+                            $('.icon-left').css('opacity','1').css('transition','.5s');
+                            $('.icon-right').css('opacity','1').css('transition','.5s');  
+                            $('.guessyoullike').css('left','-='+ move);}
+
+                    })
+            
+            
+            
+            
+            
+            }else{
+                console.log('resize');
+                $('.guessyoullike').css('width','').css('left','');
+                $('.guessyoullike').removeClass('position-absolute');
+                $('.guessyoullike').addClass('position-relative');;
+                $('.guessyoullike').addClass('justify-content-center');
+                $('.product-zone').eq(0).css('margin-right','75px').css('margin-left','0px');
+                $('.product-zone').eq(1).css('margin-right','75px').css('margin-left','0px');;
+                $('.product-zone').eq(2).css('margin-right','0px').css('margin-left','0px');;
+            };
             
         })
 
  
 
-        $('.icon-left').on('click',function(e){
-            
-            let p = $('.guessyoullike').position().left;
-            console.log('positionleft:'+p);
-            if(p==0){
-                $('.icon-left').css('opacity','.2').css('transition','.5s');
-                $('.icon-right').css('opacity','1').css('transition','.5s');
-
-            }
-
-            else if(p==-move){
-                $('.icon-left').css('opacity','.2').css('transition','.5s');
-                $('.icon-right').css('opacity','1').css('transition','.5s');
-                $('.guessyoullike').css('left','+='+ move);
-
-
-            }
-            else{     
-                $('.icon-left').css('opacity','1').css('transition','.5s');
-                $('.icon-right').css('opacity','1').css('transition','.5s');           
-                $('.guessyoullike').css('left','+='+ move);}
-
-        })
-
-        $('.icon-right').on('click',function(e){
-            
-            let p = $('.guessyoullike').position().left;
-            console.log('positionleft:'+p);
-            if(p==-move*2){
-                $('.icon-right').css('opacity','.2').css('transition','.5s');
-                $('.icon-left').css('opacity','1').css('transition','.5s');
-
-            }
-
-            else if(p==-move){
-                $('.icon-right').css('opacity','.2').css('transition','.5s');
-                $('.icon-left').css('opacity','1').css('transition','.5s');
-                $('.guessyoullike').css('left','-='+ move);
-
-
-            }
-            else{
-                $('.icon-left').css('opacity','1').css('transition','.5s');
-                $('.icon-right').css('opacity','1').css('transition','.5s');  
-                $('.guessyoullike').css('left','-='+ move);}
-
-        })
+        
 
    
 
