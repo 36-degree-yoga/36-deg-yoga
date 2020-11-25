@@ -21,8 +21,9 @@
             background: url("./img/06_content/content_07.png") right bottom no-repeat;
             background-size: cover; 
             margin-bottom: 5.625rem;     
+            height: calc(100% - 5.625rem);
             /* opacity: 1; */
-            animation: fadein 2s;
+            /* animation: fadein 2s; */
             
         }
 
@@ -48,6 +49,11 @@
 
         .hero-text-h1-mobile{
             display: none;
+        }
+
+        .col-lg-8,
+        .col-12{
+            padding:0!important;
         }
 
         
@@ -124,6 +130,7 @@
 
         .text-wrap{
             width: 21.375rem;
+            
 
         }
 
@@ -136,7 +143,7 @@
 
         }
         .sec1-text{
-            background: url("./img/06_content/content_04.svg");
+            background: url("./img/06_content/content_04.png");
             height: 100%;
             background-size: 50%;            
             background-attachment: fixed;
@@ -201,7 +208,7 @@
 
         }
         .sec2-text{
-            background: url("./img/06_content/content_04.svg");
+            background: url("./img/06_content/content_04.png");
             height: 100%;
             background-size: 50%;            
             background-attachment: fixed;
@@ -254,7 +261,7 @@
         }
 
         .img-wrap {
-            width: 225.7px;
+            width: 226px;
             height: 295px;
             margin: 60px 0 30px 0;
         }
@@ -466,7 +473,7 @@
     .content-sec{
             height: auto!important;
             padding:0 0 60px 0!important;
-            background: url("./img/06_content/content_04.svg");
+            background: url("./img/06_content/content_04.png");
             height: 100%;
             background-size: 100%;            
             background-attachment: fixed;
@@ -560,17 +567,14 @@
             }
 
         .product-zone {
-                margin-right: 75px;
-                margin-left: 75px;
+                /* margin-right: 75px;
+                margin-left: 75px; */
                 
             }
             .img-wrap{
                 margin: 40px 0 30px 0;
             }
 
-            .product-zone{
-                margin-right: 75px!important;
-            }
 
            
 /* 
@@ -677,7 +681,9 @@
                 閱讀我們的挑選指南，找到專屬你的瑜珈墊！
                 </span>
         </div>
-        <div class="col-lg-8 col-12 hero-img animate__animated animate__fadeInLeft"></div>
+        <div class="col-lg-8 col-12">
+            <div class="hero-img w-100 animate__animated animate__fadeInRight"></div>
+        </div>
 
         <!-- 手機版scrolldown -->
         
@@ -694,12 +700,12 @@
     
         <div class="container-fluid d-flex content-sec flex-wrap position-relative">
             
-            <div class="col-lg-6 col-12 sec1-img">
+            <div class="col-lg-6 col-12 sec1-img sec1-img-ani-1">
                 
 
             </div>
             <div class="col-lg-6 col-12 sec1-text d-flex justify-content-center align-items-center position-relative">
-                <div class="text-wrap">
+                <div class="text-wrap text-wrap-ani-1">
                     <h2>動態瑜珈</h2>
 
                     <div class="tag-wrapper d-flex">
@@ -728,7 +734,7 @@
         </div>
 <!-- 熱門商品 -->
 <div class="container-fluid content-product position-relative">
-    <div class="row">
+    <div class="row rec-ani-1">
         <div class="col-lg-2 px-0 icon-wrapper">
             <div class="icon-wrap d-flex">
                 <a class="icon-left"><img src="./SVG/icon_left.svg" alt=""></a>
@@ -969,47 +975,88 @@
     <script src="./lib/jquery-3.5.1.js"></script>
 
     <script>
-// -------偵測top----//
+// -------偵測top add animation----//
+
+    $('.text-wrap-ani-1').css('display','none');
+    $('.sec1-img-ani-1').css('display','none');
+    $('.rec-ani-1').css('display','none');
+
     $(window).on('scroll',function(){
-        let top = $(this).scrollTop();
-        $().addClass('');
+        
+        
+        let top = $('.text-wrap-ani-1').offset().top-200;
+        let top2 = $('.sec1-img').offset().top-200;
+        let top3 = $('.rec-ani-1').offset().top-500;
+
+        
+        let w = $(this).scrollTop();
+        console.log(w);
+
+        if(top = w){
+        $('.text-wrap-ani-1').css('display','block').addClass('animate__animated animate__fadeInRight');
+        
+        }
+
+        if(top2 = w){
+        $('.sec1-img-ani-1').css('display','block').addClass('animate__animated animate__fadeInLeft');
+        }
+
+        if(w > top3){
+        $('.rec-ani-1').css('display','flex').addClass('animate__animated animate__fadeInDown');
+        }
+
+        
+
+
 
     })
         
 
 // -------------熱門商品區-------------------------
+        $(document).ready(function() {
+            $(window).trigger('resize');
+        });
 
+//熱門商品移動
 
-        $(document).ready(function(){    
-
+        $(window).on('resize',function(){  
             let w = $(window).width(); 
             let img_wrap = $('.img-wrap').width();
             let margin = (w - img_wrap)/2;
             let width = img_wrap*3 + margin*6;
-            let move = img_wrap + margin*2;
+            let move = $(window).width();
 
           if(w < 992){
               //先設定
-
                 $('.product-zone').css('margin-left',margin).css('margin-right',margin);
                 $('.guessyoullike').css('width',width);
+                $('.guessyoullike').css('left','0');
                 $('.guessyoullike').addClass('position-absolute');
                 $('.guessyoullike').removeClass('position-relative');;
                 $('.guessyoullike').removeClass('justify-content-center');
-                console.log('img_wrap:'+img_wrap,'margin:'+margin,'move:'+move);
+                $('.icon-right').css('opacity','1');
 
-                // click movement
+             
+                /////// click movement
                 $('.icon-left').on('click',function(e){
             
-                let p = $('.guessyoullike').position().left;
-                console.log('positionleft:'+p);
-                if(p==0){
+                // let p = $('.guessyoullike').position().left;
+                let p = $('.guessyoullike').offset().left;
+                
+
+                        console.log('------');
+                        console.log('positionleft:'+p);
+                       
+                        console.log('move:'+move);
+                
+
+                if(p>=0){
                     $('.icon-left').css('opacity','.2').css('transition','.5s');
                     $('.icon-right').css('opacity','1').css('transition','.5s');
 
                 }
 
-                else if(p==-move){
+                else if(p>=move || p>-move*2){
                     $('.icon-left').css('opacity','.2').css('transition','.5s');
                     $('.icon-right').css('opacity','1').css('transition','.5s');
                     $('.guessyoullike').css('left','+='+ move);
@@ -1026,15 +1073,21 @@
 
                  $('.icon-right').on('click',function(e){
             
-                        let p = $('.guessyoullike').position().left;
+                    let p = $('.guessyoullike').offset().left;
+                    
+
+                        console.log('------');
                         console.log('positionleft:'+p);
-                        if(p==-move*2){
+                      
+                        console.log('move:'+move);
+
+                        if(p<=-move*2){
                             $('.icon-right').css('opacity','.2').css('transition','.5s');
                             $('.icon-left').css('opacity','1').css('transition','.5s');
 
                         }
 
-                        else if(p==-move){
+                        else if(p<=-move){
                             $('.icon-right').css('opacity','.2').css('transition','.5s');
                             $('.icon-left').css('opacity','1').css('transition','.5s');
                             $('.guessyoullike').css('left','-='+ move);
@@ -1048,103 +1101,120 @@
 
                     })
 
+            }else{
+              
+                 $('.guessyoullike').css('width','').css('left','');
+                 $('.guessyoullike').removeClass('position-absolute');
+                 $('.guessyoullike').addClass('position-relative');;
+                 $('.guessyoullike').addClass('justify-content-center');
+                 $('.product-zone').eq(0).css('margin-right','75px').css('margin-left','0px');
+                 $('.product-zone').eq(1).css('margin-right','75px').css('margin-left','0px');;
+                 $('.product-zone').eq(2).css('margin-right','0px').css('margin-left','0px');;
             }
                        
         })
 
-        $(window).resize(function(){
-           
+        // $(window).resize(function(){
+        //     let w = $(window).width(); 
+        //     let img_wrap = $('.img-wrap').width();
+        //     let margin = (w - img_wrap)/2;
+        //     let width = img_wrap*3 + margin*6;
+        //     let move = img_wrap + margin*2;
+                           
+        //     if(w < 992){
+        //         // setting
+        //         $('.product-zone').css('margin-left',margin).css('margin-right',margin);
+        //         $('.guessyoullike').css('width',width);
+        //         $('.guessyoullike').css('left','0');
+        //         $('.guessyoullike').addClass('position-absolute');
+        //         $('.guessyoullike').removeClass('position-relative');;
+        //         $('.guessyoullike').removeClass('justify-content-center');
+        //         $('.icon-right').css('opacity','1');
+
+        //         console.log('------');                
+        //         console.log('img_wrap:'+img_wrap,'margin:'+margin,'move:'+move,'width:',width);
+
+        //         //click
+
+        //         $('.icon-left').on('click',function(e){
             
-
-            let w = $(window).width(); 
-            let img_wrap = $('.img-wrap').width();
-            let margin = (w - img_wrap)/2;
-            let width = img_wrap*3 + margin*6;
-            let move = img_wrap + margin*2;
-                
-            
-            
-            if(w < 992){
-                // setting
-                $('.product-zone').css('margin-left',margin).css('margin-right',margin);
-                $('.guessyoullike').css('width',width);
-                $('.guessyoullike').addClass('position-absolute');
-                $('.guessyoullike').removeClass('position-relative');;
-                $('.guessyoullike').removeClass('justify-content-center');
-                
-                console.log('img_wrap:'+img_wrap,'margin:'+margin,'move:'+move);
-
-                //click
-
-                $('.icon-left').on('click',function(e){
-            
-                        let p = $('.guessyoullike').position().left;
-                        console.log('positionleft:'+p);
-                        if(p>=0){
-                            $('.icon-left').css('opacity','.2').css('transition','.5s');
-                            $('.icon-right').css('opacity','1').css('transition','.5s');
-
-                        }
-
-                        else if(p>=move){
-                            $('.icon-left').css('opacity','.2').css('transition','.5s');
-                            $('.icon-right').css('opacity','1').css('transition','.5s');
-                            $('.guessyoullike').css('left','+='+ move);
+        //                 let p = $('.guessyoullike').position().left;
+        //                 console.log('------');
+        //                 console.log('positionleft:'+p);
+        //                 console.log('img_wrap:'+img_wrap,'margin:'+margin,'move:'+move);
 
 
-                        }
-                        else{     
-                            $('.icon-left').css('opacity','1').css('transition','.5s');
-                            $('.icon-right').css('opacity','1').css('transition','.5s');           
-                            $('.guessyoullike').css('left','+='+ move);}
+        //                 if(p>=0){
+        //                     $('.icon-left').css('opacity','.2').css('transition','.5s');
+        //                     $('.icon-right').css('opacity','1').css('transition','.5s');
 
-                    })
+        //                 }
 
-                    $('.icon-right').on('click',function(e){
+        //                 else if(p>=move){
+        //                     $('.icon-left').css('opacity','.2').css('transition','.5s');
+        //                     $('.icon-right').css('opacity','1').css('transition','.5s');
+        //                     $('.guessyoullike').css('left','+='+ move);
+
+
+        //                 }
+        //                 else{     
+        //                     $('.icon-left').css('opacity','1').css('transition','.5s');
+        //                     $('.icon-right').css('opacity','1').css('transition','.5s');           
+        //                     $('.guessyoullike').css('left','+='+ move);}
+
+        //             })
+
+        //             $('.icon-right').on('click',function(e){
                         
-                        let p = $('.guessyoullike').position().left;
-                        console.log('positionleft:'+p);
-                        if(p>=-move*2){
-                            $('.icon-right').css('opacity','.2').css('transition','.5s');
-                            $('.icon-left').css('opacity','1').css('transition','.5s');
+        //                 let p = $('.guessyoullike').position().left;
+                        
 
-                        }
+        //                 console.log('------');
+        //                 console.log('img_wrap:'+img_wrap,'margin:'+margin,'move:'+move);
+        //                 console.log('positionleft:'+p);
+                        
 
-                        else if(p>=-move){
-                            $('.icon-right').css('opacity','.2').css('transition','.5s');
-                            $('.icon-left').css('opacity','1').css('transition','.5s');
-                            $('.guessyoullike').css('left','-='+ move);
+        //                 if(p>=-move*2){
+        //                     $('.icon-right').css('opacity','.2').css('transition','.5s');
+        //                     $('.icon-left').css('opacity','1').css('transition','.5s');
+
+        //                 }
+
+        //                 else if(p>=-move){
+        //                     $('.icon-right').css('opacity','.2').css('transition','.5s');
+        //                     $('.icon-left').css('opacity','1').css('transition','.5s');
+        //                     $('.guessyoullike').css('left','-='+ move);
 
 
-                        }
-                        else{
-                            $('.icon-left').css('opacity','1').css('transition','.5s');
-                            $('.icon-right').css('opacity','1').css('transition','.5s');  
-                            $('.guessyoullike').css('left','-='+ move);}
+        //                 }
+        //                 else{
+        //                     $('.icon-left').css('opacity','1').css('transition','.5s');
+        //                     $('.icon-right').css('opacity','1').css('transition','.5s');  
+        //                     $('.guessyoullike').css('left','-='+ move);}
 
-                    })
+        //             })
             
             
             
             
             
-            }else{
-                console.log('resize');
-                $('.guessyoullike').css('width','').css('left','');
-                $('.guessyoullike').removeClass('position-absolute');
-                $('.guessyoullike').addClass('position-relative');;
-                $('.guessyoullike').addClass('justify-content-center');
-                $('.product-zone').eq(0).css('margin-right','75px').css('margin-left','0px');
-                $('.product-zone').eq(1).css('margin-right','75px').css('margin-left','0px');;
-                $('.product-zone').eq(2).css('margin-right','0px').css('margin-left','0px');;
-            };
+        //     }else{
+        //         console.log('------');
+        //         console.log('resize');
+        //         console.log('img_wrap:'+img_wrap,'margin:'+margin,'move:'+move);
+        //         $('.guessyoullike').css('width','').css('left','');
+        //         $('.guessyoullike').removeClass('position-absolute');
+        //         $('.guessyoullike').addClass('position-relative');;
+        //         $('.guessyoullike').addClass('justify-content-center');
+        //         $('.product-zone').eq(0).css('margin-right','75px').css('margin-left','0px');
+        //         $('.product-zone').eq(1).css('margin-right','75px').css('margin-left','0px');;
+        //         $('.product-zone').eq(2).css('margin-right','0px').css('margin-left','0px');;
+        //     };
             
-        })
+        // })
 
- 
-
-        
-
+//沒有resize 也沒有document ready問題
+  
    
 
        
