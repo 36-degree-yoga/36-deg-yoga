@@ -751,7 +751,8 @@
             /* 猜你喜歡 */
 
             .guessyoullike {
-                width: 900px;
+                /* width: 900px; */
+                left: 0;
                 justify-content: flex-start !important;
             }
 
@@ -1063,7 +1064,7 @@
 
                                 <!-- <h4 class="amount-number text-center mb-0">1</h4> -->
 
-                                <input id="amount-number" name="amount" class="amount-number border-0 text-center"
+                                <input id="amount-number" name="amount" class="amount-number border-0 text-center w-100"
                                     type="text" value="1" readonly="readonly" style="font-size: 24px;">
 
                                 <img class="button-add" src="./SVG/button_add.svg" alt="">
@@ -1311,17 +1312,17 @@
 
                     <div class="guessyoullike position-relative ">
 
-                        <div class="product-zone-wrap d-flex justify-content-between position-absolute">
+                        <div class="product-zone-wrap d-flex justify-content-between position-absolute"
+                            style="background-color: red;">
 
                             <div class="product-zone px-0">
 
                                 <div class="product-wrap">
 
-                                    <a class="img-wrap w-100  " href="">
+                                    <div class="img-wrap w-100" href="">
                                         <!-- product 的 border 之後取消 -->
-                                        <img class="product-pic w-100  h-100" src="./guess-imgs/yoga brick.jpg"
-                                            alt="瑜珈磚">
-                                    </a>
+                                        <img class="product-pic w-100 " src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
+                                    </div>
 
                                     <div class="product-info text-center">
                                         <a href="">
@@ -1335,11 +1336,10 @@
 
                                 <div class="product-wrap">
 
-                                    <a class="img-wrap w-100 " href="">
+                                    <div class="img-wrap w-100" href="">
                                         <!-- product 的 border 之後取消 -->
-                                        <img class="product-pic w-100  h-100" src="./guess-imgs/yoga brick.jpg"
-                                            alt="瑜珈磚">
-                                    </a>
+                                        <img class="product-pic w-100  " src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
+                                    </div>
 
                                     <div class="product-info text-center">
                                         <a href="">
@@ -1353,11 +1353,10 @@
 
                                 <div class="product-wrap">
 
-                                    <a class="img-wrap w-100 " href="">
+                                    <div class="img-wrap w-100" href="">
                                         <!-- product 的 border 之後取消 -->
-                                        <img class="product-pic w-100  h-100" src="./guess-imgs/yoga brick.jpg"
-                                            alt="瑜珈磚">
-                                    </a>
+                                        <img class="product-pic w-100  " src="./guess-imgs/yoga brick.jpg" alt="瑜珈磚">
+                                    </div>
 
                                     <div class="product-info text-center">
                                         <a href="">
@@ -1367,6 +1366,7 @@
                                     </div>
                                 </div>
                             </div>
+
 
 
 
@@ -2950,7 +2950,7 @@
             $('#collapseReviews').removeClass('show');
         });
 
-        //    手機版按鈕 桌機版隱藏
+        //    手機版按鈕 桌機版隱藏 ver1.
 
         // let w = $(window).width();
         // let img_wrap = $('.img-wrap').width();
@@ -2969,111 +2969,124 @@
 
         // })
 
-        let move = '300';
+        // let move = '300';
 
-        $('.icon-left').on('click', function (e) {
+        // $('.icon-left').on('click', function (e) {
 
-            let p = $('.product-zone-wrap').position().left;
-            console.log('positionleft:');
-            console.log('positionleft:' + p);
-            if (p >= 0) {
+        //     let p = $('.product-zone-wrap').position().left;
+        //     console.log('positionleft:');
+        //     console.log('positionleft:' + p);
+        //     if (p >= 0) {
+        //         $('.icon-left').css('opacity', '.2').css('transition', '.5s');
+        //         $('.icon-right').css('opacity', '1').css('transition', '.5s');
+        //     }
+
+        //     else if (p >= move) {
+        //         $('.icon-left').css('opacity', '1').css('transition', '.5s');
+        //         $('.icon-right').css('opacity', '1').css('transition', '.5s');
+        //         $('.product-zone-wrap').css('left', '+=' + move);
+        //     }
+
+        //     else {
+        //         $('.icon-left').css('opacity', '1').css('transition', '.5s');
+        //         $('.icon-right').css('opacity', '1').css('transition', '.5s');
+        //         $('.product-zone-wrap').css('left', '+=' + move);
+        //     }
+
+
+
+        // });
+
+        // $('.icon-right').on('click', function (e) {
+
+        //     let p = $('.product-zone-wrap').position().left;
+        //     console.log('positionleft:' + p);
+        //     if (p <= -move * 2) {
+        //         $('.icon-right').css('opacity', '.2').css('transition', '.5s');
+        //         $('.icon-left').css('opacity', '1').css('transition', '.5s');
+
+        //     }
+
+        //     else if (p <= -move) {
+        //         $('.icon-right').css('opacity', '.2').css('transition', '.5s');
+        //         $('.icon-left').css('opacity', '1').css('transition', '.5s');
+        //         $('.product-zone-wrap').css('left', '-=' + move);
+
+        //     }
+        //     else {
+        //         $('.icon-left').css('opacity', '1').css('transition', '.5s');
+        //         $('.icon-right').css('opacity', '1').css('transition', '.5s');
+        //         $('.product-zone-wrap').css('left', '-=' + move);
+        //     }
+
+
+        // });
+
+
+        // // 手機版按鈕 桌機版隱藏 ver2.
+
+
+        $('.icon-left').on('click', function () {
+
+
+            let leftOffset = $('.product-zone-wrap').offset().left;
+            console.log("left", leftOffset);
+
+            let isMobile = $(window).width() < 500;
+
+            let leftX = 0;
+
+
+
+            if (isMobile) {
+                leftX = 31.25;
+            }
+
+            if (leftOffset < leftX) {
+                $('.product-zone-wrap').css('left', '+=300');
+                console.log("left", leftOffset);
+                console.log('leftX', leftX)
+
+                if (leftOffset >= -568.75) {
+                    $('.icon-left').css('opacity', '1').css('transition', '.5s');
+                    $('.icon-right').css('opacity', '1').css('transition', '.5s');
+                }
+
+            }
+
+            if (leftOffset >= -268.75) {
                 $('.icon-left').css('opacity', '.2').css('transition', '.5s');
                 $('.icon-right').css('opacity', '1').css('transition', '.5s');
+
             }
 
-            else if (p >= move) {
-                $('.icon-left').css('opacity', '1').css('transition', '.5s');
-                $('.icon-right').css('opacity', '1').css('transition', '.5s');
-                $('.product-zone-wrap').css('left', '+=' + move);
+        })
+
+        $('.icon-right').on('click', function () {
+
+
+            let rightOffset = $('.product-zone-wrap').offset().left;
+            let isMobile = $(window).width() < 500;
+
+            // let rightX = -916.5
+
+            if (isMobile) {
+                rightX = -568;
             }
 
-            else {
-                $('.icon-left').css('opacity', '1').css('transition', '.5s');
-                $('.icon-right').css('opacity', '1').css('transition', '.5s');
-                $('.product-zone-wrap').css('left', '+=' + move);
+            if (rightOffset > rightX) {
+                console.log("right", rightOffset);
+                // console.log("right", rightX);
+                $('.product-zone-wrap').css('left', '-=300');
+
+                if (rightOffset < -31.25) {
+                    $('.icon-left').css('opacity', '1').css('transition', '.5s');
+                    $('.icon-right').css('opacity', '.2').css('transition', '.5s');
+                }
+
             }
-
-
 
         });
-
-        $('.icon-right').on('click', function (e) {
-
-            let p = $('.product-zone-wrap').position().left;
-            console.log('positionleft:' + p);
-            if (p <= -move * 2) {
-                $('.icon-right').css('opacity', '.2').css('transition', '.5s');
-                $('.icon-left').css('opacity', '1').css('transition', '.5s');
-
-            }
-
-            else if (p <= -move) {
-                $('.icon-right').css('opacity', '.2').css('transition', '.5s');
-                $('.icon-left').css('opacity', '1').css('transition', '.5s');
-                $('.product-zone-wrap').css('left', '-=' + move);
-
-            }
-            else {
-                $('.icon-left').css('opacity', '1').css('transition', '.5s');
-                $('.icon-right').css('opacity', '1').css('transition', '.5s');
-                $('.product-zone-wrap').css('left', '-=' + move);
-            }
-
-
-
-        });
-
-
-        // // SCROLL 效果
-
-
-        // $('.icon-left').on('click', function () {
-
-
-        //     let leftOffset = $('.slick-track').offset().left;
-
-        //     let isMobile = $(window).width() < 768;
-
-        //     let leftX = 52;
-
-
-        //     if (isMobile) {
-        //         leftX = 0;
-        //     }
-
-        //     if (leftOffset < leftX) {
-
-
-        //         $('.slick-track').css('left', '+=300');
-        //         // console.log("left", leftOffset);
-
-        //     }
-
-        // })
-
-        // $('.icon-right').on('click', function () {
-
-
-        //     let rightOffset = $('.slick-track').offset().left;
-
-
-        //     let isMobile = $(window).width() < 768;
-
-        //     let rightX = -916.5
-
-        //     if (isMobile) {
-        //         rightX = -2100;
-        //     }
-
-        //     if (rightOffset > rightX) {
-        //         console.log("right", rightOffset);
-        //         // console.log("right", rightX);
-        //         $('.slick-track').css('left', '-=300');
-
-
-        //     }
-
-        // })
 
     </script>
 </body>
