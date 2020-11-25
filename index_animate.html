@@ -39,19 +39,6 @@
         .row{
             margin: 0;
         }
-        /* .typing {
-        width: 0px;
-        white-space: nowrap;
-        animation: typing 5s steps(200, end);
-        animation-delay: 1s;
-        animation-fill-mode: forwards;
-        overflow: hidden;
-        }
-        
-        @keyframes typing {
-        from { width: 0px; }
-        to { width: 700px; }
-        } */
 
 /* screen 1920px */
         @media(max-width: 1920px){
@@ -408,6 +395,20 @@
                 line-height: 0.5;
             }
 
+            /* .typing {
+                width: 0px;
+                white-space: nowrap;
+                animation: typing 5s steps(200, end);
+                animation-delay: 1s;
+                animation-fill-mode: forwards;
+                overflow: hidden;
+            }
+            列印效果
+            @keyframes typing {
+                from { width: 0px; }
+                to { width: 500px; }
+            } */
+
             .about_h5{
                 color: #fffefc;
             }
@@ -528,6 +529,83 @@
                 margin-top: 10px;
                 font-size: 1.5rem;
             }
+
+/* 彈跳視窗↓↓ */
+        
+            .modal-dialog{
+                border-radius: 4px;
+                
+            }
+            .close{
+                opacity: 1;
+            }
+            .modal-header{
+                border-bottom:0;
+            }
+            button:focus{
+                outline: 1px #FFFEFC;
+            }
+            .modal-footer{
+                border-top:0; 
+            }
+            .modal-content {
+            border:2px solid #004A13;
+            border-radius: 4px;
+            width: 100%;
+            background: #FFFEFC;
+            opacity: 1;
+            }
+/* 彈跳視窗↑↑ */
+/* 彈跳視窗↓↓ */
+          
+            .modal-dialog {
+            border-radius: 4px;
+            }
+            .close {
+            opacity: 1;
+            }
+            .modal-header {
+            border-bottom: 0;
+            }
+            button:focus {
+            outline: 1px #fffefc;
+            }
+            .modal-footer {
+            border-top: 0;
+            }
+            .modal-content {
+            border: 2px solid #004a13;
+            border-radius: 4px;
+            width: 100%;
+            background: #fffefc;
+            opacity: 1;
+            }
+/* 彈跳視窗↑↑ */
+
+
+/* quick_view↓↓ */
+            :focus {
+            opacity: 1;
+            }
+            .quick_view_img_wrap{
+                width: 349.7px;
+                height: 458px;
+                background-color: #db5c00;
+            }
+
+
+        .item-tag>h6 {
+            border-left: 8px solid #F2A200;
+            padding: 0 15px;
+        }
+        .color_circle{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #F2A200;
+            margin: 0 15px;
+        }
+        /* quick_view↑↑ */
 
 /* Customer Reviews */
             .index_reviews{
@@ -663,12 +741,27 @@
                 margin: 0;
                 height: 950px;
                 overflow: hidden;
+                object-fit: contain;
             }
 
             .index_back11{
                 width: 100%;
                 height: 100%;
             }
+
+            .index_back11_02{
+                width: 100%;
+                /* height: auto; */
+                transform: scale(1);
+            }
+
+            .index_back11_03{
+                width: 100%;
+                transform: scale(1.1);
+                top: 60px;
+            }
+
+
 
             /*人氣商品文字區*/
             .index_hot_area{
@@ -705,12 +798,35 @@
                 height: 350px;
                 margin: 0 30px;
                 overflow: hidden;
-                /* position: absolute; */
             }
+
+            .index_hotitem_wrap:hover{
+                width: 270px;
+                height: 350px;
+                margin: 0 30px;
+                overflow: hidden;
+                filter:drop-shadow(0px 10px 5px #333333);
+                transition-duration: .5s;
+                
+            }
+
+            .index_hotitem_wrap img:hover{
+                transform: scale(1.05);
+                transition: all .5s ease-out;
+            }
+
+
 
             .index_hotitem{
                 width: 100%;
             }
+
+            .item_topbox{
+                width: 100%;
+                height: 200px;
+            }
+
+
         }
 
 
@@ -1422,7 +1538,9 @@
 
             /* 直的find your soulmat */
             .m_fys_wrap{
-                height: 700px;
+                height: 990px;
+                width: 100%;
+                margin-right: 150px;
             }
             .m_fys_back{
                 margin: 0 ;
@@ -1432,8 +1550,10 @@
                 font-weight: 900;
                 transform: rotate(90deg);
                 white-space: pre;
+                
             }
             
+
             /* 商品滑動範圍 */
             .m_index_prod_btm{
                 margin: -60px 0 auto 0; 
@@ -1441,12 +1561,12 @@
 
             .m_prod_line{
                 width: 100%;
-                height: 700px;
+                height: 990px;
                 border-top: 4px solid #004A13;
                 border-bottom: 4px solid #004A13;
                 margin: 0 0 60px 0;
                 padding: 0;
-                overflow: hidden;
+                /* overflow: hidden; */
             }
 
             .m_prods_right,
@@ -1485,11 +1605,11 @@
             }
 
             /* quickview */
-            .m_prod_quick{
+            /* .m_prod_quick{
                 width: 85px;
                 margin-top: -20px;
                 margin-left: 5px;
-            }
+            } */
 
             /*文*/
             .m_prod_pp{
@@ -1719,12 +1839,11 @@
             }
 
             /* 左右按鈕 */
-            .m_hot_btn{
+            /* .m_hot_btn{
                 position: absolute;
-                /* margin: 0 auto; */
                 bottom: -35px;
                 right: 10px;
-            }
+            } */
         
         }
 
@@ -1902,16 +2021,19 @@
                         <!-- 移動圖片們 -->
                         <div class="prods_left col-5">
                             <div class="prods_box">
-                                <div class="prods_picwrap">
+                                <div class="prods_picwrap" data-toggle="modal" data-target="#exampleModal">
                                     <img class="index_prodspic" src="./img/index/index_04.jpg" alt="">
                                 </div>
                                 <div>
                                     <div class="d-flex prod_pp_quick">
                                         <div class="prod_ppwrap">
                                             <h6 class="prod">環保瑜珈墊</h6>
-                                            <p class="prod_price">$1000</p>
+                                            <p class="prod_price" data-toggle="modal" data-target="#exampleModal">$1000</p>
                                         </div>
-                                        <img src="/SVG/index_quickview.svg" alt="" class="prod_quick">
+                
+                                            <img src="/SVG/index_quickview.svg" alt="" class="prod_quick" data-toggle="modal" data-target="#exampleModal" >
+                                      
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -1977,11 +2099,69 @@
                                     <img src="/SVG/index_quickview.svg" alt="" class="prod_quick">
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
 
                 </div>
                 
+            </div>
+        </div>
+        <!-- 彈跳視窗↓↓ -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        <img src="./SVG/delete.svg" alt="">
+                    </span>
+                </button>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                
+                    <div class="quick_view_img_wrap">
+                        <img src="" alt="">
+                    </div>
+                    <div class="ml-5">
+                        <h3>瑜珈墊</h3>
+                        <div class="space_30"></div>
+                        <div class="item-tag d-flex">
+                            <h6 class="text-justify" style="color: #F2A200;">止滑</h6>
+                            <h6 class="text-justify" style="color: #F2A200;">防水</h6>
+                        </div>
+                        <div class="space_30"></div>
+                        <p style="line-height: 30px;">
+                            1. 全新結構，提供手腕與腳踝最佳緩衝及保護。
+                            <br>
+                            2. 天然橡膠材質，乾濕止滑效果優異。
+                            <br>
+                            3. 表面特殊波紋壓痕處理，提升質感並增加磨擦阻力係數。
+                            
+                        </p>
+                        <div class="space_30"></div>
+                        <div class="d-flex align-items-center">
+                            <div style="width: 10px;height: 20px;background-color: #db5c00;"></div>
+                            <h6 class="ml-2">NT. 1,000</h6>
+                        </div>
+                        <div class="space_60"></div>
+                        <div class="d-flex">
+                            <div class="color_circle"></div>
+                            <div class="color_circle"></div>
+                            <div class="color_circle"></div>
+                        </div>
+                        <div class="space_60"></div>
+                        <div>
+                            <button class="btn_l" style="margin-right: 40px;">了解更多</button>
+                            <button class="btn_f">加入購物車</button>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="modal-footer">
+                <div class="space_30"></div>
+                </div>
+            </div>
             </div>
         </div>
 
@@ -2080,12 +2260,14 @@
                 </div>
             </div>
         </div>
+        
+    <!-- 彈跳視窗↑↑ -->  
 
         <!-- 人氣商品 -->
         <div id="index_hot" class="index_hot container-fluid p-0">
             <div class="hot_wrap d-flex">
                 <!-- 後大圖 -->
-                <div class="back05_wrap col-8">
+                <div class="back05_wrap col-8">    
                     <img src="/img/index/index_11_01.jpg" alt="" class="index_back11">
                 </div>
 
@@ -2101,13 +2283,22 @@
             <div class="index_hotitem_area d-flex p-0 justify-content-end">
                 <div class="row ">
                     <div class="index_hotitem_wrap">
-                        <img src="/img/index/index_11_inner01.jpg" alt="" class="index_hotitem">
+                        <img src="/img/index/index_11_inner01.jpg" alt="" class="index_hotitem hotitem_01">
+                        <img src="/img/index/index_11_01.jpg" alt="" class="index_back11">
+
+                        <!-- <div class="item_topbox">
+                            <h6 class="prod">環保瑜珈墊</h6>
+                            <p class="prod_price">$1000</p>
+                        </div> -->
+
                     </div>
-                    <div class="index_hotitem_wrap">
-                        <img src="/img/index/index_11_inner02.jpg" alt="" class="index_hotitem">
+                    <div class="index_hotitem_wrap">         
+                        <img src="/img/index/index_11_inner02.jpg" alt="" class="index_hotitem hotitem_02">  
+                        <img src="/img/index/index_11_02.jpg" alt="" class="index_back11_02">      
                     </div>
-                    <div class="index_hotitem_wrap">
-                        <img src="/img/index/index_11_inner03.jpg" alt="" class="index_hotitem">
+                    <div class="index_hotitem_wrap">     
+                        <img src="/img/index/index_11_inner03.jpg" alt="" class="index_hotitem hotitem_03">  
+                        <img src="/img/index/index_11_03.jpg" alt="" class="index_back11_03">  
                     </div>
                 </div>
                 
@@ -2241,7 +2432,7 @@
                 <div class="m_index_prod_btm d-flex justify-content-end">
                     <!-- 移動區範圍 -->
                     <!-- 直的find your soulmat -->
-                    <div class="m_fys_wrap col-2 p-0 d-flex justify-content-end">
+                    <div class="m_fys_wrap col-12 p-0 d-flex justify-content-end">
                         <h1 class="m_fys_back">Find Your Soulmat</h1>
                     </div>
                     <div class="m_prod_line d-flex col-11  justify-content-end">
@@ -2257,7 +2448,6 @@
                                         <h6 class="m_prod">環保瑜珈墊</h6>
                                         <p class="m_prod_price">$1000</p>
                                     </div>
-                                    <img src="/SVG/index_quickview.svg" alt="" class="m_prod_quick">
                                 </div>
                                 
                             </div>
@@ -2271,7 +2461,6 @@
                                         <h6 class="m_prod">環保瑜珈墊</h6>
                                         <p class="m_prod_price">$1000</p>
                                     </div>
-                                    <img src="/SVG/index_quickview.svg" alt="" class="m_prod_quick">
                                 </div>
 
                             </div>
@@ -2286,7 +2475,6 @@
                                         <h6 class="m_prod">環保瑜珈墊</h6>
                                         <p class="m_prod_price">$1000</p>
                                     </div>
-                                    <img src="/SVG/index_quickview.svg" alt="" class="m_prod_quick">
                                 </div>
 
                             </div>
@@ -2302,7 +2490,6 @@
                                         <h6 class="m_prod">環保瑜珈墊</h6>
                                         <p class="m_prod_price">$1000</p>
                                     </div>
-                                    <img src="/SVG/index_quickview.svg" alt="" class="m_prod_quick">
                                 </div>
 
                             </div>
@@ -2317,7 +2504,6 @@
                                         <h6 class="m_prod">環保瑜珈墊</h6>
                                         <p class="m_prod_price">$1000</p>
                                     </div>
-                                    <img src="/SVG/index_quickview.svg" alt="" class="m_prod_quick">
                                 </div>
 
                             </div>
@@ -2332,7 +2518,6 @@
                                         <h6 class="m_prod">環保瑜珈墊</h6>
                                         <p class="m_prod_price">$1000</p>
                                     </div>
-                                    <img src="/SVG/index_quickview.svg" alt="" class="m_prod_quick">
                                 </div>
 
                             </div>
@@ -2467,10 +2652,10 @@
                 </div> 
         
                 <!-- 按鈕 -->
-                <div class="m_hot_btn">
+                <!-- <div class="m_hot_btn">
                     <img src="/SVG/btn_left_g.svg" alt="" class="m_gbtn_left">
                     <img src="/SVG/btn_right_g.svg" alt="" class="m_gbtn_right">
-                </div>
+                </div> -->
 
             </div>
             
@@ -2644,6 +2829,13 @@
             $('html,body').animate( { scrollTop:$('#index_about').offset().top } ,600);
         });
 
+// 首頁 人氣商品 index hot
+// hover 換大圖
+        $('.index_hotitem_wrap img').on('mouseover',function(){
+            let bigPic = $(this).next().attr('src');
+            $('.back05_wrap img').attr('src',bigPic).hide().delay(150).fadeIn('slow,ease-in');
+        });
+
 
 // mobile
 // mobile首頁 hero banner 
@@ -2661,7 +2853,6 @@
             .css('color', '#848484');
             $('.m_caroimg_wrap li').css('opacity', '0').eq($(this).index()).css('opacity', '1');
         });
-
 
 
 // mobile首頁 hero banner 
@@ -2688,15 +2879,26 @@
             
             if ($(window).scrollTop()>=200){
                 $('.m_scrollbtn_wrap').addClass('ma_scrollbtn_wrap');
-            }     
-
-            if ($(window).scrollTop()>=810){
+            }    
+            else {
                 $('.m_scrollbtn_wrap').removeClass('ma_scrollbtn_wrap');
-            }     
+            } 
         });  
 
 // 首頁 find your soulmat
 // 頁面移動
+        $('.hotitem_01').on('click',function(){ 
+            let bigPic01 = $(this).attr('src');
+            $('index_back11').attr('src',bigPic01);
+        });
+        $('.hotitem_02').on('click',function(){ 
+            let bigPic02 = $(this).attr('src');
+            $('index_back11_02').attr('src',bigPic02);
+            $('index_back11').css('opacity',0);
+            $('index_back11_03').css('opacity',0);
+        });
+
+        
 
 
 
