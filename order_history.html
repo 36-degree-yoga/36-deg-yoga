@@ -448,6 +448,97 @@
       </div>
       </div>
         <!--↑↑ 這裡一張訂單結束 -->
+         <!-- 這裡一張訂單開始 -->
+        <div class="order_item_wrap">
+            <div class="order_top_word">
+                <p>已於 <span id="top_date">2020-11-08</span> 完成訂單</p>
+            </div>
+      
+            <ul class="d-flex order_title">
+                <li class="col">訂單編號</li>
+                <li class="col">下單日期</li>
+                <li class="col">付款狀態</li>
+                <li class="col">物流進度</li>
+      <li class="col">總金額</li>
+      </ul>
+      <ul class="d-flex order_title_content">
+      <li class="col" id="order_id">BE8882724</li>
+      <li class="col" id="order_at">2020/10/31</li>
+      <li class="col" id="order_pay">已付款</li>
+      <li class="col" id="order_transport">已送達</li>
+      <li class="col" id="order_moneny">NT$ 2000</li>
+      </ul>
+      
+      <div
+      class="order_history_detail_btn openIt d-flex align-items-center justify-content-center"
+      >
+      <img src="SVG/custom/minus_o_icon.svg" alt="" />
+      <p>展開訂單明細</p>
+      </div>
+      
+      <!-- 詳細區塊 -->
+      
+      <div class="order_details_page">
+      <!-- 金額詳情 -->
+      <div class="order_money_detail d-flex justify-content-end">
+      <p>
+      商品總額: $<span id="order_total_pay">2000</span>&ensp; /&ensp;
+      </p>
+      <p>運費: $<span id="order_total_pay">0</span>&ensp; /&ensp;</p>
+      <p>折扣: -$<span id="order_total_pay">0</span> 元</p>
+      </div>
+      
+      <!-- 商品 -->
+      <div class="order_product_wrap d-flex align-items-center">
+      <div class="product-left d-flex col-8">
+      <!-- 訂單商品圖 -->
+      <div class="order_img_wrap">
+      <img class="p_img" src="" alt="" />
+      </div>
+      <!-- 商品尺寸 -->
+      <div class="product_detail d-flex flex-column align-self-start">
+      <p class="p_title">超棒餘家電我就是棒</p>
+      <p class="p_detail">顏色:<span id="color"></span></p>
+      <p class="p_detail">尺寸:<span id="size"></span></p>
+      <p class="p_detail">重量:<span id="weight"></span>g</p>
+      </div>
+      </div>
+      <!-- 件數價錢 -->
+      <div class="count_price d-flex justify-content-start col-5">
+      <p class="col-6">共<span class="count">10</span>件</p>
+      <p class="col-6">NT$ <span class="price">2000</span></p>
+      </div>
+      </div>
+      
+      <!-- 訂單狀態資訊跟按鈕 -->
+      <div
+      class="order_detail_bottom d-flex align-items-end justify-content-between"
+      >
+      <!-- 狀態 -->
+      <ul>
+      <li class="transport_pay_way d-flex justify-content-start">
+      <p>
+      寄送方式: <span id="transport_way">宅配</span>&ensp; /&ensp;
+      </p>
+      <p>付費方式: <span id="pay_way">ATM轉帳</span>&ensp;</p>
+      </li>
+        <li class="data_statu d-flex justify-content-start">
+        <p>
+        <span id="data">2020-11-02</span>&ensp;
+        <span id="time">09:00</span>&ensp;
+        <span id="order_event">出貨</span>
+        </p>
+        </li>
+      </ul>
+      
+      <!-- 按鈕 -->
+          <div class="btn-wrap d-flex">
+            <button class="btn_s" id="buy_again">再買一次</button>
+          </div>
+        </div>
+      </div>
+      </div>
+        <!--↑↑ 這裡一張訂單結束 -->
       </div></div>
     </div>
                 
@@ -482,7 +573,7 @@
       </div>
       <!-- 手機列表區 -->
       <div class="m_order_list">
-        <!-- 每一項目 -->
+        <!-- 手機每個訂單 -->
         <div class="m_order_item">
           <div class="m_order_title">
             <p class="m_order_status"><span>2020-11-15</span> &ensp;完成訂單</p>
@@ -495,7 +586,7 @@
           </div>
 
           <!-- 細節內容 -->
-          <div class="m_order_detail">
+          <div class="m_order_detail aa">
             <!-- 金額詳情 -->
             <div class="order_money_detail d-flex justify-content-start">
               <p>
@@ -602,13 +693,142 @@
 
           <div class="m_detail_button">
             <div
-              class="order_history_detail_btn d-flex align-items-center justify-content-center"
+              class="m_openIt order_history_detail_btn d-flex align-items-center justify-content-center"
             >
               <img src="SVG/custom/minus_o_icon.svg" alt="" />
               <p>收起訂單明細</p>
             </div>
           </div>
         </div>
+        <!--↑↑ 手機每個訂單 ↑↑-->
+         <!-- 手機每個訂單 -->
+        <div class="m_order_item">
+          <div class="m_order_title">
+            <p class="m_order_status"><span>2020-11-15</span> &ensp;完成訂單</p>
+
+            <p class="m_order_num">訂單編號 :&ensp;<span>BE22584</span></p>
+
+            <p class="m_order_data">訂單日期 :&ensp;<span>2020/10/29</span></p>
+
+            <p class="m_order_price">訂單金額 :&ensp;<span>$ 2000</span></p>
+          </div>
+
+          <!-- 細節內容 -->
+          <div class="m_order_detail aa">
+            <!-- 金額詳情 -->
+            <div class="order_money_detail d-flex justify-content-start">
+              <p>
+                商品總額: $<span id="order_total_pay">2000</span>&ensp; /&ensp;
+              </p>
+              <p>運費: $<span id="order_total_pay">0</span>&ensp; /&ensp;</p>
+              <p>折扣: -$<span id="order_total_pay">0</span> 元</p>
+            </div>
+
+            <div class="m_detail_status">
+              <p>付款狀態 : <span>已付款</span></p>
+              <p>物流狀態 : <span>已寄送</span></p>
+              <p>寄送方式 : <span>宅配</span></p>
+              <p>付款方式 : <span>ATM轉帳</span></p>
+
+              <div class="m_product_detail">
+                <hr />
+                <!-- 商品項目外框 -->
+                <div
+                  class="m_order_product_wrap d-flex align-items-end justify-content-between"
+                >
+                  <div class="product-left d-flex">
+                    <!-- 訂單商品圖 -->
+                    <div class="order_img_wrap">
+                      <img class="p_img" src="" alt="" />
+                    </div>
+                    <!-- 商品尺寸 -->
+                    <div
+                      class="product_detail d-flex flex-column align-self-start"
+                    >
+                      <p class="p_title">旋風瑜珈專哈哈哈</p>
+                      <p class="p_detail">顏色:<span id="color"></span></p>
+                      <p class="p_detail">尺寸:<span id="size"></span></p>
+                      <p class="p_detail">重量:<span id="weight"></span>g</p>
+                    </div>
+                  </div>
+                  <!-- 件數價錢 -->
+                  <div
+                    class="count_price d-flex flex-column m_p justify-content-end align-items-end"
+                  >
+                    <p class="">共<span class="count">10</span>件</p>
+                    <p class="">NT$ 11000<span class="price"></span></p>
+                  </div>
+                </div>
+                <!--商品項目外框↑-->
+
+                <!-- 商品項目外框 -->
+                <div
+                  class="m_order_product_wrap d-flex align-items-end justify-content-between"
+                >
+                  <div class="product-left d-flex">
+                    <!-- 訂單商品圖 -->
+                    <div class="order_img_wrap">
+                      <img class="p_img" src="" alt="" />
+                    </div>
+                    <!-- 商品尺寸 -->
+                    <div
+                      class="product_detail d-flex flex-column align-self-start"
+                    >
+                      <p class="p_title">旋風瑜珈專哈哈哈</p>
+                      <p class="p_detail">顏色:<span id="color"></span></p>
+                      <p class="p_detail">尺寸:<span id="size"></span></p>
+                      <p class="p_detail">重量:<span id="weight"></span>g</p>
+                    </div>
+                  </div>
+                  <!-- 件數價錢 -->
+                  <div
+                    class="count_price d-flex flex-column m_p justify-content-end align-items-end"
+                  >
+                    <p class="">共<span class="count">10</span>件</p>
+                    <p class="">NT$ 11000<span class="price"></span></p>
+                  </div>
+                </div>
+                <!--商品項目外框↑-->
+                <hr />
+              </div>
+            </div>
+
+            <!-- 物流步驟 -->
+            <ul>
+              <li class="transport_pay_way d-flex justify-content-start">
+                <p>
+                  寄送方式: <span id="transport_way">宅配</span>&ensp; /&ensp;
+                </p>
+                <p>付費方式: <span id="pay_way">ATM轉帳</span>&ensp;</p>
+              </li>
+              <li class="data_statu d-flex justify-content-start">
+                <p>
+                  <span id="data">2020-11-02</span>&ensp;
+                  <span id="time">09:00</span>&ensp;
+                  <span id="order_event">出貨</span>
+                </p>
+              </li>
+            </ul>
+
+            <!-- 再買一次按鈕 -->
+            <div class="btn-wrap d-flex justify-content-center">
+              <button class="btn_s mr-2" id="buy_again">再買一次</button>
+              <button class="btn_s ml-2">再買一次</button>
+            </div>
+          </div>
+
+          <!-- 細節打開按鈕啦 -->
+
+          <div class="m_detail_button">
+            <div
+              class="m_openIt order_history_detail_btn d-flex align-items-center justify-content-center"
+            >
+              <img src="SVG/custom/minus_o_icon.svg" alt="" />
+              <p>收起訂單明細</p>
+            </div>
+          </div>
+        </div>
+        <!--↑↑ 手機每個訂單 ↑↑-->
       </div>
     </div>
 
@@ -648,6 +868,27 @@
         
        })
         // 訂單明細收合↑↑
+
+      // 手機訂單明細收合↓↓
+      $('.m_order_detail').hide()
+
+      $('.m_openIt').on('click',function(){
+        if( $(this).children().attr('src')=='svg/custom/plus_o_icon.svg'){
+          $(this).children().attr('src','svg/custom/minus_o_icon.svg')
+          $(this).children('p').html('收起訂單明細')
+        }else{
+          $(this).children().attr('src','svg/custom/plus_o_icon.svg')
+          $(this).children('p').html('展開訂單明細')
+        }
+        
+        // console.log($(this).children('p').html())
+        
+         $(this).parent().prev().slideToggle("500")
+        //  console.log( $(this).parent().prev().hasClass('aa'))
+        
+       })
+        // 手機訂單明細收合↑↑
+
 
 
 
