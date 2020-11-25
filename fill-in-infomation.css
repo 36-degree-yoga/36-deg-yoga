@@ -111,10 +111,13 @@ h6 {
 .change-his-padding-in-mobile {
   padding: 0 60px 0 22px;
 }
+.this-one-pc-none {
+  display: none;
+}
 /* 商品明細 */
 .i-need-w-and-fix {
-  position: fixed;
   width: 23%;
+  transition: 2s;
 }
 .howmuch-you-need-pay tbody tr:last-child {
   visibility: hidden;
@@ -126,9 +129,15 @@ h6 {
   border-radius: 1px;
   background-color: #004a13;
 }
-
+/* 置中 */
+input::-ms-input-placeholder {
+  text-align: center;
+}
+input::-webkit-input-placeholder {
+  text-align: center;
+}
 .which-need-bordre-bottom {
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   border-bottom: 2px solid #004a13;
   border-radius: 1px;
 }
@@ -151,6 +160,22 @@ h6 {
 .close-features {
   color: #f2a200;
 }
+/* 表單原生造型改變 */
+
+select {
+  outline: none;
+  border: 1px solid #f2a200;
+}
+input {
+  outline: none;
+  /* outline: 1px solid #f2a200; */
+}
+input:focus {
+  border: 2px solid #f2a200;
+  border-radius: 4px;
+  /* outline: 1px solid #f2a200; */
+}
+/* 表單原生造型改變 */
 /* hover */
 a {
   transition: 0.5s;
@@ -206,6 +231,9 @@ a:hover {
   .this-one-mobile-none {
     display: none;
   }
+  .this-one-pc-none {
+    display: block;
+  }
   .change-his-padding-in-mobile {
     padding: 0;
   }
@@ -213,7 +241,6 @@ a:hover {
     padding: 0 16px;
   }
   .i-need-w-and-fix {
-    position: relative;
     width: 100%;
   }
 
@@ -227,6 +254,7 @@ a:hover {
   .form-control8 {
     visibility: hidden;
   }
+
   /* 商品明細 */
 
   .title-in-table a {

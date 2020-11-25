@@ -82,7 +82,9 @@
                   class="col-12 col-sm-12 col-md-9 col-lg-9 py-1 pr-2 d-flex"
                 >
                   <select class="form-control6 option-1 px-2 text-center">
-                    <option class="preset-choose-1">--請選擇--</option>
+                    <option value="" disabled selected hidden>
+                      --請選擇--
+                    </option>
                     <option>宅配到府</option>
                     <option>超商取貨</option>
                   </select>
@@ -96,7 +98,9 @@
                   class="col-12 col-sm-12 col-md-9 col-lg-9 py-1 pr-2 d-flex"
                 >
                   <select class="form-control6 option-1 px-2 text-center">
-                    <option class="preset-choose-1">--請選擇--</option>
+                    <option value="" disabled selected hidden>
+                      --請選擇--
+                    </option>
                     <option>貨到付款</option>
                     <option>信用卡支付</option>
                     <option>ATM匯款</option>
@@ -111,7 +115,9 @@
                   class="col-12 col-sm-12 col-md-9 col-lg-9 py-1 pr-2 d-flex"
                 >
                   <select class="form-control6 option-1 px-2 text-center">
-                    <option class="preset-choose-1">--請選擇--</option>
+                    <option value="" disabled selected hidden>
+                      --請選擇(非必填)--
+                    </option>
                     <option>上午</option>
                     <option>下午</option>
                   </select>
@@ -148,11 +154,7 @@
                 <div
                   class="col-12 col-sm-12 col-md-9 col-lg-9 py-1 mobile-need-change-padding pr-2 d-flex"
                 >
-                  <input
-                    type="text"
-                    class="form-control6 text-center"
-                    id="email"
-                  />
+                  <input type="text" class="form-control6" id="email" />
                 </div>
               </div>
               <div class="form-group row mb-2">
@@ -164,11 +166,7 @@
                 <div
                   class="col-12 col-sm-12 col-md-9 col-lg-9 py-1 mobile-need-change-padding pr-2 d-flex"
                 >
-                  <input
-                    type="text"
-                    class="form-control6 text-center"
-                    id="name"
-                  />
+                  <input type="text" class="form-control6" id="name" />
                 </div>
               </div>
               <div class="form-group row mb-2">
@@ -180,11 +178,7 @@
                 <div
                   class="col-12 col-sm-12 col-md-9 col-lg-9 py-1 mobile-need-change-padding pr-2 d-flex"
                 >
-                  <input
-                    type="text"
-                    class="form-control6 text-center"
-                    id="phone-number"
-                  />
+                  <input type="text" class="form-control6" id="phone-number" />
                 </div>
               </div>
               <div class="form-group row mb-2">
@@ -196,19 +190,33 @@
                 >
                   <div class="d-flex">
                     <select class="form-control7 option-1 px-2 text-center">
-                      <option class="preset-choose-1">--請選擇--</option>
-                      <option>city1</option>
-                      <option>city2</option>
+                      <option value="" disabled selected hidden>
+                        --請選擇--
+                      </option>
+                      <option>臺北市</option>
+                      <option>新北市</option>
+                      <option>桃園市</option>
+                      <option>臺中市</option>
+                      <option>臺南市</option>
+                      <option>高雄市</option>
+                      <option>新竹縣</option>
+                      <option>苗栗縣</option>
+                      <option>彰化縣</option>
+                      <option>南投縣</option>
+                      <option>雲林縣</option>
+                      <option>嘉義縣</option>
+                      <option>屏東縣</option>
+                      <option>宜蘭縣</option>
+                      <option>基隆市</option>
+                      <option>新竹市</option>
+                      <option>嘉義市</option>
+                      <option>花蓮縣</option>
+                      <option>臺東縣</option>
                     </select>
-                    <input
-                      type="text"
-                      class="form-control8 text-center"
-                      id="city-number"
-                    />
                   </div>
                   <input
                     type="text"
-                    class="form-control6 text-center my-3"
+                    class="form-control6 my-3"
                     id="city-detail"
                   />
                 </div>
@@ -220,11 +228,13 @@
                 <div
                   class="col-12 col-sm-12 col-md-9 col-lg-9 py-1 mobile-need-change-padding pr-2"
                 >
-                  <input
-                    type="text"
-                    class="form-control9 text-center"
-                    id="orther"
-                  />
+                  <textarea
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="3"
+                    class="form-control9"
+                  ></textarea>
                 </div>
               </div>
             </div>
@@ -253,6 +263,15 @@
             </div>
 
             <div class="px-2">
+              <!-- rwd-change -->
+              <div class="this-one-pc-none mb-3">
+                <label class="col-12 pl-0">發票種類</label>
+
+                <select name="" id="" class="form-control6 option-1 px-2">
+                  <option value="">電子發票</option>
+                  <option value="">發票證明聯</option>
+                </select>
+              </div>
               <div class="form-group row mb-2">
                 <div class="d-flex justify-content-start px-4">
                   <div class="mx-3">
@@ -268,6 +287,22 @@
                     <input type="checkbox" class="form-check-input" id="" />
                     <label class="form-check-label" for="">電子條碼載具</label>
                   </div>
+                </div>
+              </div>
+
+              <div class="form-group row mb-2">
+                <label class="col-12 col-sm-12 col-md-3 col-lg-3 col-form-label"
+                  >載據編號</label
+                >
+                <div
+                  class="col-12 col-sm-12 col-md-9 col-lg-9 py-1 mobile-need-change-padding pr-2 d-flex"
+                >
+                  <input
+                    type="text"
+                    class="form-control6"
+                    aria-describedby=""
+                    placeholder="（發票隨包裹不必填寫）"
+                  />
                 </div>
               </div>
             </div>
@@ -290,7 +325,7 @@
                 <div
                   class="col-12 col-sm-12 col-md-9 col-lg-9 py-1 mobile-need-change-padding pr-2 d-flex"
                 >
-                  <input type="text" class="form-control4 text-center" id="" />
+                  <input type="text" class="form-control4" id="" />
                   <a href="#" class="text-center control-his-position ml-3"
                     ><u>確認</u></a
                   >
@@ -302,7 +337,7 @@
 
         <!-- 明細完成 -->
         <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-          <div class="i-need-w-and-fix">
+          <div class="i-need-w-and-fix position-fixed">
             <div
               class="title-in-table d-flex justify-content-between which-need-bordre-bottom"
             >
@@ -377,8 +412,21 @@
     <!-- <script src="./text-animation.js"></script> -->
     <!--  -->
     <script>
-      $(".option-1").on("click", function () {
-        $(".preset-choose-1").addClass("display-none");
+      $(window).on("scroll", function () {
+        let scrolltop = $(window).scrollTop();
+        let isＭobile = $(this).width() < 576;
+
+        if (isＭobile) {
+          $(".i-need-w-and-fix").removeClass("position-fixed");
+        } else {
+          $(".i-need-w-and-fix").addClass("position-fixed");
+          console.log(scrolltop);
+          if (scrolltop > 155) {
+            $(".i-need-w-and-fix").css("top", "4rem");
+          } else {
+            $(".i-need-w-and-fix").css("top", "290px");
+          }
+        }
       });
     </script>
   </body>
