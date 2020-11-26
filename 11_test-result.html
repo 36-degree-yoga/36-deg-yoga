@@ -6,7 +6,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./share.css">
+    <link rel="stylesheet" href="./CSS/animate.min.css">
     <style>
+        :root {
+            --animate-duration: 2s;
+            
+            }
 
         .hero{
             height: 100vh;
@@ -16,7 +21,6 @@
 
         h2{
             color: #004A13;
-            font-family: 'Josefin Sans', sans-serif;
         }
 
 
@@ -48,7 +52,7 @@
             width: 82%;
             height: 100vh;
             background: #FFFEFC;
-            left: 9%;
+            left: 7.5%;
             animation:content 1s linear;
             opacity: 1;
             
@@ -113,12 +117,15 @@
 
         .content-wrapper button{
             width: 210px;
-            margin-top:40px;
         }
 
         re-take button{
             width: 155px;
+            
+        
         }
+
+        
 
 /*------- tag ----------*/
         .text-wrap{
@@ -265,7 +272,18 @@
                     bottom: 0;
                     background: url(./SVG/texture-cream.jpg);
                     border-top:1px solid #707070;
+                    animation: retake .2s infinite;
                 }
+
+        
+          @keyframes retake {
+
+            0{background-position:bottom;}
+            50%{background-position:center;}
+            100%{background-position:bottom;}
+
+            }
+
 
         .re-take button{
             width: 155px;
@@ -276,7 +294,7 @@
         @media (max-width: 992px) {
 
             .hero{
-                height: 2030px;
+                height: 2144px;
             }
 
             .content-wrapper{
@@ -334,10 +352,7 @@
             }
 
             .content h2{
-                font-size:40px;
-                font-family: 'Josefin Sans', sans-serif;
-                margin-top: 40px;
-                 margin-bottom: 40px;
+                font-size:56px;
             }
 
 
@@ -515,8 +530,8 @@
             <div class="content d-flex justify-content-center flex-wrap align-items-end">
                 <div class="content-title text-center w-100"><h2>Your Soulmat</h2></div>
                 <div class="content-product d-flex justify-content-between mb-4">
-                            
-                    <div class="product-zone px-0 top1">
+                <!--Top1  -->
+                    <div class="product-zone px-0 top1 animate__animated animate__fadeInUp" style="animation-delay: .3s;">
                         <div class="tag-wrapper d-flex justify-content-between">
                             <div class="d-flex align-items-center tag mr-3">
                                 <div class="tag-line"></div>
@@ -563,7 +578,8 @@
                                 </div>
         
                 </div>
-                <div class="content-product d-flex justify-content-between mb-4">
+                <!--Top2  -->
+                <div class="content-product d-flex justify-content-between mb-4 animate__animated animate__fadeInUp" style="animation-delay: .9s;">
                             
                     <div class="product-zone px-0 ">
                         <div class="tag-wrapper d-flex justify-content-between">
@@ -602,7 +618,9 @@
             
                         
                 </div>
-                <div class="content-product d-flex justify-content-between mb-4">
+
+                <!-- Top3 -->
+                <div class="content-product d-flex justify-content-between mb-4 animate__animated animate__fadeInUp" style="animation-delay: 1.2s;">
                             
                     <div class="product-zone px-0 ">
                         <div class="tag-wrapper d-flex justify-content-between">

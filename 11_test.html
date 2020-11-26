@@ -6,7 +6,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./share.css">
+    <link rel="stylesheet" href="./CSS/animate.min.css">
     <style>
+         :root {
+            --animate-duration: 2s;
+            
+            }
 
         .hero{
             height: 100vh;
@@ -17,7 +22,7 @@
         }
         .img-scope{
             overflow: hidden;
-            height: 95%;
+            height: 90%;
 
         }
 
@@ -65,7 +70,7 @@
         }
 
         .animation{
-            left: 350px;
+            left: 140px;
             top: 50px;
             z-index: 1;
         }
@@ -138,13 +143,6 @@
               height: 600px;
               width: 600px;
             }
-
-            .animation{
-              left:100px;
-              top:150px;
-            }
-
-
             .img-scope{
               height: 100%;
             }
@@ -161,18 +159,18 @@
                     </span>
                 </button>
             </div>
-            <div class="animation position-absolute">
+            <div class="animation position-absolute animate__animated animate__fadeInUp">
                 <img class="" src="./SVG/test-rotate.svg" alt="">
             </div>
             <div class="content position-absolute">
-                <h2>瑜珈墊測驗</h2>
-                <div class="last-sec-thermo position-relative ml-2"></div>
-                <div class="d-flex justify-content-center w-100">
+                <h2 class="animate__animated animate__fadeInRight">瑜珈墊測驗</h2>
+                <div class="last-sec-thermo position-relative ml-2 animate__animated animate__fadeInRight"></div>
+                <div class="d-flex justify-content-center w-100 animate__animated animate__fadeInRight">
                     <div class="text">大多數人不知道如何挑選好的瑜珈商品，對於材質也較沒有概念、更不知道怎麼買適合的輔具，因此對於瑜珈有了距離感，我們希望讓瑜珈更有溫度、更生活
                         化，讓每個人都能夠輕鬆接觸瑜珈，找到適合他們的瑜珈產品，讓瑜珈的美好融入日常！</div>
                 </div>
                 
-                <div class="btn_f btn">開始測驗</div>
+                <div class=""><div class="btn_f btn animate__animated animate__fadeInRight">開始測驗</div></div>
     
     
             </div>
