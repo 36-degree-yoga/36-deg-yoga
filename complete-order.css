@@ -70,7 +70,7 @@ body {
 
 /* 溫度計 */
 .need-bck-img {
-  background: url(./img/background-img/login-and-finish-order.png) no-repeat;
+  background: url(./img/background-img/finish-order.png) no-repeat;
 
   background-size: cover;
   background-position: bottom;
@@ -81,12 +81,9 @@ body {
   background-color: #fdebca;
 }
 /* add da-gogo animation */
-/* .da-gogo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: lightcoral;
-} */
+svg g path {
+  visibility: hidden;
+}
 /* add da-gogo animation */
 
 .finish-order-info {
@@ -102,7 +99,7 @@ body {
 .active {
   border-radius: 50%;
   animation: circle 1.3s ease infinite;
-  animation-iteration-count: 2;
+  animation-iteration-count: 1;
 }
 
 @keyframes circle {

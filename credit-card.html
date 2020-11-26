@@ -46,48 +46,71 @@
         <!--  -->
         <div class="col-lg-5 col-md-5 title-in-credit-card">
           <h6>信用卡資訊</h6>
-        
-          <div
-            class="credit-card-img position-relative text-monospace text-white"
-          >
-            <p id="demotext" class="position-absolute">
-              <span class="card-num1-text"></span>
-              <span class="card-num2-text"></span>
-              <span class="card-num3-text"></span>
-              <span class="card-num4-text"></span>
-            </p>
-            <p id="demotextdate" class="position-absolute">
-              <span class="card-num1-text"></span>
-              <span class="card-num2-text"></span>
-            </p>
+
+          <div class="credit-card-img text-monospace text-white">
+            <div class="flip-card mx-auto position-relative">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img
+                    src="./img/creditfront.png"
+                    alt="Avatar"
+                    style="width: 350px; height: 210px"
+                  />
+                  <p id="demotext" class="position-absolute">
+                    <span class="card-num1-text"></span>
+                    <span class="card-num2-text"></span>
+                    <span class="card-num3-text"></span>
+                    <span class="card-num4-text"></span>
+                  </p>
+                  <p id="demotextdate" class="position-absolute">
+                    <span class="card-date1-text"></span>
+                    <span class="there-need-hidden">/</span>
+                    <span class="card-date2-text"></span>
+                  </p>
+                </div>
+                <div class="flip-card-back">
+                  <img
+                    src="./img/creditback.png"
+                    alt=""
+                    style="width: 350px; height: 210px"
+                  />
+                  <p id="demotextcvv" class="position-absolute">
+                    <span class="cvv-code-text text-black-50"></span>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="mobile-need-change-padding-all">
             <div class="form-group row">
               <label for="card-num1" class="col-sm-3 col-form-label pl-3"
                 >信用卡卡號</label
               >
-              <div class="col-sm-9 py-1 pr-2 mobile-need-change-padding">
+              <div
+                class="col-sm-9 py-1 pr-2 mobile-need-change-padding"
+                id="auto-change-input"
+              >
                 <input
                   type="text"
-                  class="form-control3 text-center"
+                  class="form-control3 credit-card-front-info"
                   id="card-num1"
                   maxlength="4"
                 /><span class=""> -</span>
                 <input
                   type="text"
-                  class="form-control3 text-center"
+                  class="form-control3 credit-card-front-info"
                   id="card-num2"
                   maxlength="4"
                 /><span class=""> -</span>
                 <input
                   type="text"
-                  class="form-control3 text-center"
+                  class="form-control3 credit-card-front-info"
                   id="card-num3"
                   maxlength="4"
                 /><span class=""> -</span>
                 <input
                   type="text"
-                  class="form-control3 text-center"
+                  class="form-control3 credit-card-front-info"
                   id="card-num4"
                   maxlength="4"
                 />
@@ -97,35 +120,27 @@
               <label for="card-date1" class="col-sm-3 col-form-label pl-3"
                 >到期年限</label
               >
-              <div class="col-sm-9 py-1 mobile-need-change-padding pr-2 d-flex">
+              <div
+                class="col-sm-9 py-1 mobile-need-change-padding pr-2 d-flex"
+                id="auto-change-input-two"
+              >
                 <div class="col-6 p-0">
-                  <select class="form-control4 month-option px-2 text-center">
-                    <option class="preset-choose-month">--請選擇--</option>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                    <option>6</option>
-                    <option>7</option>
-                    <option>8</option>
-                    <option>9</option>
-                    <option>10</option>
-                    <option>11</option>
-                    <option>12</option></select
-                  ><span class="px-2">月</span>
+                  <input
+                    type="text"
+                    class="form-control4 px-2 credit-card-front-info"
+                    maxlength="2"
+                    id="card-date1"
+                  />
+                  <span class="px-2">月</span>
                 </div>
                 <div class="col-6 p-0">
-                  <select class="form-control4 year-option px-2 text-center">
-                    <option class="preset-choose-year">--請選擇--</option>
-                    <option>2020</option>
-                    <option>2021</option>
-                    <option>2022</option>
-                    <option>2023</option>
-                    <option>2024</option>
-                    <option>2025</option>
-                    <option>2026</option></select
-                  ><span class="px-2">年</span>
+                  <input
+                    type="text"
+                    class="form-control4 px-2 credit-card-front-info demo-hidden-trigger"
+                    maxlength="2"
+                    id="card-date2"
+                  />
+                  <span class="px-2">年</span>
                 </div>
               </div>
             </div>
@@ -136,24 +151,12 @@
               <div class="col-sm-9 py-1 mobile-need-change-padding pr-2">
                 <input
                   type="text"
-                  class="form-control5 text-center"
+                  class="form-control5"
                   id="cvv-code"
-                  maxlength="4"
+                  maxlength="3"
                 />
               </div>
             </div>
-
-            <!-- 鍵盤輸入練習 -->
-            <!-- <input
-              type="text"
-              id="ttt"
-              name=""
-              value=""
-              maxlength=""
-              placeholder=""
-            />
-            <div class="ppp"></div> -->
-            <!-- 鍵盤輸入練習  -->
           </div>
         </div>
         <div class="col-lg-1 col-md-1"></div>
@@ -210,63 +213,64 @@
 
     <script src="lib/jquery-3.5.1.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.js"></script>
-    <!-- <script src="./text-animation.js"></script> -->
-    <!--  -->
+
     <script>
-      //溫度計的
-      $(".home_page_number a").on("click", function () {
-        $(this).css("color", "#db5c00");
-        $(this).siblings().css("color", "#848484");
+      let credit = document.querySelector(".flip-card-inner");
+      let cvv = document.querySelector("#cvv-code");
+      let demotext = document.querySelector("#demotext");
+      let demotextdate = document.querySelector("#demotextdate");
+      let number = document.querySelectorAll(".credit-card-front-info");
+      // 背面
+      cvv.addEventListener("click", function () {
+        credit.classList.add("turn-around");
+        demotext.classList.add("there-need-hidden");
+        demotextdate.classList.add("there-need-hidden");
+      });
+      //前面
+      number.forEach(function (element) {
+        element.addEventListener("click", function () {
+          credit.classList.remove("turn-around");
+          demotext.classList.remove("there-need-hidden");
+          demotextdate.classList.remove("there-need-hidden");
+        });
       });
 
-      $("#hpn_1").on("click", function () {
-        $(".thermometer_move").css("width", "33%");
+      // "/"出現
+      $(".demo-hidden-trigger").focus(function () {
+        $(".there-need-hidden").css("opacity", "1");
       });
 
-      $("#hpn_2").on("click", function () {
-        $(".thermometer_move").css("width", "66%");
-      });
-
-      $("#hpn_3").on("click", function () {
-        $(".thermometer_move").css("width", "100%");
-      });
+      let allInput = document.getElementById("auto-change-input");
+      input = allInput.getElementsByTagName("input");
+      let iNow = 0;
+      (type = !-[1] ? "onpropertychange" : "oninput"), (limit = 4); //滿足自動切換焦點的字元數
+      for (let i = 0; i < input.length - 1; i++) {
+        input[i].index = i;
+        input[i][type] = function () {
+          iNow = this.index;
+          let that = this;
+          setTimeout(function () {
+            that.value.length > limit - 1 && input[iNow + 1].focus();
+          }, 0);
+        };
+      }
 
       //鍵盤輸入練習
-      $("document").ready(function () {
-        $("#card-num1").keyup(function () {
-          $(".card-num1-text:first").html(this.value);
-        });
-        $("#card-num2").keyup(function () {
-          $(".card-num2-text:first").html(this.value);
-        });
-        $("#card-num3").keyup(function () {
-          $(".card-num3-text:first").html(this.value);
-        });
-        $("#card-num4").keyup(function () {
-          $(".card-num4-text:first").html(this.value);
-        });
-      });
-      $("document").ready(function () {
-        $("#ttt").keyup(function () {
-          $(".ppp:first").html(this.value);
+
+      const $allInput = $(".mobile-need-change-padding-all input");
+      $allInput.on("keyup", function () {
+        $allInput.each(function () {
+          $("." + this.id + "-text").text($(this).val());
         });
       });
 
-      $(".month-option").on("click", function () {
-        $(".preset-choose-month").addClass("display-none");
-      });
-      $(".year-option").on("click", function () {
-        $(".preset-choose-year").addClass("display-none");
-      });
-      //補0
-      function decimal2Hex(d) {
-        let mon = d.toString(12);
-        if (mon.length < 2) {
-          mon = 0 + hex;
-        }
-        return hex;
-      }
+      $("#auto-change-input-two input")
+        .eq(0)
+        .on("keyup", function () {
+          if ($(this).val().length == 2) {
+            $("#auto-change-input-two input").eq(1).focus();
+          }
+        });
     </script>
-    <!-- 鍵盤輸入練習 -->
   </body>
 </html>
