@@ -327,9 +327,22 @@
         /* 詳細內容 區塊1(右)*/
 
         .color-element {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+        }
+
+
+        .color-element::before {
+            content: "";
+            background: url('./SVG/selected.svg') no-repeat;
             width: 40px;
             height: 40px;
-            border-radius: 50%;
+            display: inline-block;
+            position: absolute;
+            /* top: 0px;
+            left: -1px; */
+            /* visibility: hidden; */
         }
 
         .vertical-line {
@@ -575,6 +588,20 @@
             color: #848484;
             background-color: transparent;
             border: none;
+
+        }
+
+        .page-link::before {
+            content: "";
+            background: url('./SVG/selected.svg') no-repeat;
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            position: absolute;
+            top: 0px;
+            left: -3px;
+            /* visibility: hidden; */
+
         }
 
         .page-link:focus {
@@ -781,6 +808,7 @@
                 top: 150px;
             }
 
+
             .icon-left img,
             .icon-right img {
                 width: 35px;
@@ -882,6 +910,10 @@
             .page-item {
                 margin-left: 4px;
                 margin-right: 4px;
+            }
+
+            .page-link {
+                padding: 6px 12px !important;
             }
 
         }
@@ -2863,6 +2895,10 @@
         })
 
         // 選擇顏色 >>> 需串資料？？？
+        // $('.color-element').on('click', function () {
+        //     $('.color-element').addClass('show');
+        // })
+
 
         // 點擊了 $('.color-selector li') >> $('.banner-wrap img, .sm-banner-wrap img') 裡的 src 會更換資料庫裡的圖片檔案
 
@@ -2950,141 +2986,49 @@
             $('#collapseReviews').removeClass('show');
         });
 
-        //    手機版按鈕 桌機版隱藏 ver1.
-
-        // let w = $(window).width();
-        // let img_wrap = $('.img-wrap').width();
-        // let margin = (w - img_wrap) / 2;
-        // let width = img_wrap * 3 + margin * 6;
-        // let move = img_wrap + margin * 2;
-
-        // $(document).ready(function () {
-
-
-        //     if (w < 500) {
-        //         $('.product-zone').css('margin-left', margin).css('margin-right', margin);
-        //         $('.product-zone-wrap').css('width', width);
-        //         console.log('img_wrap:' + img_wrap, 'margin:' + margin, 'move:' + move);
-        //     }
-
-        // })
-
-        // let move = '300';
-
-        // $('.icon-left').on('click', function (e) {
-
-        //     let p = $('.product-zone-wrap').position().left;
-        //     console.log('positionleft:');
-        //     console.log('positionleft:' + p);
-        //     if (p >= 0) {
-        //         $('.icon-left').css('opacity', '.2').css('transition', '.5s');
-        //         $('.icon-right').css('opacity', '1').css('transition', '.5s');
-        //     }
-
-        //     else if (p >= move) {
-        //         $('.icon-left').css('opacity', '1').css('transition', '.5s');
-        //         $('.icon-right').css('opacity', '1').css('transition', '.5s');
-        //         $('.product-zone-wrap').css('left', '+=' + move);
-        //     }
-
-        //     else {
-        //         $('.icon-left').css('opacity', '1').css('transition', '.5s');
-        //         $('.icon-right').css('opacity', '1').css('transition', '.5s');
-        //         $('.product-zone-wrap').css('left', '+=' + move);
-        //     }
+        //    撰寫商品評論 星星
 
 
 
-        // });
 
-        // $('.icon-right').on('click', function (e) {
-
-        //     let p = $('.product-zone-wrap').position().left;
-        //     console.log('positionleft:' + p);
-        //     if (p <= -move * 2) {
-        //         $('.icon-right').css('opacity', '.2').css('transition', '.5s');
-        //         $('.icon-left').css('opacity', '1').css('transition', '.5s');
-
-        //     }
-
-        //     else if (p <= -move) {
-        //         $('.icon-right').css('opacity', '.2').css('transition', '.5s');
-        //         $('.icon-left').css('opacity', '1').css('transition', '.5s');
-        //         $('.product-zone-wrap').css('left', '-=' + move);
-
-        //     }
-        //     else {
-        //         $('.icon-left').css('opacity', '1').css('transition', '.5s');
-        //         $('.icon-right').css('opacity', '1').css('transition', '.5s');
-        //         $('.product-zone-wrap').css('left', '-=' + move);
-        //     }
-
-
-        // });
-
-
-        // // 手機版按鈕 桌機版隱藏 ver2.
+        //     手機版按鈕 桌機版隱藏 
 
 
         $('.icon-left').on('click', function () {
 
-
             let leftOffset = $('.product-zone-wrap').offset().left;
-            console.log("left", leftOffset);
 
-            let isMobile = $(window).width() < 500;
-
-            let leftX = 0;
-
-
-
-            if (isMobile) {
-                leftX = 31.25;
-            }
-
-            if (leftOffset < leftX) {
-                $('.product-zone-wrap').css('left', '+=300');
+            if (leftOffset == -568.75) {
                 console.log("left", leftOffset);
-                console.log('leftX', leftX)
-
-                if (leftOffset >= -568.75) {
-                    $('.icon-left').css('opacity', '1').css('transition', '.5s');
-                    $('.icon-right').css('opacity', '1').css('transition', '.5s');
-                }
-
-                if (leftOffset >= -268.75) {
-                    $('.icon-left').css('opacity', '.2').css('transition', '.5s');
-                    $('.icon-right').css('opacity', '1').css('transition', '.5s');
-                }
-
+                $('.product-zone-wrap').css('left', '+=300');
+                $('.icon-left').css('opacity', '1').css('transition', '.5s');
+                $('.icon-right').css('opacity', '1').css('transition', '.5s');
             }
 
+            if (leftOffset == -268.75) {
+                console.log("left", leftOffset);
+                $('.product-zone-wrap').css('left', '+=300');
+                $('.icon-left').css('opacity', '.2').css('transition', '.5s');
+                $('.icon-right').css('opacity', '1').css('transition', '.5s');
+            }
 
-
-        })
+        });
 
         $('.icon-right').on('click', function () {
 
-
             let rightOffset = $('.product-zone-wrap').offset().left;
-            let isMobile = $(window).width() < 500;
 
-            // let rightX = -916.5
-
-            if (isMobile) {
-                rightX = -568;
-            }
-
-            if (rightOffset > rightX) {
+            if (rightOffset == 31.25) {
                 console.log("right", rightOffset);
-                // console.log("right", rightX);
                 $('.product-zone-wrap').css('left', '-=300');
-
-                if (rightOffset < -31.25) {
-                    $('.icon-left').css('opacity', '1').css('transition', '.5s');
-                    $('.icon-right').css('opacity', '.2').css('transition', '.5s');
-                }
-
+                $('.icon-left').css('opacity', '1').css('transition', '.5s');
+                $('.icon-right').css('opacity', '1').css('transition', '.5s');
+            }
+            if (rightOffset == -268.75) {
+                console.log("right", rightOffset);
+                $('.product-zone-wrap').css('left', '-=300');
+                $('.icon-left').css('opacity', '1').css('transition', '.5s');
+                $('.icon-right').css('opacity', '.2').css('transition', '.5s');
             }
 
         });
