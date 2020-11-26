@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="./share.css">
     <link rel="stylesheet" href="./CSS/animate.min.css">
     <style>
+        :root {
+            --animate-duration: 2s;
+            
+            }
+
         h1,h2{
             color:#004A13;
         }
@@ -349,6 +354,16 @@
             height: 6px;
             background: #DB5C00;
         }
+
+
+        /* thermo animation */
+        /* .last-sec-thermo
+        {
+            animation:fadeInRight;
+            animation-delay:.3s;
+
+        } */
+
 
         .last-sec-text{
             margin-top: 7.5rem;
@@ -712,16 +727,16 @@
             </div>
             <div class="col-lg-6 col-12 sec1-text d-flex justify-content-center align-items-center position-relative">
                 <div class="text-wrap text-wrap-ani-1 position-relative">
-                    <h2>動態瑜珈</h2>
+                    <h2 class="">動態瑜珈</h2>
 
                     <div class="tag-wrapper d-flex">
                             <div class="d-flex align-items-center tag mr-3">
-                                <div class="tag-line" style="filter: drop-shadow(2px 4px 6px white);"></div>
-                                <h6 class="mt-2" style="filter: drop-shadow(2px 4px 6px white);">防滑</h6>
+                                <div class="tag-line"></div>
+                                <h6 class="mt-2">防滑</h6>
                             </div>
                             <div class="d-flex align-items-center tag mr-3">
-                                <div class="tag-line" style="filter: drop-shadow(2px 4px 6px white);"></div>
-                                <h6 class="mt-2" style="filter: drop-shadow(2px 4px 6px white);">穩定</h6>
+                                <div class="tag-line"></div>
+                                <h6 class="mt-2">穩定</h6>
                             
                             </div>
                             <div class="d-flex align-items-center tag mr-3">
@@ -731,7 +746,7 @@
                             </div>
                 </div>
                     
-                    <p style="filter: drop-shadow(2px 4px 6px white);">如果常做的瑜珈種類是動作多變、體式變化較頻繁或含有彈跳的瑜珈類型，你需要一張防滑性好，與穩定性更高的的薄墊，
+                    <p class="">如果常做的瑜珈種類是動作多變、體式變化較頻繁或含有彈跳的瑜珈類型，你需要一張防滑性好，與穩定性更高的的薄墊，
                         讓你的身體穩定在正確的位置上，動作穩定一些，減少運動傷害。</p>
                 </div>
 
@@ -740,7 +755,7 @@
         </div>
 <!-- 熱門商品 -->
 <div class="container-fluid content-product position-relative">
-    <div class="row rec-ani-1">
+    <div class="row">
         <div class="col-lg-2 px-0 icon-wrapper">
             <div class="icon-wrap d-flex">
                 <a class="icon-left"><img src="./SVG/icon_left.svg" alt=""></a>
@@ -749,11 +764,11 @@
         </div>
         <div class="col-lg-8 coi-sm-12 px-0">
 
-            <h2 class="text-center">商品推薦</h2>
+            <h2 class="text-center rec-ani-1">商品推薦</h2>
 
             <div class="guessyoullike d-flex justify-content-center position-relative">
                 <a href="">
-                    <div class="product-zone px-0">
+                    <div class="product-zone px-0 rec-ani-1">
 
                         <div class="product-wrap">
 
@@ -772,7 +787,7 @@
                     </div>
                 </a>
                 <a href="">
-                    <div class="product-zone px-0">
+                    <div class="product-zone px-0 rec-ani-1">
 
                         <div class="product-wrap">
 
@@ -792,7 +807,7 @@
                 </a>
                 
                 <a href="">
-                    <div class="product-zone px-0 mr-0">
+                    <div class="product-zone px-0 mr-0 rec-ani-1">
 
                         <div class="product-wrap">
 
@@ -820,19 +835,16 @@
         
         <div class="col-2 px-0"></div>
     </div>
-    <div class="w-100 d-flex justify-content-center"><button class="btn_f">看更多商品</button>
+    <div class="w-100 d-flex justify-content-center rec-ani-1"><button class="btn_f">看更多商品</button>
     </div>
 </div>
-            
-       
-
 
 <!-- content區塊2 -->
         <div class="container-fluid d-flex content-sec flex-wrap position-relative">
                     
             <div class="col-lg-6 col-12 sec2-text d-flex justify-content-center align-items-center position-relative">
-                <div class="text-wrap">
-                    <h2 style="filter: drop-shadow(2px 4px 6px white);">靜態瑜珈</h2>
+                <div class="text-wrap text-wrap-ani-2">
+                    <h2>靜態瑜珈</h2>
 
                     <div class="tag-wrapper d-flex">
                             <div class="d-flex align-items-center tag mr-3">
@@ -856,7 +868,7 @@
 
             </div>
 
-            <div class="col-lg-6 col-12 sec2-img">
+            <div class="col-lg-6 col-12 sec2-img sec2-img-ani-2">
                 
 
             </div>
@@ -874,11 +886,11 @@
         </div>
         <div class="col-lg-8 coi-sm-12 px-0">
 
-            <h2 class="text-center">商品推薦</h2>
+            <h2 class="text-center rec-ani-2">商品推薦</h2>
 
             <div class="guessyoullike d-flex justify-content-center position-relative">
                 <a href="">
-                    <div class="product-zone px-0">
+                    <div class="product-zone px-0 rec-ani-2">
 
                         <div class="product-wrap">
 
@@ -897,7 +909,7 @@
                     </div>
                 </a>
                 <a href="">
-                    <div class="product-zone px-0">
+                    <div class="product-zone px-0 rec-ani-2">
 
                         <div class="product-wrap">
 
@@ -917,7 +929,7 @@
                 </a>
                 
                 <a href="">
-                    <div class="product-zone px-0 mr-0">
+                    <div class="product-zone px-0 mr-0 rec-ani-2">
 
                         <div class="product-wrap">
 
@@ -945,7 +957,7 @@
         
         <div class="col-2 px-0"></div>
     </div>
-    <div class="w-100 d-flex justify-content-center"><button class="btn_f">看更多商品</button>
+    <div class="w-100 d-flex justify-content-center"><button class="btn_f rec-ani-2">看更多商品</button>
     </div>
 </div>
 <!---------------------------------  最後區塊  -->
@@ -955,18 +967,18 @@
     <div class="col-lg-1 col-0"></div>
     <div class="col-lg-4 col-12 d-flex flex-column last-sec last-sec-content flex-wrap">
         <div class="last-sec-text-wrap">
-            <div class="last-sec-thermo position-relative ml-2">
+            <div class="last-sec-thermo position-relative ml-2 last-sec-img-ani">
             </div>
-            <div class="last-sec-text desktop"><h1 class="">Find</h1><h1 class="">Your</h1><h1>Soulmat</h1></div>
-            <div class="last-sec-text mobile"><h1 class="">Find Your</h1><h1>Soulmat</h1></div>
+            <div class="last-sec-text desktop last-sec-text-ani"><h1 class="">Find</h1><h1 class="">Your</h1><h1>Soulmat</h1></div>
+            <div class="last-sec-text mobile last-sec-text-ani"><h1 class="">Find Your</h1><h1>Soulmat</h1></div>
             
-            <div class="desktop"><h3>36度，與人類共感的溫度</h3></div>
-            <div class="mobile"><h3>36度，<br>與人類共感的溫度</h3></div>
-            <div class="last-sec-btn"><button class="btn_l">進入測驗</button></div>
+            <div class="desktop last-sec-text-ani"><h3>36度，與人類共感的溫度</h3></div>
+            <div class="mobile last-sec-text-ani"><h3>36度，<br>與人類共感的溫度</h3></div>
+            <div class="last-sec-btn last-sec-text-ani"><button class="btn_l">進入測驗</button></div>
         </div>
     </div>
 
-    <div class="col-lg-7 col-12 last-sec-img"></div>
+    <div class="col-lg-7 col-12 last-sec-img last-sec-img-ani"></div>
     
 
 </div>
@@ -982,34 +994,78 @@
 
     <script>
 // -------偵測top add animation----//
+        //第1區動畫
+    $('.text-wrap-ani-1').css('opacity','0');
+    $('.sec1-img-ani-1').css('opacity','0');
+    $('.rec-ani-1').css('opacity','0');
+        //第2區動畫
 
-    $('.text-wrap-ani-1').css('display','none');
-    $('.sec1-img-ani-1').css('display','none');
-    $('.rec-ani-1').css('display','none');
+    $('.text-wrap-ani-2').css('opacity','0');
+    $('.sec2-img-ani-2').css('opacity','0');
+    $('.rec-ani-2').css('opacity','0');
+
+        //第3區動畫
+    $('.last-sec-img-ani').css('opacity','0');
+    $('.last-sec-text-ani').css('opacity','0');
+    $('.last-sec-thermo').css('opacity','0');
+    
 
     $(window).on('scroll',function(){
-        
-        
-        let top = $('.text-wrap-ani-1').offset().top-200;
-        let top2 = $('.sec1-img').offset().top-200;
-        let top3 = $('.rec-ani-1').offset().top-500;
 
+        let a = $(window).height()/5*4;
+        console.log('5分之4:'+a);
         
         let w = $(this).scrollTop();
         console.log(w);
+        
+        
+        //sec1
+        let top = $('.text-wrap-ani-1').offset().top-a;
+        let top2 = $('.sec1-img-ani-1').offset().top-a;
+        let top3 = $('.rec-ani-1').offset().top-a;
 
-        if(top = w){
-        $('.text-wrap-ani-1').css('display','block').addClass('animate__animated animate__fadeInRight');
+        //sec2
+        let top4 = $('.text-wrap-ani-2').offset().top-a;
+        let top5 = $('.sec2-img-ani-2').offset().top-a;
+        let top6 = $('.rec-ani-2').offset().top-a;
+
+
+        //sec3
+        let top7 = $('.last-sec-img-ani').offset().top-a*1.5;
+        let top8 = $('.last-sec-text-ani').offset().top-a;
+
+
+        
+
+        //第一區
+       
+        $('.sec1-img-ani-1').css('opacity','1').addClass('animate__animated animate__fadeInLeft');
+        $('.text-wrap-ani-1').css('opacity','1').addClass('animate__animated animate__fadeInRight');
+
+
+        if(w >= top3){
+        $('.rec-ani-1').css('opacity','1').addClass('animate__animated animate__fadeInDown');
+        }
+
+        // //第2區
+
+
+        if(w >= top5){
+        $('.sec2-img-ani-2').css('opacity','1').addClass('animate__animated animate__fadeInRight');
+        $('.text-wrap-ani-2').css('opacity','1').addClass('animate__animated animate__fadeInLeft');
+        }
+
+
+        // //第3區
+
+        if(w >= top7){
+
+        $('.last-sec-img-ani').css('opacity','1').addClass('animate__animated animate__fadeInRight');
+        $('.last-sec-text-ani').css('opacity','1').addClass('animate__animated animate__fadeInLeft');
+        $('.last-sec-thermo').css('opacity','1').addClass('animate__animated animate__fadeInLeft').css('animation-delay','.5s');
         
         }
 
-        if(top2 = w){
-        $('.sec1-img-ani-1').css('display','block').addClass('animate__animated animate__fadeInLeft');
-        }
-
-        if(w > top3){
-        $('.rec-ani-1').css('display','flex').addClass('animate__animated animate__fadeInDown');
-        }
 
         
 
@@ -1056,14 +1112,14 @@
                         console.log('move:'+move);
                 
 
-                if(p>=0){
+                if(p==0){
                     $('.icon-left').css('opacity','.2').css('transition','.5s');
                     $('.icon-right').css('opacity','1').css('transition','.5s');
                     console.log('new position:'+p);
 
                 }
 
-                else if(p<=-move || p<=-move*2){
+                else if(p==-move || p==-move*2){
                     //p>=move || p>-move*2
                     $('.icon-left').css('opacity','.2').css('transition','.5s');
                     $('.icon-right').css('opacity','1').css('transition','.5s');
@@ -1072,11 +1128,11 @@
 
 
                 }
-                else{     
-                    $('.icon-left').css('opacity','1').css('transition','.5s');
-                    $('.icon-right').css('opacity','1').css('transition','.5s');           
-                    $('.guessyoullike').css('left','+='+ move);}
-                    console.log('new position:'+p);
+                // else{     
+                //     $('.icon-left').css('opacity','1').css('transition','.5s');
+                //     $('.icon-right').css('opacity','1').css('transition','.5s');           
+                //     $('.guessyoullike').css('left','+='+ move);}
+                //     console.log('new position:'+p);
                 
                  })
                 
@@ -1090,26 +1146,32 @@
                         console.log('positionleft:'+p);
                         console.log('move:'+move);
 
-                        if(p<=-move*2){
+                        if(p==-move*2){
                             $('.icon-right').css('opacity','.2').css('transition','.5s');
                             $('.icon-left').css('opacity','1').css('transition','.5s');
                             console.log('new position:'+p);
 
                         }
 
-                        else if(p<=-move){
+                        else if(p==-move){
                             $('.icon-right').css('opacity','.2').css('transition','.5s');
                             $('.icon-left').css('opacity','1').css('transition','.5s');
                             $('.guessyoullike').css('left','-='+ move);
                             console.log('new position:'+p);
 
 
-                        }
-                        else{
-                            $('.icon-left').css('opacity','1').css('transition','.5s');
-                            $('.icon-right').css('opacity','1').css('transition','.5s');  
-                            $('.guessyoullike').css('left','-='+ move);}
+                        }else if(p==0){
+                            $('.icon-right').css('opacity','1').css('transition','.5s');
+                            $('.icon-left').css('opacity','.2').css('transition','.5s');
+                            $('.guessyoullike').css('left','-='+ move);
                             console.log('new position:'+p);
+
+                        }
+                        // else{
+                        //     $('.icon-left').css('opacity','1').css('transition','.5s');
+                        //     $('.icon-right').css('opacity','1').css('transition','.5s');  
+                        //     $('.guessyoullike').css('left','-='+ move);}
+                        //     console.log('new position:'+p);
 
                     })
 
