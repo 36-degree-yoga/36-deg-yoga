@@ -114,3 +114,13 @@ button:focus {
   opacity: 1;
 }
 /* 彈跳視窗↑↑ */
+
+/* 表單原生造型改變↓↓ */
+input {
+  outline: none;
+}
+input:focus {
+  border: 2px solid #f2a200;
+  border-radius: 4px;
+}
+/* 表單原生造型改變↑↑ */

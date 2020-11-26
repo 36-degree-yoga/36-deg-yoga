@@ -337,7 +337,7 @@
 
         <!-- 明細完成 -->
         <div class="col-lg-4 col-md-4 col-sm-12 col-12">
-          <div class="i-need-w-and-fix position-fixed">
+          <div class="i-need-w-and-fix">
             <div
               class="title-in-table d-flex justify-content-between which-need-bordre-bottom"
             >
@@ -415,19 +415,27 @@
       $(window).on("scroll", function () {
         let scrolltop = $(window).scrollTop();
         let isＭobile = $(this).width() < 576;
+        let inPc = $(this).width() < 576;
 
-        if (isＭobile) {
-          $(".i-need-w-and-fix").removeClass("position-fixed");
-        } else {
-          $(".i-need-w-and-fix").addClass("position-fixed");
+        if (isＭobile || scrolltop < 205) {
           console.log(scrolltop);
-          if (scrolltop > 155) {
-            $(".i-need-w-and-fix").css("top", "4rem");
-          } else {
-            $(".i-need-w-and-fix").css("top", "290px");
-          }
+          $(".i-need-w-and-fix").removeClass(
+            "position-fixed  i-need-w-and-fix-w-part"
+          );
+        } else {
+          $(".i-need-w-and-fix").addClass(
+            "position-fixed i-need-w-and-fix-w-part"
+          );
+          $(".i-need-w-and-fix").css("top", "4rem");
         }
       });
+
+      // console.log(scrolltop);
+      //     if (scrolltop > 155) {
+      //       $(".i-need-w-and-fix").css("top", "4rem");
+      //     } else {
+      //       $(".i-need-w-and-fix").css("top", "290px");
+      //     }
     </script>
   </body>
 </html>

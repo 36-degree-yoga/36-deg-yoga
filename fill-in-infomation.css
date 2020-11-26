@@ -115,10 +115,14 @@ h6 {
   display: none;
 }
 /* 商品明細 */
+/* jq */
 .i-need-w-and-fix {
-  width: 23%;
-  transition: 2s;
+  transition: 0.5s;
 }
+.i-need-w-and-fix-w-part {
+  width: 24%;
+}
+/* jq */
 .howmuch-you-need-pay tbody tr:last-child {
   visibility: hidden;
 }

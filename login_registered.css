@@ -23,7 +23,7 @@ body {
   line-height: 55px;
   color: #004a13;
   cursor: pointer;
-  transition: 0.5s;
+  /* transition: 0.5s; */
 }
 
 .login-btn {
