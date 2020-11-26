@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap-grid.css">
     <link rel="stylesheet" href="./fontawesome/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./CSS/animate.min.css">
 
     <style>
         /* 
@@ -80,14 +80,14 @@
 
             .hero_wrap{
                 width: 100%;
-                height: 1000px;
+                height: 950px;
             }
 
             .back01_wrap{
                 margin: 0;
                 padding: 0;
                 overflow: hidden;
-                height: 1000px;
+                height: 950px;
             }
 
             .index_back01{
@@ -115,10 +115,10 @@
         
             /*find your soulmat btn */
             .hero_btn{
-                margin-top: 120px;
+                margin-top: 110px;
                 margin-bottom: 120px;
-                margin-right: 80px;
-                margin-left: 40px;
+                margin-right: 70px;
+                margin-left: 50px;
                 padding: 0;
                 cursor: pointer;
                 animation-duration: 1.5s;
@@ -131,22 +131,24 @@
             .soulmat:hover{
                 animation: .5s jump;
                 /* transform: translateY(-20px); */
+                animation-iteration-count:infinite;
+                animation-timing-function: ease-in-out;
             }
 
             @keyframes jump {
                 0% {
-                    transform: translateY(-10px);
-                    transition-duration: .5s;
+                    transform: translateY(0px);
+                    transition-duration: 1s;
                 }
 
                 50%{
                     transform: translateY(-10px);
-                    transition-duration: .5s;
+                    transition-duration: 1s;
                 }
 
                 100%{
                     transform: translateY(0px);
-                    transition-duration: .5s;
+                    transition-duration: 1s;
                 }
             }
 
@@ -190,7 +192,7 @@
             .caro_img02{
                 position: absolute;
                 top: -40px;
-                left: -10%;
+                left: -8%;
                 transition: .3s;
             }
 
@@ -293,7 +295,7 @@
             }
 
             .scrollbox_a{
-                height: 240px;
+                height: 20px;
                 margin-left: 35px;
                 transition-duration: .3s;
                 cursor: pointer;
@@ -317,7 +319,7 @@
 
             /* social media 按鈕 */
             .index_hero_social{
-                padding-right: 30px;
+                padding-right: 39px;
                 padding-bottom: 120px;
                 animation-duration: 1s;
                 animation-delay: .3s;
@@ -458,6 +460,10 @@
             /* 直的find your soulmat */
             .fys_wrap{
                 margin-top: 50px;
+
+                /* 固定位置*/
+                top: 50px;
+                position: sticky;
             }
 
             .fys_back{
@@ -484,23 +490,38 @@
                 height: 1700px;
                 border-top: 4px solid #333333;
                 border-bottom: 4px solid #333333;
-                margin: 0 0 120px 0;
+                margin: 60px 0 120px 0;
                 padding: 0;
-                overflow: hidden;
+
+                /* 固定位置*/
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0;
+
+                overflow: scroll;
+                overflow-x: hidden;
+            }
+
+            .prod_line::-webkit-scrollbar{
+                width: 0 !important;
+                background: transparent;
+
             }
 
             .prods_right,
             .prods_left{
                 padding: 0;
                 /* margin-right: -30px; */
+                margin-top: 60px;
             }
 
             .prods_right{
                 margin-left: 60px;
+                margin-top: 890px;
             }
 
             .prods_left{
-                margin-top: 350px;
+                margin-top: 990px;
             }
 
             /* 圖加文*/
@@ -525,6 +546,10 @@
             }
 
             /* 文字加quickview */
+            .index_quick{
+                margin-top: 40px;
+            }
+
             .prod_quick{
                 width: 210px;
                 margin-top: -15px;
@@ -1066,7 +1091,7 @@
             }
 
             .a_soulmat{
-                transition-duration: .3s;
+                transition-duration: .5s;
                 transform: translateY(30px);
             }
 
@@ -1886,7 +1911,7 @@
                 <div class="row d-flex hero_inner">
                     <!-- scroll down -->
                     <div class="srolldown_btn col-1 d-flex flex-column justify-content-end align-items-center">
-                        <div class="scrollbox">
+                        <div class="scrollbox animate__animated animate__fadeInDown">
                             <div class="scroll_p">Scroll Down</div>
                             <div class="scrolldown_line"></div> 
                         </div>
@@ -2024,6 +2049,7 @@
                 <div class="row index_prod_btm d-flex justify-content-center">
 
                     <!-- 移動區範圍 -->
+                    <div class="testline"></div>
                     <div class="prod_line d-flex col-10 justify-content-between align-content-center">
 
                         <!-- 直的find your soulmat -->
@@ -2034,7 +2060,7 @@
                         </div>
 
                         <!-- 移動圖片們 -->
-                        <div class="prods_left col-5">
+                        <div class="movemove prods_left col-5" data-rellax-speed="10" >
                             <div class="prods_box">
                                 <div class="prods_picwrap" data-toggle="modal" data-target="#exampleModal">
                                     <img class="index_prodspic" src="./img/index/index_04.jpg" alt="">
@@ -2045,15 +2071,29 @@
                                             <h6 class="prod">環保瑜珈墊</h6>
                                             <p class="prod_price" data-toggle="modal" data-target="#exampleModal">$1000</p>
                                         </div>
-                
+                                        <a href="" class="index_quick">
                                             <img src="/SVG/index_quickview.svg" alt="" class="prod_quick" data-toggle="modal" data-target="#exampleModal" >
-                                      
-                                        
+                                        </a>
+                                
                                     </div>
                                 </div>
                             </div>
                             <div class="prods_box">
-                                <div class="prods_picwrap">
+                                <div class="prods_picwrap" data-toggle="modal" data-target="#exampleModal">
+                                    <img class="index_prodspic" src="./img/index/index_02.jpg" alt="">
+                                </div>
+                                <div class="d-flex prod_pp_quick">
+                                    <div class="prod_ppwrap">
+                                        <h6 class="prod">環保瑜珈墊</h6>
+                                        <p class="prod_price">$1000</p>
+                                    </div>
+                                    <a href="" class="index_quick">
+                                        <img src="/SVG/index_quickview.svg" alt="" class="prod_quick" data-toggle="modal" data-target="#exampleModal" >
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="prods_box">
+                                <div class="prods_picwrap" data-toggle="modal" data-target="#exampleModal">
                                     <img class="index_prodspic" src="./img/index/index_04.jpg" alt="">
                                 </div>
                                 <div class="d-flex prod_pp_quick">
@@ -2061,25 +2101,29 @@
                                         <h6 class="prod">環保瑜珈墊</h6>
                                         <p class="prod_price">$1000</p>
                                     </div>
-                                    <img src="/SVG/index_quickview.svg" alt="" class="prod_quick">
+                                    <a href="" class="index_quick">
+                                        <img src="/SVG/index_quickview.svg" alt="" class="prod_quick" data-toggle="modal" data-target="#exampleModal" >
+                                    </a>
                                 </div>
                             </div>
                             <div class="prods_box">
-                                <div class="prods_picwrap">
-                                    <img class="index_prodspic" src="./img/index/index_04.jpg" alt="">
+                                <div class="prods_picwrap" data-toggle="modal" data-target="#exampleModal">
+                                    <img class="index_prodspic" src="./img/index/index_02.jpg" alt="">
                                 </div>
                                 <div class="d-flex prod_pp_quick">
                                     <div class="prod_ppwrap">
                                         <h6 class="prod">環保瑜珈墊</h6>
                                         <p class="prod_price">$1000</p>
                                     </div>
-                                    <img src="/SVG/index_quickview.svg" alt="" class="prod_quick">
+                                    <a href="" class="index_quick">
+                                        <img src="/SVG/index_quickview.svg" alt="" class="prod_quick" data-toggle="modal" data-target="#exampleModal" >
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="prods_right col-5">
+                        <div class="movemove prods_right col-5  " data-rellax-speed="6">
                             <div class="prods_box">
-                                <div class="prods_picwrap">
+                                <div class="prods_picwrap" data-toggle="modal" data-target="#exampleModal">
                                     <img class="index_prodspic" src="./img/index/index_04.jpg" alt="">
                                 </div>
                                 <div class="d-flex prod_pp_quick">
@@ -2087,23 +2131,27 @@
                                         <h6 class="prod">環保瑜珈墊</h6>
                                         <p class="prod_price">$1000</p>
                                     </div>
-                                    <img src="/SVG/index_quickview.svg" alt="" class="prod_quick">
+                                    <a href="" class="index_quick">
+                                        <img src="/SVG/index_quickview.svg" alt="" class="prod_quick" data-toggle="modal" data-target="#exampleModal" >
+                                    </a>
                                 </div>
                             </div>
                             <div class="prods_box">
-                                <div class="prods_picwrap">
-                                    <img class="index_prodspic" src="./img/index/index_04.jpg" alt="">
+                                <div class="prods_picwrap" data-toggle="modal" data-target="#exampleModal">
+                                    <img class="index_prodspic" src="./img/index/index_02.jpg" alt="">
                                 </div>
                                 <div class="d-flex prod_pp_quick">
                                     <div class="prod_ppwrap">
                                         <h6 class="prod">環保瑜珈墊</h6>
                                         <p class="prod_price">$1000</p>
                                     </div>
-                                    <img src="/SVG/index_quickview.svg" alt="" class="prod_quick">
+                                    <a href="" class="index_quick">
+                                        <img src="/SVG/index_quickview.svg" alt="" class="prod_quick" data-toggle="modal" data-target="#exampleModal" >
+                                    </a>
                                 </div>
                             </div>
                             <div class="prods_box">
-                                <div class="prods_picwrap">
+                                <div class="prods_picwrap" data-toggle="modal" data-target="#exampleModal">
                                     <img class="index_prodspic" src="./img/index/index_04.jpg" alt="">
                                 </div>
                                 <div class="d-flex prod_pp_quick">
@@ -2111,13 +2159,15 @@
                                         <h6 class="prod">環保瑜珈墊</h6>
                                         <p class="prod_price">$1000</p>
                                     </div>
-                                    <img src="/SVG/index_quickview.svg" alt="" class="prod_quick">
+                                    <a href="" class="index_quick">
+                                        <img src="/SVG/index_quickview.svg" alt="" class="prod_quick" data-toggle="modal" data-target="#exampleModal" >
+                                    </a>
                                 </div>
                             </div>
                             
                         </div>
                     </div>
-
+                    <div class="testline"></div>
                 </div>
                 
             </div>
@@ -2689,6 +2739,7 @@
     <script src="./lib/jquery-3.5.1.js"></script>
     <!-- butterfly for nav -->
     <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="./js/rellax.min.js"></script>
     <script>
 // butterfly nav
 
@@ -2838,6 +2889,8 @@
             caroIndex+=1;
         },2000)
 
+
+
 // 首頁 scrolldown
 // 點擊 移動頁面
         $('.scrollbox').on('click',function(){
@@ -2898,13 +2951,24 @@
 
         });
 
-
-  
 // 首頁 人氣商品 index hot
 // hover 換大圖
         $('.index_hotitem_wrap img').on('mouseover',function(){
             let bigPic = $(this).next().attr('src');
             $('.back05_wrap img').attr('src',bigPic).hide().delay(150).fadeIn('slow,ease-in');
+        });
+
+// 首頁 人氣商品
+// 頁面移動
+        $('.hotitem_01').on('click',function(){ 
+            let bigPic01 = $(this).attr('src');
+            $('index_back11').attr('src',bigPic01);
+        });
+        $('.hotitem_02').on('click',function(){ 
+            let bigPic02 = $(this).attr('src');
+            $('index_back11_02').attr('src',bigPic02);
+            $('index_back11').css('opacity',0);
+            $('index_back11_03').css('opacity',0);
         });
 
 
@@ -2956,35 +3020,12 @@
             } 
         });  
 
-// 首頁 find your soulmat
-// 頁面移動
-        $('.hotitem_01').on('click',function(){ 
-            let bigPic01 = $(this).attr('src');
-            $('index_back11').attr('src',bigPic01);
-        });
-        $('.hotitem_02').on('click',function(){ 
-            let bigPic02 = $(this).attr('src');
-            $('index_back11_02').attr('src',bigPic02);
-            $('index_back11').css('opacity',0);
-            $('index_back11_03').css('opacity',0);
-        });
 
-        
-
-
-
-         
-
-        
-
-
-    
-
-       
-        
-
+        var rellax = new Rellax('.movemove');
 
     </script>
+
+   
 
 
 </body>
