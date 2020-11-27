@@ -764,7 +764,7 @@
         </div>
         <div class="col-lg-8 coi-sm-12 px-0">
 
-            <h2 class="text-center rec-ani-1">商品推薦</h2>
+            <h2 class="text-center rec-ani-1" style="animation-delay: .8s;">商品推薦</h2>
 
             <div class="guessyoullike d-flex justify-content-center position-relative">
                 <a href="">
@@ -848,22 +848,22 @@
 
                     <div class="tag-wrapper d-flex">
                             <div class="d-flex align-items-center tag mr-3">
-                                <div class="tag-line" style="filter: drop-shadow(2px 4px 6px white);"></div>
-                                <h6 class="mt-2" style="filter: drop-shadow(2px 4px 6px white);">舒適</h6>
+                                <div class="tag-line"></div>
+                                <h6 class="mt-2">舒適</h6>
                             </div>
                             <div class="d-flex align-items-center tag mr-3">
-                                <div class="tag-line" style="filter: drop-shadow(2px 4px 6px white);"></div>
-                                <h6 class="mt-2" style="filter: drop-shadow(2px 4px 6px white);">觸感</h6>
+                                <div class="tag-line"></div>
+                                <h6 class="mt-2">觸感</h6>
                             
                             </div>
                             <div class="d-flex align-items-center tag mr-3">
-                                <div class="tag-line" style="filter: drop-shadow(2px 4px 6px white);"></div>
-                                <h6 class="mt-2" style="filter: drop-shadow(2px 4px 6px white);">5-8cm</h6>
+                                <div class="tag-line"></div>
+                                <h6 class="mt-2">5-8cm</h6>
                             
                             </div>
                 </div>
                     
-                    <p style="filter: drop-shadow(2px 4px 6px white);">靜態瑜珈強調呼吸和冥想，主要坐在墊子上的動作，適合帶點厚度、緩衝性較高的瑜珈墊，以避免身體接觸地面而感到冰冷或過硬不適，厚而柔軟的瑜伽墊會讓你更舒適。</p>
+                    <p>靜態瑜珈強調呼吸和冥想，主要坐在墊子上的動作，適合帶點厚度、緩衝性較高的瑜珈墊，以避免身體接觸地面而感到冰冷或過硬不適，厚而柔軟的瑜伽墊會讓你更舒適。</p>
                 </div>
 
             </div>
@@ -886,7 +886,7 @@
         </div>
         <div class="col-lg-8 coi-sm-12 px-0">
 
-            <h2 class="text-center rec-ani-2">商品推薦</h2>
+            <h2 class="text-center rec-ani-2" style="animation-delay: .8s;">商品推薦</h2>
 
             <div class="guessyoullike d-flex justify-content-center position-relative">
                 <a href="">
@@ -1193,108 +1193,6 @@
                        
         })
 
-        // $(window).resize(function(){
-        //     let w = $(window).width(); 
-        //     let img_wrap = $('.img-wrap').width();
-        //     let margin = (w - img_wrap)/2;
-        //     let width = img_wrap*3 + margin*6;
-        //     let move = img_wrap + margin*2;
-                           
-        //     if(w < 992){
-        //         // setting
-        //         $('.product-zone').css('margin-left',margin).css('margin-right',margin);
-        //         $('.guessyoullike').css('width',width);
-        //         $('.guessyoullike').css('left','0');
-        //         $('.guessyoullike').addClass('position-absolute');
-        //         $('.guessyoullike').removeClass('position-relative');;
-        //         $('.guessyoullike').removeClass('justify-content-center');
-        //         $('.icon-right').css('opacity','1');
-
-        //         console.log('------');                
-        //         console.log('img_wrap:'+img_wrap,'margin:'+margin,'move:'+move,'width:',width);
-
-        //         //click
-
-        //         $('.icon-left').on('click',function(e){
-            
-        //                 let p = $('.guessyoullike').position().left;
-        //                 console.log('------');
-        //                 console.log('positionleft:'+p);
-        //                 console.log('img_wrap:'+img_wrap,'margin:'+margin,'move:'+move);
-
-
-        //                 if(p>=0){
-        //                     $('.icon-left').css('opacity','.2').css('transition','.5s');
-        //                     $('.icon-right').css('opacity','1').css('transition','.5s');
-
-        //                 }
-
-        //                 else if(p>=move){
-        //                     $('.icon-left').css('opacity','.2').css('transition','.5s');
-        //                     $('.icon-right').css('opacity','1').css('transition','.5s');
-        //                     $('.guessyoullike').css('left','+='+ move);
-
-
-        //                 }
-        //                 else{     
-        //                     $('.icon-left').css('opacity','1').css('transition','.5s');
-        //                     $('.icon-right').css('opacity','1').css('transition','.5s');           
-        //                     $('.guessyoullike').css('left','+='+ move);}
-
-        //             })
-
-        //             $('.icon-right').on('click',function(e){
-                        
-        //                 let p = $('.guessyoullike').position().left;
-                        
-
-        //                 console.log('------');
-        //                 console.log('img_wrap:'+img_wrap,'margin:'+margin,'move:'+move);
-        //                 console.log('positionleft:'+p);
-                        
-
-        //                 if(p>=-move*2){
-        //                     $('.icon-right').css('opacity','.2').css('transition','.5s');
-        //                     $('.icon-left').css('opacity','1').css('transition','.5s');
-
-        //                 }
-
-        //                 else if(p>=-move){
-        //                     $('.icon-right').css('opacity','.2').css('transition','.5s');
-        //                     $('.icon-left').css('opacity','1').css('transition','.5s');
-        //                     $('.guessyoullike').css('left','-='+ move);
-
-
-        //                 }
-        //                 else{
-        //                     $('.icon-left').css('opacity','1').css('transition','.5s');
-        //                     $('.icon-right').css('opacity','1').css('transition','.5s');  
-        //                     $('.guessyoullike').css('left','-='+ move);}
-
-        //             })
-            
-            
-            
-            
-            
-        //     }else{
-        //         console.log('------');
-        //         console.log('resize');
-        //         console.log('img_wrap:'+img_wrap,'margin:'+margin,'move:'+move);
-        //         $('.guessyoullike').css('width','').css('left','');
-        //         $('.guessyoullike').removeClass('position-absolute');
-        //         $('.guessyoullike').addClass('position-relative');;
-        //         $('.guessyoullike').addClass('justify-content-center');
-        //         $('.product-zone').eq(0).css('margin-right','75px').css('margin-left','0px');
-        //         $('.product-zone').eq(1).css('margin-right','75px').css('margin-left','0px');;
-        //         $('.product-zone').eq(2).css('margin-right','0px').css('margin-left','0px');;
-        //     };
-            
-        // })
-
-//沒有resize 也沒有document ready問題
-  
-   
 
        
 
