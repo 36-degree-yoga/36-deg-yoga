@@ -82,8 +82,16 @@
 
         .choice-next button{
             width: 8.125rem;
+            transition:.5s;
 
         }
+
+        .btn_f:hover{
+            opacity: 0.5s!important;
+
+        }
+
+
         .btn-wrapper{
             width: 100%;
             padding: 0 21%;
@@ -95,7 +103,7 @@
         }
         
 
-        .btn_l {
+        /* .btn_l {
             background-color: transparent;
             font-weight: 400;
             color: #004a13;
@@ -104,9 +112,9 @@
             border: 2px solid #004a13;
             border-radius: 4px;
             transition:.5s;
-            }
+            } */
 
-            .btn_f {
+            /* .btn_f {
         background-color: #004a13;
         font-weight: 400;
         color: #fffefc;
@@ -114,10 +122,10 @@
         height: 38px;
         border: none;
         border-radius: 4px;
-        transition:.5s;
-        }
+        transition:0.5s!important;
+        } */
 
-
+/* 
         .btn_f:hover{
           opacity: .6!important;
           background: #004a13;
@@ -125,7 +133,7 @@
           transition: 0.5s;
           
         }
-
+ */
 
         .choice{
             width: 14rem;
@@ -529,9 +537,9 @@
 
 
     
-                <div class="choice-next d-flex justify-content-center">
-                    <button type="button" class="btn_f choice mx-5 animate__animated animate__fadeInUp" name="" value="">上一步</button>
-                    <button type="button" class="btn_f choice mx-5 animate__animated animate__fadeInUp" name="" value="">下一步</button>
+                <div class="choice-next d-flex justify-content-center animate__animated animate__fadeInUp">
+                    <button type="button" class="btn_f choice mx-5" name="" value="">上一步</button>
+                    <button type="button" class="btn_f choice mx-5" name="" value="">下一步</button>
 
                 </div>
             </div>
@@ -628,6 +636,13 @@
               $('.cls-3').css('fill','#004a13');
             }
         });
+
+
+    // $('button').mouseenter(function(){
+
+    //     $('button').css('opacity','0.6');
+    // })
+
 </script>
 
     
