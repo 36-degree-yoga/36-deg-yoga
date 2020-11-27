@@ -1124,7 +1124,7 @@
 
                 }
 
-                else if(p==-move || p==-move*2){
+                else if(p==-move){
                     //p>=move || p>-move*2
                     $('.icon-left').css('opacity','.2').css('transition','.5s');
                     $('.icon-right').css('opacity','1').css('transition','.5s');
@@ -1133,11 +1133,17 @@
 
 
                 }
-                // else{     
-                //     $('.icon-left').css('opacity','1').css('transition','.5s');
-                //     $('.icon-right').css('opacity','1').css('transition','.5s');           
-                //     $('.guessyoullike').css('left','+='+ move);}
-                //     console.log('new position:'+p);
+
+                else if(p==-move*2){
+                    //p>=move || p>-move*2
+                    $('.icon-left').css('opacity','1').css('transition','.5s');
+                    $('.icon-right').css('opacity','1').css('transition','.5s');
+                    $('.guessyoullike').css('left','+='+ move);
+                    console.log('new position:'+p);
+
+
+                }
+                
                 
                  })
                 
@@ -1167,17 +1173,12 @@
 
                         }else if(p==0){
                             $('.icon-right').css('opacity','1').css('transition','.5s');
-                            $('.icon-left').css('opacity','.2').css('transition','.5s');
+                            $('.icon-left').css('opacity','1').css('transition','.5s');
                             $('.guessyoullike').css('left','-='+ move);
                             console.log('new position:'+p);
 
                         }
-                        // else{
-                        //     $('.icon-left').css('opacity','1').css('transition','.5s');
-                        //     $('.icon-right').css('opacity','1').css('transition','.5s');  
-                        //     $('.guessyoullike').css('left','-='+ move);}
-                        //     console.log('new position:'+p);
-
+                        
                     })
 
             }else{
