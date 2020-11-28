@@ -46,26 +46,31 @@
         >
           <div class="finish-order-info">
             <!-- animation -->
-            <div class="da-gogo mx-auto mb-3 text-center">
+            <div class="mb-3 text-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="50"
                 height="50"
                 viewBox="0 0 50 50"
               >
+                <!-- 圈圈 -->
+                <circle
+                  class="circle"
+                  cx="25"
+                  cy="25"
+                  r="24"
+                  fill="none"
+                  stroke="#004a13"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  transform="rotate(-90 25 25)"
+                ></circle>
+
                 <g
                   id="Group_1902"
                   data-name="Group 1902"
                   transform="translate(-696 -424)"
                 >
-                  <g
-                    id="Path_577"
-                    data-name="Path 577"
-                    transform="translate(696 424)"
-                    fill="#none"
-                  >
-                    <!-- 圈圈 -->
-                  </g>
                   <!-- 勾勾 -->
                   <path
                     id="Path_578"
@@ -104,14 +109,8 @@
     <script src="lib/jquery-3.5.1.js"></script>
     <script>
       setTimeout(function () {
-        $("svg").addClass("active");
+        $(".circle").addClass("active");
       }, 500);
-      setTimeout(function () {
-        $("svg").css("border", "2px solid #004a13");
-      }, 1750);
-      setTimeout(function () {
-        $("svg g path").css("visibility", "visible");
-      }, 2000);
     </script>
   </body>
 </html>

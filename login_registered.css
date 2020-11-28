@@ -55,7 +55,7 @@ body {
   height: 462px;
   padding: 60px 0;
   background-color: #fffefc;
-  /* transition: 0.8s; */
+  color: #333;
   z-index: 1;
 }
 

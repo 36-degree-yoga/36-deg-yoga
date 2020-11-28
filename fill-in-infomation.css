@@ -70,14 +70,9 @@
   border: 1px solid #333;
   border-radius: 4px;
   height: 96px;
-  width: 90%;
+  width: 95%;
 }
-.form-control8 {
-  border: 1px solid #333;
-  border-radius: 4px;
-  height: 32px;
-  width: 30%;
-}
+
 .form-control7 {
   border: 1px solid #333;
   border-radius: 4px;
@@ -89,7 +84,7 @@
   border: 1px solid #333;
   border-radius: 4px;
   height: 32px;
-  width: 90%;
+  width: 95%;
 }
 .control-his-position {
   width: 18%;
@@ -102,11 +97,33 @@
   cursor: pointer;
   transition: 0.5s;
 }
+/* color */
+.form-group label {
+  color: #333;
+}
+.form-group select {
+  color: #333;
+}
+.which-need-border-bottom label {
+  color: #333;
+}
+/* table */
+.m_product_detail {
+  color: #333;
+}
+.howmuch-you-need-pay th {
+  color: #333;
+}
+.howmuch-you-need-pay td {
+  color: #333;
+}
 h6 {
   color: #004a13;
 }
+/* color */
 .i-need-padding {
   padding: 0 30px;
+  padding-right: 52px;
 }
 .change-his-padding-in-mobile {
   padding: 0 60px 0 22px;
@@ -115,6 +132,71 @@ h6 {
   display: none;
 }
 /* 商品明細 */
+.order-detail1 {
+  padding-right: 30px;
+}
+/* open-order-list */
+.order_img_wrap {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  margin-right: 20px;
+}
+.p_title {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.p_detail {
+  font-size: 0.8em;
+  line-height: 20px;
+  margin-bottom: 0px;
+}
+.product-left {
+  width: 100%;
+}
+
+.count_price {
+  width: 35%;
+}
+.btn-wrap {
+  margin-top: 30px;
+}
+
+.order_history_detail_btn {
+  margin-bottom: 0;
+}
+/* addclass */
+.hide {
+  display: none;
+}
+/* 細節打開按鈕啦 */
+.order_history_detail_btn {
+  cursor: pointer;
+  margin: 15px 0;
+  transition: 0.5s;
+}
+/* toggle */
+.change-margin-top {
+  margin-top: 0px;
+}
+/* toggle */
+.order_history_detail_btn p,
+.order_history_detail_btn img {
+  transition: 0.3s;
+}
+.order_history_detail_btn:hover p,
+.order_history_detail_btn:hover img {
+  opacity: 0.6;
+}
+.order_history_detail_btn p {
+  font-weight: 500;
+  color: #f2a200;
+  margin-left: 5px;
+}
+.order_history_detail_btn img {
+  width: 20px;
+}
+/* open-order-list */
 /* jq */
 .i-need-w-and-fix {
   transition: 0.5s;
@@ -140,7 +222,7 @@ input::-ms-input-placeholder {
 input::-webkit-input-placeholder {
   text-align: center;
 }
-.which-need-bordre-bottom {
+.which-need-border-bottom {
   margin-bottom: 12px;
   border-bottom: 2px solid #004a13;
   border-radius: 1px;
@@ -242,6 +324,7 @@ a:hover {
     padding: 0;
   }
   .i-need-padding {
+    padding-right: 0px;
     padding: 0 16px;
   }
   .i-need-w-and-fix {
@@ -260,7 +343,9 @@ a:hover {
   }
 
   /* 商品明細 */
-
+  .order-detail1 {
+    padding: 0 16px;
+  }
   .title-in-table a {
     visibility: hidden;
   }

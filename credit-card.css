@@ -146,6 +146,30 @@
   backface-visibility: hidden;
 }
 /* 文字demo */
+/* text color */
+/* card */
+.form-group label {
+  color: #333;
+}
+.form-group span {
+  color: #333;
+}
+/* atm */
+.atm-remit-info p {
+  color: #333;
+}
+/* table */
+.m_product_detail {
+  color: #333;
+}
+
+.howmuch-you-need-pay th {
+  color: #333;
+}
+.howmuch-you-need-pay td {
+  color: #333;
+}
+/* text color */
 
 .mobile-need-change-padding {
   padding-left: 0;
@@ -182,9 +206,6 @@
   color: #f2a200;
 }
 /* * atm  */
-.howmuch-you-need-pay tbody tr:last-child {
-  visibility: hidden;
-}
 
 .dividerline-in-table-no2 {
   width: 100%;
@@ -194,6 +215,9 @@
   margin: 20px 0;
 }
 /* atm */
+.order-detail1 {
+  padding-right: 30px;
+}
 .dividerline-in-table {
   width: 100%;
   height: 0.1px;
@@ -268,12 +292,10 @@
   margin-top: 0px;
 }
 /* toggle */
-
 .order_history_detail_btn p,
 .order_history_detail_btn img {
   transition: 0.3s;
 }
-
 .order_history_detail_btn:hover p,
 .order_history_detail_btn:hover img {
   opacity: 0.6;
@@ -286,7 +308,6 @@
 .order_history_detail_btn img {
   width: 20px;
 }
-
 /* open-order-list */
 /* hover */
 a {
@@ -350,9 +371,6 @@ a:hover {
   .title-in-table a {
     visibility: hidden;
   }
-  .howmuch-you-need-pay tbody tr:last-child {
-    visibility: visible;
-  }
 
   /* card */
   .title-in-credit-card {
@@ -368,6 +386,9 @@ a:hover {
   }
   .mobile-need-change-padding-all {
     padding-left: 12px;
+  }
+  .order-detail1 {
+    padding: 0 10px;
   }
   /* atm */
   .title-in-atm {
@@ -387,7 +408,7 @@ a:hover {
     display: block;
   }
   .credit-card-img {
-    margin: 20px 0 20px 5px;
+    margin: 20px 0 20px 0px;
   }
 
   .mobile-need-change-padding {
