@@ -1965,6 +1965,36 @@
                 margin:0 auto;
             }
 
+            /* test */
+            /*slide bar*/
+            /* .slick-slide{
+                transform: scale(.7);
+                opacity : .7;
+                transition: all ease 0.5s;
+                width: 300px;
+            }
+
+            .slick-slide.slick-current{
+                transform: scale(1);
+                opacity: 1;
+                width: 300px;
+            }
+
+            .slick-track{
+                width:300px;
+            } */
+
+            /* .m_reviews_big{
+                transform: scale(1.15);
+                opacity: 1;
+                z-index: 1;
+                position: relative;
+            } */
+
+            /* .m_reviews_ruler{
+                position: relative;
+            } */
+
             .m_star{
                 width: 15px;
             }
@@ -2033,15 +2063,6 @@
                 font-size: 1.1rem;
             }
 
-             /* test */
-            /* Customer Reviews 內容 */
-            .reviews_inner{
-                /* position: absolute; */
-                margin-top: 120px;
-            }
-
-            /* 評論動態區 */
-            
 /* mobile 人氣商品 */  
             .m_index_hot{
                 width: 100%;
@@ -3048,8 +3069,9 @@
                         </div>   
                     </div>
 
-                </div>  
+                </div> 
                 
+
                 <!-- 大頭貼 -->
                 <div class="m_memberhead_wrap">
                     <img src="/img/index/member_head.jpg" alt="" class="m_member_head">
@@ -3351,7 +3373,26 @@
 
 // 首頁 Reviews
 // 頁面移動
-        
+        $('.reviews_area').slick({
+            centerMode: true,
+            centerPadding: '20px',
+            slidesToShow: 3,
+            nextArrow: '.btn_left',
+            prevArrow: '.btn_right',
+
+        responsive: [
+            {
+                breakpoint: 350,
+                settings: {
+                arrows: false,
+                centerMode: true,
+                centerPadding: '20px',
+                slidesToShow: 1
+                    
+                }
+            },      
+        ]
+        });
 
 
 // 首頁 人氣商品 index hot
@@ -3541,26 +3582,8 @@
 
 // mobile Reviews
 // 頁面移動
-        // $('.m_reviews_area').slick({
-        //     centerMode: true,
-        //     centerPadding: '5px',
-        //     slidesToShow: 1,
-        //     nextArrow: 'm_gbtn_left ',
-        //     prevArrow: 'm_gbtn_right',
 
-        // responsive: [
-        //     {
-        //         breakpoint: 375,
-        //         settings: {
-        //         arrows: false,
-        //         centerMode: true,
-        //         centerPadding: '5px',
-        //         slidesToShow: 1
-                    
-        //         }
-        //     },      
-        // ]
-        // });
+
 
         
 // mobile 人氣商品
